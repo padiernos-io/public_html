@@ -1,7 +1,0 @@
-reassign_user_content.reassign_author:
-  path: '/admin/content/reassign-author'
-  defaults:
-    _title: 'Assign Author'
-    _form: 'Drupal\reassign_user_content\Form\AssignAuthorForm'
-  requirements:
-    _permission: 'access content'

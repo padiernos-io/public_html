@@ -1,6 +1,0 @@
-@reference "@src/main.css";
-@layer theme, base, components, utilities;
-
-@layer components {
-  @import "./_daisyui-toggle.css";
-}

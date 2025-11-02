@@ -1,4 +1,0 @@
-administer entityqueue buttons:
-  title: 'Administer EntityQueue Buttons settings'
-  description: 'Allow access to the EntityQueue Buttons settings page'
-  restrict access: TRUE

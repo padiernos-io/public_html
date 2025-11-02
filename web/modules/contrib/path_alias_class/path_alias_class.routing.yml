@@ -1,7 +1,0 @@
-path_alias_class.settings:
-  path: '/admin/config/content/path-alias-class-settings'
-  defaults:
-    _form: '\Drupal\path_alias_class\Form\PathAliasClassSettingsForm'
-    _title: 'Path Alias Class Settings'
-  requirements:
-    _permission: 'administer site configuration'

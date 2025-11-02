@@ -1,9 +1,0 @@
-entity_body_class.settings:
-  type: config_object
-  label: 'Entity body class settings'
-  mapping:
-    types:
-      type: sequence
-      label: 'Default values'
-      sequence:
-        type: string

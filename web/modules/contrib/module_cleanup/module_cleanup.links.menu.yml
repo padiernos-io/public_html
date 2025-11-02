@@ -1,6 +1,0 @@
-module_cleanup.delete_transient_data:
-  title: 'Delete transient module data'
-  parent: system.admin_config_system
-  description: 'Delete leftover transient module data from uninstalled or removed modules.'
-  route_name: module_cleanup.delete_transient_data
-  weight: 30

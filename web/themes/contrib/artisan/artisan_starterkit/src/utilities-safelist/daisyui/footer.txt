@@ -1,7 +1,0 @@
-footer
-footer-title
-footer-center
-
-footer-horizontal
-lg:footer-horizontal
-footer-vertical

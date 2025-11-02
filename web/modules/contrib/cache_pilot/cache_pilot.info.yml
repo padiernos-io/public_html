@@ -1,9 +1,0 @@
-name: Cache Pilot
-type: module
-description: Simple tools to manage the APCu and OPcache caches.
-core_version_requirement: ^10.3 || ^11
-
-# Information added by Drupal.org packaging script on 2025-04-10
-version: '1.0.0-alpha3'
-project: 'cache_pilot'
-datestamp: 1744287497

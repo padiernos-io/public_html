@@ -1,8 +1,0 @@
-{
-  "name": "drupal/opcachctl",
-  "description": "Module to view PHP OPcache status and allows cache clearing.",
-  "type": "drupal-module",
-  "license": "GPL-2.0-or-later",
-  "homepage": "https://drupal.org/project/opcachectl"
-}
-

@@ -1,5 +1,0 @@
-cache_pilot.dashboard:
-  title: 'Cache Pilot dashboard'
-  description: 'Get statistics for APCu and Zend Opcache caches.'
-  route_name: cache_pilot.dashboard
-  parent: system.admin_reports

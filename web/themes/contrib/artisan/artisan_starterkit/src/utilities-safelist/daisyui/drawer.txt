@@ -1,9 +1,0 @@
-drawer
-
-drawer-toggle
-drawer-content
-drawer-side
-drawer-overlay
-
-drawer-end
-drawer-open

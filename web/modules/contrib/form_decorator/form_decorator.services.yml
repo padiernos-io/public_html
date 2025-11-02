@@ -1,4 +1,0 @@
-services:
-  plugin.manager.form_decorator:
-    class: Drupal\form_decorator\FormDecoratorPluginManager
-    parent: default_plugin_manager

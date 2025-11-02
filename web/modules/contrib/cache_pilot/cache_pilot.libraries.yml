@@ -1,4 +1,0 @@
-fragmentation-bar:
-  css:
-    component:
-      css/cache-pilot-fragmentation-bar.css: { }

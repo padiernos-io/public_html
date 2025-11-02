@@ -1,6 +1,0 @@
-media_name.settings_form:
-  title: 'Media Name'
-  route_name: media_name.settings_form
-  description: 'Configure Media Name.'
-  parent: media.name
-  weight: 99

@@ -1,2 +1,0 @@
-
-<artisan-customizer csspropertiesstorageselector=".artisan-properties-storage" cssfontdefinitionsstorageselector=".artisan-fonts-storage" componentscssassets=""></artisan-customizer>

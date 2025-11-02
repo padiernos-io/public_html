@@ -1,3 +1,0 @@
-ui:
-  js:
-    ui/dist/artisan-customizer.js: { attributes: { type: module } }

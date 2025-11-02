@@ -1,5 +1,0 @@
-typogrify:
-  version: 1.x
-  css:
-    theme:
-      assets/typogrify.css: {}

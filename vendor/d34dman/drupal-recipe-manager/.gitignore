@@ -1,5 +1,0 @@
-vendor/
-node_modules/
-bin
-!bin/drupal-recipe-manager
-*.cache

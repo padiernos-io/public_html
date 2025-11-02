@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: ept_timeline
-label: 'EPT Timeline'
-icon_uuid: null
-icon_default: null
-description: 'Extra Paragraph Type (EPT): Timeline'
-behavior_plugins: {  }

@@ -1,6 +1,0 @@
-services:
-  module_cleanup_drush_commands.commands:
-    class: \Drupal\module_cleanup\Commands\ModuleCleanupDrushCommands
-    arguments: ['@database']
-    tags:
-      - { name: drush.command }

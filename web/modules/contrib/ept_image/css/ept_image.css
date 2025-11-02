@@ -1,7 +1,0 @@
-.ept-paragraph-image.greyscale {
-  filter: grayscale(1);
-}
-
-.ept-paragraph-image.greyscale.colorful-on-hover:hover {
-  filter: grayscale(0);
-}

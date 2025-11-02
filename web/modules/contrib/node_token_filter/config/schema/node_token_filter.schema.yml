@@ -1,7 +1,0 @@
-filter_settings.node_filter_token_by_url:
-  type: mapping
-  label: 'Allows token values to be used as filters'
-  mapping:
-    replace_empty_token:
-      type: boolean
-      label: 'Replace empty tokens'

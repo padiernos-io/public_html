@@ -1,8 +1,0 @@
-status: true
-dependencies:
-  module:
-    - node
-id: reassign_user_content_action
-label: 'Reassign selected content to user'
-type: node
-plugin: reassign_user_content_action

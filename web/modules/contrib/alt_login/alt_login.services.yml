@@ -1,9 +1,0 @@
-services:
-  alt_login.method_manager:
-    class: Drupal\alt_login\AltLoginMethodManager
-    arguments: ['@container.namespaces', '@module_handler', '@config.factory']
-
-  logger.channel.alt_login:
-    parent: logger.channel_base
-    arguments: ['Alt Login']
-

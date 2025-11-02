@@ -1,8 +1,0 @@
-corge
-grault
-sandboxed
-endsandbox
-GETATTR
-quux
-sdcv
-kint

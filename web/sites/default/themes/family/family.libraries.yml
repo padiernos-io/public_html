@@ -1,5 +1,0 @@
-global-styling:
-  css:
-    theme:
-      assets/family.theme.css: {}
-

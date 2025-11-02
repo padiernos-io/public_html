@@ -1,5 +1,0 @@
-{
-  "image_gallery": ["mytheme/image-gallery", "mytheme/common-gallery-styles"],
-  "quote": ["mytheme/quote-style", "mytheme/shared-styles"],
-  "video": ["mytheme/video-player"]
-}

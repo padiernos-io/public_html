@@ -1,4 +1,0 @@
-access sdc component library:
-  title: 'Access SDC Component Library'
-  description: 'Allows users to access the SDC Component Library routes.'
-  restrict access: true

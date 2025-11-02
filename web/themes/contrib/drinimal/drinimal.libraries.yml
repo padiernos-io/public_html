@@ -1,5 +1,0 @@
-# reimplement '.visually-hidden' after disabling core css in `drinimal.info.yml`
-visually-hidden:
-  css:
-    layout:
-      css/visually-hidden.css: {}

@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - paragraph_block
-id: paragraph_block
-label: 'Paragraph block'
-revision: 0
-description: 'Provides a content block that includes one paragraph. It is used by the paragraph_block module to save the paragraph data.'

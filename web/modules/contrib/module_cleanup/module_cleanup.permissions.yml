@@ -1,3 +1,0 @@
-delete transient module data:
-  title: 'Delete module data'
-  description: 'Allow to access to the Module Cleanup transient data delete form.'

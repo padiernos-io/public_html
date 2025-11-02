@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: ept_tabs_item
-label: 'EPT Tabs Item'
-icon_uuid: null
-icon_default: null
-description: 'Tab item for EPT Tabs paragraph'
-behavior_plugins: {  }

@@ -1,4 +1,0 @@
-epub
-EPUB
-rootfile
-rootfiles

@@ -1,6 +1,0 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
-name: Pagination
-description: A pagination component based on DaisyUI join pattern
-slots:
-  items:
-    title: Pagination Items

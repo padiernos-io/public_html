@@ -1,7 +1,0 @@
-path_alias_class.settings:
-  title: 'Path Alias Class Settings'
-  description: 'Configure the settings for the Path Alias Class module.'
-  route_name: path_alias_class.settings
-  parent: system.admin_config_content
-  
-

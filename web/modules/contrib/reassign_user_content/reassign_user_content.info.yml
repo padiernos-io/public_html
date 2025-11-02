@@ -1,9 +1,0 @@
-name: Reassign Deleted User Content / Media
-type: module
-description: 'Reassign deleted user(s) content, media, and groups to another user.'
-core_version_requirement: ^8 || ^9 || ^10 || ^11
-
-# Information added by Drupal.org packaging script on 2025-08-11
-version: '1.1.0'
-project: 'reassign_user_content'
-datestamp: 1754950077

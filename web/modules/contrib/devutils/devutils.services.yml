@@ -1,4 +1,0 @@
-services:
-  devutils.update_import:
-    class: Drupal\devutils\ConfigImport
-    autowire: true

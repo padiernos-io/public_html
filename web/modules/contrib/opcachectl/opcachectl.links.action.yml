@@ -1,5 +1,0 @@
-opcachectl.reset:
-  route_name: opcachectl.reset.form
-  title: 'Reset PHP OPcache'
-  appears_on:
-    - opcachectl.report.stats

@@ -1,8 +1,0 @@
-theme.test.yaml:
-  class: \Drupal\themespace_test_theme\Plugin\Themespace\ThemeYamlPlugin
-
-# Theme plugin defined using a module class.
-# This is a potential use case for plugins defined in YAML, however
-# when this happens, the module or theme should declare this dependency.
-theme.test1.yaml:
-  class: \Drupal\themespace_test\Plugin\Themespace\ModuleYamlPlugin

@@ -1,9 +1,0 @@
-name: Better Page Not Found
-type: module
-description: 'Improved styling for 404, 403 and 404 error pages'
-core_version_requirement: ^8 || ^9 || ^10 || ^11
-
-# Information added by Drupal.org packaging script on 2024-08-22
-version: '3.0.0'
-project: 'better_page_not_found'
-datestamp: 1724332483

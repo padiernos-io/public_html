@@ -1,8 +1,0 @@
-table
-table-zebra
-
-table-xs
-table-sm
-table-md
-table-lg
-table-xl

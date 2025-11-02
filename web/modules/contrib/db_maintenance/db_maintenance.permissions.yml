@@ -1,3 +1,0 @@
-'administer db maintenance':
-  title: 'Administer DB Maintenance'
-  description: 'Select which tables to optimize during cron jobs.'

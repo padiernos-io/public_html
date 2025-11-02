@@ -1,6 +1,0 @@
-# Ignore files from ddev-drupal-contrib.
-/web/
-/vendor/
-/.editorconfig
-/.gitattributes
-/composer.lock

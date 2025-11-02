@@ -1,6 +1,0 @@
-block:
-  js:
-    js/spotify_playing.js: { }
-  css:
-    theme:
-      css/spotify_playing.css: { }

@@ -1,6 +1,0 @@
-custom_status_report.settings:
-  title: 'Custom Status Report Settings'
-  description: 'Configure which sections are displayed in the status report.'
-  parent: system.admin_config_system
-  route_name: custom_status_report.settings
-  weight: 100

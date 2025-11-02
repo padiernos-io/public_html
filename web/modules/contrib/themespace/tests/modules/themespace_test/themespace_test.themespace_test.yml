@@ -1,7 +1,0 @@
-module.test.yaml:
-  class: \Drupal\themespace_test\Plugin\Themespace\ModuleYamlPlugin
-
-# Test deriver with a class plugin definition.
-module.deriver.yaml:
-  class: \Drupal\themespace_test\Plugin\Themespace\ModuleYamlPlugin
-  deriver: \Drupal\themespace_test\Plugin\Derivative\ModuleYamlDeriver

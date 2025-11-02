@@ -1,5 +1,0 @@
-services:
-  menu_perms_per_menu.route_subscriber:
-    class: Drupal\menu_perms_per_menu\Routing\MenuPermsPerMenuRouteSubscriber
-    tags:
-      - { name: event_subscriber }

@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: ept_counter_item
-label: 'EPT Counter Item'
-icon_uuid: null
-icon_default: null
-description: 'Counter Items to be used inside of Paragraph Type: "EPT Counter"'
-behavior_plugins: {  }

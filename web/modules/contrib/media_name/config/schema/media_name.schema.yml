@@ -1,9 +1,0 @@
-# Schema for the configuration files of the media_name module.
-
-media_name.settings:
-  type: config_object
-  label: 'Media Name settings'
-  mapping:
-    file_name_override:
-      type: boolean
-      label: 'Enable file name replacement when the media name is the same as the original file name.'

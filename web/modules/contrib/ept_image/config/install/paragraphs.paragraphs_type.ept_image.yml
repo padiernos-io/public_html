@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: ept_image
-label: 'EPT Image'
-icon_uuid: null
-icon_default: null
-description: 'Extra Paragraph Type (EPT): Image'
-behavior_plugins: {  }

@@ -1,5 +1,0 @@
-minifyjs.scan:
-  title: Scan for Javascript Files
-  route_name: minifyjs.scan
-  appears_on:
-    - minifyjs.manage

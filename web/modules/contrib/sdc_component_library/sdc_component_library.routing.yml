@@ -1,7 +1,0 @@
-sdc_component_library.component_list:
-  path: '/components'
-  defaults:
-    _controller: '\Drupal\sdc_component_library\Controller\ComponentsController::content'
-    _title: 'Components Preview'
-  requirements:
-    _permission: 'access sdc component library'

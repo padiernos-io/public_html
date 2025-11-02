@@ -1,4 +1,0 @@
-services:
-  ept_basic_button.generate_custom_css:
-    class: Drupal\ept_basic_button\Services\GenerateCustomCSS
-    arguments: ['@config.factory']

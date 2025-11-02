@@ -1,6 +1,0 @@
-services:
-  url_entity.extractor:
-    class: Drupal\url_entity\UrlEntityExtractor
-    arguments:
-      - '@request_stack'
-      - '@router.no_access_checks'

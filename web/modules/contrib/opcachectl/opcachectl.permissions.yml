@@ -1,4 +1,0 @@
-reset opcache:
-  title: 'Reset PHP OPcache'
-access opcache statistics:
-  title: 'Access PHP OPcache statistics'

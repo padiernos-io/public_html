@@ -1,6 +1,0 @@
-<video {{ attributes }}>
-  {% for file in files %}
-    <source {{ file.source_attributes }} />
-    {{ 'Your browser does not support the video tag'|t }}. <a href="{{ file.source_attributes.src }}">{{ 'Download the video'|t }}</a>.
-  {% endfor %}
-</video>
