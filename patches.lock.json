@@ -1,0 +1,65 @@
+{
+    "_hash": "ceb92bf73be098158e9e4a6ceaf25b0185b4bd721d461f7f46a4265d80faafff",
+    "patches": {
+        "drupal/book_access_code": [
+            {
+                "package": "drupal/book_access_code",
+                "description": "Automated Drupal 11 compatibility fixes for book_access_code",
+                "url": "https://www.drupal.org/files/issues/2024-03-15/book_access_code.2.0.1.rector.patch",
+                "sha256": "97274eb988e960c1fb4aeb511efdea7b2252a6d370582a60de1570d77781d607",
+                "depth": 3,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/book_tree_menu": [
+            {
+                "package": "drupal/book_tree_menu",
+                "description": "Automated Drupal 11 compatibility fixes for book_tree_menu",
+                "url": "https://www.drupal.org/files/issues/2024-11-22/book_tree_menu_issue_3429037.patch",
+                "sha256": "231a30ba62a1cecaca4d41967f987f1df5d37586ffbebc3b1a29f35c2c746db5",
+                "depth": 3,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/social_post_facebook": [
+            {
+                "package": "drupal/social_post_facebook",
+                "description": "D11 Compatibility",
+                "url": "https://www.drupal.org/files/issues/2024-03-25/social_post_facebook.3.0.x-dev.rector.patch",
+                "sha256": "6c47d9d3b71c67a1f762e76808dfdc297f98b95a3e9b1cb9c1f5506039a90f16",
+                "depth": 3,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/social_post_linkedin": [
+            {
+                "package": "drupal/social_post_linkedin",
+                "description": "D10 Compatibility",
+                "url": "https://www.drupal.org/files/issues/2024-04-22/social_api_linkedin-update-20240422.patch",
+                "sha256": "dc2aeb38ec67734285135ba5018c684252c93a6c816b5092e59d3d3fe3b6bae1",
+                "depth": 3,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/themable_forms": [
+            {
+                "package": "drupal/themable_forms",
+                "description": "Automated Drupal 11 compatibility fixes for themable_forms",
+                "url": "https://www.drupal.org/files/issues/2024-03-25/themable_forms.8.x-1.0.rector.patch",
+                "sha256": "8114e28fe6f1de658d2fc9af967345fbfbe75ad085a984728af2fea832386409",
+                "depth": 3,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}
