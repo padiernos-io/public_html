@@ -77,6 +77,8 @@ Thumbs.db
 
 # AWStats directories
 awstats/
+awstatsicons/
+awstats-icon/
 awstats-data/
 awstats_data/
 awstats_sessions/
