@@ -1,0 +1,5 @@
+dynamic_library_loader.list_entries:
+  title: 'Dynamic Library Loader'
+  description: 'Manage dynamic library loader entries.'
+  parent: system.admin_config_development
+  route_name: dynamic_library_loader.list_entries

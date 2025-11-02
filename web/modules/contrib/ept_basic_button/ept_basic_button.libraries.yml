@@ -1,0 +1,13 @@
+ept_basic_button_form:
+  js:
+    js/ept_basic_button_form.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/drupalSettings
+
+ept_basic_button_view:
+  css:
+    component:
+      css/ept_basic_button_view.css: {}

@@ -1,0 +1,19 @@
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - artisan_starterkit
+id: artisan_starterkit_search_form
+theme: artisan_starterkit
+region: header
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

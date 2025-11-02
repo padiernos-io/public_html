@@ -1,0 +1,97 @@
+.block-local-tasks-block {
+  nav.tabs {
+    @media (max-width: $screen-sm-max) {
+      ul.tabs {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 30px 0;
+        border-top: 1px solid var(--primary-damped);
+
+        li {
+          margin: 0 0 0 -2px;
+          padding: 0;
+          border-right: 1px solid var(--primary-damped);
+          border-bottom: 1px solid var(--primary-damped);
+          line-height: 1.5;
+
+          a {
+            display: block;
+            box-sizing: border-box;
+            height: 50px;
+            margin: 0;
+            padding: 0px 28px;
+            white-space: nowrap;
+            color: var(--black-60);
+            border-left: 7px solid var(--primary-damped);
+            background: none;
+            font-size: 17px;
+            line-height: 50px;
+
+            &:hover {
+              text-decoration: none;
+              color: var(--black);
+              border-left: 7px solid var(--primary);
+            }
+          }
+
+          &.is-active a {
+            color: var(--black);
+            border-left: 7px solid var(--primary);
+            font-weight: bold;
+
+            &:hover {
+              color: var(--black);
+              border-left: 7px solid var(--primary);
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: $screen-md-min) {
+      ul.tabs {
+        display: flex;
+        margin: 0 0 40px 0;
+        padding: 0 25px;
+        border: 0;
+        border-bottom: 2px solid var(--primary-damped);
+
+        li {
+          margin: 0 6px -2px 0;
+          padding: 0;
+          line-height: 1.5;
+
+          a {
+            display: block;
+            box-sizing: border-box;
+            height: 60px;
+            margin: 0;
+            padding: 0px 28px;
+            white-space: nowrap;
+            color: var(--black-60);
+            background: none;
+            font-size: 17px;
+            line-height: 60px;
+
+            &:hover {
+              text-decoration: none;
+              color: var(--black);
+              border-bottom: 2px solid var(--primary);
+            }
+          }
+
+          &.is-active a {
+            color: var(--black);
+            border-bottom: 7px solid var(--primary);
+            font-weight: bold;
+
+            &:hover {
+              color: var(--black);
+              border-bottom: 7px solid var(--primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+permission_callbacks:
+  - \Drupal\menu_perms_per_menu\Access\MenuPermsPerMenuPermissions::permissions

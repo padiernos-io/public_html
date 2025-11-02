@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains back_to_top_with_pi.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function back_to_top_with_pi_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the back_to_top_with_pi module.
+    case 'help.page.back_to_top_with_pi':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a block for the Back to top with progress scrollbar which provice smooth back to top button with a circular progress bar which indicates the current reading progress.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function back_to_top_with_pi_theme($existing, $type, $theme, $path) {
+  return [
+    'back_to_top_with_pi' => [
+      'variables' => ['back_to_top_data' => NULL],
+    ],
+  ];
+}

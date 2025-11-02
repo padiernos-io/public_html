@@ -1,0 +1,13 @@
+field.formatter.settings.title_with_classes:
+  type: mapping
+  label: Title with classes formatter settings
+  mapping:
+    linked:
+      type: boolean
+      label: 'Linked'
+    tag:
+      type: string
+      label: 'Tag'
+    classes:
+      type: string
+      label: Classes

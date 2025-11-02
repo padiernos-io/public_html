@@ -1,0 +1,4 @@
+status_overrides:
+  css:
+    base:
+      css/custom_status_report.css: {}

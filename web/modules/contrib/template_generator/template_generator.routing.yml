@@ -1,0 +1,7 @@
+template_generator.settings:
+  path: '/admin/config/development/template_generator'
+  defaults:
+    _form: '\Drupal\template_generator\Form\TemplateGeneratorForm'
+    _title: 'Template Generator'
+  requirements:
+    _permission: 'administer site configuration'

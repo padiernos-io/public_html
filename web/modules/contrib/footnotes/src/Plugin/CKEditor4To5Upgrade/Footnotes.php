@@ -1,0 +1,66 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Drupal\footnotes\Plugin\CKEditor4To5Upgrade;
+
+use Drupal\Core\Plugin\PluginBase;
+use Drupal\ckeditor5\HTMLRestrictions;
+use Drupal\ckeditor5\Plugin\CKEditor4To5UpgradePluginInterface;
+use Drupal\filter\FilterFormatInterface;
+
+// From Drupal 11 onwards, there is no longer a CK Editor 4 upgrade path.
+// Upgrades must be done within Drupal 10.
+if (interface_exists(CKEditor4To5UpgradePluginInterface::class)) {
+
+  /**
+   * Provides the CKEditor 4 to 5 upgrade path for contrib plugins now in core.
+   *
+   * @CKEditor4To5Upgrade(
+   *   id = "Footnotes",
+   *   cke4_buttons = {
+   *     "footnotes"
+   *   },
+   *   cke4_plugin_settings = {
+   *   },
+   *   cke5_plugin_elements_subset_configuration = {
+   *   }
+   * )
+   *
+   * @internal
+   *   Plugin classes are internal.
+   */
+  class Footnotes extends PluginBase implements CKEditor4To5UpgradePluginInterface {
+
+    /**
+     * {@inheritdoc}
+     */
+    // phpcs:ignore
+    public function mapCKEditor4ToolbarButtonToCKEditor5ToolbarItem(string $cke4_button, HTMLRestrictions $text_format_html_restrictions): ?array {
+      switch ($cke4_button) {
+        case 'footnotes':
+          return ['footnotes'];
+
+        default:
+          throw new \OutOfBoundsException();
+      }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    // phpcs:ignore
+    public function mapCKEditor4SettingsToCKEditor5Configuration(string $cke4_plugin_id, array $cke4_plugin_settings): ?array {
+      throw new \OutOfBoundsException();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    // phpcs:ignore
+    public function computeCKEditor5PluginSubsetConfiguration(string $cke5_plugin_id, FilterFormatInterface $text_format): ?array {
+      throw new \OutOfBoundsException();
+    }
+
+  }
+}

@@ -1,0 +1,14 @@
+name: Pathauto Update
+type: module
+description: Automatically regenerate path aliases when values behind the tokens change.
+core_version_requirement: ^9.4 || ^10 || ^11
+php: 7.4
+dependencies:
+  - pathauto:pathauto
+  - token:token
+  - url_entity:url_entity
+
+# Information added by Drupal.org packaging script on 2025-01-16
+version: '1.0.1'
+project: 'pathauto_update'
+datestamp: 1737014789

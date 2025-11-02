@@ -1,0 +1,36 @@
+// form-item
+.form-item {
+  margin-bottom: 30px;
+
+  label {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .description {
+    padding: 8px 10px 0 10px;
+    color: var(--black-60);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .form-type-checkbox,
+  .form-type-radio {
+    margin: 8px 0;
+
+    label {
+      margin-bottom: 0;
+      color: var(--primary);
+      font-weight: normal;
+    }
+  }
+}
+
+// form-actions
+.form-actions {
+  margin-bottom: 30px;
+}

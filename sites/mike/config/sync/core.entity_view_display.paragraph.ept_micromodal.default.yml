@@ -1,0 +1,50 @@
+uuid: 5a08a595-9cb0-4e51-aa59-b1b56c1960fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_micromodal.field_ept_micromodal_title
+    - field.field.paragraph.ept_micromodal.field_ept_settings
+    - field.field.paragraph.ept_micromodal.field_ept_text
+    - field.field.paragraph.ept_micromodal.field_ept_title
+    - paragraphs.paragraphs_type.ept_micromodal
+  module:
+    - ept_core
+    - text
+_core:
+  default_config_hash: 3RH7OegTiWFWXapSfExaq4iTqsXp0J-FoDgKn3BLvug
+id: paragraph.ept_micromodal.default
+targetEntityType: paragraph
+bundle: ept_micromodal
+mode: default
+content:
+  field_ept_micromodal_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ept_settings:
+    type: ept_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,14 @@
+shy.ckeditor5:
+  js:
+    js/shy.js: {}
+  css:
+    theme:
+      css/ckeditor.shy.css: { }
+  dependencies:
+    - core/drupal
+    - core/ckeditor5
+
+shy.admin:
+  css:
+    theme:
+      css/shy.admin.css: { }

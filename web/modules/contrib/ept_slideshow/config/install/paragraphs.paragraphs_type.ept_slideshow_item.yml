@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ept_slideshow_item
+label: 'EPT Slideshow Item'
+icon_uuid: null
+icon_default: null
+description: 'Slideshow section for EPT Slideshow'
+behavior_plugins: {  }

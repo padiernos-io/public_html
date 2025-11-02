@@ -1,0 +1,87 @@
+<?php
+
+/**
+ * @file
+ * Contains patreon_extras.module.
+ */
+
+use Drupal\Component\Serialization\Json;
+use League\OAuth2\Client\Token\AccessToken;
+
+/**
+ * Implements hook_cron().
+ */
+function patreon_extras_cron(): void {
+  $config = \Drupal::config('patreon_extras.settings');
+  $last_run = $config->get('patreon_extras_pledge_data_last_update');
+  $now = time();
+
+  // Only update data daily.
+  if ($now - $last_run > 86400) {
+    patreon_extras_update_pledge_data();
+  }
+}
+
+/**
+ * Helper to collect data about pledges from Patreon.
+ */
+function patreon_extras_update_pledge_data(): void {
+  $config = \Drupal::service('config.factory')
+    ->getEditable('patreon_extras.settings');
+
+  /** @var \Drupal\patreon_user\PatreonUserService $service */
+  $service = \Drupal::service('patreon_user.api');
+  $count = $amount = 0;
+
+  foreach (patreon_extras_get_all_tokens() as $values) {
+    try {
+      if (isset($values->user_patreon_token_value)) {
+        if ($value = Json::decode($values->user_patreon_token_value)) {
+          $token = new AccessToken($value);
+          $service->setToken($token);
+
+          if ($data = $service->fetchUser()) {
+            if ($status = $service->getValueByKey($data, [
+              'included',
+              0,
+              'attributes',
+              'patron_status',
+            ])) {
+              if ($status == 'active_patron') {
+                $count++;
+
+                if ($cents = $service->getValueByKey($data, [
+                  'included',
+                  0,
+                  'attributes',
+                  'currently_entitled_amount_cents',
+                ])) {
+                  $amount += $cents;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    catch (Exception $e) {
+      \Drupal::logger('patreon_extras')->error(t('Error obtaining pledge data :error', [
+        ':error' => $e->getMessage(),
+      ]));
+    }
+  }
+
+  $config->set('patreon_extras_pledge_count', $count);
+  $config->set('patreon_extras_pledge_amount', $amount);
+  $config->set('patreon_extras_pledge_data_last_update', time())->save();
+}
+
+/**
+ * Helper to load all tokens for signed up users.
+ *
+ * @return array
+ *   An array of all user access tokens.
+ */
+function patreon_extras_get_all_tokens(): array {
+  return \Drupal::database()->query('SELECT user_patreon_token_value FROM {user__user_patreon_token}')->fetchAll();
+}

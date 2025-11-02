@@ -1,0 +1,19 @@
+---
+label: 'Backstop Terminology'
+related:
+- backstop_generator.overview
+- backstop_generator.usage
+- backstop_generator.configuration
+---
+
+<h2>{% trans %}Profile{% endtrans %}</h2>
+<p>{% trans %}This is the main entity from which the BackstopJS JSON file is generated. It is a collection of defined Scenarios and Viewports used for testing. Each Profile can include multiple Viewports and Scenarios.{% endtrans %}</p>
+
+<h3>{% trans %}Scenario Defaults{% endtrans %}</h3>
+<p>{% trans %}A set of configuration options set at the Profile level which apply to all associated Scenarios. These settings, however, can be overridden at the Scenario level.{% endtrans %}</p>
+
+<h2>{% trans %}Scenario{% endtrans %}</h2>
+<p>{% trans %}Represents a single page on your site you want to test. Every Scenario is associated with a single Profile.{% endtrans %}</p>
+
+<h2>{% trans %}Viewport{% endtrans %}</h2>
+<p>{% trans %}Defines the browser window size used during testing. Most commonly set to mobile, tablet, and desktop breakpoints. A single Viewport can belong to several Profiles.{% endtrans %}</p>

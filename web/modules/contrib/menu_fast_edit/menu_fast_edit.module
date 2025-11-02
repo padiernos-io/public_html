@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for menu_fast_edit module.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\menu_fast_edit\MenuEditFormAlter;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function menu_fast_edit_form_menu_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Alter the menu edit form.
+  \Drupal::classResolver()->getInstanceFromDefinition(MenuEditFormAlter::class)->alterForm($form, $form_state, $form_id);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function menu_fast_edit_form_menu_link_content_menu_link_content_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // Apply a default value for Menu Parent via query parameter, if available.
+  if (isset($form['menu_parent'])) {
+    if ($menu_parent = \Drupal::request()->query->get('menu_parent')) {
+      $form['menu_parent']['#default_value'] = $menu_parent;
+    }
+  }
+
+}
+
+/**
+ * Implements hook_help().
+ */
+function menu_fast_edit_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.menu_fast_edit':
+      $text = file_get_contents(__DIR__ . '/README.md');
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . Html::escape($text) . '</pre>';
+      }
+      else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return '';
+}

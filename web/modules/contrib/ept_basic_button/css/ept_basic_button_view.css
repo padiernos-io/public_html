@@ -1,0 +1,99 @@
+.ept-basic-button {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.ept-basic-button .ept-basic-button-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+}
+.ept-basic-button.ept-align-left .ept-container {
+  text-align: left;
+}
+.ept-basic-button.ept-align-center .ept-container {
+  text-align: center;
+}
+.ept-basic-button.ept-align-right .ept-container {
+  text-align: right;
+}
+.ept-basic-button.ept-shape-square .ept-container .ept-basic-button {
+  border-radius: 0;
+}
+.ept-basic-button.ept-shape-round .ept-container .ept-basic-button {
+  border-radius: 5px;
+}
+.ept-basic-button.ept-shape-circle .ept-container .ept-basic-button {
+  border-radius: 4em;
+}
+.ept-basic-button.ept-size-small .ept-container .ept-basic-button {
+  font-size: 13px;
+  padding: 10px 30px;
+}
+.ept-basic-button.ept-size-medium .ept-container .ept-basic-button {
+  font-size: 16px;
+  padding: 15px 43px;
+}
+.ept-basic-button.ept-size-large .ept-container .ept-basic-button {
+  font-size: 21px;
+  padding: 20px 56px;
+}
+.ept-basic-button.ept-stretched .ept-container .ept-basic-button-wrapper {
+  width: 100%;
+}
+.ept-basic-button.ept-stretched .ept-container .ept-basic-button {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.ept-button2-wrapper .ept-basic-button2-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+}
+.ept-button2-wrapper .ept-basic-button2-wrapper .ept-basic-button2 {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.ept-button2-wrapper.ept-align-left {
+  text-align: left;
+}
+.ept-button2-wrapper.ept-align-center {
+  text-align: center;
+}
+.ept-button2-wrapper.ept-align-right {
+  text-align: right;
+}
+.ept-button2-wrapper.ept-shape-square .ept-basic-button2 {
+  border-radius: 0;
+}
+.ept-button2-wrapper.ept-shape-round .ept-basic-button2 {
+  border-radius: 5px;
+}
+.ept-button2-wrapper.ept-shape-circle .ept-basic-button2 {
+  border-radius: 4em;
+}
+.ept-button2-wrapper.ept-size-small .ept-basic-button2 {
+  font-size: 13px;
+  padding: 10px 30px;
+}
+.ept-button2-wrapper.ept-size-medium .ept-basic-button2 {
+  font-size: 16px;
+  padding: 15px 43px;
+}
+.ept-button2-wrapper.ept-size-large .ept-basic-button2 {
+  font-size: 21px;
+  padding: 20px 56px;
+}
+.ept-button2-wrapper.ept-stretched .ept-basic-button2-wrapper {
+  width: 100%;
+}
+.ept-button2-wrapper.ept-stretched .ept-basic-button2 {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+}

@@ -1,0 +1,47 @@
+# Schema for the configuration files of the Heading module.
+
+field.storage_settings.heading:
+  type: mapping
+  label: 'Heading settings'
+
+field.field_settings.heading:
+  type: mapping
+  label: 'Heading settings'
+  mapping:
+    label:
+      type: string
+      label: 'Label for the text part of the heading'
+    allowed_sizes:
+      type: sequence
+      label: 'Allowed heading sizes'
+      sequence:
+        type: string
+        label: 'Allowed heading size'
+
+field.value.heading:
+  type: mapping
+  label: 'Heading value'
+  mapping:
+    text:
+      type: string
+      label: 'Text part of the heading'
+    size:
+      type: string
+      label: 'Heading size'
+
+field.widget.settings.heading:
+  type: mapping
+  label: 'Heading widget settings'
+
+field.formatter.settings.heading:
+  type: mapping
+  label: 'Heading formatter settings'
+
+field.formatter.settings.heading_text:
+  type: mapping
+  label: 'String and text as heading formatter settings'
+  mapping:
+    size:
+      type: string
+      label: 'Heading size'
+

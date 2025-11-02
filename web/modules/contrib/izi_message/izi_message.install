@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains update functions for Izi Message module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function izi_message_requirements($phase) {
+  $requirements = [];
+
+  if ($phase == 'install' || $phase == 'runtime') {
+    $plugin_detected = file_exists(DRUPAL_ROOT . '/libraries/iziToast/dist/js/iziToast.min.js');
+
+    if ($plugin_detected) {
+      $requirements['izi_message'] = [
+        'title' => t('Izi Message'),
+        'value' => t('Library detected'),
+        'severity' => REQUIREMENT_OK,
+      ];
+    }
+    else {
+      $requirements['izi_message'] = [
+        'title' => t('Izi Message'),
+        'value' => t('Library not detected'),
+        'severity' => REQUIREMENT_ERROR,
+        'description' => t('Before you can use the Izi Messages module, you need to download the iziToast from github.com and place it in /libraries/iziToast. Check the README.md for more information. <a href=":plugin_url">Get the plugin here</a>.', [':plugin_url' => 'https://github.com/marcelodolza/iziToast']),
+      ];
+    }
+  }
+
+  return $requirements;
+}

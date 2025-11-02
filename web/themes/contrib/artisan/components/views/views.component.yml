@@ -1,0 +1,60 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Views
+props:
+  type: object
+  properties:
+    title:
+      title: Title
+      type: string
+    dom_id:
+      title: Dom id
+      type: string
+    display_id:
+      title: Display id
+      type: string
+    css_class:
+      title: The user-specified classes names, if any.
+      type: string
+    css_name:
+      title: A CSS-safe version of the view name
+      type: string
+    header_extra_classes:
+      title: Header extra classes
+      type: array
+      items:
+        type: string
+    rows_extra_classes:
+      title: Rows extra classes
+      type: array
+      items:
+        type: string
+    footer_extra_classes:
+      title: Footer extra classes
+      type: array
+      items:
+        type: string
+slots:
+  title_prefix:
+    title: Title prefix
+  title_suffix:
+    title: Title suffix
+  header:
+    title: Header
+  exposed:
+    title: Exposed
+  attachment_before:
+    title: Attachment before
+  attachment_after:
+    title: Attachment after
+  rows:
+    title: Rows
+  empty:
+    title: Empty
+  pager:
+    title: Pager
+  more:
+    title: More
+  footer:
+    title: Footer
+  feed_icons:
+    title: Feed icons

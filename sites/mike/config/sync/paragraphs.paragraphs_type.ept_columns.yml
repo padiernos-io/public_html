@@ -1,0 +1,12 @@
+uuid: c6ca2a8f-1b61-44db-a8f8-08fc617dde5e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fmkytBjjMOfcRpE_qi-piB3B8O6AiLkllwZyK_sI7Gw
+id: ept_columns
+label: 'EPT Columns / Container'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Types (EPT): Columns / Container'
+behavior_plugins: {  }

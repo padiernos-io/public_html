@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall logic for ept_micromodal.
+ */
+
+/**
+ * Mark the checkbox "display_close_icon" as TRUE by default.
+ */
+function ept_micromodal_update_9001() {
+
+  // Load all paragraphs with type EPT Micromodal.
+  $micromodal_paragraphs = \Drupal::entityTypeManager()->getStorage('paragraph')->loadByProperties(['type' => 'ept_micromodal']);
+
+  foreach ($micromodal_paragraphs as $micromodal_paragraph) {
+
+    // Get the settings array.
+    $field_ept_settings = $micromodal_paragraph->get('field_ept_settings')->getValue();
+
+    // Mark the display X icon as TRUE by default.
+    $field_ept_settings[0]['ept_settings']['display_close_icon'] = TRUE;
+
+    // Set in the field settings
+    $micromodal_paragraph->set('field_ept_settings', $field_ept_settings);
+
+    // Save the paragraph.
+    $micromodal_paragraph->save();
+
+  }
+
+}

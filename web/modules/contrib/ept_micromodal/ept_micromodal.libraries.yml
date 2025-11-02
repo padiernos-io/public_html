@@ -1,0 +1,11 @@
+ept_micromodal:
+  js:
+    /libraries/micromodal/dist/micromodal.min.js: {}
+    js/ept-micromodal.js: {}
+  css:
+    component:
+      css/ept-micromodal.css: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/drupalSettings

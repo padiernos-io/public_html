@@ -1,0 +1,21 @@
+uuid: ec1cc1a4-ab15-4a01-85b1-17d998f9dc2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_analysis
+    - node.type.case_study
+  module:
+    - yoast_seo
+id: node.case_study.field_seo_analysis
+field_name: field_seo_analysis
+entity_type: node
+bundle: case_study
+label: 'SEO analysis'
+description: 'Pick the main keyword this page is about.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

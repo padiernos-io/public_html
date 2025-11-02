@@ -1,0 +1,42 @@
+{% set classes = [
+  'collapse',
+  icon ? 'collapse-' ~ icon : 'collapse-arrow',
+] %}
+
+{% set collapse_title_classes = [
+  'collapse-title',
+]|merge(collapse_title_extra_classes ?: []) %}
+
+{% set collapse_content_classes = [
+  'collapse-content',
+]|merge(collapse_content_extra_classes ?: []) %}
+
+{% if variant == 'focus' %}
+  <div {{ attributes.addClass(classes).setAttribute('tabindex', '0') }}>
+    {% if title %}
+      <{{ title_heading_level }}>{{ title }}</{{ title_heading_level }}>
+    {% endif %}
+    {% if content %}
+      <div class="{{ collapse_content_classes|join(' ') }}">{{ content }}</div>
+    {% endif %}
+  </div>
+{% elseif variant == 'checkbox' %}
+  <div {{ attributes.addClass(classes) }}>
+    <input type="checkbox">
+    {% if title %}
+      <{{ title_heading_level }}>{{ title }}</{{ title_heading_level }}>
+    {% endif %}
+    {% if content %}
+      <div class="{{ collapse_content_classes|join(' ') }}">{{ content }}</div>
+    {% endif %}
+  </div>
+{% elseif variant == 'details' %}
+  <details {{ attributes.addClass(classes) }}>
+    {% if title %}
+      <summary class="{{ collapse_title_classes|join(' ') }}"><{{ title_heading_level }}>{{ title }}</{{ title_heading_level }}></summary>
+    {% endif %}
+    {% if content %}
+      <div class="{{ collapse_content_classes|join(' ') }}">{{ content }}</div>
+    {% endif %}
+  </details>
+{% endif %}

@@ -1,0 +1,17 @@
+type: module
+name: 'Extra Paragraph Types (EPT): Image'
+description: 'Adds Image block type with Media field.'
+core_version_requirement: ^9.3 || ^10 || ^11
+package: 'Extra Paragraph Types'
+
+dependencies:
+  - ept_core:ept_core
+  - drupal:link
+  - drupal:media
+  - glightbox:glightbox
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2025-09-21
+version: '1.4.7'
+project: 'ept_image'
+datestamp: 1758470353

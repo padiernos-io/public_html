@@ -1,0 +1,21 @@
+uuid: cc99aafd-2eca-472e-9d9f-0dd6fb276009
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+_core:
+  default_config_hash: DHvUvJxjsMX4y4-L8sAyVpFvA0pptpqcHZ8p_EMBBdU
+id: paragraph.field_ept_cta_second_link
+field_name: field_ept_cta_second_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

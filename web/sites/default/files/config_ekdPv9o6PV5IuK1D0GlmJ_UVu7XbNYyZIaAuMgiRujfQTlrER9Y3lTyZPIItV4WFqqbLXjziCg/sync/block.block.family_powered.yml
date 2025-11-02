@@ -1,0 +1,22 @@
+uuid: 7012f8f1-ed44-4f1d-afd3-44b80b9006fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - family
+_core:
+  default_config_hash: 5VBXsyvJSTQNtrh86WK8GN_FCaRtK03D1fjfZQnUvtU
+id: family_powered
+theme: family
+region: branding
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

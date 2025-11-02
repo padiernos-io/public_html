@@ -1,0 +1,14 @@
+shy_shy:
+  ckeditor5:
+    plugins: [shy.Shy]
+  drupal:
+    toolbar_items:
+      shy:
+        label: Soft hyphen
+    label: Soft hyphen
+    admin_library: shy/shy.admin
+    library: shy/shy.ckeditor5
+    elements:
+      - <shy>
+    conditions:
+      filter: shy_cleaner_filter

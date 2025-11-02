@@ -1,0 +1,22 @@
+uuid: ab242e0f-5885-4812-a519-710ad44f8c5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - minim
+_core:
+  default_config_hash: 5ra2HNIksWbp6AhPpTufTGSlgx2FR7RR_ssxdjgFg4I
+id: minim_messages
+theme: minim
+region: highlight
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

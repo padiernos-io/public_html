@@ -1,0 +1,11 @@
+name: Backstop Generator
+type: module
+description: Generates backstop.json files for visual-regression testing.
+package: Development
+core_version_requirement: ^10 || ^11
+configure: backstop_generator.settings_form
+
+# Information added by Drupal.org packaging script on 2025-05-18
+version: '2.0.1'
+project: 'backstop_generator'
+datestamp: 1747585428

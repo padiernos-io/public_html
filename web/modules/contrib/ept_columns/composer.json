@@ -1,0 +1,16 @@
+{
+    "name": "drupal/ept_columns",
+    "type": "drupal-module",
+    "description": "Extra Paragraph Types (EPT): Columns / Container",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ept_columns",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ept_columns",
+        "source": "https://git.drupalcode.org/project/ept_columns"
+    },
+    "require": {
+        "drupal/ept_core": "^1.4"
+    }
+}

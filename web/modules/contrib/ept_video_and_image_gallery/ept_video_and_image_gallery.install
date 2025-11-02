@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the ept_video_and_image_gallery module.
+ */
+
+use Drupal\media\Entity\MediaType;
+
+/**
+ * Implements hook_requirements().
+ */
+function ept_video_and_image_gallery_requirements($phase) {
+  if ($phase != 'install') {
+    return [];
+  }
+
+  $media_types = [];
+  if (class_exists('Drupal\media\Entity\MediaType')) {
+    foreach (MediaType::loadMultiple() as $type) {
+      if (in_array($type->id(), ['image', 'remote_video'])) {
+        $media_types[] = $type->id();
+      }
+    }
+  }
+
+  if (in_array('image', $media_types) &&
+    in_array('remote_video', $media_types)) {
+    return [];
+  }
+
+  return [
+    'ept_video_and_image_gallery_media_type_image' => [
+      'title' => t('Media type Image'),
+      'value' => t('Not created'),
+      'description' => t('The EPT Image Gallery needs to be <a href="@url">created</a> "Image" and "Remote Video" Media types.', ['@url' => '/admin/structure/media']),
+      'severity' => REQUIREMENT_ERROR,
+    ],
+  ];
+}

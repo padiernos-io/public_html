@@ -1,0 +1,12 @@
+services:
+  ckeditor5_markdown_editor_install:
+    class: Drupal\ckeditor5_markdown_editor\Command\Drush\InstallCommand
+    arguments: ['@ckeditor5_markdown_editor_cli_commands', '@module_handler']
+  ckeditor5_markdown_editor_update:
+    class: Drupal\ckeditor5_markdown_editor\Command\Drush\UpdateCommand
+    arguments: ['@ckeditor5_markdown_editor_cli_commands', '@module_handler']
+  ckeditor5_markdown_editor.commands:
+    class: Drupal\ckeditor5_markdown_editor\Command\Drush\CKEditorMarkdownEditorCommands
+    arguments: ['@ckeditor5_markdown_editor_install', '@ckeditor5_markdown_editor_update']
+    tags:
+      - { name: drush.command }

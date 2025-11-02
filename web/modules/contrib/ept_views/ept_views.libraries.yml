@@ -1,0 +1,4 @@
+ept_views:
+  css:
+    component:
+      css/ept-views.css: {}

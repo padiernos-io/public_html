@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Modal
+description: A modal dialog component that can be triggered by a button.
+props:
+  type: object
+  properties:
+    button_text:
+      title: Button Text
+      type: string
+    modal_id:
+      title: Modal ID
+      type: string
+    modal_toggle_extra_classes:
+      title: Modal toggle extra classes
+      type: array
+      items:
+        type: string
+    modal_box_extra_classes:
+      title: Dropdown box extra classes
+      type: array
+      items:
+        type: string
+slots:
+  content:
+    title: Modal Content

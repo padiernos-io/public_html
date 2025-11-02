@@ -1,0 +1,12 @@
+.off-canvas {
+  .block-system-branding-block {
+    gap: 0rem;
+  }
+}
+.site-branding__logo-image {
+  padding: 0;
+}
+.site-branding__name {
+  color: #ff904d;
+  transform: translateY(-8%);
+}

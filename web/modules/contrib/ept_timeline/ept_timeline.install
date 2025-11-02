@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the EPT timeline.
+ */
+
+use Drupal\media\Entity\MediaType;
+
+/**
+ * Implements hook_requirements().
+ */
+function ept_timeline_requirements($phase) {
+  if ($phase != 'install') {
+    return [];
+  }
+
+  if (class_exists('Drupal\media\Entity\MediaType')) {
+    foreach (MediaType::loadMultiple() as $type) {
+      if ($type->id() == 'image') {
+        return [];
+      }
+    }
+  }
+  return [
+    'ept_timeline_media_type_image' => [
+      'title' => t('Media type Image'),
+      'value' => t('Not created'),
+      'description' => t('The EPT Timeline needs to be <a href="@url">created</a> "Image" Media type.', ['@url' => '/admin/structure/media']),
+      'severity' => REQUIREMENT_ERROR,
+    ],
+  ];
+}

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ept_slick_slider
+label: 'EPT Slick Slider'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Slick Slider'
+behavior_plugins: {  }

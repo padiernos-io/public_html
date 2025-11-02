@@ -1,0 +1,26 @@
+{% set classes = [
+  'container',
+]|merge(extra_classes ?: [])  %}
+
+{% set container_classes = [
+  'footer',
+  'lg:footer-horizontal',
+]|merge(container_extra_classes ?: []) %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="{{ container_classes|join(' ') }}">
+  <aside>
+    <img src="/themes/contrib/artisan/artisan/logo.svg" width="75" height="auto" alt="Artisan Logo" />
+    <p>
+      Artisan is a modern and responsive theme
+      <br>
+      based on <strong>TailwindCSS</strong> and <strong>DaisyUI</strong>
+    </p>
+  </aside>
+    {% block content %}
+      {% if content %}
+        {{ content }}
+      {% endif %}
+    {% endblock %}
+  </div>
+</div>

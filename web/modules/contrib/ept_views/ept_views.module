@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * EPT Views main hooks file
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ept_views_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ept_views module.
+    case 'help.page.ept_views':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Extra Paragraph Types (EPT): Views module provides ability to insert existing Views using Paragraphs.') . '</p>';
+      return $output;
+  }
+}

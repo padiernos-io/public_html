@@ -1,0 +1,43 @@
+uuid: 06d5626e-140d-4ff0-bef1-f42ec6de024f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.section.field_paragraph
+    - node.type.section
+  module:
+    - entity_reference_revisions
+    - manage_display
+id: node.section.default
+targetEntityType: node
+bundle: section
+mode: default
+content:
+  field_paragraph:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  published_at: true
+  search_api_excerpt: true
+  uid: true

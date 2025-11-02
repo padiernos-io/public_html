@@ -1,0 +1,12 @@
+uuid: 5808e635-5aed-4870-8740-829d6aa77ab6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1DUe53zhmyI3hSvz4PGQ9EcXk8A47wdqyIrDi3aJmo8
+id: ept_counter_item
+label: 'EPT Counter Item'
+icon_uuid: null
+icon_default: null
+description: 'Counter Items to be used inside of Paragraph Type: "EPT Counter"'
+behavior_plugins: {  }

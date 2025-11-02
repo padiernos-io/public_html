@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Enable the "glightbox inline" functionality.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function glightbox_inline_page_attachments(array &$page) {
+  \Drupal::service('glightbox.attachment')->attach($page);
+  $page['#attached']['library'][] = 'glightbox_inline/glightbox_inline';
+}
+
+/**
+ * Implements hook_help().
+ */
+function glightbox_inline_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.glightbox_inline':
+      return t('<p>The GLightbox Inline module allows you to open content already on the page within a glightbox.</p>
+<p>See the <a href=":project_page">project page on Drupal.org</a> for more details.</p>',
+      [
+        ':project_page' => 'https://www.drupal.org/project/glightbox',
+      ]);
+  }
+}

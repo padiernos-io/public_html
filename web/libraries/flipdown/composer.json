@@ -1,0 +1,7 @@
+{
+    "name": "levmyshkin/flipdown",
+    "description": "FlipDown is a lightweight and performant flip styled countdown clock.",
+    "type": "drupal-library",
+    "license": "MIT",
+    "require": {}
+}

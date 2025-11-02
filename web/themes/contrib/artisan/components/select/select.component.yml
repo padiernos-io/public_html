@@ -1,0 +1,12 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Select
+props:
+  type: object
+  properties:
+    options:
+      title: Options
+      type: array
+      items:
+        type: object
+      minItems: 1
+      uniqueItems: true

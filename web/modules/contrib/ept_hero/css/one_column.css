@@ -1,0 +1,18 @@
+.ept-hero.one_column .ept-container .ept-hero-container .field--name-field-ept-hero-link {
+  padding: 10px 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #94c9ff;
+}
+.ept-hero.one_column .ept-container .ept-hero-container .field--name-field-ept-hero-link:hover {
+  background: #0073e8;
+  color: white;
+}
+.ept-hero.one_column .ept-container .ept-hero-container .field--name-field-ept-hero-link:hover a {
+  color: white;
+}
+.ept-hero.one_column .ept-container .ept-hero-container .field--name-field-ept-hero-link a {
+  text-decoration: none;
+  color: black;
+}

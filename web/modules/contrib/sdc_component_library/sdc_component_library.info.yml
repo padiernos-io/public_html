@@ -1,0 +1,12 @@
+name: 'SDC - Component library'
+type: module
+description: 'Provides a page with a component preview using a custom Twig template.'
+core_version_requirement: ^10.3 || ^11
+package: Component library
+libraries:
+  - sdc_component_library/components_preview
+
+# Information added by Drupal.org packaging script on 2025-10-08
+version: '1.0.0'
+project: 'sdc_component_library'
+datestamp: 1759912175

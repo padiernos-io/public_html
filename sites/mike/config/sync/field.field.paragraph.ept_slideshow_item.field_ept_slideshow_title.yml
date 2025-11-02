@@ -1,0 +1,24 @@
+uuid: 8ee85699-f7cd-4991-8879-c6b3bba128ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_slideshow_title
+    - paragraphs.paragraphs_type.ept_slideshow_item
+  module:
+    - text
+_core:
+  default_config_hash: of2_NLVXcX_Tqy_oCPxWCKkqkVV1GMoDc32IPKj-uAs
+id: paragraph.ept_slideshow_item.field_ept_slideshow_title
+field_name: field_ept_slideshow_title
+entity_type: paragraph
+bundle: ept_slideshow_item
+label: 'Slide Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,35 @@
+bootstrap:
+  version: 5.3.3
+  css:
+    theme:
+      #includes reboot, grid, utilities
+      assets/lib/bootstrap/css/bootstrap.min.css: {}
+  js:
+    #includes popper
+    assets/lib/bootstrap/js/bootstrap.bundle.min.js: {}
+
+sli:
+  css:
+    theme:
+      assets/lib/simplelineicons/css/simple-line-icons.css: {}
+
+fonts:
+  css:
+    theme:
+      '//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap': { type: external, minified: true }
+
+custom-mockup:
+  css:
+    theme:
+      assets/css/main.css: {}
+  js:
+    assets/js/script.js: {}
+  dependencies:
+  - core/jquery
+  - core/drupal
+  - castorcito_basepack/slick
+  - core/once
+appearance-mockup:
+  css:
+    theme:
+      assets/appearence_mockup/css/appearance_mockup.css: {weight: 1}

@@ -1,0 +1,75 @@
+/* Semantic variables (do not generate utility classes & does represent and element). */
+/*--size-field variable is used to define the base size of fields like input, button, tab, etc.*/
+/*--size-selector variable is used to define the base size of selectors like checkbox, radio, toggle, badge, etc.*/
+@layer base {
+  :root, :host {
+    @media (min-width: theme(--breakpoint-lg)) {
+      --theme-h1-font-size: calc(var(--theme-font-size) * 4);
+      --theme-h2-font-size: calc(var(--theme-font-size) * 3.5);
+      --theme-h3-font-size: calc(var(--theme-font-size) * 3);
+      --theme-h4-font-size: calc(var(--theme-font-size) * 2.5);
+      --theme-h5-font-size: calc(var(--theme-font-size) * 2);
+      --theme-h6-font-size: calc(var(--theme-font-size) * 1.5);
+    }
+  }
+
+  body  {
+    font-family: var(--theme-font-family);
+    font-size: var(--theme-font-size);
+    font-weight: var(--theme-font-weight-normal);
+    line-height: var(--theme-line-height);
+    color: var(--theme-base-content);
+    background-color: var(--theme-base);
+  }
+
+  p {
+    margin-bottom: calc(var(--theme-spacing) * 4);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--theme-font-famiy);
+    font-weight: var(--theme-font-weight-bold);
+    line-height: var(--theme-line-height-sm);
+  }
+
+  h1 {
+    font-size: var(--theme-h1-font-size);
+  }
+
+  h2 {
+    font-size: var(--theme-h2-font-size);
+  }
+
+  h3 {
+    font-size: var(--theme-h3-font-size);
+  }
+
+  h4 {
+    font-size: var(--theme-h4-font-size);
+  }
+
+  h5 {
+    font-size: var(--theme-h5-font-size);
+  }
+
+  h6 {
+    font-size: var(--theme-h6-font-size);
+  }
+
+  a:not(.btn) {
+    text-decoration: underline;
+    color: var(--theme-link-content);
+
+    &:hover {
+      color: var(--theme-link-hover-content);
+    }
+
+    &:focus {
+      color: var(--theme-link-focus-content);
+    }
+
+    &:focus-visible {
+      color: var(--theme-link-focus-visible-content);
+    }
+  }
+}

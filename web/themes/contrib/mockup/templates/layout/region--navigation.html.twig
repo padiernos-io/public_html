@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{%
+  set classes = [
+  'region',
+  'region-' ~ region|clean_class,
+  navigation_position ? 'offcanvas-' ~ navigation_position,
+]
+%}
+
+{% set container = region_container|clean_class %}
+
+{% if content %}
+  <div class="toggle-menu-mockup ">
+    <div class="d-flex align-items-center justify-content-between flex-row-reverse">
+      <button class="navigation-toggle cursor-pointer" aria-expanded="false">
+        <span class="mobile-nav-button__icon"></span>
+      </button>
+    </div>
+  </div>
+  <section{{ attributes.addClass(classes) }}>
+    <div class="d-flex">
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </div>
+  </section>
+{% endif %}

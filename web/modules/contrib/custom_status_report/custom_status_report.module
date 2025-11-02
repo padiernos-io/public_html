@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the Custom Status Report module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_requirements_alter().
+ */
+function custom_status_report_requirements_alter(array &$requirements) {
+  $module_path = \Drupal::service('extension.list.module')->getPath('custom_status_report');
+  $requirements['custom_status_report'] = [
+    'title' => 'Custom Status Report',
+    'value' => t(' Custom Status Report installed. Configure what shows up here in the settings.<br>
+        <a class="button button--primary button--small" href="/admin/config/system/custom-status-report">Settings</a>'),
+    'severity' => REQUIREMENT_OK,
+    'add_to_general_info' => TRUE,
+    'module_icon' => '/' . $module_path . '/icons/task-list.png',
+  ];
+  return $requirements;
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function custom_status_report_element_info_alter(array &$types) {
+  if (isset($types['status_report_page'])) {
+    foreach ($types['status_report_page']['#pre_render'] as $i => $type) {
+      if ($type[1] == 'preRenderGeneralInfo') {
+        $types['status_report_page']['#pre_render'][$i][0] = 'Drupal\custom_status_report\Element\CustomStatusReportPage';
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function custom_status_report_theme_registry_alter(&$theme_registry) {
+  $module_path = \Drupal::service('extension.list.module')->getPath('custom_status_report');
+  $theme_registry['status_report_general_info']['path'] = $module_path . '/templates';
+  $theme_registry['status_report_general_info']['variables']['cards'] = [];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function custom_status_report_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'custom_status_report_settings') {
+    $form['#attached']['library'][] = 'custom_status_report/status_overrides';
+  }
+}

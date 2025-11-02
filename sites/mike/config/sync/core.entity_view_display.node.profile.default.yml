@@ -1,0 +1,52 @@
+uuid: e88aa698-4870-4e78-bcd4-accff52361c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.profile.field_biography
+    - field.field.node.profile.field_paragraph
+    - node.type.profile
+  module:
+    - entity_reference_revisions
+    - manage_display
+    - text
+id: node.profile.default
+targetEntityType: node
+bundle: profile
+mode: default
+content:
+  field_biography:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraph:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  published_at: true
+  search_api_excerpt: true
+  uid: true

@@ -1,0 +1,8 @@
+services:
+  entityqueue_buttons.queue_manager:
+    class: Drupal\entityqueue_buttons\EntityQueueButtonsManager
+    arguments:
+      - '@entity_type.manager'
+      - '@config.factory'
+      - '@csrf_token'
+      - '@string_translation'

@@ -1,0 +1,12 @@
+name: 'Field Group Settings'
+type: module
+description: Provides a field group display formatter for hiding settings.
+package : Fields
+core_version_requirement: ^10.3 || ^11
+dependencies:
+  - field_group:field_group
+
+# Information added by Drupal.org packaging script on 2025-06-12
+version: '4.0.5'
+project: 'field_group_settings'
+datestamp: 1749745258

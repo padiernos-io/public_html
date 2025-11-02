@@ -1,0 +1,38 @@
+.ept-tabs-minimalist_tabs .ui-tabs,
+.ept-tabs-minimalist_tabs .ui-tabs.ui-widget.ui-widget-content {
+  background: transparent;
+  border: 0;
+}
+
+.ept-tabs-minimalist_tabs .ui-widget-header {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #c0c0c0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.ept-tabs-minimalist_tabs .ui-tabs-nav .ui-state-default {
+  background: transparent;
+  border: none;
+}
+
+.ept-tabs-minimalist_tabs .ui-tabs-nav li a {
+  border: 0;
+}
+
+.ept-tabs-minimalist_tabs .ui-tabs-nav .ui-state-active {
+  background: transparent url(img/ui-tabs-arrow.png) no-repeat bottom center;
+  border: none;
+}
+
+.ept-tabs-minimalist_tabs .ui-tabs-nav .ui-state-default a {
+  color: #c0c0c0;
+  text-decoration: none;
+  border: 0;
+}
+
+.ept-tabs-minimalist_tabs .ui-tabs-nav .ui-state-active a {
+  color: #000;
+}

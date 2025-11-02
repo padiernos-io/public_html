@@ -1,0 +1,22 @@
+uuid: c10a0b3a-6541-48d9-8b78-d3f549e5c6fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - minim
+_core:
+  default_config_hash: rUKMsaj4XvIHtU3kRiHIA6Rkn4IHzCkhTiUZudMkp14
+id: minim_breadcrumbs
+theme: minim
+region: buffer
+weight: -1
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

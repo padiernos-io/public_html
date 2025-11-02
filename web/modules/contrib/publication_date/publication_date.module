@@ -1,0 +1,97 @@
+<?php
+
+/**
+ * @file
+ * Add a field to nodes containing the publication date.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function publication_date_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  if ($entity_type->id() == 'node') {
+    $fields['published_at'] = BaseFieldDefinition::create('published_at')
+      ->setLabel(t('Published on'))
+      ->setDescription(t('Keep the publication timestamp for each node.'))
+      ->setRevisionable(TRUE)
+      ->setTranslatable(TRUE)
+      ->setDisplayOptions('view', [
+        'region' => 'hidden',
+      ])
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayOptions('form', [
+        'type' => 'publication_date_timestamp',
+        'weight' => 10,
+      ])
+      ->setDisplayConfigurable('form', TRUE);
+  }
+
+  return $fields;
+}
+
+/**
+ * Implements hook_form_BASE_ID_alter().
+ *
+ * Display the publication date on the node edit form.
+ *
+ * @note: This won't work where you have Display Suite/REL enabled.
+ */
+function publication_date_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $account = \Drupal::currentUser();
+  $node = $form_state->getFormObject()->getEntity();
+  $bundle = $node->bundle();
+
+  if (isset($form['published_at'])) {
+    // Check edit permissions (highest priority).
+    $can_edit = $account->hasPermission('administer publication date') ||
+      $account->hasPermission('set any published on date') ||
+      $account->hasPermission("set $bundle published on date");
+
+    // Check view permissions.
+    $can_view = $can_edit ||
+      $account->hasPermission('view any published on date') ||
+      $account->hasPermission("view $bundle published on date");
+
+    if ($can_edit) {
+      // Full edit access.
+      $form['published_at']['#access'] = TRUE;
+      $form['published_at']['#disabled'] = FALSE;
+    }
+    elseif ($can_view) {
+      // Read-only access.
+      $form['published_at']['#access'] = TRUE;
+      $form['published_at']['#disabled'] = TRUE;
+    }
+    else {
+      // No access at all.
+      $form['published_at']['#access'] = FALSE;
+    }
+
+    $form['published_at']['#group'] = 'revision_information';
+  }
+}
+
+/**
+ * Implements hook_clone_node_alter().
+ *
+ * Reset the publication date when a node is cloned using the Node Clone module.
+ *
+ * @see clone.api.php
+ */
+function publication_date_clone_node_alter(&$node, $context) {
+  $node->published_at->value = NULL;
+}
+
+/**
+ * Implements hook_field_formatter_info_alter().
+ */
+function publication_date_field_formatter_info_alter(array &$info) {
+  $info['timestamp']['field_types'][] = 'published_at';
+  $info['timestamp_ago']['field_types'][] = 'published_at';
+}

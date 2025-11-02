@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: ept_quote_image
+label: 'EPT Quote Image'
+effects:
+  c7e1a3e5-c5e1-4f6b-92f2-525a6f9ca013:
+    uuid: c7e1a3e5-c5e1-4f6b-92f2-525a6f9ca013
+    id: image_scale
+    weight: 1
+    data:
+      width: 530
+      height: null
+      upscale: true

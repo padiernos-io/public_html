@@ -1,0 +1,25 @@
+uuid: 69b60453-8c16-48e9-915f-fb9690c2c2d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph
+    - node.type.profile
+  module:
+    - entity_reference_revisions
+id: node.profile.field_paragraph
+field_name: field_paragraph
+entity_type: node
+bundle: profile
+label: Paragraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: {  }
+    negate: 0
+field_type: entity_reference_revisions

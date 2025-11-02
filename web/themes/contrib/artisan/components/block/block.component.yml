@@ -1,0 +1,13 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Block
+slots:
+  label:
+    title: Label
+  content:
+    title: Content
+props:
+  type: object
+  properties:
+    label_attributes:
+      title: Label attributes
+      type: Drupal\Core\Template\Attribute

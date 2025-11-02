@@ -1,0 +1,14 @@
+name: 'Improve Line Breaks Filter'
+description: 'Provides a text filter to improve the line breaks. Replace empty paragraphs with line breaks tags.'
+package: Text filters
+
+type: module
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+
+dependencies:
+  - drupal:filter
+
+# Information added by Drupal.org packaging script on 2024-10-30
+version: '8.x-1.7'
+project: 'improve_line_breaks_filter'
+datestamp: 1730297765

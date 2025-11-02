@@ -1,0 +1,271 @@
+<?php
+
+//include_once 'logo_diagnostic.php';
+
+/**
+ * @file
+ * Main module file for Logo Image Style.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_form_FORM_ID_alter() for system_site_information_settings.
+ */
+function logo_image_enhanced_form_system_site_information_settings_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Modificar los tipos de archivo permitidos para incluir WebP y AVIF
+  if (isset($form['logo']['settings']['site_logo_upload'])) {
+    // Sobrescribir completamente el validador de extensiones
+    if (isset($form['logo']['settings']['site_logo_upload']['#upload_validators']['file_validate_extensions'])) {
+      $form['logo']['settings']['site_logo_upload']['#upload_validators']['file_validate_extensions'] = ['png gif jpg jpeg apng svg webp avif'];
+    }
+    
+    // Si no existe el validador, añadirlo
+    if (!isset($form['logo']['settings']['site_logo_upload']['#upload_validators']['file_validate_extensions'])) {
+      $form['logo']['settings']['site_logo_upload']['#upload_validators']['file_validate_extensions'] = ['png gif jpg jpeg apng svg webp avif'];
+    }
+    
+    // Registrar para depuración
+    \Drupal::logger('logo_image_enhanced')->notice('Modificado validador de extensiones en configuración del sitio para permitir WebP y AVIF.');
+  }
+  
+  // Obtener la configuración del módulo
+  $config = \Drupal::config('logo_image_enhanced.settings');
+  
+  // Add image style selection for logo
+  $form['logo']['logo_image_enhanced'] = [
+    '#type' => 'details',
+    '#title' => t('Logo Image Style Settings'),
+    '#open' => TRUE,
+    '#weight' => 0,
+    '#states' => [
+      'visible' => [
+        ':input[name="site_logo_upload"]' => ['filled' => TRUE],
+      ],
+    ],
+  ];
+
+  // Get all available image styles
+  $styles = \Drupal::entityTypeManager()
+    ->getStorage('image_style')
+    ->loadMultiple();
+  
+  $options = ['_none' => t('- None -')];
+  foreach ($styles as $style) {
+    $options[$style->id()] = $style->label();
+  }
+
+  $form['logo']['logo_image_enhanced']['logo_image_enhanced_logo_style'] = [
+    '#type' => 'select',
+    '#title' => t('Image Style for Logo'),
+    '#options' => $options,
+    '#default_value' => $config->get('logo_style') ?? '_none',
+    '#description' => t('Select the image style to apply to the logo.'),
+  ];
+
+  // Add fields for alt and title attributes
+  $form['logo']['logo_image_enhanced']['logo_image_enhanced_logo_alt'] = [
+    '#type' => 'textfield',
+    '#title' => t('Logo Alternative Text (alt)'),
+    '#default_value' => $config->get('logo_alt') ?? \Drupal::config('system.site')->get('name'),
+    '#description' => t('Text that is used by screen readers and displayed when the image is not loaded. Important for accessibility.'),
+  ];
+
+  $form['logo']['logo_image_enhanced']['logo_image_enhanced_logo_title'] = [
+    '#type' => 'textfield',
+    '#title' => t('Logo Title'),
+    '#default_value' => $config->get('logo_title') ?? \Drupal::config('system.site')->get('name'),
+    '#description' => t('Text that is displayed as a tooltip when hovering over the logo.'),
+  ];
+
+  // Add validate and submit handlers
+  $form['#validate'][] = 'logo_image_enhanced_site_information_validate';
+  $form['actions']['submit']['#submit'][] = 'logo_image_enhanced_site_information_submit';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for system_theme_settings.
+ */
+function logo_image_enhanced_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Verificar si existe el campo de subida de logo
+  if (isset($form['logo']['settings']['logo_upload'])) {
+    // Sobrescribir completamente el validador de extensiones
+    if (isset($form['logo']['settings']['logo_upload']['#upload_validators']['file_validate_extensions'])) {
+      $form['logo']['settings']['logo_upload']['#upload_validators']['file_validate_extensions'] = ['png gif jpg jpeg apng svg webp avif'];
+    }
+    
+    // Si no existe el validador, añadirlo
+    if (!isset($form['logo']['settings']['logo_upload']['#upload_validators']['file_validate_extensions'])) {
+      $form['logo']['settings']['logo_upload']['#upload_validators']['file_validate_extensions'] = ['png gif jpg jpeg apng svg webp avif'];
+    }
+    
+    // Añadir mensaje informativo
+    $form['logo']['settings']['logo_note'] = [
+      '#type' => 'markup',
+      '#markup' => '<div class="messages messages--status">' . t('Logo Image Style module: Support for WebP and AVIF formats has been enabled.') . '</div>',
+      '#weight' => -10,
+    ];
+    
+    // Registrar para depuración
+    \Drupal::logger('logo_image_enhanced')->notice('Modificado validador de extensiones para permitir WebP y AVIF.');
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function logo_image_enhanced_module_implements_alter(&$implementations, $hook) {
+  if ($hook === 'form_alter' || $hook === 'form_system_theme_settings_alter' || $hook === 'form_system_site_information_settings_alter') {
+    // Mover nuestra implementación al final para que se ejecute después de otros módulos
+    if (isset($implementations['logo_image_enhanced'])) {
+      $group = $implementations['logo_image_enhanced'];
+      unset($implementations['logo_image_enhanced']);
+      $implementations['logo_image_enhanced'] = $group;
+    }
+  }
+}
+
+/**
+ * Validate handler for site information form.
+ */
+function logo_image_enhanced_site_information_validate($form, FormStateInterface $form_state) {
+  // Only validate if custom logo is used
+  if (!$form_state->getValue('site_logo_upload')) {
+    return;
+  }
+  
+  // Validate alt text (required for accessibility)
+  $alt_text = $form_state->getValue('logo_image_enhanced_logo_alt');
+  if (empty($alt_text)) {
+    $form_state->setErrorByName('logo_image_enhanced_logo_alt', t('Alternative text for the logo is required for accessibility.'));
+  }
+}
+
+/**
+ * Submit handler for site information form.
+ */
+function logo_image_enhanced_site_information_submit($form, FormStateInterface $form_state) {
+  // Usar nuestra propia configuración en lugar de system.site
+  $config = \Drupal::configFactory()->getEditable('logo_image_enhanced.settings');
+  
+  // Save the logo path if logo was uploaded
+  $logo_path = $form_state->getValue('site_logo_upload');
+  if ($logo_path) {
+    // Usar la URI directamente para compatibilidad con Drupal moderno
+    $config->set('logo_path', $logo_path);
+  }
+  
+  // Save image style, alt and title settings
+  $config->set('logo_style', $form_state->getValue('logo_image_enhanced_logo_style'));
+  $config->set('logo_alt', $form_state->getValue('logo_image_enhanced_logo_alt'));
+  $config->set('logo_title', $form_state->getValue('logo_image_enhanced_logo_title'));
+  $config->save();
+  
+  // Registrar información para depuración
+  \Drupal::logger('logo_image_enhanced')->notice('Configuración guardada: Estilo: @style, Alt: @alt, Title: @title', [
+    '@style' => $form_state->getValue('logo_image_enhanced_logo_style'),
+    '@alt' => $form_state->getValue('logo_image_enhanced_logo_alt'),
+    '@title' => $form_state->getValue('logo_image_enhanced_logo_title'),
+  ]);
+  
+  // Limpiar todas las cachés para asegurar que los cambios se apliquen
+  drupal_flush_all_caches();
+  
+  // Añadir mensaje de confirmación
+  \Drupal::messenger()->addMessage(t('Logo image style settings have been saved successfully.'));
+}
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function logo_image_enhanced_block_view_system_branding_block_alter(&$build, $block) {
+  // Only proceed if the build array contains a logo
+  if (isset($build['content']['site_logo'])) {
+    // Add pre-render callback for our logo modification
+    $build['#pre_render'][] = [
+      '\Drupal\logo_image_enhanced\Plugin\Block\LogoBlockViewBuilder',
+      'preRender'
+    ];
+  }
+}
+
+/**
+ * Implements hook_help().
+ */
+function logo_image_enhanced_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.logo_image_enhanced':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Logo Image Style module allows you to apply image styles to your site logo and add accessibility attributes like alt text and title.') . '</p>';
+      $output .= '<h3>' . t('Uses') . '</h3>';
+      $output .= '<dl>';
+      $output .= '<dt>' . t('Applying image styles to the logo') . '</dt>';
+      $output .= '<dd>' . t('You can select an image style for your logo in the <a href=":settings">Site Information</a> configuration page.', [':settings' => Url::fromRoute('system.site_information_settings')->toString()]) . '</dd>';
+      $output .= '<dt>' . t('Adding accessibility attributes') . '</dt>';
+      $output .= '<dd>' . t('You can add alt text and title attributes to your logo to improve accessibility.') . '</dd>';
+      $output .= '<dt>' . t('Support for modern image formats') . '</dt>';
+      $output .= '<dd>' . t('This module enables support for WebP and AVIF image formats for logos.') . '</dd>';
+      $output .= '</dl>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_preprocess_image().
+ *
+ * Añade los atributos alt y title al logo a nivel de preprocesamiento.
+ */
+function logo_image_enhanced_preprocess_image(&$variables) {
+  // Verificar si esta imagen es un logo
+  if (isset($variables['attributes']['class']) && 
+      is_array($variables['attributes']['class']) && 
+      in_array('site-logo', $variables['attributes']['class'])) {
+    
+    // Obtener la configuración
+    $config = \Drupal::config('logo_image_enhanced.settings');
+    $site_name = \Drupal::config('system.site')->get('name');
+    
+    // Establecer atributos
+    $variables['attributes']['alt'] = $config->get('logo_alt') ?? $site_name;
+    $variables['attributes']['title'] = $config->get('logo_title') ?? $site_name;
+    
+    // Registrar para depuración
+    \Drupal::logger('logo_image_enhanced')->notice('Preprocesando imagen del logo: Alt: @alt, Title: @title', [
+      '@alt' => $variables['attributes']['alt'],
+      '@title' => $variables['attributes']['title'],
+    ]);
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Añade JavaScript personalizado para modificar los atributos del logo en el cliente.
+ */
+function logo_image_enhanced_page_attachments(array &$attachments) {
+  // Obtener la configuración
+  $config = \Drupal::config('logo_image_enhanced.settings');
+  $site_name = \Drupal::config('system.site')->get('name');
+  $logo_alt = $config->get('logo_alt') ?? $site_name;
+  $logo_title = $config->get('logo_title') ?? $site_name;
+  
+  // Añadir JavaScript en línea para modificar los atributos del logo
+  $attachments['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'script',
+      '#value' => 'document.addEventListener("DOMContentLoaded", function() {
+        var logoImages = document.querySelectorAll(".site-logo");
+        if (logoImages.length > 0) {
+          logoImages.forEach(function(img) {
+            img.setAttribute("alt", "' . $logo_alt . '");
+            img.setAttribute("title", "' . $logo_title . '");
+          });
+        }
+      });',
+    ],
+    'logo_image_enhanced_js',
+  ];
+}

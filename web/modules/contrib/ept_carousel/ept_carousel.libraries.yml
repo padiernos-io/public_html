@@ -1,0 +1,22 @@
+tiny_slider:
+  remote: https://github.com/ganlanyuan/tiny-slider
+  license:
+    name: MIT license
+    url: https://github.com/ganlanyuan/tiny-slider/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/tiny-slider/dist/min/tiny-slider.js: { minified: true }
+    js/tiny-slider/tiny-slider.js: {}
+  css:
+    component:
+      /libraries/tiny-slider/dist/tiny-slider.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/drupalSettings
+
+basic:
+  css:
+    component:
+      css/basic/basic.css: {}

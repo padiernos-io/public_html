@@ -1,0 +1,92 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the EPT Carousel module.
+ */
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\media\Entity\MediaType;
+
+/**
+ * Implements hook_requirements().
+ */
+function ept_carousel_requirements($phase) {
+  if ($phase != 'install') {
+    return [];
+  }
+
+  // Check if the Media module is enabled.
+  $module_handler = \Drupal::service('module_handler');
+  if (!$module_handler->moduleExists('media')) {
+    return [];
+  }
+
+  if (class_exists('Drupal\media\Entity\MediaType')) {
+    foreach (MediaType::loadMultiple() as $type) {
+      if ($type->id() == 'image') {
+        return [];
+      }
+    }
+  }
+
+  return [
+    'ept_carousel_media_type_image' => [
+      'title' => t('Media type Image'),
+      'value' => t('Not created'),
+      'description' => t('The EPT Carousel needs to be <a href="@url">created</a> "Image" Media type.', ['@url' => '/admin/structure/media']),
+      'severity' => REQUIREMENT_ERROR,
+    ],
+  ];
+}
+
+/**
+ * Enable Media module.
+ */
+function ept_carousel_update_8001(&$sandbox) {
+  \Drupal::service('module_installer')->install(['media']);
+  \Drupal::service('module_installer')->install(['media_library']);
+}
+
+/**
+ * Set the label of "ept_counter_item" as 'EPT Carousel item'.
+ */
+function ept_carousel_update_9101() {
+
+  // Get the paragraph type entity.
+  $paragraph_type = \Drupal::entityTypeManager()->getStorage('paragraphs_type')->load('ept_carousel');
+
+  // If empty for any reason, just skip this.
+  if (empty($paragraph_type)) {
+    return;
+  }
+
+  // Set the new label.
+  $paragraph_type->label = 'EPT Carousel item';
+
+  // Save the object.
+  $paragraph_type->save();
+
+}
+
+/**
+ * Set the field "field_ept_carousel_image" as required.
+ */
+function ept_carousel_update_9102() {
+
+  // Set the machine names.
+  $paragraph_type_id = 'ept_carousel';
+  $field_name = 'field_ept_carousel_image';
+
+  // Load the field configuration object.
+  $field_config = FieldConfig::loadByName('paragraph', $paragraph_type_id, $field_name);
+
+  // If the field doesn't exists, skip.
+  if (empty($field_config)) {
+    return;
+  }
+
+  // Set the field as required.
+  $field_config->setRequired(TRUE)->save();
+
+}

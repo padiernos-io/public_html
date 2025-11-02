@@ -1,0 +1,21 @@
+uuid: 1cd72c06-3144-4a7f-8b2f-477b6b7201ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_timeline_date
+    - paragraphs.paragraphs_type.ept_timeline_item
+_core:
+  default_config_hash: ng1Uzcs0pfLazx4fEIymXeW4_k_EL-Irjs14WIH0je0
+id: paragraph.ept_timeline_item.field_ept_timeline_date
+field_name: field_ept_timeline_date
+entity_type: paragraph
+bundle: ept_timeline_item
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

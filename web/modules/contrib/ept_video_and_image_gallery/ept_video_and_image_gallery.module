@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Add templates for EPT Video and Image Gallery.
+ */
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function ept_video_and_image_gallery_theme_registry_alter(&$theme_registry) {
+  $ept_module = 'ept_video_and_image_gallery';
+  $module_path = \Drupal::service('extension.list.module')->getPath($ept_module);
+  $ept_module_with_dashes = str_replace('_', '-', $ept_module);
+
+  $base_theme = 'field';
+  $theme_registry['field__paragraph__field_ept_videos_and_images__' . $ept_module] = [
+    'path' => $module_path . '/templates',
+    'template' => 'field--paragraph--field-ept-videos-and-images--' . $ept_module_with_dashes,
+    'render element' => $theme_registry[$base_theme]['render element'],
+    'base hook' => $base_theme,
+    'type' => 'module',
+    'theme path' => $module_path,
+    'preprocess functions' => $theme_registry[$base_theme]['preprocess functions'],
+    'initial preprocess' => 'template_preprocess_field',
+  ];
+}

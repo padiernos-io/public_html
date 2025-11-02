@@ -1,0 +1,45 @@
+<div class="basepack-quote--wrapper castorcito-basepack--item">
+  <div class="castorcito-basepack--inner">
+    <div class="basepack-quote--item">
+      <div class="basepack-quote--inner">
+        <div class="basepack-quote--image-wrapper">
+          {% if component_data.fields.image.value is not empty %}
+            <div class="basepack-quote--image">
+              {% embed "castorcito:castorcito_image" with {
+                cfield_data: component_data.fields.image,
+                cd_display_settings: display_settings.basepack_quote.cfields.image
+              } %}
+              {% endembed %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="basepack-quote--description">
+          {% if component_data.fields.description.value is not empty  %}
+          <div class="basepack-quote--quote">
+            <blockquote>
+            {% embed "castorcito:castorcito_formatted_text" with {
+              cfield_data: component_data.fields.description 
+            } %}
+            {% endembed %}
+            </blockquote>
+          </div>
+          {% endif %}
+          <div class="basepack-quote--info">
+            {% if component_data.fields.author.value is not empty  %}
+            <div class="basepack-quote--author">
+              {{ component_data.fields.author.value }}
+            </div>
+            {% endif %}
+            <div class="basepack-quote--info-author">
+              {% if component_data.fields.position.value is not empty  %}
+              <div class="basepack-quote--position">
+                {{ component_data.fields.position.value }}
+              </div>
+            {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

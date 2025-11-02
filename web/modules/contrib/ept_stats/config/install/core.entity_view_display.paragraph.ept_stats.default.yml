@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_stats.field_ept_settings
+    - field.field.paragraph.ept_stats.field_ept_stats
+    - field.field.paragraph.ept_stats.field_ept_text
+    - field.field.paragraph.ept_stats.field_ept_title
+    - paragraphs.paragraphs_type.ept_stats
+  module:
+    - entity_reference_revisions
+    - ept_core
+    - text
+id: paragraph.ept_stats.default
+targetEntityType: paragraph
+bundle: ept_stats
+mode: default
+content:
+  field_ept_settings:
+    type: ept_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_stats:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ept_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Navbar brand
+props:
+  type: object
+  properties:
+    navbar_brand_logo_container_extra_classes:
+      title: Navbar Brand Logo Container Extra Classes
+      type: array
+      items:
+        type: string
+    image:
+      title: Logo Image Source
+      type: string
+    width:
+      title: Image Width
+      type: string
+    height:
+      title: Image Height
+      type: string
+    alt:
+      title: Image Alt Text
+      type: string
+    webp:
+      title: WebP Support
+      type: boolean

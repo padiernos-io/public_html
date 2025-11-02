@@ -1,0 +1,33 @@
+# Recipe Management System Configuration
+
+# Directories to scan for recipes
+scanDirs:
+  - ../recipes/contrib
+  - ../recipes/custom
+  - ../web/core/recipes
+
+# Custom commands for recipe management
+commands:
+  ddevRecipe:
+    description: "🚀 Run Drush recipe command using ddev"
+    command: "ddev drush recipe ${ddevRecipePath}"
+    requiresFolder: true
+  # drushRecipe:
+  #   description: "🚀 Run Drush recipe command"
+  #   command: "drush recipe ${folder}"
+  #   requiresFolder: true  
+  # phpRecipe:
+  #   description: "🚀 Run Drupal recipe command"
+  #   command: "php ../../web/core/scripts/drupal recipe ../${folder} -v"
+  #   requiresFolder: true
+logsDir: ../
+# Variable transformations
+variables:
+  - name: "ddevRecipePath"
+    input: "folder"
+    search: "^.*?recipes/"
+    replace: "../recipes/"
+  - name: "recipeName"
+    input: "folder_basename"
+    search: "-"
+    replace: "_"

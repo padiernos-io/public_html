@@ -1,0 +1,21 @@
+uuid: ba600265-a1a5-434c-ad89-43b364629e94
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.hero
+    - field.field.media.image.field_media_image
+    - media.type.image
+_core:
+  default_config_hash: bRkbUUam-k4ca3cG_O0yJzoKiQu3dTprhyhjfjVsuvI
+id: media.image.hero
+targetEntityType: media
+bundle: image
+mode: hero
+content: {  }
+hidden:
+  created: true
+  field_media_image: true
+  name: true
+  thumbnail: true
+  uid: true

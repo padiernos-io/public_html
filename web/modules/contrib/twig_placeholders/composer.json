@@ -1,0 +1,52 @@
+{
+  "name": "drupal/twig_placeholders",
+  "description": "A Drupal module providing Twig functions to generate placeholder content in templates.",
+  "keywords": ["Drupal", "Twig"],
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.drupal.org/project/twig_placeholders",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/twig_placeholders",
+    "source": "https://git.drupalcode.org/project/twig_placeholders"
+  },
+  "require": {
+    "php": ">=8.3",
+    "drupal/core": "^10.3 || ^11 || ^12",
+    "twig/twig": "^3.4.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Drupal\\twig_placeholders\\": "src/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "scripts": {
+    "cspell": [
+      "echo '\\n\\033[44m\\n\\n 🏁 Running cspell test. 🏁 \\n\\033[0m\\n'",
+      "cspell --config .cspell.json --words-only --unique --quiet README.md src templates tests twig_placeholders.module"
+    ],
+    "phpcs": [
+      "echo '\\n\\033[44m\\n\\n 🏁 Running phpcs test. 🏁 \\n\\033[0m\\n'",
+      "phpcs src tests"
+    ],
+    "phpstan": [
+      "echo '\\n\\033[44m\\n\\n 🏁 Running phpstan test. 🏁 \\n\\033[0m\\n'",
+      "phpstan"
+    ],
+    "phpunit": [
+      "echo '\\n\\033[44m\\n\\n 🏁 Running phpunit test. 🏁 \\n\\033[0m\\n'",
+      "@putenv XDEBUG_MODE=coverage",
+      "phpunit --testdox --colors --display-warnings tests"
+    ],
+    "tests": [
+      "@composer cspell",
+      "@composer phpcs",
+      "@composer phpstan",
+      "@composer phpunit"
+    ]
+  }
+}

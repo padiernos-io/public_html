@@ -1,0 +1,14 @@
+components_preview:
+  css:
+    theme:
+      assets/css/components-preview.css: {}
+  js:
+    assets/js/components-preview.js: { }
+    assets/js/axe-core.js: { }
+
+axe_core:
+  version: 4.x
+  js:
+    assets/js/axe.min.js: {}
+  dependencies:
+    - core/jquery

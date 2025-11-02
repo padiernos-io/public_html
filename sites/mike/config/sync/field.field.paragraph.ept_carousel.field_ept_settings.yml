@@ -1,0 +1,23 @@
+uuid: 6dd49a52-e609-401f-88f4-2193439fe6c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_settings
+    - paragraphs.paragraphs_type.ept_carousel
+  module:
+    - ept_core
+_core:
+  default_config_hash: _IVLsSToXRuYcAqksQE6q0UQCw5J0ys7z54fIX3Prcg
+id: paragraph.ept_carousel.field_ept_settings
+field_name: field_ept_settings
+entity_type: paragraph
+bundle: ept_carousel
+label: Settings
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ept_settings

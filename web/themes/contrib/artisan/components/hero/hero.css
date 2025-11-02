@@ -1,0 +1,10 @@
+.hero:not(.hero-figure) {
+  position: relative;
+  height: 45rem;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 45rem;
+  }
+}

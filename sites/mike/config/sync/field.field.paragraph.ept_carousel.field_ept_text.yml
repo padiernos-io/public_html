@@ -1,0 +1,24 @@
+uuid: 14e4abe4-bdaa-4ade-8e1d-4127cf157720
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_text
+    - paragraphs.paragraphs_type.ept_carousel
+  module:
+    - text
+_core:
+  default_config_hash: T9eYBrQXk7NZSU8LgCIvtf9ldAkjSDaUsIlMZK1m5ks
+id: paragraph.ept_carousel.field_ept_text
+field_name: field_ept_text
+entity_type: paragraph
+bundle: ept_carousel
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

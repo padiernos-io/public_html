@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * @file
+ * Contains media_name.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\media_name\MediaNameInterface;
+
+/**
+ * Implements hook_help().
+ */
+function media_name_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the media_name module.
+    case 'help.page.media_name':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('If the Media name is displayed on the create/edit form, make it not mandatory. If the name has been set previously or updated, preserve it on file change.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function media_name_form_media_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  // If the media name is accessible, it could be overridden.
+  if (array_key_exists('name', $form) && $form['name']['#access']) {
+    /** @var \Drupal\media_name\MediaNameInterface $mediaNameService */
+    $mediaNameService = \Drupal::service('media_name');
+    $mediaNameService->alterMediaEditForm($form_state);
+
+    // Always set the custom submit handler if the original name has
+    // been provided to the build info.
+    $buildInfo = $form_state->getBuildInfo();
+    if (
+      array_key_exists(MediaNameInterface::MEDIA_NAME_ORIGINAL_VALUE, $buildInfo) &&
+      !empty($buildInfo[MediaNameInterface::MEDIA_NAME_ORIGINAL_VALUE])
+    ) {
+      $form['actions']['submit']['#submit'][] = '_media_name_form_submit';
+    }
+  }
+}
+
+/**
+ * Custom submit handler for the Media edit form.
+ */
+function _media_name_form_submit(array &$form, FormStateInterface $form_state) {
+  /** @var \Drupal\media_name\MediaNameInterface $mediaNameService */
+  $mediaNameService = \Drupal::service('media_name');
+  $mediaNameService->mediaEditFormSubmitHandler($form_state);
+}
+
+/**
+ * Implements hook_entity_base_field_info_alter().
+ *
+ * Make name optional, it will be checked through validation.
+ */
+function media_name_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+  if ($entity_type->id() === 'media' && !empty($fields['name'])) {
+    $fields['name']->setRequired(FALSE);
+  }
+}
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ *
+ * Make name optional, it will be checked through validation.
+ * Some Media bundles are not covered if this hook is not implemented
+ * complementary to hook_entity_base_field_info_alter().
+ */
+function media_name_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  if ($entity_type->id() === 'media' && !empty($fields['name'])) {
+    $fields['name']->setRequired(FALSE);
+  }
+}

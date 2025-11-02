@@ -1,0 +1,153 @@
+backstop_generator.profile.*:
+  type: config_entity
+  label: Backstop Profile
+  mapping:
+    id:
+      type: string
+      label: ID
+    label:
+      type: label
+      label: Label
+    uuid:
+      type: string
+    description:
+      type: string
+    test_domain:
+      type: string
+      label: Test Domain
+    reference_domain:
+      type: string
+      label: Reference Domain
+    viewports:
+      type: sequence
+      label: Viewports
+    onBeforeScript:
+      type: boolean
+      label: onBeforeScript
+    onReadyScript:
+      type: boolean
+      label: onReadyScript
+    include_homepage:
+      type: boolean
+      label: Include homepage
+    viewport_list:
+      type: sequence
+      label: Viewports
+    language_list:
+      type: sequence
+      label: Languages
+    menu_list:
+      type: sequence
+      label: Menus
+    menu_depth:
+      type: integer
+      label: Menu Depth
+    node_quantity:
+      type: integer
+      label: Node Quantity
+    content_type_list:
+      type: sequence
+      label: Content types
+    path_list:
+      type: sequence
+      label: Paths
+    paths:
+      type: string
+      label: Paths
+    define_scenario_defaults:
+      type: boolean
+      label: Define Scenario Defaults
+    scenarioDefaults:
+      type: mapping
+      label: Scenario Defaults
+      mapping:
+        delay:
+          type: integer
+          label: Delay
+        hideSelectors:
+          type: string
+          label: Hide Selectors
+        removeSelectors:
+          type: string
+          label: Remove Selectors
+        misMatchThreshold:
+          type: string
+          label: MisMatch Threshold
+        requireSameDimensions:
+          type: boolean
+          label: Require Same Dimensions
+        cookiePath:
+          type: string
+          label: Cookie Path
+        readyEvent:
+          type: string
+          label: Ready Event
+        readySelector:
+          type: string
+          label: Ready Selector
+        readyTimeout:
+          type: integer
+          label: Ready Timeout
+        onBeforeScript:
+          type: bool
+          label: OnBeforeScript
+        onReadyScript:
+          type: bool
+          label: OnReadyScript
+        keyPressSelectors:
+          type: string
+          label: Key Press Selectors
+        hoverSelector:
+          type: string
+          label: Hover Selector
+        hoverSelectors:
+          type: string
+          label: Hover Selectors
+        clickSelector:
+          type: string
+          label: Click Selector
+        clickSelectors:
+          type: string
+          label: Click Selectors
+        postInteractionWait:
+          type: integer
+          label: Post Interaction Wait
+        scrollToSelector:
+          type: string
+          label: Scroll To Selector
+        selectors:
+          type: string
+          label: Selectors
+        selectorExpansion:
+          type: boolean
+          label: Selector Expansion
+        expect:
+          type: integer
+          label: Expect
+        gotoParameters:
+          type: string
+          label: Goto Parameters
+    scenario_list:
+      type: sequence
+      label: Scenarios
+    report:
+      type: string
+      label: Report
+    engine:
+      type: string
+      label: Engine
+    engineOptions:
+      type: string
+      label: engineOptions
+    asyncCaptureLimit:
+      type: integer
+      label: asyncCaptureLimit
+    asyncCompareLimit:
+      type: integer
+      label: asyncCompareList
+    debug:
+      type: boolean
+      label: Debug
+    debugWindow:
+      type: boolean
+      label: debugWindow

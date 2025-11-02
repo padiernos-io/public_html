@@ -1,0 +1,25 @@
+uuid: 2b075849-6893-4a77-94fa-3be0cf154f55
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - stone
+_core:
+  default_config_hash: MX2iS2rMC2lQ-sUFnOKksJ01S2lh0j5-80hKkdDmHkI
+id: stone_site_branding
+theme: stone
+region: branding
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

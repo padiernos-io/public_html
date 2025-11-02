@@ -1,0 +1,8 @@
+# Directories
+.vscode
+bin
+vendor
+
+# Files.
+.phpunit.*
+composer.lock

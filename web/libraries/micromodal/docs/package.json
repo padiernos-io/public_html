@@ -1,0 +1,32 @@
+{
+  "name": "@micromodal/docs",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "lib",
+    "docs",
+    "tests"
+  ],
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --detailed-report",
+    "deploy": "now --prod",
+    "sync": "cp ../lib/dist/micromodal.js ./src/scripts/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghosh/micromodal.git"
+  },
+  "author": "Indrashish Ghosh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ghosh/micromodal/issues"
+  },
+  "homepage": "https://github.com/ghosh/micromodal#readme",
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  }
+}

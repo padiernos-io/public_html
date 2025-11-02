@@ -1,0 +1,33 @@
+uuid: c4804378-745c-4770-8806-b85f9dea02e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_timeline
+    - paragraphs.paragraphs_type.ept_timeline
+    - paragraphs.paragraphs_type.ept_timeline_item
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: cYlu97NUbPRwZGG_4177ZENGT29qvyoK3QqqySXRLV0
+id: paragraph.ept_timeline.field_ept_timeline
+field_name: field_ept_timeline
+entity_type: paragraph
+bundle: ept_timeline
+label: Timeline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ept_timeline_item: ept_timeline_item
+    negate: 0
+    target_bundles_drag_drop:
+      ept_timeline_item:
+        weight: 68
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,336 @@
+/**
+ * @file
+ * Module Matrix Style.
+ *
+ * Filename:     module-matrix-style.css
+ * Website:      https://www.flashwebcenter.com
+ * Developer:    Alaa Haddad https://www.alaahaddad.com.
+ */
+form#system-modules .matrix-details-content .admin-requirements.project .material-icons {
+  color: #757575; /* Neutral gray for Project */
+}
+
+form#system-modules .matrix-details-content .admin-requirements.status .material-icons {
+  color: #4caf50; /* Green for Status (Enabled) */
+}
+
+form#system-modules .compact-bottom .version .material-icons,
+form#system-modules .matrix-details-content .admin-requirements.version .material-icons {
+  color: #2196f3; /* Blue for Version */
+}
+
+form#system-modules .matrix-details-content .admin-requirements.mtime .material-icons {
+  color: #ff9800; /* Orange for Last Modified */
+}
+
+form#system-modules .matrix-details-content .admin-requirements.stability .material-icons {
+  color: #4caf50; /* Green for Stability */
+}
+
+form#system-modules .matrix-details-content .admin-requirements.lifecycle .material-icons {
+  color: #009688; /* Teal for Lifecycle */
+}
+
+form#system-modules .matrix-details-content .admin-requirements.machine-name .material-icons {
+  color: #9e9e9e; /* Light gray for Machine Name */
+}
+
+form#system-modules .compact-bottom .help-link .material-icons,
+form#system-modules .matrix-details-content .admin-requirements.help-link .material-icons {
+  color: #3f51b5; /* Indigo for Help */
+}
+
+form#system-modules .compact-bottom .permissions-link .material-icons,
+form#system-modules .matrix-details-content .admin-requirements.permissions-link .material-icons {
+  color: #f44336; /* Red for Permissions */
+}
+
+form#system-modules .compact-bottom .configure-link .material-icons,
+form#system-modules .matrix-details-content .admin-requirements.configure-link .material-icons {
+  color: #673ab7; /* Purple for Configure */
+}
+
+form#system-modules .matrix-details-content .admin-requirements.issue-link .material-icons {
+  color: #e91e63; /* Pink for Create Issue */
+}
+
+form#system-modules .matrix-details-content .admin-requirements.usage-link .material-icons {
+  color: #ffc107; /* Amber for Usage Stats */
+}
+
+form#system-modules .matrix-details-content .admin-requirements.requires .material-icons {
+  color: #4caf50; /* Green for Requires */
+}
+
+form#system-modules .matrix-details-content .admin-requirements.required_by .material-icons {
+  color: #f44336; /* Red for Required By (Disabled) */
+}
+
+form#system-modules .matrix-details-content .admin-requirements.subpath .material-icons {
+  color: #00acc1; /* Deep Cyan for Subpath */
+}
+
+form#system-modules .module-details-content .module-description .material-icons {
+  color: #3f51b5; /* Indigo for Description */
+}
+
+form#system-modules .matrix-details-content .reason .material-icons {
+  color: #f44336; /* Red for Reason */
+}
+
+/* Form */
+form#system-modules .module-matrix-sidebar a {
+  margin: 5px 0;
+}
+
+@media (min-width:576px) {
+  form#system-modules {
+    border-radius: 8px !important;
+    padding: 16px !important;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    position: relative;
+  }
+
+  form#system-modules #edit-actions {
+    position: absolute;
+    top: 21px;
+    margin: 0;
+    right: 32px;
+    width: auto;
+    padding: 0;
+  }
+
+  form#system-modules #edit-actions input {
+    margin: 0;
+  }
+
+}
+
+form#system-modules input[type="text"],
+form#system-modules input[type="submit"] {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, padding 0.3s ease, color 0.3s ease;
+}
+
+form#system-modules input[type="text"] {
+  border: 3px solid transparent;
+  width: 100%;
+  padding: 16px 12px;
+  border-radius: 4px;
+  outline: none;
+}
+
+form#system-modules input.button {
+  border-radius: 4px;
+  padding: 12px 32px;
+  box-shadow: none;
+  line-height: 1.5;
+}
+
+form#system-modules input[type="text"]:disabled {
+  cursor: not-allowed;
+}
+
+form#system-modules input[type="checkbox"] {
+  all: unset;
+  appearance: none!important;
+  cursor: pointer;
+  display: inline-block!important;
+  vertical-align: top!important;
+  position: relative!important;
+  overflow: hidden!important;
+  clip-path: circle(1.5rem at 50% 50%);
+  border-radius: 12px!important;
+  border: none!important;
+  padding: 0!important;
+  height: 24px!important;
+  width: 48px!important;
+  box-sizing: border-box!important;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+form#system-modules input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  border: none!important;
+  margin: 2px!important;
+  width: calc(100% - 26px)!important;
+  height: calc(100% - 4px)!important;
+  border-radius: 50%!important;
+  transition: transform 0.3s ease-in-out, background 0.3s ease, border 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  transform: translateX(2px)!important;
+  box-shadow: none!important;
+}
+
+form#system-modules input[type="checkbox"]:checked::before {
+  transform: translateX(20px)!important;
+  box-shadow: none;
+}
+
+form#system-modules input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+form#system-modules .module-matrix-sidebar a.active,
+form#system-modules .module-matrix-sidebar a:hover {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Form style */
+form#system-modules .module-matrix-list-inner:not(.module-matrix-wrapper.grid-layout .module-matrix-list-inner):hover {
+  cursor: pointer;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+form#system-modules .module-matrix-wrapper .module-matrix-list .name-package {
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease-in-out, border-color 0.5s ease, padding 0.5s ease, color 0.5s ease;
+}
+
+body form#system-modules .module-matrix-wrapper .module-matrix-list .name-package.enabled {
+  border-color: rgba(76, 175, 80, 0.4) !important;
+  box-shadow: inset 0 6px 12px rgba(76, 175, 80, 0.1);
+}
+
+body form#system-modules .module-matrix-wrapper .module-matrix-list .name-package.disabled {
+  border-color: rgba(244, 67, 54, 0.4) !important;
+  box-shadow: inset 0 6px 12px rgba(244, 67, 54, 0.1);
+}
+
+/* Stylish Number Indicators */
+form#system-modules .module-matrix-wrapper .module-matrix-sidebar a span.on {
+  color: #4caf50 !important;
+}
+
+form#system-modules .module-matrix-wrapper .module-matrix-sidebar a span.off {
+  color: #f44336 !important;
+}
+
+form#system-modules .module-matrix-wrapper .module-matrix-sidebar a span.total {
+  color: #9e9e9e !important;
+}
+
+form#system-modules .matrix-details-header *,
+form#system-modules .module-matrix-wrapper .grid-layout .module-matrix-list-inner,
+form#system-modules .module-matrix-wrapper .module-matrix-list-inner > *:not(.grid-layout .module-matrix-list-inner > *) {
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease, padding 0.5s ease, color 0.5s ease;
+}
+
+form#system-modules .module-matrix-wrapper .module-matrix-sidebar a:hover,
+form#system-modules .module-matrix-wrapper.grid-layout .module-matrix-list-inner:hover,
+form#system-modules .module-matrix-wrapper .module-matrix-list-inner:hover > .module-matrix-item-details:not(.grid-layout.module-matrix-wrapper .module-matrix-list-inner > *) {
+  text-decoration: none;
+  --main-shadow: rgba(0, 0, 0, 0.2) 0 8px 40px;
+  box-shadow: var(--main-shadow);
+}
+
+form#system-modules .module-matrix-wrapper .module-matrix-list-inner:hover > .name-package.disabled {
+  border-color: #f45d52 !important;
+  box-shadow: inset 0 -10px 16px rgba(244, 67, 54, 0.5);
+}
+
+form#system-modules .module-matrix-wrapper .module-matrix-list-inner:hover > .name-package.enabled {
+  border-color: #65e66a !important;
+  box-shadow: inset 0 -10px 16px rgba(76, 175, 80, 0.5);
+}
+
+form#system-modules .module-matrix-sidebar a:focus,
+form#system-modules .module-matrix-sidebar a:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.module-matrix-sidebar a {
+  border: 1px solid #ddd;
+}
+
+/* For all accent colors */
+form#system-modules {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+form.system-modules *:not(a) {
+  color: var(--text-color);
+}
+
+form.system-modules .module-matrix-filters {
+  border: 1px dashed var(--border-color) !important;
+  box-shadow: var(--main-shadow);
+  background: var(--filter-bg);
+  width: auto;
+}
+
+form#system-modules * {
+  border-color: var(--border-color);
+}
+
+form.system-modules a:not(.package-link),
+form.system-modules a:not(.package-link) * {
+  color: var(--link-color);
+}
+
+form.system-modules a:hover,
+form.system-modules a:hover * {
+  color: var(--link-color-hover);
+}
+
+
+form#system-modules .module-matrix-filters fieldset.form-checkboxes .form-checkboxes > * {
+  width: auto;
+  display: flex;
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+  margin-right: 24px!important;
+  margin-left: 0!important;
+  flex-direction: column;
+}
+
+[dir="rtl"] form#system-modules .module-matrix-filters fieldset.form-checkboxes .form-checkboxes > * {
+  margin-right: 0 !important;
+  margin-left: 24px !important;
+}
+
+form#system-modules .module-matrix-filters fieldset.form-checkboxes .form-checkboxes > *:first-child {
+  margin: 0;
+}
+
+form#system-modules .module-matrix-filters .reset-button {
+  margin-left: auto;
+  margin-top: auto;
+  display: flex;
+}
+
+form#system-modules .module-matrix-filters fieldset.form-checkboxes .form-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+}
+
+/* Ensure RTL themes align elements correctly */
+[dir="rtl"] form#system-modules .module-matrix-filters fieldset.form-checkboxes legend {
+  text-align: right;
+}
+
+[dir="rtl"] form#system-modules .module-matrix-filters .reset-button {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] form#system-modules .module-matrix-filters fieldset.form-checkboxes .form-checkboxes {
+  justify-content: flex-end;
+}
+
+[dir="rtl"] form#system-modules .module-matrix-filters fieldset.form-checkboxes legend span {
+  margin-right: 0;
+  margin-left: 16px;
+}

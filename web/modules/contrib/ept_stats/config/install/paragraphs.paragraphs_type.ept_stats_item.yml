@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ept_stats_item
+label: 'EPT Stats Item'
+icon_uuid: null
+icon_default: null
+description: 'Stats Item for EPT Stats paragraph'
+behavior_plugins: {  }

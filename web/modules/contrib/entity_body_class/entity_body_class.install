@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install/update/uninstall hooks for entity_body_class module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function entity_body_class_uninstall() {
+  field_purge_batch(10);
+}

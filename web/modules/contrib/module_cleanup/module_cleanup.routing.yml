@@ -1,0 +1,7 @@
+module_cleanup.delete_transient_data:
+  path: '/admin/config/system/delete-transient-module-data'
+  defaults:
+    _controller: '\Drupal\module_cleanup\Controller\ModuleCleanupController::overview'
+    _title: 'Delete transient module data'
+  requirements:
+    _permission: 'delete transient module data'

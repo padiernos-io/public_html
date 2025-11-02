@@ -1,0 +1,12 @@
+{% set attributes = attributes ?: create_attribute() %}
+
+{% set classes = [
+  'timeline',
+  orientation ? 'timeline-' ~ orientation,
+  responsive ? 'lg:timeline-horizontal',
+  icon ? 'timeline-snap-icon max-md:timeline-compact'
+] %}
+
+<ul{{ attributes.addClass(classes) }}>
+  {{ items }}
+</ul>

@@ -1,0 +1,42 @@
+{% set classes = [
+  'card',
+  'shadow-sm',
+  size ? 'card-' ~ size,
+  border ? 'card-' ~ border,
+  variant ? variant,
+] %}
+
+{% set body_classes = [
+  'card-body',
+]|merge(body_extra_classes ?: []) %}
+
+{% set action_classes = [
+  'card-actions',
+]|merge(actions_extra_classes ?: []) %}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if image %}
+    {% block image %}
+      <figure>
+        {{ image }}
+      </figure>
+    {% endblock %}
+  {% endif %}
+  <div class="{{ body_classes|join(' ') }}">
+    {% block title %}
+      <{{ title_heading_level }}> {{ title }} </{{ title_heading_level }}>
+    {% endblock %}
+
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+
+    {% if actions %}
+      <div class="{{ action_classes|join(' ') }}">
+        {% block actions %}
+          {{ actions }}
+        {% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</div>

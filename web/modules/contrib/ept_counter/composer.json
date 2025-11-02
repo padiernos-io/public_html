@@ -1,0 +1,18 @@
+{
+    "name": "drupal/ept_counter",
+    "type": "drupal-module",
+    "description": "Extra Paragraph Types (EPT): Counter",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ept_counter",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ept_counter",
+        "source": "https://git.drupalcode.org/project/ept_counter"
+    },
+    "require": {
+        "drupal/ept_core": "^1.4",
+        "drupal/paragraphs": "^1.0",
+        "levmyshkin/count-up.js": "^2.8"
+    }
+}

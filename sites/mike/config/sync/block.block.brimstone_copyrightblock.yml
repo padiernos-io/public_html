@@ -1,0 +1,25 @@
+uuid: d9365f87-ce1f-402f-bb53-80e518c8f403
+langcode: en
+status: true
+dependencies:
+  module:
+    - copyright_block
+  theme:
+    - brimstone
+id: brimstone_copyrightblock
+theme: brimstone
+region: footer
+weight: -7
+provider: null
+plugin: copyright_block
+settings:
+  id: copyright_block
+  label: 'Copyright block'
+  label_display: '0'
+  provider: copyright_block
+  start_year: '2022'
+  separator: ' ― '
+  text:
+    value: '<p>© [site:name], [copyright_statement:dates]</p>'
+    format: content_format
+visibility: {  }

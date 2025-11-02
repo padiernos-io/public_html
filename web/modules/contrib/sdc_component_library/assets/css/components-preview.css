@@ -1,0 +1,285 @@
+:root {
+  /* Color Variables */
+  --color-background: #f7f8fa;
+  --color-border: #e1e4e8;
+  --color-button-bg: #f8f9fa;
+  --color-button-border: #d1d1d1;
+  --color-button-text: #007bff;
+  --color-highlight-bg: #e6f7ff;
+  --color-sidebar-bg: #fff;
+  --color-text: #333;
+  --color-title-text: #1f2933;
+
+  /* Font Size Variables */
+  --font-size-base: 16px;
+  --font-size-label: 14px;
+  --font-size-subtitle: 20px;
+  --font-size-title: 24px;
+
+  /* Padding Variables */
+  --padding-base: 20px;
+  --padding-extra-small: 5px;
+  --padding-large: 30px;
+  --padding-small: 10px;
+
+  /* Border Radius */
+  --border-radius-base: 8px;
+
+  /* Miscellaneous */
+  --grid-max-width: 100rem !important;
+  --shadow-base: 0 1px 3px rgb(0, 0, 0, 0.12), 0 1px 2px rgb(0, 0, 0, 0.24);
+}
+
+/* Overall container */
+.components-preview {
+  padding: var(--padding-large);
+  background-color: var(--color-background);
+}
+
+/* Wrapper for sidebar and main content */
+.components-preview__wrapper {
+  display: grid;
+  overflow: hidden;
+  grid-template-areas:
+    "sidebar main"
+    "a11y a11y";
+  grid-template-rows: auto;
+  grid-template-columns: 300px minmax(0, 1fr);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  gap: var(--padding-large);
+}
+
+/* Sidebar styles */
+.components-preview__sidebar {
+  display: flex;
+  flex-direction: column;
+  grid-area: sidebar;
+  max-height: 500px;
+  padding: var(--padding-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-sidebar-bg);
+  box-shadow: var(--shadow-base);
+}
+
+.components-preview__nav {
+  overflow-y: scroll;
+}
+
+.components-preview__search {
+  width: calc(100% - var(--padding-base));
+  margin-bottom: var(--padding-small);
+  padding: var(--padding-small);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+}
+
+/* A11Y Block Styling */
+.components-preview__a11y {
+  display: none;
+  flex-basis: 100%;
+  grid-area: a11y;
+  width: 100%;
+  padding: var(--padding-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-sidebar-bg);
+  box-shadow: var(--shadow-base);
+}
+
+.components-preview__a11y li {
+  cursor: pointer;
+}
+
+.components-preview__a11y_disclaimer {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: #6c757d;
+  border-left: 4px solid #dee2e6;
+  background-color: #f8f9fa;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.components-preview__main {
+  grid-area: main;
+}
+
+/* Image styling */
+.components-preview__main img {
+  max-width: 500px;
+}
+
+/* Code Block Styling */
+.components-preview__code {
+  position: relative;
+  margin-top: 15px;
+  padding: 20px;
+  color: #fff;
+  border-radius: 8px;
+  background-color: #2d2d2d;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+  font-family: "Fira Code", "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.components-preview__code pre {
+  overflow-x: auto;
+  margin: 0;
+  padding-right: 80px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: none;
+  font-family: inherit;
+}
+
+.components-preview__code code {
+  display: block;
+  color: #c3e88d;
+}
+
+.components-preview__code code::before,
+.components-preview__code code::after {
+  display: block;
+  height: 8px;
+  content: "";
+}
+
+/* Copy Button Styling */
+.copy-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+  font-size: 12px;
+}
+
+.copy-btn:hover {
+  background-color: #444;
+}
+
+.copy-btn:active {
+  background-color: #222;
+}
+
+/* Update Button */
+.components-preview__update-component {
+  margin-top: var(--padding-large);
+  padding: var(--padding-small);
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid var(--color-button-border);
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-button-text);
+}
+
+.components-preview__update-component:hover {
+  color: var(--color-button-text);
+  background-color: var(--color-button-bg);
+}
+
+/* Navigation Styles */
+.components-preview__nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.components-preview__provider {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.components-preview__group {
+  font-weight: bold;
+}
+
+.components-preview__title {
+  padding: var(--padding-small);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: var(--border-radius-base);
+}
+
+.components-preview__title button {
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.components-preview__title:hover {
+  background-color: var(--color-highlight-bg);
+}
+
+/* Component Styles */
+.components-preview__components {
+  display: none;
+  margin-bottom: var(--padding-large);
+  padding: var(--padding-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-sidebar-bg);
+  box-shadow: var(--shadow-base);
+}
+
+.components-preview__components.active {
+  display: block;
+}
+
+/* Header for the component */
+.components-preview__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--padding-base);
+}
+
+.components-preview__header h2 {
+  margin: 0;
+  color: var(--color-title-text);
+  font-size: var(--font-size-title);
+}
+
+/* Show Code Button */
+.components-preview__show-code {
+  padding: var(--padding-small);
+  cursor: pointer;
+  color: var(--color-button-text);
+  border: 1px solid var(--color-button-border);
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-button-bg);
+}
+
+.components-preview__show-code:hover {
+  color: #fff;
+  background-color: var(--color-button-text);
+}
+
+/* Component preview */
+.components-preview__preview {
+  min-height: 250px;
+  padding: var(--padding-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-background);
+}
+
+@media screen and (max-width: 992px) {
+  .components-preview__wrapper {
+    grid-template-areas:
+      "sidebar"
+      "main"
+      "a11y";
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

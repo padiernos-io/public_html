@@ -1,0 +1,12 @@
+name: CKEditor5 Markdown editor
+type: module
+description: With this module you can configure CKEditor 5 to output Markdown instead of HTML.
+package: CKEditor 5
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:ckeditor5
+
+# Information added by Drupal.org packaging script on 2025-02-27
+version: '1.0.0-beta3'
+project: 'ckeditor5_markdown_editor'
+datestamp: 1740647724

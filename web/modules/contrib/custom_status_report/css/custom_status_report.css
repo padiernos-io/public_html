@@ -1,0 +1,27 @@
+.csr-grid,
+.csr-divider {
+  display: grid !important;
+  grid-gap: var(--space-l);
+}
+.csr-grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.csr-divider {
+  grid-template-columns: 3fr 1fr 3fr;
+}
+
+.csr-divider > span {
+  margin: auto;
+}
+
+.csr-grid > .system-status-general-info__item {
+  display: block;
+  width: auto !important;
+  margin-block-end: initial !important;
+  border: none !important;
+  outline: 1px solid #ccc;
+}
+
+.csr-grid > .system-status-general-info__item:last-of-type {
+  margin-inline-start: 0 !important;
+}

@@ -1,0 +1,21 @@
+uuid: a8ed5bdf-a2d1-483c-817c-e1072e41fe9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: HeWBlq69mptI0nGWU0dliRAS9rVOa2HzuJbUbzsJg4M
+id: paragraph.field_ept_carousel_caption
+field_name: field_ept_carousel_caption
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

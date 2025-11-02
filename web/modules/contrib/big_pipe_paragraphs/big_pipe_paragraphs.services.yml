@@ -1,0 +1,4 @@
+services:
+  big_pipe_paragraphs.lazy_builder:
+    class: Drupal\big_pipe_paragraphs\LazyParagraphBuilder
+    arguments: ["@entity_type.manager", "@config.factory"]

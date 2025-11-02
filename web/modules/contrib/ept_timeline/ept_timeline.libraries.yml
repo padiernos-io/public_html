@@ -1,0 +1,4 @@
+simple_vertical:
+  css:
+    component:
+      css/simple_vertical/simple_vertical.css: {}

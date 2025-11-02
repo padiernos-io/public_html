@@ -1,0 +1,50 @@
+//Main Colors
+$primaryColor: #2C3E50;
+$secondaryColor: rgba(0, 0, 0, 0.5);
+$thirdColor: #34495E ;
+$fourthColor: #BDC3C7 ;
+$fifthColor: #ECF0F1 ;
+$buttonColor: #9F9F9F;
+$text: #000;
+
+$region: #2A6496;
+$border: #C7C1C1;
+$white: #fff;
+
+//Media queries
+$fullMaxLarge: "(max-width: 1399px)";
+$maxLarge: "(max-width: 1319px)";
+$large: "(max-width: 1199px)";
+$tablet: "(max-width: 991px)";
+$phone: "(max-width: 767px)";
+$smallPhone: "(max-width: 575px)";
+
+
+@mixin primaryFont() {
+  font-family: "Montserrat", sans-serif;
+}
+
+@mixin secondaryFont() {
+}
+
+@function pxtorem($target, $context:16) {
+  @return calc($target/$context)+0rem;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//Clearfix to use in other rules
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

@@ -1,0 +1,27 @@
+cache_pilot.settings:
+  path: '/admin/config/development/performance/cache-pilot'
+  methods: ['GET', 'POST']
+  defaults:
+    _title: 'Cache Pilot settings'
+    _form: \Drupal\cache_pilot\Form\SettingsForm
+  requirements:
+    _permission: 'cache_pilot.administer'
+
+cache_pilot.dashboard:
+  path: '/admin/reports/cache-pilot'
+  methods: ['GET']
+  defaults:
+    _controller: \Drupal\cache_pilot\Controller\DashboardController
+    _title_callback: \Drupal\cache_pilot\Controller\DashboardController::pageTitle
+    cache_type: 'apcu'
+  requirements:
+    _permission: 'cache_pilot.administer'
+
+cache_pilot.dashboard.statistics:
+  path: '/admin/reports/cache-pilot/{cache_type}'
+  methods: ['GET']
+  defaults:
+    _controller: \Drupal\cache_pilot\Controller\DashboardController
+    _title_callback: \Drupal\cache_pilot\Controller\DashboardController::pageTitle
+  requirements:
+    _permission: 'cache_pilot.administer'

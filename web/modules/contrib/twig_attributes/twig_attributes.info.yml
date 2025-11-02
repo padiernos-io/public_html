@@ -1,0 +1,9 @@
+name: 'Twig Attributes'
+type: module
+description: 'Provides the ability to add attributes to child render arrays in Twig templates.'
+core_version_requirement: ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2025-03-27
+version: '2.0.1'
+project: 'twig_attributes'
+datestamp: 1743083964

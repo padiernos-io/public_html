@@ -1,0 +1,22 @@
+.ept-tabs-vertical_tabs_rotated .ui-tabs,
+.ept-tabs-vertical_tabs_rotated .ui-tabs.ui-widget.ui-widget-content {
+  background: transparent;
+}
+
+.ept-tabs-vertical_tabs_rotated .ui-tabs-nav {
+  position: absolute;
+  transform: translate(-100%, 0%) rotate(-90deg);
+  transform-origin: 100% 0;
+}
+
+.ept-tabs-vertical_tabs_rotated .ui-tabs-nav li {
+  float: right;
+}
+
+.ept-tabs-vertical_tabs_rotated .ui-tabs-nav li a {
+  border: 0;
+}
+
+.ept-tabs-vertical_tabs_rotated .ui-tabs .ui-tabs-panel {
+  padding-left: 4.5em;
+}

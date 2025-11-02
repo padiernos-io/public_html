@@ -1,0 +1,24 @@
+# =============================================================================
+# Local Development Site Aliases
+# Quick access aliases for local development
+# =============================================================================
+
+# Default site (points to main padiernos.me site)
+dev:
+  root: /home/padiernos/public_html
+  uri: http://localhost
+
+# Main production site
+prod:
+  root: /home/padiernos/public_html
+  uri: https://www.padiernos.me
+
+# Quick aliases for common tasks
+local:
+  root: /home/padiernos/public_html
+  uri: http://localhost:8080
+
+# Legacy compatibility (existing aliases)
+family:
+  root: /home/padiernos/public_html
+  uri: https://www.padiernos.me

@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * EPT Micromodal code for including templates.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ept_micromodal_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main help for the ept_micromodal.
+    case 'help.page.ept_micromodal':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Extra Paragraph Types: Micromodal module provides ability to add a paragraph with accessible modal dialogs. It will be useful for Pravicy Policy or any other text information.') . '</p>';
+      $output .= '<p>' . t('<a href="@demo_link">Demo</a>', ['@demo_link' => 'https://drupalbook.org/ept/demo/micromodal']) . '</p>';
+      $output .= '<p>' . t('EPT Micromodule modules uses Micromodal.js plugin:') . '</p>';
+      $output .= '<ul>';
+      $output .= '<li><a href="https://micromodal.vercel.app/">https://micromodal.vercel.app/</a></li>';
+      $output .= '<li><a href="https://github.com/Ghosh/micromodal">https://github.com/Ghosh/micromodal</a></li>';
+      $output .= '<ul>';
+      return $output;
+  }
+}

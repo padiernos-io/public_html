@@ -1,0 +1,26 @@
+uuid: 62cae9a6-894e-4112-ac49-d776552336d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - brimstone
+_core:
+  default_config_hash: rUKMsaj4XvIHtU3kRiHIA6Rkn4IHzCkhTiUZudMkp14
+id: brimstone_breadcrumbs
+theme: brimstone
+region: highlight
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/about\r\n/contact"

@@ -1,0 +1,14 @@
+services:
+  cache_pilot.command.opcache_clear:
+    class: Drupal\cache_pilot\Command\OpcacheClear
+    arguments:
+      - '@Drupal\cache_pilot\Cache\OpcacheCache'
+    tags:
+      - { name: console.command }
+
+  cache_pilot.command.apcu_clear:
+    class: Drupal\cache_pilot\Command\ApcuClear
+    arguments:
+      - '@Drupal\cache_pilot\Cache\ApcuCache'
+    tags:
+      - { name: console.command }

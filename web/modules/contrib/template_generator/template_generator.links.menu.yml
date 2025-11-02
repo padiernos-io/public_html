@@ -1,0 +1,6 @@
+template_generator.settings:
+  title: Generate Templates
+  route_name: template_generator.settings
+  parent: system.admin_config_development
+  description: 'Génération des templates'
+  weight: 0

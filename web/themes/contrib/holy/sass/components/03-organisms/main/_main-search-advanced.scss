@@ -1,0 +1,19 @@
+#main {
+  .search-advanced {
+    .form-checkboxes {
+      .form-type-checkbox {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .action {
+      margin-top: 9px;
+
+      input {
+        width: auto !important;
+        border-radius: 7px !important;
+      }
+    }
+  }
+}

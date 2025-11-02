@@ -1,0 +1,19 @@
+CHANGELOG for EntityQueue Buttons module
+
+2024-11-04
+-------------------------
+version: 1.0.0
+
+Jeg har lavet et Drupal 10 modul med Claude.
+Jeg definerede opgaven.
+"I want a new Drupal 10 module called EntityQueue Buttons. It should have a settings page where all existing content types on the site are listed. For each content type you should be able to checkbox select entity queues. All EntityQueues should be listed."
+og udbyggede den
+"When viewing a node of content type A I wish to be able to add it to an entityqueue IF said entityqueue has been selected for the content type on the settings page"
+Altså en 5-linjers specifikation.
+Noter:
+Jeg tænkte ikke et sekund! (en behagelig del af processen/eksperimentet) Jeg brugte _ingen_ Drupal-viden. Jeg arbejde som min bror ville gøre det. Jeg kopierede, indsatte, testede og fodrede Claude med de sammenlagt 7 fejlmeddelelser jeg i alt fik, før modulet virkede perfekt (tror jeg). Claude er fantastisk!
+Hvor meget lavede Claude? 13 filer! 730 linjer kode, js, css, twig, service, manger og yaml! Kernen er forholdsvis uigennemskuelig - men det kan nok ikke være anderledes, når der skal navigeres i "The issue was we were trying to implement our own CSRF protection when we should have been using Drupal's built-in AJAX framework security." oma.
+At lave det i hånden ligner en 13 timers-opgave. Med Claude var det klaret på under en time.
+En manuel Cowboy-løsning ville formentlig fylde det halve i både filer og linjer. Men hvem har 5-10-13 timer til dens slags, når man kan bede værkstedsdrengen trække et ypperstepræst-godkendt modul i automaten på 1 time?
+Det havde jeg eddersparkemig ikke troet ville være muligt, da jeg første gang snakkede med Chat GPT for to år siden.
+https://claude.ai/chat/563cefcc-b55b-4887-9b63-e734d9555e53(ved ikke om I kan se det)

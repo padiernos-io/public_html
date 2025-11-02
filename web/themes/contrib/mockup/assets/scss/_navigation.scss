@@ -1,0 +1,388 @@
+@use 'conf' as *;
+/*-----------------------------------------------------------------------------
+ *           MENU
+ *---------------------------------------------------------------------------*/
+
+.region,
+.views-row {
+  @include clearfix();
+}
+
+.navbar-toggler {
+  margin-bottom: pxtorem(10);
+}
+
+.mobile-nav-button__icon {
+  position: relative;
+  display: block;
+  width: pxtorem(36);
+  height: 0;
+  border-top: solid 3px #000;
+
+  &::before,
+  &::after {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    width: 100%;
+    height: 0;
+    content: "";
+    transition: transform 0.2s;
+    border-top: solid 3px #000;
+  }
+
+  &::before {
+    transform: translateY(-0.6875rem);
+  }
+
+  &::after {
+    transform: translateY(0.3125rem);
+  }
+}
+
+.navigation-toggle[aria-expanded="true"] {
+  .mobile-nav-button__icon {
+    border-top-color: transparent;
+    &::before {
+      transform: translateY(-0.1875rem) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translateY(-0.1875rem) rotate(45deg);
+    }
+  }
+}
+
+
+.region-navigation {
+  transition: all ease 0.3s;
+  @media #{$large} {
+    background: #FFF;
+    position: fixed;
+    z-index: 501; /* Appear above overlay and contextual links in header. */
+    inset-block-start: 0;
+    inset-inline-start: 100%;
+    visibility: hidden;
+    overflow: auto;
+    /* Ensure that header nav not use additional space and force system branding
+    * block text to unnecessarily wrap. */
+    flex-basis: max-content;
+    width: 100%;
+    max-width: var(--mobile-nav-width);
+    height: 100%;
+    padding-block: 0 1.125rem;
+    padding-inline-start: pxtorem(30);
+    padding-inline-end: pxtorem(30);
+    /* Create room for the "close" button. We cannot use margin because the
+    * mobile navigation needs to slide beneath the button, but we also cannot
+    * use padding because that would enable the button to scroll out of the
+    * viewport on short screens. */
+    border-block-start: solid #FFF calc( calc(3 * 1.125rem) + var(--drupal-displace-offset-top, 0px));
+    box-shadow: 0 0 72px rgba(0, 0, 0, 0.1);
+
+    &.is-active {
+      visibility: visible;
+      transform: translateX(calc(-100% - var(--drupal-displace-offset-right, 0px))); /* LTR */
+    }
+
+    .menu--main .menu {
+      display: block;
+    }
+
+
+    > .d-flex {
+      display: block !important;
+    }
+  }
+}
+
+
+.menu--main {
+  display: flex;
+  align-items: center;
+  @media #{$large} {
+    display: block;
+  }
+  .menu {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    @media #{$large} {
+      display: block;
+      text-align: left;
+    }
+  }
+  .menu-item {
+    display: block;
+    margin: 0;
+    padding-top: 0;
+
+    a,span,button {
+      font-size: pxtorem(16);
+      padding: 0 pxtorem(25);
+      //margin-left: pxtorem(10);
+      //margin-right: pxtorem(10);
+      @include primaryFont;
+      font-weight: 700;
+      color: $text;
+      text-decoration: none;
+      @media #{$large} {
+        display: block;
+        padding: 0;
+        margin: 0;
+      }
+
+      &:hover,
+      &.is-active,
+      &:active,
+      &:focus-visible,
+      &:focus {
+        color: $buttonColor;
+      }
+
+      @media #{$large} {
+        font-size: pxtorem(28);
+        line-height: 2;
+      }
+    }
+  }
+
+  .menu-item--expanded {
+    position: relative;
+
+    & > .menu {
+      box-shadow: 0 0 5px 0 #656565;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      background: #FFF;
+      display: none;
+
+      @media #{$large} {
+        background: #efefef;
+        display: block;
+        position: relative;
+        top: 0;
+        box-shadow: none;
+      }
+
+      .menu-item {
+        a {
+          display: block;
+          margin: 0;
+          padding: pxtorem(8) pxtorem(25);
+          text-align: left;
+
+          &:hover {
+            background: #000;
+          }
+        }
+      }
+    }
+
+    &:after {
+      width: 100%;
+      top: 24px;
+      content: '';
+      height: 100%;  
+      position: absolute;
+      display: block;
+      @media #{$large} {
+        display: none;
+      }
+    }
+
+
+    &:hover > .menu {
+      display: block;
+      z-index: 1;
+    }
+  }
+}
+
+aside {
+  .menu--main {
+    .menu {
+      display: block;
+
+      .menu-item a {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.offcanvas {
+  background-color: #FFF;
+  .btn-close {
+    color: #000; 
+    opacity: 1;
+  }
+
+  .site-logo {
+    display: block;
+    padding-bottom: pxtorem(80);
+  }
+
+  .menu--main .menu {
+    @media #{$large} {
+      flex-direction: column;
+      text-align: left; 
+      width: 100%;
+    }
+  }
+  .menu--main .menu-item a, 
+  .menu--main .menu-item span, 
+  .menu--main .menu-item button {
+    color: #000;
+    padding: 0;
+
+    &:hover {
+      color: $buttonColor;
+    }
+  }
+
+  .menu--account {
+    border-top: 1px solid #000;
+    padding: pxtorem(10) 0 0;
+    .menu-item {
+      padding: pxtorem(10) 0;
+    }
+  }
+
+  .menu-item {
+    padding: pxtorem(10) 0;
+  }
+
+
+  .block-system-branding-block {
+    .site-logo {
+      display: flex;
+    }
+    .site-name {
+      padding-left: pxtorem(20);
+    }
+  }
+}
+
+.offcanvas-body {
+  text-align: center;
+}
+
+.menu--main .menu-item a, 
+.menu--main .menu-item span, 
+.menu--main .menu-item button {
+  color: #000;
+  display: block;
+  width: 100%;
+
+  &:hover {
+    color: $buttonColor;
+  }
+}
+
+.toggle-menu-mockup {
+  display: none;
+  @media #{$large} {
+    display: block;
+    z-index: 505;
+  }
+
+  .burger-icon {
+    fill: #000;
+    height: 40px;
+    width: 40px;
+  }
+
+  button {
+    background: none !important;
+    border: none !important;
+  }
+}
+
+.region-header {
+  @media #{$large} {
+    .block-menu {
+      display: none;
+    }
+
+    .block-system-branding-block {
+      max-width: 45px;
+      .site-name {
+        display: none;
+      }
+    }
+
+  }
+}
+
+.menu--account {
+  border-left: 1px solid #000;
+  padding-left: pxtorem(25);
+  @media #{$large} {
+    border: none;
+    padding: pxtorem(10) 0;
+  }
+
+  .menu {
+    margin: 0;
+  }
+
+  .menu-item {
+    display: inline-block;
+    padding: 0 pxtorem(20) 0 0;
+
+    @media #{$large} {
+      display: block;
+      padding: pxtorem(10) 0;
+    }
+
+    &:last-child {
+      padding: 0;
+      @media #{$large} {
+        padding: pxtorem(10) 0;
+      }
+    }
+
+    a {
+      color: #000;
+      display: inline-block;
+      text-decoration: none;
+
+      &:hover {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.region-header-top {
+  .menu--account .menu-item a {
+    color: #FFF;
+  }
+}
+
+.menu-account--icon  {
+  background: #000;
+  border-radius: 50px;
+  color: #FFF;
+  display: inline-block;
+  height: 35px;
+  padding: 8px 0;
+  text-align: center;
+  width: 35px;
+}
+
+.main-footer {
+  .menu--main {
+    .menu-item {
+      a,span,button {
+        color: #FFF;
+        font-weight: 500;
+      }
+    }
+  }
+}

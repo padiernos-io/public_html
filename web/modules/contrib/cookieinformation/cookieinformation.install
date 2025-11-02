@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * @file
+ * Contains database updates for the module.
+ */
+
+/**
+ * Add Google consent mode configuration default value.
+ */
+function cookieinformation_update_8101() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('cookieinformation.settings');
+  $config->set('enable_google_consent_mode', FALSE);
+  $config->save(TRUE);
+}
+
+/**
+ * Add iframe blocking configuration default value.
+ */
+function cookieinformation_update_8102() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('cookieinformation.settings');
+  $config->set('block_iframes', FALSE);
+  $config->save(TRUE);
+}
+
+/**
+ * Add Google consent mode v2 configuration default value.
+ */
+function cookieinformation_update_8103() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('cookieinformation.settings');
+  $config->set('enable_google_consent_mode_v2', FALSE);
+  $config->save(TRUE);
+}
+
+/**
+ * Add iframe blocking configuration default value.
+ */
+function cookieinformation_update_8104() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('cookieinformation.settings');
+  $config->set('block_iframes_category', 'functional');
+  $config->save(TRUE);
+}
+
+/**
+ * Migrate old boolean configurations for Google consent mode.
+ */
+function cookieinformation_update_9201() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('cookieinformation.settings');
+
+  if ($config->get('enable_google_consent_mode_v2')) {
+    $config->set('google_consent_mode', 'v2');
+  }
+  elseif ($config->get('enable_google_consent_mode')) {
+    $config->set('google_consent_mode', 'v1');
+  }
+  else {
+    $config->set('google_consent_mode', '');
+  }
+
+  $config->clear('enable_google_consent_mode');
+  $config->clear('enable_google_consent_mode_v2');
+
+  $config->save(TRUE);
+}

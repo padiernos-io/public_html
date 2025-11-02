@@ -1,0 +1,24 @@
+services:
+  paragraph_block.service:
+    class: Drupal\paragraph_block\ParagraphBlockService
+    arguments:
+      - '@plugin.manager.block'
+      - '@entity_type.manager'
+
+  paragraph_block.controller_alter:
+    class: Drupal\paragraph_block\EventSubscriber\ControllerAlterSubscriber
+    arguments:
+      - '@module_handler'
+    tags:
+      - { name: event_subscriber }
+
+  paragraph_block.config_subscriber:
+    class: Drupal\paragraph_block\EventSubscriber\ConfigSubscriber
+    arguments:
+      - '@paragraph_block.service'
+    tags:
+      - { name: event_subscriber }
+
+  Drupal\paragraph_block\Hook\ParagraphBlockHooks:
+    class: Drupal\paragraph_block\Hook\ParagraphBlockHooks
+    autowire: true

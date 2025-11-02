@@ -1,0 +1,14 @@
+common:
+  css:
+    component:
+      css/common.css: {}
+
+one_column:
+  css:
+    component:
+      css/one_column.css: {}
+
+two_columns:
+  css:
+    component:
+      css/two_columns.css: {}

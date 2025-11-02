@@ -1,0 +1,9 @@
+access entity body class settings:
+  title: 'Manage body class settings'
+  description: 'Allows a user to manage body class settings.'
+access entity body class fields:
+  title: 'Manage body class fields'
+  description: 'Allows a user to manage body class fields.'
+
+permission_callbacks:
+  - Drupal\entity_body_class\EntityBodyClassPermissions::permissions

@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_quote.field_ept_quote_author
+    - field.field.paragraph.ept_quote.field_ept_quote_image
+    - field.field.paragraph.ept_quote.field_ept_settings
+    - field.field.paragraph.ept_quote.field_ept_text
+    - field.field.paragraph.ept_quote.field_ept_title
+    - image.style.ept_quote_image
+    - paragraphs.paragraphs_type.ept_quote
+  module:
+    - ept_core
+    - media
+    - text
+id: paragraph.ept_quote.default
+targetEntityType: paragraph
+bundle: ept_quote
+mode: default
+content:
+  field_ept_quote_author:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_quote_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ept_quote_image
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ept_settings:
+    type: ept_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ept_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

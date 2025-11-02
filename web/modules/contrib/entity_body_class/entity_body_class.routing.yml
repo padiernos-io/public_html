@@ -1,0 +1,7 @@
+entity_body_class.settings:
+  path: '/admin/config/content/body-class-settings'
+  defaults:
+    _form: '\Drupal\entity_body_class\Form\EntityBodyClassForm'
+    _title: 'Manage entity body class settings'
+  requirements:
+    _permission: 'access entity body class settings'

@@ -1,0 +1,9 @@
+name: 'Create and Continue'
+type: module
+description: 'Creates a button on the node edit form that allows a user to create a node and continue to create another node of that type upon saving.'
+core_version_requirement: ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2025-02-28
+version: '2.0.0'
+project: 'createandcontinue'
+datestamp: 1740744289

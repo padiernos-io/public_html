@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: gvjbwwxsPfbgveTNs-GVGUETtLdpLF0vnA6_UQ4xZG8
+jpeg_quality: 75
+resize_filter: 22
+optimize: true
+strip_metadata: true

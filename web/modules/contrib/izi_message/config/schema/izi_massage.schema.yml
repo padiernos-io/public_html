@@ -1,0 +1,70 @@
+izi_message.settings:
+  type: config_object
+  label: 'Izi message settings'
+  mapping:
+    position:
+      type: string
+      label: 'izi Message Position'
+    theme:
+      type: string
+      label: 'izi Message Theme'
+    maxWidth:
+      type: integer
+      label: 'izi Message Width'
+    timeout:
+      type: integer
+      label: 'izi Message Timeout'
+    titleSize:
+      type: string
+      label: 'Title font size'
+    messageSize:
+      type: string
+      label: 'Message font size'
+    drag:
+      type: boolean
+      label: 'Drag Feature'
+    close:
+      type: boolean
+      label: 'Close button'
+    closeOnEscape:
+      type: boolean
+      label: 'Close on escape'
+    closeOnClick:
+      type: boolean
+      label: 'Close on click'
+    rtl:
+      type: boolean
+      label: 'RTL option'
+    pauseOnHover:
+      type: boolean
+      label: 'Pause on hover'
+    resetOnHover:
+      type: boolean
+      label: 'Reset on hover'
+    progressBar:
+      type: boolean
+      label: 'Progress Bar'
+    overlay:
+      type: boolean
+      label: 'Overlay'
+    overlayClose:
+      type: boolean
+      label: 'Overlay close'
+    animateInside:
+      type: boolean
+      label: 'Animate inside'
+    transitionIn:
+      type: string
+      label: 'Transition in'
+    transitionOut:
+      type: string
+      label: 'Transition out'
+    transitionInMobile:
+      type: string
+      label: 'Mobile transition in'
+    transitionOutMobile:
+      type: string
+      label: 'Mobile transition out'
+    displayMode:
+      type: boolean
+      label: 'Display mode'

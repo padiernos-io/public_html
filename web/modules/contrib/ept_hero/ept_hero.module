@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * EPT Hero module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ept_hero_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ept_hero module.
+    case 'help.page.ept_hero':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Extra Block Types: Hero module provides ability to add a paragraph with Hero image, background image or video, title, subtitle and two buttons.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function ept_hero_preprocess_paragraph(&$variables) {
+  if (empty($variables['elements']['#paragraph']) ||
+    $variables['elements']['#paragraph']->bundle() !== 'ept_hero') {
+    return;
+  }
+
+  $paragraph_class = 'paragraph-id-' . $variables['elements']['#paragraph']->id();
+  $ept_settings = $variables['elements']['#paragraph']->field_ept_settings->getValue();
+
+  $service = \Drupal::service('ept_basic_button.generate_custom_css');
+  $variables['button_styles'] = $service->generateFromSettings($ept_settings[0]['ept_settings'], $paragraph_class);
+
+  $service = \Drupal::service('ept_hero.generate_hero_css');
+  $variables['hero_styles'] = $service->generateFromSettings($ept_settings[0]['ept_settings'], $paragraph_class);
+}

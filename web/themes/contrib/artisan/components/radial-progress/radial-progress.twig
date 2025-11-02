@@ -1,0 +1,6 @@
+{% set classes = [
+  'radial-progress',
+  color ? 'text-' ~ color,
+] %}
+<div {{ attributes.addClass(classes).setAttribute('style','--value:'~ value).setAttribute('aria-valuenow', value) }} role="progressbar">{{ value }}%</div>
+

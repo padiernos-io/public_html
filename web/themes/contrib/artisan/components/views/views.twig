@@ -1,0 +1,74 @@
+{% set classes = [
+  'view',
+  css_name|clean_class,
+  display_id|clean_class,
+  dom_id ? 'js-view-dom-id-' ~ dom_id,
+  css_class ? css_class,
+] %}
+
+{% set view_header_classes = [
+  'view-header',
+]|merge(view_header_extra_classes ?: []) %}
+
+{% set view_row_classes = [
+  'view-content',
+]|merge(view_row_extra_classes ?: []) %}
+
+{% set view_footer_classes = [
+  'view-footer',
+]|merge(view_footer_extra_classes ?: []) %}
+
+<div{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+  {% block header %}
+    {% if header %}
+      <div class="{{ view_header_classes|join(' ') }}">
+        {{ header }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block exposed %}
+    {{ exposed }}
+  {% endblock %}
+
+  {% block attachment_before %}
+    {{ attachment_before }}
+  {% endblock %}
+
+  {% block rows %}
+    {% if rows -%}
+      <div class="{{ view_row_classes|join(' ') }}">
+        {{ rows }}
+      </div>
+    {% elseif empty -%}
+      {{ empty }}
+    {% endif %}
+  {% endblock %}
+
+  {% block pager %}
+    {{ pager }}
+  {% endblock %}
+
+  {% block attachment_after %}
+    {{ attachment_after }}
+  {% endblock %}
+
+  {% block more %}
+    {{ more }}
+  {% endblock %}
+
+  {% block footer %}
+    {% if footer %}
+      <div class="{{ view_footer_classes|join(' ') }}">
+        {{ footer }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {{ feed_icons }}
+</div>

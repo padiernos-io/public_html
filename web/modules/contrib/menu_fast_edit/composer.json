@@ -1,0 +1,27 @@
+{
+    "name": "slalom-consulting/menu_fast_edit",
+    "type": "drupal-module",
+    "description": "Enhances the Drupal admin UI to let menu links be added and edited quickly.",
+    "keywords": ["Drupal", "menu", "configuration", "configuration management"],
+    "authors": [
+        {
+            "name": "Steven Wright",
+            "email": "steven.wright@slalom.com",
+            "homepage": "https://slalom.com",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Rick Hawkins",
+            "email": "rick.hawkins@slalom.com",
+            "homepage": "https://slalom.com",
+            "role": "Maintainer"
+        }
+    ],
+    "homepage": "https://www.drupal.org/project/menu_fast_edit",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/menu_fast_edit",
+        "source": "https://git.drupalcode.org/project/menu_fast_edit"
+    },
+    "license": "GPL-2.0-or-later",
+    "require": {}
+}

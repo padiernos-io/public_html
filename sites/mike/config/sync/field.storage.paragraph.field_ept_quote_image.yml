@@ -1,0 +1,22 @@
+uuid: 0d13f21f-7a53-4331-957c-d7abd0682824
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: tQ8LcsYTu_fXhMAvx5We58I0EB2mrFc9tC42tO2YpQ4
+id: paragraph.field_ept_quote_image
+field_name: field_ept_quote_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

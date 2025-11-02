@@ -1,0 +1,31 @@
+uuid: 15a33cbb-c049-42f6-bed7-8edc114b4d6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_stats_item_image
+    - media.type.image
+    - paragraphs.paragraphs_type.ept_stats_item
+_core:
+  default_config_hash: gQ-WN8Z7uMhqF7m3PcgLkMbssZvUuoZDru39piaWdaY
+id: paragraph.ept_stats_item.field_ept_stats_item_image
+field_name: field_ept_stats_item_image
+entity_type: paragraph
+bundle: ept_stats_item
+label: 'Stats item image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

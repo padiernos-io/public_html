@@ -1,0 +1,19 @@
+entity_display_processor_plugin.settings.custom_classes:
+  type: mapping
+  mapping:
+    classes:
+      type: string
+      label: 'Classes'
+core.entity_view_display.*.*.*.third_party.entity_display_processor:
+  type: mapping
+  label: 'Entity display processor'
+  mapping:
+    processor:
+      type: mapping
+      mapping:
+        id:
+          type: string
+          label: 'Processor plugin ID'
+        settings:
+          type: entity_display_processor_plugin.settings.[%parent.id]
+          label: 'Processor plugin settings'

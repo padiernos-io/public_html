@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
+langcode: en
+uuid: 21826894-c455-4da5-a5d5-acb80c1707cd
+name: 'M. Padiernos'
+mail: dev@padiernos.me
+slogan: ''
+page:
+  403: /user/login
+  404: ''
+  front: /page-front
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

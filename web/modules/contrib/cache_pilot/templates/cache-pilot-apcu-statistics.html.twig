@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display APCu statistics.
+ *
+ * Available variables:
+ * - attributes: The main wrapper element attributes.
+ * - statistics: An array with raw data containing:
+ *   - cache_info: The cache information from apcu_cache_info().
+ *   - memory_info: The memory information from apcu_sma_info().
+ * - cache: The information about general cache.
+ * - memory: The information about memory usage.
+ */
+#}
+<div{{ attributes.addClass('cache-pilot-apcu-statistics') }}>
+  {{ cache }}
+  {{ memory }}
+</div>

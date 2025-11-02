@@ -1,0 +1,140 @@
+.ept-paragraph-counter .ept-counter-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.ept-paragraph-counter .ept-counter-content .field--name-field-ept-counter-title {
+  flex-grow: 1;
+}
+
+.ept-counter-four_columns .ept-container .field--name-field-ept-counter-items {
+  display: grid;
+  justify-content: space-between;
+  grid-row-gap: 30px;
+  grid-column-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media (max-width: 768px) {
+  .ept-counter-four_columns .ept-container .field--name-field-ept-counter-items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .ept-counter-four_columns .ept-container .field--name-field-ept-counter-items {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+.ept-counter-four_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content {
+  background: lightgray;
+  text-align: center;
+  overflow-wrap: break-word;
+  padding: 10px;
+}
+.ept-counter-four_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .field--name-field-ept-counter-icon img {
+  height: 75px;
+  margin: 0 auto;
+}
+.ept-counter-four_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .field--name-field-ept-counter-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 20px 0;
+}
+.ept-counter-four_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .field--name-field-ept-counter-description {
+  text-align: center;
+}
+.ept-counter-four_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .ept-counter-number {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.ept-counter-four_columns .ept-container .field--name-field-ept-settings {
+  display: none;
+}
+
+.ept-counter-three_columns .ept-container .field--name-field-ept-counter-items {
+  display: grid;
+  justify-content: space-between;
+  grid-row-gap: 30px;
+  grid-column-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 768px) {
+  .ept-counter-three_columns .ept-container .field--name-field-ept-counter-items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .ept-counter-three_columns .ept-container .field--name-field-ept-counter-items {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+.ept-counter-three_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content {
+  background: lightgray;
+  text-align: center;
+  overflow-wrap: break-word;
+  padding: 10px;
+}
+.ept-counter-three_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .field--name-field-ept-counter-icon img {
+  height: 75px;
+  margin: 0 auto;
+}
+.ept-counter-three_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .field--name-field-ept-counter-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 20px 0;
+}
+.ept-counter-three_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .field--name-field-ept-counter-description {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.ept-counter-three_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .ept-counter-number {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.ept-counter-three_columns .ept-container .field--name-field-ept-settings {
+  display: none;
+}
+
+.ept-counter-two_columns .ept-container .field--name-field-ept-counter-items {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 30px;
+  grid-column-gap: 30px;
+}
+@media (max-width: 480px) {
+  .ept-counter-two_columns .ept-container .field--name-field-ept-counter-items {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+.ept-counter-two_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content {
+  background: lightgray;
+  text-align: center;
+  overflow-wrap: break-word;
+  padding: 10px;
+}
+.ept-counter-two_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .field--name-field-ept-counter-icon img {
+  height: 75px;
+  margin: 0 auto;
+}
+.ept-counter-two_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .field--name-field-ept-counter-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 20px 0;
+}
+.ept-counter-two_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .field--name-field-ept-counter-description {
+  text-align: center;
+}
+.ept-counter-two_columns .ept-container .field--name-field-ept-counter-items .ept-counter-content .ept-counter-number {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.ept-counter-two_columns .ept-container .field--name-field-ept-settings {
+  display: none;
+}

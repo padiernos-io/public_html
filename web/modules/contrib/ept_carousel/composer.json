@@ -1,0 +1,18 @@
+{
+    "name": "drupal/ept_carousel",
+    "type": "drupal-module",
+    "description": "Extra Paragraph Types (EPT): Carousel",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ept_carousel",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ept_carousel",
+        "source": "https://git.drupalcode.org/project/ept_carousel"
+    },
+    "require": {
+        "drupal/ept_core": "^1.4",
+        "drupal/paragraphs": "^1.0",
+        "levmyshkin/tiny-slider": "^2.9"
+    }
+}

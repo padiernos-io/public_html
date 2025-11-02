@@ -1,0 +1,12 @@
+uuid: ea8b2eba-70e3-4749-a383-167644812d73
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7pqqqPfYwBkkvx32K8x5QoezX6vxHdseC3YV0ajDLEI
+id: ept_accordion
+label: 'EPT Accordion/FAQ'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Accordion/FAQ'
+behavior_plugins: {  }

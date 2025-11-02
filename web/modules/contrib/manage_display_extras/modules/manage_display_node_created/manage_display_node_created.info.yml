@@ -1,0 +1,10 @@
+name: Manage display node created
+type: module
+description: "Show the 'created' field as configurable in the manage display."
+package: Fields
+core_version_requirement: ^9 || ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2025-03-17
+version: '3.0.0-beta1'
+project: 'manage_display_extras'
+datestamp: 1742249579

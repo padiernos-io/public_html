@@ -1,0 +1,23 @@
+uuid: decefe4c-3a48-4472-942d-ad56dbb1ae2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_timeline_current
+    - paragraphs.paragraphs_type.ept_timeline_item
+_core:
+  default_config_hash: zpFOycu5dLSdICqGiMRKW_Fe34nrbfZaN_TkIE6Os9c
+id: paragraph.ept_timeline_item.field_ept_timeline_current
+field_name: field_ept_timeline_current
+entity_type: paragraph
+bundle: ept_timeline_item
+label: Current
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

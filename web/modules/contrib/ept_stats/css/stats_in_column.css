@@ -1,0 +1,105 @@
+.ept-stats-stats_in_column .ept-container h2 {
+  color: #000000;
+  margin-bottom: 1rem;
+}
+@media (min-width: 880px) {
+  .ept-stats-stats_in_column .ept-container h2 {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1100px) {
+  .ept-stats-stats_in_column .ept-container h2 {
+    font-size: 1.625rem;
+    line-height: 2.375rem;
+    margin-bottom: 4.25rem;
+  }
+}
+@media (min-width: 880px) {
+  .ept-stats-stats_in_column .ept-container .ept-stats-body-stats {
+    display: flex;
+  }
+}
+@media (min-width: 880px) {
+  .ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-body {
+    width: 55.5%;
+    margin-right: 20%;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1100px) {
+  .ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-body {
+    width: 53%;
+    margin-right: 16.5%;
+  }
+}
+@media (min-width: 1320px) {
+  .ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-body {
+    width: 56%;
+    margin-right: 15.5%;
+  }
+}
+.ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-body .field--type-text-with-summary p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #000000;
+  line-height: 1.5rem;
+}
+@media (min-width: 880px) {
+  .ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-body .field--type-text-with-summary p {
+    font-size: 1.125rem;
+    margin-bottom: 0;
+    line-height: 1.875rem;
+  }
+}
+.ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-stats-in-column .field--type-entity-reference-revisions .field__item .paragraph--type--ept-stats-item {
+  display: flex;
+  flex-direction: column-reverse;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 880px) {
+  .ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-stats-in-column .field--type-entity-reference-revisions .field__item .paragraph--type--ept-stats-item {
+    margin-bottom: 24px;
+  }
+}
+@media (min-width: 1320px) {
+  .ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-stats-in-column .field--type-entity-reference-revisions .field__item .paragraph--type--ept-stats-item {
+    width: 295px;
+  }
+}
+.ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-stats-in-column .field--type-entity-reference-revisions .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-image {
+  display: none;
+}
+.ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-stats-in-column .field--type-entity-reference-revisions .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-link {
+  display: none;
+}
+.ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-stats-in-column .field--type-entity-reference-revisions .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-text {
+  margin-bottom: 0.5rem;
+  color: #000;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+}
+.ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-stats-in-column .field--type-entity-reference-revisions .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-number {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (min-width: 880px) {
+  .ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-stats-in-column .field--type-entity-reference-revisions .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-number {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1100px) {
+  .ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-stats-in-column .field--type-entity-reference-revisions .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-number {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+.ept-stats-stats_in_column .ept-container .ept-stats-body-stats .ept-stats-stats-in-column .field--type-entity-reference-revisions .field__item .field__item:last-child .paragraph--type--ept-stats-item {
+  border-bottom: 0px;
+  margin-bottom: 0;
+}

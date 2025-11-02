@@ -1,0 +1,10 @@
+name: 'Module Cleanup'
+description: 'Lists uninstalled or deleted modules with transient data and allows the admin to delete the trasient data.'
+package: 'Module Cleanup'
+type: module
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2025-03-18
+version: '1.0.5'
+project: 'module_cleanup'
+datestamp: 1742291613

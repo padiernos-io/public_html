@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Defines the hooks of the Izi message module here.
+ */
+
+use Drupal\izi_message\Utility\HelpTemplate;
+
+/**
+ * Implements hook_help().
+ */
+function izi_message_help($route_name, $route_match) {
+  if ($route_name === 'help.page.izi_message') {
+    $readmy = file_get_contents(__DIR__ . '/README.md');
+    if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+      $template = HelpTemplate::help();
+      return \Drupal::service('renderer')->render($template);
+    }
+    else {
+      $filter_manager = \Drupal::service('plugin.manager.filter');
+      $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+      $config = ['settings' => $settings];
+      $filter = $filter_manager->createInstance('markdown', $config);
+      return $filter->process($readmy, 'en');
+    }
+  }
+  return NULL;
+
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function izi_message_preprocess_page(&$variables) {
+  $config = \Drupal::config('izi_message.settings')->get();
+  if (!empty($config['_core'])) {
+    unset($config['_core']);
+  }
+  $variables['#attached']['drupalSettings']['iziMessage'] = $config;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function izi_message_theme($existing, $type, $theme, $path) {
+  return [
+    'izi_message' => [
+      'render element' => 'element',
+      'variables' => [
+        'children' => '',
+        'message_list' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function izi_message_element_info_alter(array &$info) {
+  $info['status_messages']['#pre_render'] = ["\Drupal\izi_message\IziMessage::generatePlaceholder"];
+}

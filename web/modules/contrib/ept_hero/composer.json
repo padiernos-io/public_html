@@ -1,0 +1,17 @@
+{
+    "name": "drupal/ept_hero",
+    "type": "drupal-module",
+    "description": "EPT Hero",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ept_hero",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ept_hero",
+        "source": "https://git.drupalcode.org/project/ept_hero"
+    },
+    "require": {
+        "drupal/ept_basic_button": "^1.4",
+        "drupal/ept_core": "^1.4"
+    }
+}

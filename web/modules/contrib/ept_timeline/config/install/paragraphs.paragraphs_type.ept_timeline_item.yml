@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ept_timeline_item
+label: 'EPT Timeline Event'
+icon_uuid: null
+icon_default: null
+description: 'Timeline section for EPT Timeline'
+behavior_plugins: {  }

@@ -1,0 +1,38 @@
+{
+    "name": "agaric/php-facebook",
+    "homepage": "https://gitlab.com/agaric/php/php-facebook",
+    "description": "Extends the Facebook OAuth 2.0 Client Provider with methods for posting to Facebook",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "keegan rankin",
+            "email": "keegan@agaric.coop",
+            "homepage": "https://agaric.coop/keegan",
+            "role": "Developer"
+        },
+        {
+            "name": "benjamin melançon",
+            "email": "ben@agaric.com",
+            "homepage": "https://agaric.coop/mlncn",
+            "role": "Developer"
+        }
+
+    ],
+    "keywords": [
+        "oauth",
+        "oauth2",
+        "client",
+        "authorization",
+        "authentication",
+        "facebook",
+        "post"
+    ],
+    "require": {
+        "league/oauth2-facebook": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Agaric\\FacebookApi\\": "src/"
+        }
+    }
+}

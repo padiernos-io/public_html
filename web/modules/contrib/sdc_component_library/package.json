@@ -1,0 +1,33 @@
+{
+  "name": "sdc_component_library",
+  "version": "1.0.0",
+  "author": "",
+  "type": "module",
+  "description": "Finalist Components Module Overview",
+  "main": "index.js",
+  "keywords": [],
+  "license": "ISC",
+  "scripts": {
+    "lint:css": "stylelint assets/css/*.css'",
+    "lint:js": "eslint 'assets/js/*.js'",
+    "lint:js:fix": "eslint 'assets/js/*.js' --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-promise": "^6.6.0",
+    "globals": "^15.10.0",
+    "prettier": "^3.3.3",
+    "stylelint": "^16.9.0",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-prettier": "^5.0.2",
+    "stylelint-webpack-plugin": "^5.0.1"
+  }
+}

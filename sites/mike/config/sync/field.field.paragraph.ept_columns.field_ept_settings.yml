@@ -1,0 +1,23 @@
+uuid: 39de1fae-849e-4950-b95f-adb818a906fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_settings
+    - paragraphs.paragraphs_type.ept_columns
+  module:
+    - ept_core
+_core:
+  default_config_hash: v6ug86IR2khsDICnCIAdzPfNfLXmkeVFT9UqUTRCd9s
+id: paragraph.ept_columns.field_ept_settings
+field_name: field_ept_settings
+entity_type: paragraph
+bundle: ept_columns
+label: Settings
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ept_settings

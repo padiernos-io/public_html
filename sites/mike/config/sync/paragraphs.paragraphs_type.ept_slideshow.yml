@@ -1,0 +1,12 @@
+uuid: a27cb74f-1f73-4d0d-9f7e-2f906aa630e6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KeaY7LvgW90UqWSbJG60DfX1q0Up4566bgG8p85U12U
+id: ept_slideshow
+label: 'EPT Slideshow'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Slideshow'
+behavior_plugins: {  }

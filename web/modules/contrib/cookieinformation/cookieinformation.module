@@ -1,0 +1,119 @@
+<?php
+
+/**
+ * @file
+ * Module file for cookieinformation.
+ */
+
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cookieinformation_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name !== 'help.page.cookieinformation') {
+    return;
+  }
+  $links = [
+    ':cookieinformation_website' => 'https://cookieinformation.com',
+    ':project_page' => 'https://drupal.org/project/cookieinformation',
+  ];
+  $output = '';
+  $output .= '<h3>' . t('About', [], ['context' => 'Cookie information']) . '</h3>';
+  $output .= '<p>' . t('The Cookie Information module provides a simple way of adding the Cookie Information consent popup to any Drupal site with an active Cookie Information subscription. See the <a href=":cookieinformation_website">Cookie Information website</a> for general information about Cookie Information. For more module help, see the <a href=":project_page">module project page</a>.', $links, ['context' => 'Cookie information']) . '</p>';
+  return $output;
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function cookieinformation_page_attachments_alter(array &$page) {
+  $config = \Drupal::config('cookieinformation.settings');
+  $languageService = \Drupal::service('cookieinformation.language_service');
+  $visibilityService = \Drupal::service('cookieinformation.visibility_service');
+  $modulePath = \Drupal::service('extension.list.module')->getPath('cookieinformation');
+
+  // Add module cache tags.
+  $page['#cache']['tags'] = Cache::mergeTags($page['#cache']['tags'] ?? [], $config->getCacheTags());
+
+  if (!$visibilityService->checkAll()) {
+    return;
+  }
+
+  // Create default tag for Cookie information.
+  $cookie_popup = [
+    '#type' => 'html_tag',
+    '#tag' => 'script',
+    '#attributes' => [
+      'type' => 'text/javascript',
+      'id' => 'CookieConsent',
+      'src' => 'https://policy.app.cookieinformation.com/uc.js',
+      'data-culture' => $languageService->getId(),
+    ],
+  ];
+
+  // Add TCF data-attributes when IAB is enabled in module settings.
+  if (!empty($config->get('enable_iab'))) {
+    $cookie_popup['#attributes']['data-tcf-v2-enabled'] = "true";
+    $cookie_popup['#attributes']['data-tcf-version'] = "2.2";
+  }
+
+  $gcm_version = !empty($config->get('google_consent_mode')) ? $config->get('google_consent_mode') : '';
+
+  // Enable Google Consent Mode v1 scripts.
+  if ($gcm_version === 'v1') {
+    // Embed Google Consent Mode tag as early as possible in the page load.
+    $consent_mode_js_path = $modulePath . '/js/consent_mode.init.js';
+    $consent_mode_js_url = \Drupal::service('file_url_generator')->generateString($consent_mode_js_path);
+
+    // Create inline <script> from Google Consent Mode tag.
+    $consent_mode_init_script = [
+      '#type' => 'html_tag',
+      '#tag' => 'script',
+      '#attributes' => [
+        'type' => 'text/javascript',
+        'id' => 'ConsentMode',
+        'src' => $consent_mode_js_url,
+      ],
+      '#weight' => -200,
+    ];
+    $page['#attached']['html_head'][] = [$consent_mode_init_script, 'consent_mode_init_script_key'];
+    $page['#attached']['library']['cookieinformation/sdk'] = 'cookieinformation/consent_mode';
+  }
+  // Enable Google Consent Mode v2 scripts.
+  elseif ($gcm_version === 'v2') {
+    $cookie_popup['#attributes']['data-gcm-version'] = '2.0';
+
+    // Embed Google Consent Mode tag as early as possible in the page load.
+    $consent_mode_v2_js_path = $modulePath . '/js/consent_mode_v2.init.js';
+    $consent_mode_v2_js_url = \Drupal::service('file_url_generator')->generateString($consent_mode_v2_js_path);
+
+    // Create inline <script> from Google Consent Mode tag.
+    $consent_mode_v2_init_script = [
+      '#type' => 'html_tag',
+      '#tag' => 'script',
+      '#attributes' => [
+        'type' => 'text/javascript',
+        'id' => 'ConsentMode',
+        'src' => $consent_mode_v2_js_url,
+      ],
+      '#weight' => -200,
+    ];
+    $page['#attached']['html_head'][] = [$consent_mode_v2_init_script, 'consent_mode_init_script_key'];
+    $page['#attached']['library']['cookieinformation/sdk'] = 'cookieinformation/consent_mode_v2';
+  }
+
+  $page['#attached']['html_head'][] = [$cookie_popup, 'cookieinformation.ucjs'];
+
+  if (!empty($config->get('block_iframes')) && !empty($config->get('block_iframes_category'))) {
+    $cookie_category = $config->get('block_iframes_category');
+    $cookie_category_label = \Drupal::service('cookieinformation.category_service')->getCategoryLabel($cookie_category);
+
+    $page['#attached']['library']['cookieinformation/iframes'] = 'cookieinformation/iframes';
+    $page['#attached']['drupalSettings']['cookieinformation'] = [
+      'block_iframes_category' => $cookie_category,
+      'block_iframes_category_label' => $cookie_category_label,
+    ];
+  }
+}

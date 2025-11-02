@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Provides functionality for responsive gallery.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ *
+ * Provides definitions for drupal's help features.
+ */
+function responsive_gallery_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.responsive_gallery':
+      $output = '<p>' . t('Responsive Gallery provides the image formatter for the beautiful, modern responsive image gallery and overlay windows containing images.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function responsive_gallery_theme($existing, $type, $theme, $path) {
+  $items = [];
+
+  $items['responsive_gallery'] = [
+    'variables' => [
+      'gallery' => [
+        'thumbnail_classes' => NULL,
+        'wrapper_class' => [],
+      ],
+      'thumbnails' => [
+        'images' => [],
+      ],
+    ],
+  ];
+
+  return $items;
+}

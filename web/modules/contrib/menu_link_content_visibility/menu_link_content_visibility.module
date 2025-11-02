@@ -1,0 +1,22 @@
+<?php
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function menu_link_content_visibility_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  if ($entity_type->id() === 'menu_link_content') {
+    $fields['visibility'] = BaseFieldDefinition::create('menu_link_content_visibility')
+      ->setLabel(t('Visibility'))
+      ->setDisplayOptions('form', [
+          'type' => 'menu_link_content_visibility',
+          'weight' => 30,
+        ]
+      );
+  }
+  return $fields;
+}

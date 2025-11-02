@@ -1,0 +1,95 @@
+backstop_generator.scenario.*:
+  type: config_entity
+  label: Backstop Scenario
+  mapping:
+    page:
+      type: integer
+      label: Page
+    id:
+      type: string
+      label: ID
+    label:
+      type: string
+      label: Label
+    uuid:
+      type: string
+    description:
+      type: string
+    cookiePath:
+      type: string
+      label: cookiePath
+    url:
+      type: string
+      label: URL
+    referenceUrl:
+      type: string
+      label: referenceUrl
+    useScenarioDefaults:
+      type: boolean
+      label: useScenarioDefaults
+    readyEvent:
+      type: string
+      label: readyEvent
+    readySelector:
+      type: string
+      label: readySelector
+    readyTimeout:
+      type: integer
+      label: readyTimeout
+    delay:
+      type: integer
+      label: Delay
+    hideSelectors:
+      type: string
+      label: hideSelectors
+    removeSelectors:
+      type: string
+      label: removeSelectors
+    onBeforeScript:
+      type: boolean
+      label: onBeforeScript
+    onReadyScript:
+      type: boolean
+      label: onReadyScript
+    keyPressSelectors:
+      type: string
+      label: keyPressSelectors
+    hoverSelector:
+      type: string
+      label: hoverSelector
+    hoverSelectors:
+      type: string
+      label: hoverSelectors
+    clickSelector:
+      type: string
+      label: clickSelector
+    clickSelectors:
+      type: string
+      label: clickSelectors
+    postInteractionWait:
+      type: integer
+      label: postInteractionWait
+    scrollToSelector:
+      type: string
+      label: scrollToSelector
+    selectors:
+      type: string
+      label: selectors
+    selectorExpansion:
+      type: boolean
+      label: selectorExpansion
+    expect:
+      type: integer
+      label: Expect
+    misMatchThreshold:
+      type: decimal
+      label: misMatchThreshold
+    requireSameDimensions:
+      type: boolean
+      label: requireSameDimensions
+    viewports:
+      type: sequence
+      label: Viewports
+    gotoParameters:
+      type: string
+      label: gotoParameters

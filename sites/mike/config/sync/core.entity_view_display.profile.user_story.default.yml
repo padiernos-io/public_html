@@ -1,0 +1,25 @@
+uuid: 93e6dce4-d752-407f-93a2-dc5043aed579
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.user_story.field_paragraphs
+    - profile.type.user_story
+  module:
+    - entity_reference_revisions
+id: profile.user_story.default
+targetEntityType: profile
+bundle: user_story
+mode: default
+content:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

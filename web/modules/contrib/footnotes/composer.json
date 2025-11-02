@@ -1,0 +1,46 @@
+{
+  "name": "drupal/footnotes",
+  "description": "Add automatically numbered footnotes to your posts.",
+  "type": "drupal-module",
+  "homepage": "https://drupal.org/project/footnotes",
+  "authors": [
+    {
+      "name": "Andrii Aleksandrov (id.aleks)",
+      "homepage": "https://www.drupal.org/u/idaleks",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Oleksandr Dekhteruk (pifagor)",
+      "homepage": "https://www.drupal.org/u/pifagor",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Fernando Conceição (yukare)",
+      "homepage": "https://www.drupal.org/u/yukare",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Henrik Ingo (hingo)",
+      "homepage": "https://www.drupal.org/u/hingo",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Scott Euser (scott_euser)",
+      "homepage": "https://www.drupal.org/u/scott_euser",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://drupal.org/project/issues/footnotes",
+    "source": "https://cgit.drupalcode.org/footnotes"
+  },
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/core": ">=10.0"
+  },
+  "require-dev": {
+    "drupal/metatag": "^2.0",
+    "drupal/search_api": "*"
+  }
+}

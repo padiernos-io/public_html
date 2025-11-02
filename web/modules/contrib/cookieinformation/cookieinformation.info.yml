@@ -1,0 +1,13 @@
+name: Cookie Information
+type: module
+description: Integration cookie consent popup from Cookieinformation.com.
+core_version_requirement: ^9.3 || ^10 || ^11
+package: Cookie Information
+configure: cookieinformation.settings
+dependencies:
+  - 'drupal:path_alias'
+
+# Information added by Drupal.org packaging script on 2025-03-07
+version: '2.2.1'
+project: 'cookieinformation'
+datestamp: 1741331295

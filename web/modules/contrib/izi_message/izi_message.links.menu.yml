@@ -1,0 +1,4 @@
+izi_message.settings:
+  title: 'Izi Message settings'
+  route_name: izi_message.settings
+  parent: 'system.admin_config_development'

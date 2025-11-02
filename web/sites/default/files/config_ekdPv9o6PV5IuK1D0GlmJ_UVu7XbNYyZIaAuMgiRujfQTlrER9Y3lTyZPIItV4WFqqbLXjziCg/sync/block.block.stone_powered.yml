@@ -1,0 +1,22 @@
+uuid: 0e8acdef-8122-47dd-bfa2-eb246f5b39ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - stone
+_core:
+  default_config_hash: 5VBXsyvJSTQNtrh86WK8GN_FCaRtK03D1fjfZQnUvtU
+id: stone_powered
+theme: stone
+region: branding
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

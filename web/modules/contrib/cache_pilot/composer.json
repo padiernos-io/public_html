@@ -1,0 +1,22 @@
+{
+    "name": "drupal/cache_pilot",
+    "type": "drupal-module",
+    "description": "Simple tools to manage the APCu and OPcache caches.",
+    "keywords": [
+        "Drupal",
+        "cache",
+        "APCu",
+        "Zend OPcache"
+    ],
+    "license": "GPL-2.0+",
+    "homepage": "https://drupal.org/project/cache_pilot",
+    "support": {
+        "issues": "https://drupal.org/project/issues/cache_pilot",
+        "source": "https://git.drupalcode.org/project/cache_pilot"
+    },
+    "require": {
+        "php": ">=8.3",
+        "drupal/core": "^10.3 || ^11.0",
+        "hollodotme/fast-cgi-client": "^3.1"
+    }
+}

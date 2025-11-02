@@ -1,0 +1,9 @@
+name: Grouped by field widget
+description: 'Provides a widget that groups checkboxes by their parents. Useful for grouping terms into their vocabularies.'
+core_version_requirement: ~9.0 || ^10.0 || ^11
+type: module
+
+# Information added by Drupal.org packaging script on 2025-03-27
+version: '1.2.5'
+project: 'group_by_field_widget'
+datestamp: 1743095480

@@ -1,0 +1,17 @@
+{
+    "name": "drupal/ept_basic_button",
+    "type": "drupal-module",
+    "description": "Extra Paragraph Types (EPT): Basic Button",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ept_basic_button",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ept_basic_button",
+        "source": "https://git.drupalcode.org/project/ept_basic_button"
+    },
+    "require": {
+        "drupal/ept_core": "^1.4",
+        "drupal/paragraphs": "^1.0"
+    }
+}

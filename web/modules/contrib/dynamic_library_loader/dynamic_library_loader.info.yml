@@ -1,0 +1,8 @@
+name: 'Dynamic Library Loader'
+type: module
+description: 'A custom module to dynamically load libraries conditionally to entities when needed.'
+core_version_requirement: ^10 || ^11
+# Information added by Drupal.org packaging script on 2025-02-03
+version: '2.0.5'
+project: 'dynamic_library_loader'
+datestamp: 1738618587

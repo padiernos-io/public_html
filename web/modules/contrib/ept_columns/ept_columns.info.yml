@@ -1,0 +1,14 @@
+type: module
+name: 'Extra Paragraph Types (EPT): Columns / Container'
+description: 'Extra Paragraph Types (EPT): Columns / Container module.'
+core_version_requirement: ^9.3 || ^10 || ^11
+package: 'Extra Paragraph Types'
+
+dependencies:
+  - ept_core:ept_core
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2024-07-19
+version: '1.4.6'
+project: 'ept_columns'
+datestamp: 1721384281

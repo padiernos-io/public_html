@@ -1,0 +1,27 @@
+uuid: 51c801c3-6d79-4db6-9c35-5a8ee3ac7250
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - drinimal
+_core:
+  default_config_hash: MC8XOKrs3rCERlWettoqU7VEy_VkW-z01IeUO7PBtvI
+id: drinimal_footer_menu
+theme: drinimal
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

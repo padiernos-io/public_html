@@ -1,0 +1,12 @@
+<div {{ attributes.addClass('hero')}} style="background-image: url('{{ image }}');">
+  <div class="hero-overlay"></div>
+  <div class="hero-content text-neutral-content">
+    <div class="max-w-md">
+      <{{ title_heading_level }}>{{ title }}</{{ title_heading_level }}>
+      {% block content %}
+        <div class="py-6">{{ content }}</div>
+      {% endblock %}
+      <a class="{{ cta_style }}" href="{{ cta_url }}">{{ cta_text }}</a>
+    </div>
+  </div>
+</div>

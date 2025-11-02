@@ -1,0 +1,7 @@
+{
+    "name": "levmyshkin/count-up.js",
+    "description": "CountUp.js is a dependency-free, lightweight Javascript class that can be used to quickly create animations that display numerical data in a more interesting way",
+    "type": "drupal-library",
+    "license": "MIT",
+    "require": {}
+}

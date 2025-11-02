@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_tabs_item.field_ept_tab_block
+    - field.field.paragraph.ept_tabs_item.field_ept_tab_content
+    - field.field.paragraph.ept_tabs_item.field_ept_tab_page
+    - field.field.paragraph.ept_tabs_item.field_ept_tab_text
+    - field.field.paragraph.ept_tabs_item.field_ept_tab_title
+    - field.field.paragraph.ept_tabs_item.field_ept_tab_views
+    - paragraphs.paragraphs_type.ept_tabs_item
+  module:
+    - block_field
+    - text
+    - viewsreference
+id: paragraph.ept_tabs_item.default
+targetEntityType: paragraph
+bundle: ept_tabs_item
+mode: default
+content:
+  field_ept_tab_block:
+    type: block_field
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_tab_page:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ept_tab_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ept_tab_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ept_tab_views:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_ept_tab_content: true

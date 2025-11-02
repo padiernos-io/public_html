@@ -1,0 +1,15 @@
+back_to_top_with_pi:
+  version: VERSION
+  css:
+    theme:
+      css/unicons.css: {}
+      css/custom.css: {}
+  js:
+    js/custom.js: {}
+
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/once

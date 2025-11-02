@@ -1,0 +1,14 @@
+{
+  "name": "drupal/big_pipe_paragraphs",
+  "description": "Load paragraphs with big pipe.",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "keywords": ["Drupal", "Drupal 8", "Paragraphs", "Big Pipe"],
+  "require": {
+    "drupal/preprocess": "^2.0",
+    "drupal/paragraphs": "^1.6"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  }
+}

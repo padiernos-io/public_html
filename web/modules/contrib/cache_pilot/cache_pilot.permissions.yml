@@ -1,0 +1,3 @@
+cache_pilot.administer:
+  title: 'Administer Cache Pilot settings'
+  restrict access: true

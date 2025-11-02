@@ -1,0 +1,10 @@
+services:
+  entity_usage_explorer.usage:
+    class: Drupal\entity_usage_explorer\UsageService
+    arguments: ['@database', '@entity_type.manager', '@plugin.manager.field.field_type']
+
+  entity_usage_explorer.twig.UsageHelper:
+    class: Drupal\entity_usage_explorer\UsageHelper
+    arguments: ['@entity_type.manager', '@entity_usage_explorer.usage', '@language_manager']
+    tags:
+      - { name: twig.extension }

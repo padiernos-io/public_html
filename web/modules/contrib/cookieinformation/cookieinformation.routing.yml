@@ -1,0 +1,7 @@
+cookieinformation.settings:
+  path: '/admin/config/system/cookie-information'
+  defaults:
+    _form: 'Drupal\cookieinformation\Form\CookieInformationSettingsForm'
+    _title: 'Cookie Information settings'
+  requirements:
+    _permission: 'administer cookie information settings'

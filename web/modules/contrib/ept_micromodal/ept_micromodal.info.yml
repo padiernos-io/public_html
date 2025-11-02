@@ -1,0 +1,14 @@
+type: module
+name: 'Extra Paragraph Types (EPT): Micromodal'
+description: 'Adds button with popup paragraph type.'
+core_version_requirement: ^9.3 || ^10 || ^11
+package: 'Extra Paragraph Types'
+
+dependencies:
+  - ept_core:ept_core
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2025-05-03
+version: '1.4.3'
+project: 'ept_micromodal'
+datestamp: 1746263660

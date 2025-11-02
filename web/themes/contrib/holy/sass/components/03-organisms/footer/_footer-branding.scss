@@ -1,0 +1,46 @@
+#footer {
+  .block-system-branding-block {
+    margin-bottom: 40px;
+
+    a.logo {
+      display: inline-block;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      .image {
+        display: block;
+        padding-right: 13px;
+
+        img {
+          width: auto;
+          height: 56px;
+        }
+      }
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .site-name {
+          display: block;
+          color: var(--white);
+          font-family: 'Geologica', sans-serif;
+          font-size: 24px;
+          font-weight: 600;
+        }
+
+        .site-slogan {
+          position: relative;
+          top: -5px;
+          display: block;
+          color: var(--white);
+          font-family: 'Geologica', sans-serif;
+          font-size: 15px;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+}

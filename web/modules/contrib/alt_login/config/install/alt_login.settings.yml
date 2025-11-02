@@ -1,0 +1,6 @@
+display: ''
+display_anon: 'Member [user:uid]'
+aliases:
+  - username
+name_mode: alt_login_generate_from_address
+login: {  }

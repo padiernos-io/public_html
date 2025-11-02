@@ -1,0 +1,44 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Collapse
+props:
+  type: object
+  properties:
+    title:
+      title: Title
+      type: string
+    content:
+      title: Content
+      type: string
+    title_heading_level:
+      title: Title heading level
+      type: string
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+    collapse_title_extra_classes:
+      title: Collapse title extra classes
+      type: array
+      items:
+        type: string
+    collapse_content_extra_classes:
+      title: Collapse content extra classes
+      type: array
+      items:
+        type: string
+    icon:
+      title: Variants
+      type: string
+      enum:
+        - arrow
+        - plus
+    variant:
+      title: Variants
+      type: string
+      enum:
+        - focus
+        - checkbox
+        - details

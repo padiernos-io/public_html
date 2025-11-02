@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Add templates for EPT Slideshow.
+ */
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function ept_slideshow_theme_registry_alter(&$theme_registry) {
+  $ept_module = 'ept_slideshow';
+  $module_path = \Drupal::service('extension.list.module')
+    ->getPath($ept_module);
+  $ept_module_with_dashes = str_replace('_', '-', $ept_module);
+  $base_theme = 'paragraph';
+  $theme_registry['paragraph__ept_slideshow_item__default'] = [
+    'path' => $module_path . '/templates',
+    'template' => 'paragraph--ept-slideshow-item--default',
+    'render element' => $theme_registry[$base_theme]['render element'],
+    'base hook' => $base_theme,
+    'type' => 'module',
+    'theme path' => $module_path,
+    'preprocess functions' => $theme_registry[$base_theme]['preprocess functions'],
+    'initial preprocess' => 'template_preprocess_paragraph',
+  ];
+
+  $base_theme = 'field';
+  $theme_registry['field__paragraph__field_' . $ept_module . '__' . $ept_module] = [
+    'path' => $module_path . '/templates',
+    'template' => 'field--paragraph--field-' . $ept_module_with_dashes . '--' . $ept_module_with_dashes,
+    'render element' => $theme_registry[$base_theme]['render element'],
+    'base hook' => $base_theme,
+    'type' => 'module',
+    'theme path' => $module_path,
+    'preprocess functions' => $theme_registry[$base_theme]['preprocess functions'],
+    'initial preprocess' => 'template_preprocess_field',
+  ];
+}

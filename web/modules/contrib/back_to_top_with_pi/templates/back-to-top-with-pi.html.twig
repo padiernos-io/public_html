@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a mrcs social share formatter.
+ *
+ * Available variables:
+ * - back_to_top_data: Array of back to top config data.
+ * 	 - circle_stroke_color: Circle stroke color is the line of color that precisely
+ * 	   follows a path on page scroll.
+ * 	 - progress_box_shadow: Progress box shadow color where the stroke will
+ * 	   follow a path
+ * 	   on page scroll
+ * 	 - icon_color: Icon color
+ * 	 - icon_hover_color: Icon color on hover
+ * 	 - scroll_bar_position: Scrollbar
+ * 	 - has_shadow: Scrollbar has shadow on hover
+ * 	 - shadow_color: Scrollbar shadow color
+ * 	 - has_fill_color: Scrollbar will be filled with color. The default fill color will
+ * 	   be transparent if the checkbox is not checked.
+ * 	 - created_at: Block created timestamp
+ * 	 - scrollbar_type: Scrollbar display with arrow icon or scroll percentage
+ * 	 - fill_color: Scrollbar fill color
+ *
+ * @ingroup themeable
+ */
+ #}
+ <div id = "progress-bar-{{ back_to_top_data.created_at }}" data-scroll-type="{{  back_to_top_data.scrollbar_type }}" data-before="" class="bttwpi-progressbar-container {% if back_to_top_data.scroll_bar_position == 'left' %} left-scrollbar {% else %} right-scrollbar {% endif %}" data-attr="#progress-bar-{{ back_to_top_data.created_at }} {
+ box-shadow: inset 0 0 0 2px {{ back_to_top_data.progress_box_shadow }};}
+ #progress-bar-{{ back_to_top_data.created_at }} svg.progress-circle path { stroke: {{ back_to_top_data.circle_stroke_color }}; } #progress-bar-{{ back_to_top_data.created_at }}::before { background-color: {{ back_to_top_data.icon_hover_color }}; }
+ #progress-bar-{{ back_to_top_data.created_at }}::after { color: {{ back_to_top_data.icon_color }};} {% if back_to_top_data.has_shadow %}
+ #progress-bar-{{ back_to_top_data.created_at }}::before { box-shadow: {{ back_to_top_data.shadow_color }};}  {% endif %} {% if back_to_top_data.has_fill_color %}
+ #progress-bar-{{ back_to_top_data.created_at }}.active-progress { background: {{ back_to_top_data.fill_color }};}  {% endif %} {% if back_to_top_data.scrollbar_type == 'percentage' %}
+ #progress-bar-{{ back_to_top_data.created_at }}::before { content:  attr(data-before); font-size: 14px; } #progress-bar-{{ back_to_top_data.created_at }}::after { content:  attr(data-before); font-size: 14px; }  {% endif %}">
+ <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+ 	<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+ </svg>
+</div>

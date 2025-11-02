@@ -1,0 +1,56 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Timeline item
+description: Timeline item
+props:
+  type: object
+  properties:
+    title:
+      title: Ttile
+      type: string
+    description:
+      title: Description
+      type: string
+    date:
+      title: Date
+      type: string
+    type:
+      title: Type layout
+      type: string
+      enum:
+        - horizontal_text_both_sides
+        - horizontal_text_bottom_side
+        - horizontal_text_top_side
+        - horizontal_text_top_without_icons
+        - horizontal_text_bottom_without_icons
+        - vertical_text_both_sides
+        - vertical_text_right_sides
+        - vertical_text_left_sides
+        - vertical_text_left_without_icons
+        - vertical_text_right_without_icons
+        - vertical_text_left_side_icon_snapped
+        - vertical_text_right_side_icon_snapped
+        - responsive
+    check_color:
+      title: Checkbox color
+      type: string
+      enum:
+        - neutral
+        - primary
+        - secondary
+        - accent
+        - info
+        - success
+        - warning
+        - error
+    line_color:
+      title: Line color
+      type: string
+      enum:
+        - neutral
+        - primary
+        - secondary
+        - accent
+        - info
+        - success
+        - warning
+        - error

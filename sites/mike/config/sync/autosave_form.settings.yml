@@ -1,0 +1,23 @@
+langcode: en
+interval: 60000
+only_on_form_change: false
+active_on:
+  content_entity_forms: true
+  config_entity_forms: false
+notification:
+  active: true
+  message: 'Saving draft...'
+  delay: 1000
+allowed_content_entity_types:
+  node:
+    bundles:
+      blog: blog
+      case_study: case_study
+      image: image
+      page: page
+      profile: profile
+      project: project
+      section: section
+      video: video
+      webform: webform
+allowed_new: true

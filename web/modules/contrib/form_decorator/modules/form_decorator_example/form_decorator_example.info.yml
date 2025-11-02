@@ -1,0 +1,12 @@
+name: 'Form decorator example'
+type: module
+description: 'Provides some example form decorators'
+package: Forms
+core_version_requirement: ^10 || ^11
+dependencies:
+  - form_decorator:form_decorator
+
+# Information added by Drupal.org packaging script on 2025-07-16
+version: '1.0.0'
+project: 'form_decorator'
+datestamp: 1752667279

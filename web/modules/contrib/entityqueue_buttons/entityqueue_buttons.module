@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_entity_view().
+ */
+function entityqueue_buttons_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->getEntityTypeId() !== 'node' || $view_mode !== 'full') {
+    return;
+  }
+
+  /** @var \Drupal\entityqueue_buttons\EntityQueueButtonsManager $queue_manager */
+  $queue_manager = \Drupal::service('entityqueue_buttons.queue_manager');
+  $enabled_queues = $queue_manager->getEnabledQueues($entity->bundle());
+
+  if (empty($enabled_queues)) {
+    return;
+  }
+
+  $links = [];
+  $cache_tags = [];
+
+  foreach ($enabled_queues as $queue_id) {
+    // Check if user has permission to manipulate this queue.
+    if (!\Drupal::currentUser()->hasPermission('manipulate ' . $queue_id . ' entityqueue')) {
+      continue;
+    }
+
+    $queue = \Drupal::entityTypeManager()->getStorage('entity_queue')->load($queue_id);
+    if (!$queue) {
+      continue;
+    }
+
+    // Add cache tags for the queue and its subqueue.
+    $cache_tags[] = 'entity_queue:' . $queue_id;
+    $subqueue = $queue_manager->getSubqueue($queue_id);
+    if ($subqueue) {
+      $cache_tags = array_merge($cache_tags, $subqueue->getCacheTags());
+    }
+
+    $is_queued = $queue_manager->isItemInQueue($queue_id, $entity->id());
+
+    $operation = $is_queued ? 'remove' : 'add';
+    $label = $is_queued ? t('Remove from @queue', ['@queue' => $queue->label()]) : t('Add to @queue', ['@queue' => $queue->label()]);
+
+    $url = Url::fromRoute('entityqueue_buttons.queue_operation', [
+      'node' => $entity->id(),
+      'queue' => $queue_id,
+      'operation' => $operation,
+    ]);
+
+    $url->setOption('attributes', [
+      'class' => ['use-ajax', 'entityqueue-button', "entityqueue-$operation"],
+    ]);
+
+    $links[$queue_id] = Link::fromTextAndUrl($label, $url)->toRenderable();
+  }
+
+  if (!empty($links)) {
+    $build['entityqueue_buttons'] = [
+      '#theme' => 'entityqueue_buttons',
+      '#links' => $links,
+      '#attached' => [
+        'library' => ['entityqueue_buttons/buttons'],
+      ],
+      '#weight' => 100,
+      '#cache' => [
+        'contexts' => ['user.permissions'],
+        'tags' => $cache_tags,
+      ],
+    ];
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function entityqueue_buttons_theme() {
+  return [
+    'entityqueue_buttons' => [
+      'variables' => [
+        'links' => [],
+      ],
+    ],
+  ];
+}

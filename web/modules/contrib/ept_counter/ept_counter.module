@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * @file
+ * EPT Counter module code for including templates.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ept_counter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ept_counter module.
+    case 'help.page.ept_counter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Extra Paragraph Types: Counter module provides ability to add Number Counter and Text with WYSIWYG editor. This module provides settings for 2,3 or 4 columns and all options from Count-up.js plugin.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Register a theme for each paragraph type.
+ */
+function ept_counter_theme($existing, $type, $theme, $path) {
+  $theme_templates = [];
+
+  // Register custom Paragraph field number.
+  $theme_templates['field__paragraph__ept_counter__field_ept_counter_number'] = [
+    'base hook' => 'field',
+  ];
+
+  return $theme_templates;
+}
+
+/**
+ * Implements hook_theme_suggestions_hook_alter().
+ */
+function ept_counter_theme_suggestions_field_alter(array &$suggestions, array $variables, $hook) {
+  $field = $variables['element']['#field_name'];
+
+  if ($field == 'field_ept_counter_number') {
+    $suggestions[] = 'field__paragraph__ept_counter__field_ept_counter_number';
+  }
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function ept_counter_theme_registry_alter(&$theme_registry) {
+  $ept_module = 'ept_counter';
+  $module_path = \Drupal::service('extension.list.module')->getPath($ept_module);
+  $base_theme = 'paragraph';
+  $theme_registry['paragraph__ept_counter_item__default'] = [
+    'path' => $module_path . '/templates',
+    'template' => 'paragraph--ept-counter-item--default',
+    'render element' => $theme_registry[$base_theme]['render element'],
+    'base hook' => $base_theme,
+    'type' => 'module',
+    'theme path' => $module_path,
+    'preprocess functions' => $theme_registry[$base_theme]['preprocess functions'],
+    'initial preprocess' => 'template_preprocess_paragraph',
+  ];
+
+  $base_theme = 'field';
+  $theme_registry['field__paragraph__ept_counter__field_ept_counter_number'] = [
+    'path' => $module_path . '/templates',
+    'template' => 'field--paragraph--ept-counter--field-ept-counter-number',
+    'render element' => $theme_registry[$base_theme]['render element'],
+    'base hook' => $base_theme,
+    'type' => 'module',
+    'theme path' => $module_path,
+    'preprocess functions' => $theme_registry[$base_theme]['preprocess functions'],
+    'initial preprocess' => 'template_preprocess_field',
+  ];
+}

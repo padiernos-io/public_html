@@ -1,0 +1,17 @@
+type: module
+name: 'Extra Paragraph Types (EPT): Video'
+description: 'Adds single video (Remote videos and Local) paragraph type.'
+core_version_requirement: ^9.3 || ^10 || ^11
+package: 'Extra Paragraph Types'
+
+dependencies:
+  - drupal:media
+  - ept_core:ept_core
+  - glightbox:glightbox
+  - glightbox_media_video:glightbox_media_video
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2024-07-31
+version: '1.4.3'
+project: 'ept_video'
+datestamp: 1722411736

@@ -1,0 +1,24 @@
+uuid: a42a63f1-32b0-4043-93bd-dc2d34361308
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_title
+    - paragraphs.paragraphs_type.ept_counter
+  module:
+    - text
+_core:
+  default_config_hash: _A9WA0oPqrE9hJAdrstmGGAwR1IetKm59q9podeyJaI
+id: paragraph.ept_counter.field_ept_title
+field_name: field_ept_title
+entity_type: paragraph
+bundle: ept_counter
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

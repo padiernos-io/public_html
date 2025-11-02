@@ -1,0 +1,111 @@
+<?php
+
+/**
+ * @file
+ * EPT Tabs module file.
+ */
+
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ept_webform_popup_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ept_webform_popup module.
+    case 'help.page.ept_webform_popup':
+
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Webform Popup module provides ability to add Webform in popup. The button and popup are customizable with Settings form.') . '</p>';
+      $output .= '<p>' . t('This module will be helpful for creating Forms in popup, for example; Contact Us form.') . '</p>';
+      $output .= '<h3>' . t('Creating the new custom block') . '</h3>';
+      $output .= '<ul>';
+      $output .= '<li>' . t('After installing and configuring the default settings you can go ahead and create the custom block at') . '</li>';
+      $output .= '<li>' . t('Administration » Structure » Block layout » Add custom block') . '</li>';
+      $output .= '<li>' . t('You can fill in the fields, select the webform that you need to use, choose the design options and save') . '</li>';
+      $output .= '<li>' . t('Now you can place the new custom block using the default block regions or using Layout Builder in a few clicks.') . '</li>';
+      $output .= '</ul>';
+      $output .= '<h3>' . t('EPT Core') . '</h3>';
+      $output .= '<p>' . t('EPT modules provide the ability to add blocks in the layout builder in a few clicks. You can install separate block types from this bunch of EPT modules:') . '</p>';
+      $output .= '<li>' . t('<a href="@ept_accordion@">EPT Accordion / FAQ</a>', ['@ept_accordion@' => 'https://www.drupal.org/project/ept_accordion']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_basic_button@">EPT Bootstrap Button</a>', ['@ept_basic_button@' => 'https://www.drupal.org/project/ept_basic_button']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_bootstrap_button@">EPT Bootstrap Button</a>', ['@ept_bootstrap_button@' => 'https://www.drupal.org/project/ept_bootstrap_button']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_cta@">EPT Call to Action</a>', ['@ept_cta@' => 'https://www.drupal.org/project/ept_cta']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_carousel@">EPT Carousel</a>', ['@ept_carousel@' => 'https://www.drupal.org/project/ept_carousel']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_counter@">EPT Counter</a>', ['@ept_counter@' => 'https://www.drupal.org/project/ept_counter']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_image_gallery@">EPT Image Gallery</a>', ['@ept_image_gallery@' => 'https://www.drupal.org/project/ept_image_gallery']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_micromodal@">EPT Micromodal</a>', ['@ept_micromodal@' => 'https://www.drupal.org/project/ept_micromodal']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_quote@">EPT Quote</a>', ['@ept_quote@' => 'https://www.drupal.org/project/ept_quote']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_slick_slider@">EPT Slick Slider</a>', ['@ept_slick_slider@' => 'https://www.drupal.org/project/ept_slick_slider']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_slideshow@">EPT Slideshow</a>', ['@ept_slideshow@' => 'https://www.drupal.org/project/ept_slideshow']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_stats@">EPT Stats</a>', ['@ept_stats@' => 'https://www.drupal.org/project/ept_stats']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_tabs@">EPT Tabs</a>', ['@ept_tabs@' => 'https://www.drupal.org/project/ept_tabs']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_text@">EPT Text</a>', ['@ept_text@' => 'https://www.drupal.org/project/ept_text']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_timeline@">EPT Timeline</a>', ['@ept_timeline@' => 'https://www.drupal.org/project/ept_timeline']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_webform@">EPT Webform<</a>', ['@ept_webform@' => 'https://www.drupal.org/project/ept_webform']) . '</li>';
+      $output .= '<li>' . t('<a href="@ept_webform_popup@">EPT Webform Popup</a>', ['@ept_webform_popup@' => 'https://www.drupal.org/project/ept_webform_popup']) . '</li>';
+      $output .= '</ul>';
+      $output .= '<h3>' . t('External Documentation') . '</h3>';
+      $output .= '<p>' . t('You can also view the EPT documentation at Drupal Book: <a href="@drupalbook_external_documentation@">@drupalbook_external_documentation@</a>', [
+        '@drupalbook_external_documentation@' => 'https://drupalbook.org/ept',
+      ]) . '</p>';
+
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function ept_webform_popup_preprocess_paragraph(&$variables) {
+    if (empty($variables['elements']['#paragraph']) ||
+    $variables['elements']['#paragraph']->bundle() !== 'ept_webform_popup') {
+    return;
+  }
+
+  // @See https://drupal.org/node/3456067
+  $variables['#attached']['library'][] = 'webform/webform.ajax';
+
+  if (!empty($variables['content']['field_ept_webform_popup_form'][0]['#webform'])) {
+    $variables['form_url'] = $variables['content']['field_ept_webform_popup_form'][0]['#webform']->toUrl();
+  }
+
+  $service = \Drupal::service('ept_basic_button.generate_custom_css');
+  $ept_settings = $variables['elements']['#paragraph']->field_ept_settings->getValue();
+
+  $block_class = 'paragraph-id-' . $variables['elements']['#paragraph']->id();
+  $variables['button_styles'] = $service->generateFromSettings($ept_settings[0]['ept_settings'], $block_class);
+
+  $data_dialog_options = [
+    'width' => str_replace('px', '', $ept_settings[0]['ept_settings']['popup_settings']['popup_width']),
+    'height' => 'auto',
+    'classes' => [
+      'ui-dialog' => 'ui-dialog-webform-popup',
+    ],
+  ];
+
+  if (!empty($ept_settings[0]['ept_settings']['popup_settings']['popup_height'])) {
+    $data_dialog_options['height'] = str_replace('px', '', $ept_settings[0]['ept_settings']['popup_settings']['popup_height']);
+  }
+
+  if (!empty($ept_settings[0]['ept_settings']['popup_settings']['popup_title'])) {
+    $data_dialog_options['title'] = $ept_settings[0]['ept_settings']['popup_settings']['popup_title'];
+  }
+  $variables['data_dialog_options'] = Json::encode($data_dialog_options);
+
+  if (!empty($ept_settings[0]['ept_settings']['popup_settings']['popup_type'])) {
+    $variables['data_dialog_type'] = $ept_settings[0]['ept_settings']['popup_settings']['popup_type'];
+  }
+  else {
+    $variables['data_dialog_type'] = 'modal';
+  }
+
+  if (!empty($ept_settings[0]['ept_settings']['button_text'])) {
+    $variables['button_text'] = $ept_settings[0]['ept_settings']['button_text'];
+  }
+  else {
+    $variables['button_text'] = t('Contact Us');
+  }
+}

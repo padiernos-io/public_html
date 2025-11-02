@@ -1,0 +1,13 @@
+.visually-hidden:not(:focus):not(:active) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* prevent layout shift when actually using skip link */
+[href="#main-content"].visually-hidden:focus,
+[href="#main-content"].visually-hidden:active {
+  position: absolute;
+}

@@ -1,0 +1,6 @@
+# Ignore IDE and editor specific files
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.vscode/
+*.DS_Store

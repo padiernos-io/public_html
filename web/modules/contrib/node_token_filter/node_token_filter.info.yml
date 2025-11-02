@@ -1,0 +1,13 @@
+name: Node Token Filter
+type: module
+description: "Node token to render node entity by current URL if node context is not supported"
+package: Other
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:filter
+  - token:token
+
+# Information added by Drupal.org packaging script on 2025-09-24
+version: '1.1.0-beta1'
+project: 'node_token_filter'
+datestamp: 1758718835

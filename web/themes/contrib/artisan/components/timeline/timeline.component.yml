@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: 'Timeline'
+description: Timeline.
+props:
+  type: object
+  properties:
+    orientation:
+      title: Display mode
+      type: string
+      enum:
+        - horizontal
+        - vertical
+    responsive:
+      title: Responsive
+      type: boolean
+    icon:
+      title: Icon startup
+      type: boolean
+slots:
+  items:
+    title: Timeline Items
+    description: A list of timeline entries

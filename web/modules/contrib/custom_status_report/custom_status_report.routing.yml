@@ -1,0 +1,7 @@
+custom_status_report.settings:
+  path: '/admin/config/system/custom-status-report'
+  defaults:
+    _form: '\Drupal\custom_status_report\Form\CustomStatusReportSettingsForm'
+    _title: 'Custom Status Report Settings'
+  requirements:
+    _permission: 'administer site configuration'

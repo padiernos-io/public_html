@@ -1,0 +1,37 @@
+dynamic_library_loader.settings:
+  type: config_object
+  label: 'Dynamic Library Loader Settings'
+  mapping:
+    entries:
+      type: sequence
+      label: 'Entries'
+      sequence:
+        type: mapping
+        mapping:
+          id:
+            type: string
+            label: 'Unique entry ID'
+          name:
+            type: string
+            label: 'Entry name'
+          enabled:
+            type: boolean
+            label: 'Is the entry enabled?'
+          rows:
+            type: sequence
+            label: 'Rows'
+            sequence:
+              type: mapping
+              mapping:
+                context_type:
+                  type: string
+                  label: 'Context type (e.g., content_type, node_id)'
+                context:
+                  type: string
+                  label: 'Context value'
+                theme:
+                  type: string
+                  label: 'Theme or module'
+                library:
+                  type: string
+                  label: 'Library name'

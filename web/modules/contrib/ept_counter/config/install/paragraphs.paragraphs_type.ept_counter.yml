@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ept_counter
+label: 'EPT Counter'
+icon_uuid: null
+icon_default: null
+description: 'Adds Counter with coffee cups, projects, case studies number, etc.'
+behavior_plugins: {  }

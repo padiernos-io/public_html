@@ -1,0 +1,19 @@
+{% embed 'artisan:page' with {
+  header_extra_classes: ['shadow'],
+  main_extra_classes: ['container', 'py-5'],
+  footer_extra_classes: [],
+  distraction_free: distraction_free ?: false,
+  header: {
+    top: page.header_top,
+    branding: page.branding,
+    primary_menu: page.primary_menu,
+    secondary_menu: page.secondary_menu,
+    header: page.header,
+  },
+  main_content: page.content,
+  footer: {
+    top: page.footer_top,
+    bottom: page.footer_bottom,
+  }
+} only %}
+{% endembed %}

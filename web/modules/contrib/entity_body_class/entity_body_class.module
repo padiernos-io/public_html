@@ -1,0 +1,118 @@
+<?php
+
+/**
+ * @file
+ * Contains entity_body_class.module.
+ */
+
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Entity\ContentEntityFormInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function entity_body_class_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.entity_body_class':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides entity body class functionality.') . '</p>';
+      $output .= '<p>' . t('All entity types have a new "Body CSS class(es)" field to add body classes.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function entity_body_class_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  if (in_array(ContentEntityInterface::class, class_implements($entity_type->getOriginalClass())) &&
+    $entity_type->getLinkTemplate('canonical')
+  ) {
+    $fields['entity_body_class'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Body CSS class(es)'))
+      ->setDescription(t('The field can include multiple classes separated by a single space. It can also contain tokens. .e.g. <em>my-body-class-1 [language:langcode]</em>'))
+      ->setTranslatable(TRUE)
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+      ])
+      ->setDisplayConfigurable('form', TRUE);
+  }
+
+  return $fields;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function entity_body_class_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  /** @var \Drupal\Core\Form\FormInterface $object */
+  $object = $form_state->getFormObject();
+
+  if ($object instanceof ContentEntityFormInterface &&
+    array_key_exists('entity_body_class', $form)
+  ) {
+    $config = \Drupal::configFactory()->getEditable('entity_body_class.settings');
+    $entity = $object->getEntity();
+
+    $types = $config->get('types');
+    if ($types && $entity->isNew() && !empty($types[$entity->getEntityTypeId()])) {
+      $widget = &$form['entity_body_class']['widget'];
+      $widget[0]['value']['#default_value'] = $types[$entity->getEntityTypeId()];
+    }
+
+    if (\Drupal::moduleHandler()->moduleExists('token')) {
+      $form['entity_body_class']['suffix'] = [
+        '#theme' => 'token_tree_link',
+        '#token_types' => [$entity->getEntityTypeId()],
+      ];
+    }
+
+    $access = \Drupal::currentUser()->hasPermission('access entity body class fields') ||
+      \Drupal::currentUser()->hasPermission("access {$entity->getEntityTypeId()} body class field");
+    $form['entity_body_class']['#access'] = $access;
+    $form['#validate'][] = 'entity_body_class_entity_form_validate';
+  }
+}
+
+/**
+ * Form validation handler for the 'entity_body_class' field.
+ *
+ * @param array $form
+ *   An associative array containing the structure of the form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The current state of the form.
+ */
+function entity_body_class_entity_form_validate(array $form, FormStateInterface $form_state) {
+  $class = $form_state->getValue('entity_body_class');
+
+  if (!empty($class[0]['value'])) {
+    $class[0]['value'] = Xss::filter($class[0]['value']);
+    $form_state->setValue('entity_body_class', $class);
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function entity_body_class_preprocess_html(&$variables) {
+  foreach (\Drupal::routeMatch()->getParameters() as $entity) {
+    if (is_object($entity) &&
+      $entity instanceof ContentEntityInterface &&
+      $entity->hasField('entity_body_class') &&
+      !$entity->get('entity_body_class')->isEmpty()
+    ) {
+      $token = \Drupal::token();
+      $class = $entity->get('entity_body_class')->getString();
+
+      $variables['attributes']['class'][] = $token->replace($class, [$entity->getEntityTypeId() => $entity]);
+    }
+  }
+}

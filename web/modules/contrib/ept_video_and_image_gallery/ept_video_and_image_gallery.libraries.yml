@@ -1,0 +1,12 @@
+ept_video_and_image_gallery:
+  css:
+    component:
+      css/ept_video_and_image_gallery.css: {}
+
+ept_photo_swipe:
+  css:
+    component:
+      /libraries/photo-swipe/dist/photoswipe.css: {}
+  js:
+    /libraries/photo-swipe/dist/umd/photoswipe.umd.min.js: {}
+    /libraries/photo-swipe/dist/und/photoswipe-lightbox.umd.min.js: {}

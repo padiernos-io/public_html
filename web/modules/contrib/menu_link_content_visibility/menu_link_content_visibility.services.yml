@@ -1,0 +1,4 @@
+services:
+  menu.default_tree_manipulators:
+    class: Drupal\menu_link_content_visibility\MenuLinkContentVisibilityLinkTreeManipulator
+    arguments: ['@access_manager', '@current_user', '@entity_type.manager', '@module_handler', '@plugin.manager.condition', '@context.handler', '@context.repository', '@entity.repository', '@request_stack']

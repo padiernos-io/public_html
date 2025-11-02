@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ept_slideshow
+label: 'EPT Slideshow'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Slideshow'
+behavior_plugins: {  }

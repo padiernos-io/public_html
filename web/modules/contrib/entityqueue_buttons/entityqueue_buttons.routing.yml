@@ -1,0 +1,18 @@
+entityqueue_buttons.settings:
+  path: '/admin/config/content/entityqueue-buttons'
+  defaults:
+    _form: '\Drupal\entityqueue_buttons\Form\EntityQueueButtonsSettingsForm'
+    _title: 'EntityQueue Buttons Settings'
+  requirements:
+    _permission: 'administer entityqueue buttons'
+
+entityqueue_buttons.queue_operation:
+  path: '/entityqueue-buttons/{node}/{queue}/{operation}'
+  defaults:
+    _controller: '\Drupal\entityqueue_buttons\Controller\EntityQueueButtonsController::queueOperation'
+    _title: 'EntityQueue Buttons Operation'
+  requirements:
+    _custom_access: '\Drupal\entityqueue_buttons\Controller\EntityQueueButtonsController::access'
+    operation: 'add|remove'
+  options:
+    _auth: ['cookie']

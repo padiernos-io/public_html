@@ -1,0 +1,23 @@
+slick_slider:
+  remote: https://github.com/levmyshkin/slick
+  license:
+    name: MIT
+    url: https://github.com/levmyshkin/slick/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/slick/slick/slick.js: {}
+    js/slick-slider.js: {}
+  css:
+    component:
+      /libraries/slick/slick/slick.css: {}
+      /libraries/slick/slick/slick-theme.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/drupalSettings
+
+basic:
+  css:
+    component:
+      css/basic/slick-basic.css: {}

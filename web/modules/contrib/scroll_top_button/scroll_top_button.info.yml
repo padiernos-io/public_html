@@ -1,0 +1,11 @@
+name: Scroll To Top Button
+type: module
+description: 'This module add scroll to top botton on pages with customizable options'
+package: User interface
+core_version_requirement: ^8.8 || ^9 || ^10 || ^11
+configure: scroll_top_button.settings
+
+# Information added by Drupal.org packaging script on 2025-02-28
+version: '2.1.1'
+project: 'scroll_top_button'
+datestamp: 1740732416

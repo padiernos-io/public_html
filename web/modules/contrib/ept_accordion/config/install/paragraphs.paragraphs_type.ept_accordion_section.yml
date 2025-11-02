@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ept_accordion_section
+label: 'EPT Accordion section / FAQ section'
+icon_uuid: null
+icon_default: null
+description: 'Accordion or FAQ section for EPT Accordion/FAQ'
+behavior_plugins: {  }

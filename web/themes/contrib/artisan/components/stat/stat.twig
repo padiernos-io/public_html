@@ -1,0 +1,24 @@
+{% set attributes = attributes ?: create_attribute() %}
+{% set title_attributes = title_attributes ?: create_attribute() %}
+{% set value_attributes = value_attributes ?: create_attribute() %}
+{% set desc_attributes = desc_attributes ?: create_attribute() %}
+{% set figure_attributes = figure_attributes ?: create_attribute() %}
+
+<div {{ attributes.addClass('stat') }}>
+  {% if figure %}
+    <div {{ figure_attributes.addClass('stat-figure') }}>
+      {% block figure %}
+        {{ figure }}
+      {% endblock %}
+    </div>
+  {% endif %}
+  {% if title %}
+    <div {{ title_attributes.addClass('stat-title') }}>{{ title }}</div>
+  {% endif %}
+  {% if value %}
+    <div {{ value_attributes.addClass('stat-value') }}>{{ value }}</div>
+  {% endif %}
+  {% if desc %}
+    <div {{ desc_attributes.addClass('stat-desc') }}>{{ desc }}</div>
+  {% endif %}
+</div>

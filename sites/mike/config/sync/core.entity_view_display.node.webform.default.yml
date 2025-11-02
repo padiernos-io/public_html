@@ -1,0 +1,49 @@
+uuid: 50c4a176-c2bc-4197-be87-eac50d5ece45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.webform.webform
+    - node.type.webform
+  module:
+    - layout_builder
+    - layout_discovery
+    - manage_display
+    - webform
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.webform.default
+targetEntityType: node
+bundle: webform
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+  webform:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: false
+      lazy: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  published_at: true
+  search_api_excerpt: true
+  uid: true

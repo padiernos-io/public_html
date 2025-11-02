@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_video_and_image_gallery_item.field_ept_gallery_item
+    - field.field.paragraph.ept_video_and_image_gallery_item.field_ept_gallery_item_text
+    - paragraphs.paragraphs_type.ept_video_and_image_gallery_item
+  module:
+    - media_library
+    - text
+id: paragraph.ept_video_and_image_gallery_item.default
+targetEntityType: paragraph
+bundle: ept_video_and_image_gallery_item
+mode: default
+content:
+  field_ept_gallery_item:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_ept_gallery_item_text:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

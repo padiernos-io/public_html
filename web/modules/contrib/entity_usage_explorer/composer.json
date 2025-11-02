@@ -1,0 +1,22 @@
+{
+    "name": "drupal/entity_usage_explorer",
+    "description": "Provides an overview of entity usages in the site.",
+    "type": "drupal-module",
+    "homepage": "https://www.drupal.org/project/entity_usage_explorer",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+      {
+        "name": "Keshav Patel",
+        "homepage": "https://www.drupal.org/u/keshav-patel",
+        "role": "Maintainer"
+      }
+    ],
+    "require": {
+      "drupal/core": "^10 || ^11"
+    },
+    "extra": {
+      "drupal": {
+        "package": "Tools"
+      }
+    }
+}

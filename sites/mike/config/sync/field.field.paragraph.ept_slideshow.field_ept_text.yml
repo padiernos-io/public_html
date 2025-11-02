@@ -1,0 +1,24 @@
+uuid: 0d74acf6-7070-4455-9b38-ed841c9bc90f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_text
+    - paragraphs.paragraphs_type.ept_slideshow
+  module:
+    - text
+_core:
+  default_config_hash: eFgq1F96D8Kk_yB-LhiHcUiv0NDGHiiESnrxKVotJ8M
+id: paragraph.ept_slideshow.field_ept_text
+field_name: field_ept_text
+entity_type: paragraph
+bundle: ept_slideshow
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,16 @@
+parameters:
+  excludePaths:
+    - */bower_components/*
+    - */node_modules/*
+    - */tests/*
+  # Ignore some type hint errors due to hooks that should not have typed hint
+  # parameters or return.
+  ignoreErrors:
+    - identifier: missingType.generics
+    - identifier: missingType.iterableValue
+    # new static() is a best practice in Drupal, so we cannot fix that.
+    - "#^Unsafe usage of new static#"
+  treatPhpDocTypesAsCertain: false
+  inferPrivatePropertyTypeFromConstructor: true
+  level: 7
+  reportUnmatchedIgnoredErrors: false

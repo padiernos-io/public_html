@@ -1,0 +1,19 @@
+{
+  "dictionaries": [
+    "en-gb",
+    "cspell-custom-latin",
+    "cspell-custom-project"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "cspell-custom-latin",
+      "path": "./cspell-custom-latin.txt",
+      "addWords": true
+    },
+    {
+      "name": "cspell-custom-project",
+      "path": "./cspell-custom-project.txt",
+      "addWords": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the EPT Accordion.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function ept_accordion_uninstall() {
+  \Drupal::logger('ept_accordion')->notice(t('The EPT Accordion has been uninstalled, but the Paragraph Type have not been deleted for consistency reasons. If needed, you can manually remove them by going to Structure » Paragraph layout » Custom block library'));
+}

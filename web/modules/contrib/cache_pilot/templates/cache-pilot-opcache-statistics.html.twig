@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display Zend OPcache statistics.
+ *
+ * Available variables:
+ * - attributes: The main wrapper element attributes.
+ * - statistics: An array with raw data from opcache_get_status().
+ * - general: The general information.
+ * - strings: The information about strings cache.
+ * - opcache_stats: The OPcache statistics information.
+ */
+#}
+<div{{ attributes.addClass('cache-pilot-opcache-statistics') }}>
+  {{ general }}
+  {{ strings }}
+  {{ opcache_stats }}
+</div>

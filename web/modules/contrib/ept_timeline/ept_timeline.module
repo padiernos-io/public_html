@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Add templates for EPT Timeline.
+ */
+
+use Drupal\file\Entity\File;
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function ept_timeline_preprocess_paragraph(&$variables) {
+  if (empty($variables['elements']['#paragraph']) ||
+    $variables['elements']['#paragraph']->bundle() !== 'ept_timeline_item') {
+    return;
+  }
+
+  if (empty($variables['content']['field_ept_timeline_media_image'])) {
+    return;
+  }
+
+  if (empty($variables['content']['field_ept_timeline_media_image'][0])) {
+    return;
+  }
+
+  if (empty($variables['content']['field_ept_timeline_media_image'][0]['#media'])) {
+    return;
+  }
+
+  $media = $variables['content']['field_ept_timeline_media_image'][0]['#media'];
+  $file_id = $media->getSource()->getSourceFieldValue($media);
+  if (empty($file_id)) {
+    return;
+  }
+  $file = File::load($file_id);
+  if (empty($file)) {
+    return;
+  }
+
+  $variables['media_image'] = $file->createFileUrl();
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function ept_timeline_theme_registry_alter(&$theme_registry) {
+  $ept_module = 'ept_timeline';
+  $module_path = \Drupal::service('extension.list.module')->getPath($ept_module);
+  $ept_module_with_dashes = str_replace('_', '-', $ept_module);
+  $base_theme = 'paragraph';
+  $theme_registry['paragraph__ept_timeline_item__default'] = [
+    'path' => $module_path . '/templates',
+    'template' => 'paragraph--ept-timeline-item--default',
+    'render element' => $theme_registry[$base_theme]['render element'],
+    'base hook' => $base_theme,
+    'type' => 'module',
+    'theme path' => $module_path,
+    'preprocess functions' => $theme_registry[$base_theme]['preprocess functions'],
+    'initial preprocess' => 'template_preprocess_paragraph',
+  ];
+
+  $base_theme = 'field';
+  $theme_registry['field__paragraph__field_' . $ept_module . '__' . $ept_module] = [
+    'path' => $module_path . '/templates',
+    'template' => 'field--paragraph--field-' . $ept_module_with_dashes . '--' . $ept_module_with_dashes,
+    'render element' => $theme_registry[$base_theme]['render element'],
+    'base hook' => $base_theme,
+    'type' => 'module',
+    'theme path' => $module_path,
+    'preprocess functions' => $theme_registry[$base_theme]['preprocess functions'],
+    'initial preprocess' => 'template_preprocess_field',
+  ];
+}

@@ -1,0 +1,9 @@
+big_pipe_paragraphs.settings:
+  path: '/admin/config/system/big-pipe-paragraphs'
+  defaults:
+    _form: '\Drupal\big_pipe_paragraphs\Form\SettingsForm'
+    _title: 'Big Pipe Paragraphs configuration'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

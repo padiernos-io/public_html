@@ -1,0 +1,39 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Hero
+description: A responsive hero component with image overlay based on DaisyUI
+props:
+  type: object
+  properties:
+    title:
+      title: Hero Title
+      type: string
+      description: Hero title
+    title_heading_level:
+      title: Title heading level
+      type: string
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+    cta_text:
+      type: string
+      title: Button Text
+      description: Text for the call to action button
+    cta_url:
+      type: string
+      title: Button URL
+      description: URL for the call to action button
+      format: uri
+    cta_style:
+      type: string
+      title: Button Style
+slots:
+  image:
+    title: Hero Background Image
+    description: Background image
+  content:
+    title: Content
+    description: The main content text for the hero section

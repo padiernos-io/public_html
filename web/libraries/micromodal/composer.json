@@ -1,0 +1,8 @@
+{
+  "name": "levmyshkin/micromodal",
+  "description": "Fork from ghosh/Micromodal. Tiny, dependency-free javascript library for creating accessible modal dialogs.",
+  "type": "drupal-library",
+  "license": "GPL-2.0-or-later",
+  "keywords": ["Drupal","EBT","popup","modal"],
+  "homepage": "https://github.com/levmyshkin/micromodal"
+}

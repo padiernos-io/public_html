@@ -1,0 +1,52 @@
+uuid: 60e540d1-e722-4cb5-bf21-c9b92d6c3bd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_image_gallery.field_ept_image_gallery
+    - field.field.paragraph.ept_image_gallery.field_ept_settings
+    - field.field.paragraph.ept_image_gallery.field_ept_text
+    - field.field.paragraph.ept_image_gallery.field_ept_title
+    - paragraphs.paragraphs_type.ept_image_gallery
+  module:
+    - ept_core
+    - text
+_core:
+  default_config_hash: baNfcT8hwfXqGdk9GFr_Uo5DAZw65OmnpJIPGu7rwLU
+id: paragraph.ept_image_gallery.default
+targetEntityType: paragraph
+bundle: ept_image_gallery
+mode: default
+content:
+  field_ept_image_gallery:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: ept_image_gallery
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ept_settings:
+    type: ept_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

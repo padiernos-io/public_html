@@ -1,0 +1,8 @@
+services:
+  logo_image_enhanced.logo_attributes_subscriber:
+    class: Drupal\logo_image_enhanced\EventSubscriber\LogoAttributesEventSubscriber
+    arguments:
+      - '@config.factory'
+      - '@file_system'
+    tags:
+      - { name: event_subscriber }

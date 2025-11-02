@@ -1,0 +1,10 @@
+name: Themespace
+type: module
+description: Provides theme class namespaces and use of provider typed plugins definitions.
+core_version_requirement: ^10.2 || ^11
+package: Theming
+
+# Information added by Drupal.org packaging script on 2025-03-06
+version: '3.0.0-beta1'
+project: 'themespace'
+datestamp: 1741238372

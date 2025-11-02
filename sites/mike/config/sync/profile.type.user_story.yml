@@ -1,0 +1,13 @@
+uuid: aa2f419b-4daa-4f03-8ed4-d159bd3e7e11
+langcode: en
+status: true
+dependencies: {  }
+id: user_story
+label: 'User Story'
+display_label: ''
+multiple: false
+registration: false
+roles:
+  authenticated: authenticated
+allow_revisions: true
+new_revision: true

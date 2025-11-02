@@ -1,0 +1,12 @@
+name: Porter-Stemmer
+type: module
+description: Improves American English language searching by simplifying related words to their root (conjugations, plurals).
+core_version_requirement: ^9.1 || ^10 || ^11
+package: Search
+dependencies:
+  - drupal:search
+
+# Information added by Drupal.org packaging script on 2024-05-03
+version: '2.0.2'
+project: 'porterstemmer'
+datestamp: 1714747750

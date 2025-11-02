@@ -1,0 +1,25 @@
+uuid: 380eecca-8e08-4f8f-b871-9c15b8053001
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_counter_number
+    - paragraphs.paragraphs_type.ept_counter_item
+_core:
+  default_config_hash: NLE9w7TbjN5CmAnSSj-gSDT5bGz-IIqdEs-myskjLxo
+id: paragraph.ept_counter_item.field_ept_counter_number
+field_name: field_ept_counter_number
+entity_type: paragraph
+bundle: ept_counter_item
+label: Number
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

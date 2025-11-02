@@ -1,0 +1,20 @@
+services:
+  plugin.manager.themespace_attribute_test:
+    class: Drupal\themespace_test\Plugin\ThemespaceTestPluginManager
+    arguments:
+      - 'Plugin/Themespace'
+      - '@themespace.namespaces'
+      - '@module_handler'
+      - '@theme_handler'
+      - '\Drupal\Component\Plugin\PluginInspectionInterface'
+      - '\Drupal\themespace_test\Attribute\ThemespaceTest'
+
+  plugin.manager.themespace_empty:
+    class: Drupal\themespace_test\Plugin\ThemespaceEmptyPluginManager
+    arguments:
+      - 'Plugin/Themespace'
+      - '@themespace.namespaces'
+      - '@module_handler'
+      - '@theme_handler'
+      - '\Drupal\Component\Plugin\PluginInspectionInterface'
+      - '\Drupal\themespace_test\Annotation\ThemespaceTest'

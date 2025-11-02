@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the ept_video module.
+ */
+
+use Drupal\media\Entity\MediaType;
+
+/**
+ * Implements hook_requirements().
+ */
+function ept_video_requirements($phase) {
+  if ($phase != 'install') {
+    return [];
+  }
+
+  // Check if the Media module is enabled.
+  $module_handler = \Drupal::service('module_handler');
+  if (!$module_handler->moduleExists('media')) {
+    return [];
+  }
+
+  $media_types = [];
+  if (class_exists('Drupal\media\Entity\MediaType')) {
+    foreach (MediaType::loadMultiple() as $type) {
+      if (in_array($type->id(), ['remote_video'])) {
+        $media_types[] = $type->id();
+      }
+    }
+  }
+
+  if (in_array('remote_video', $media_types)) {
+    return [];
+  }
+
+  return [
+    'ept_video_media_type_remote_video' => [
+      'title' => t('Media type Remote video'),
+      'value' => t('Not created'),
+      'description' => t('The EPT Video needs to be <a href="@url">created</a> "Remote Video" Media types.', ['@url' => '/admin/structure/media']),
+      'severity' => REQUIREMENT_ERROR,
+    ],
+  ];
+}

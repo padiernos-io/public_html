@@ -1,0 +1,15 @@
+type: module
+name: 'Extra Paragraph Types (EPT): Webform Popup'
+description: 'Shows Webform Popup by click on button.'
+core_version_requirement: ^9.3 || ^10 || ^11
+package: 'Extra Paragraph Types'
+
+dependencies:
+  - ept_basic_button:ept_basic_button
+  - paragraphs:paragraphs
+  - webform:webform
+
+# Information added by Drupal.org packaging script on 2024-07-19
+version: '1.4.3'
+project: 'ept_webform_popup'
+datestamp: 1721384667

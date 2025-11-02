@@ -1,0 +1,55 @@
+uuid: 9fa5e663-1b86-4374-a634-0e0558f20338
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_stats_item.field_ept_stats_item_image
+    - field.field.paragraph.ept_stats_item.field_ept_stats_item_link
+    - field.field.paragraph.ept_stats_item.field_ept_stats_item_number
+    - field.field.paragraph.ept_stats_item.field_ept_stats_item_text
+    - paragraphs.paragraphs_type.ept_stats_item
+  module:
+    - link
+    - media_library
+    - text
+_core:
+  default_config_hash: wF_mUJwfQr8bsVI-d3u1R2W8PUu9gazphbDkBAY2SEk
+id: paragraph.ept_stats_item.default
+targetEntityType: paragraph
+bundle: ept_stats_item
+mode: default
+content:
+  field_ept_stats_item_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_ept_stats_item_link:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_ept_stats_item_number:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ept_stats_item_text:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,11 @@
+@layer theme, base, components, utilities;
+@layer components {
+  :root, :host {
+    --header-top-background-color: var(--color-info);
+    --header-top-color: var(--color-base-100);
+  }
+  .header-top {
+    background-color: var(--header-top-background-color);
+    color: var(--header-top-color);
+  }
+}

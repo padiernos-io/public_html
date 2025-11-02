@@ -1,0 +1,31 @@
+uuid: ee3668f7-3272-40bc-b5c4-6423ba8d842c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_timeline_media_image
+    - media.type.image
+    - paragraphs.paragraphs_type.ept_timeline_item
+_core:
+  default_config_hash: HfwXxVupZiaPWTq7fZ-BOAXixOddo5ItFCV5Ilw0hfc
+id: paragraph.ept_timeline_item.field_ept_timeline_media_image
+field_name: field_ept_timeline_media_image
+entity_type: paragraph
+bundle: ept_timeline_item
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

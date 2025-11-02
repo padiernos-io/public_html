@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Spotify Playing module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function spotify_playing_theme() {
+  return [
+    'spotify_playing_block' => [
+      'variables' => [
+        'display_art' => FALSE,
+        'endpoint' => '',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_help().
+ */
+function spotify_playing_help($route_name, RouteMatchInterface $route_match) {
+
+  switch ($route_name) {
+
+    case 'spotify_playing.settings':
+      return '<p>' .
+        t('You will need to create a new application on the 
+					Spotify Developer site (<a href="https://developer.spotify.com/" target="_blank">https://developer.spotify.com/</a>). <br /> 
+					Copy the Client ID and Client Secret from the App settings, and use the full URL below as the Redirect URI.', []) . '</p>';
+
+  }
+
+}

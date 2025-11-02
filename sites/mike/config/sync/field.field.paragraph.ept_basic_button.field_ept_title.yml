@@ -1,0 +1,24 @@
+uuid: ec278762-e4c4-48e8-bd6d-6558f7b6b662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_title
+    - paragraphs.paragraphs_type.ept_basic_button
+  module:
+    - text
+_core:
+  default_config_hash: Q6Cswt1AxNHLXzTfwWiWRP4dJwyasulFfWasATFZdrU
+id: paragraph.ept_basic_button.field_ept_title
+field_name: field_ept_title
+entity_type: paragraph
+bundle: ept_basic_button
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

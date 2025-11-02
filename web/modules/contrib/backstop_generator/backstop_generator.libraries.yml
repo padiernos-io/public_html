@@ -1,0 +1,20 @@
+backstop_forms:
+  css:
+    theme:
+      css/backstop_forms.css: {}
+
+scenario_form:
+  js:
+    js/scenario_form.js: {}
+
+profile_form:
+  version: 1.x
+  js:
+    js/toggle-scenarios.js: {}
+    js/add-path-handler.js: {}
+    js/delete-unchecked-scenarios.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

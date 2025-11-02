@@ -1,0 +1,16 @@
+cache_pilot.settings:
+  title: 'Cache Pilot settings'
+  route_name: cache_pilot.settings
+  base_route: system.performance_settings
+
+cache_pilot.dashboard.apcu:
+  title: 'APCu'
+  route_name: cache_pilot.dashboard
+  base_route: cache_pilot.dashboard
+
+cache_pilot.dashboard.opcache:
+  title: 'OPcache'
+  route_name: cache_pilot.dashboard.statistics
+  base_route: cache_pilot.dashboard
+  route_parameters:
+    cache_type: 'opcache'

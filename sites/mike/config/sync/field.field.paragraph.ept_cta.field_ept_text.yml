@@ -1,0 +1,24 @@
+uuid: 0b17a0e8-e082-414d-bffc-dd0ab4266a21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_text
+    - paragraphs.paragraphs_type.ept_cta
+  module:
+    - text
+_core:
+  default_config_hash: QN1QM2C6SY_OR_LyAWi1j0iKDvbeAcJCe6s806EaZDo
+id: paragraph.ept_cta.field_ept_text
+field_name: field_ept_text
+entity_type: paragraph
+bundle: ept_cta
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

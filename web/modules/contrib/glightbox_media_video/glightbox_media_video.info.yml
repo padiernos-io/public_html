@@ -1,0 +1,14 @@
+name: 'GLightbox Media Video'
+type: module
+description: 'Adds GLightbox support to Media Video and Remote Video types.'
+package: Media
+core_version_requirement: ^9.3 || ^10 || ^11
+
+dependencies:
+  - drupal:media
+  - glightbox:glightbox
+
+# Information added by Drupal.org packaging script on 2024-12-15
+version: '1.0.3'
+project: 'glightbox_media_video'
+datestamp: 1734297827

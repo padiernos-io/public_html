@@ -1,0 +1,11 @@
+name: Twig Placeholders
+type: module
+description: 'Provides Twig functions to generate placeholder content in templates.'
+core_version_requirement: '>=10.3'
+dependencies:
+  - drupal:system (>=10.3)
+
+# Information added by Drupal.org packaging script on 2025-04-20
+version: '1.0.1'
+project: 'twig_placeholders'
+datestamp: 1745181309

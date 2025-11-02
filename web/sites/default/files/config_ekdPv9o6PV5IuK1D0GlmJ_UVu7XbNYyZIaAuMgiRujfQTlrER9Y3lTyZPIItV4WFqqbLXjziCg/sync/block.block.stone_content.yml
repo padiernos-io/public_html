@@ -1,0 +1,22 @@
+uuid: 2c8224c7-54c9-4f02-8650-63a486e43bfe
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - stone
+_core:
+  default_config_hash: G4iNGvy_k2yNIEH_FJmbkvgBBar1etJIhKJYuygT7hU
+id: stone_content
+theme: stone
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

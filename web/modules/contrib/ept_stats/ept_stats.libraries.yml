@@ -1,0 +1,14 @@
+stats_with_vertical_dividers:
+  css:
+    component:
+      css/stats_with_vertical_dividers.css: {}
+
+stats_in_squares:
+  css:
+    component:
+      css/stats_in_squares.css: {}
+
+stats_in_column:
+  css:
+    component:
+      css/stats_in_column.css: { }

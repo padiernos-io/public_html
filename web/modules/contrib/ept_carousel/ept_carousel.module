@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * @file
+ * Provides theme registry alterations for the EPT Carousel module.
+ */
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function ept_carousel_theme_registry_alter(&$theme_registry) {
+  $ept_module = 'ept_carousel';
+  $module_path = \Drupal::service('extension.list.module')->getPath($ept_module);
+  $ept_module_with_dashes = str_replace('_', '-', $ept_module);
+  $base_theme = 'paragraph';
+  $theme_registry['paragraph__ept_carousel_item__default'] = [
+    'path' => $module_path . '/templates',
+    'template' => 'paragraph--ept-carousel-item--default',
+    'render element' => $theme_registry[$base_theme]['render element'],
+    'base hook' => $base_theme,
+    'type' => 'module',
+    'theme path' => $module_path,
+    'preprocess functions' => $theme_registry[$base_theme]['preprocess functions'],
+    'initial preprocess' => 'template_preprocess_paragraph',
+  ];
+
+  $base_theme = 'field';
+  $theme_registry['field__paragraph__field_' . $ept_module . '__' . $ept_module] = [
+    'path' => $module_path . '/templates',
+    'template' => 'field--paragraph--field-' . $ept_module_with_dashes . '--' . $ept_module_with_dashes,
+    'render element' => $theme_registry[$base_theme]['render element'],
+    'base hook' => $base_theme,
+    'type' => 'module',
+    'theme path' => $module_path,
+    'preprocess functions' => $theme_registry[$base_theme]['preprocess functions'],
+    'initial preprocess' => 'template_preprocess_field',
+  ];
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function ept_carousel_preprocess_paragraph(&$variables) {
+  if (empty($variables['paragraph'])) {
+    return;
+  }
+
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->bundle() != 'ept_carousel_item') {
+    return;
+  }
+
+  $carousel = $paragraph->getParentEntity();
+  if (!$carousel->hasField('field_ept_settings')) {
+    return;
+  }
+  $ept_settings = $carousel->get('field_ept_settings')->ept_settings;
+  if (empty($ept_settings) || empty($ept_settings['image_size'])) {
+    return;
+  }
+
+  if (!isset($variables['content']['field_ept_carousel_image'][0]['#image_style'])) {
+    return;
+  }
+
+  $variables['content']['field_ept_carousel_image'][0]['#image_style'] = $ept_settings['image_size'];
+}

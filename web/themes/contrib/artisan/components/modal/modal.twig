@@ -1,0 +1,21 @@
+{% set classes = [
+  'modal',
+] %}
+
+{% set modal_toggle_classes = [
+  'btn',
+]|merge(modal_toggle_extra_classes ?: []) %}
+
+{% set modal_box_classes = [
+  'modal-box',
+]|merge(modal_box_extra_classes ?: []) %}
+
+<button class="{{ modal_toggle_classes|join(' ') }}" onclick="{{ modal_id ~ '.showModal()' }}"> {{ button_text }} </button>
+<dialog {{ attributes.addClass(classes)}} id="{{ modal_id }}">
+  <div class="{{ modal_box_classes|join(' ') }}">
+    {{ content }}
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button></button>
+  </form>
+</dialog>

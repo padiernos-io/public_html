@@ -1,0 +1,23 @@
+uuid: 79cd70cb-91e7-4169-8652-e93d1d53819e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_settings
+    - paragraphs.paragraphs_type.ept_accordion
+  module:
+    - ept_core
+_core:
+  default_config_hash: dFTek-2-VjYGV96ffjrJqRnc7cP8oR-xd4f0hA8JlyA
+id: paragraph.ept_accordion.field_ept_settings
+field_name: field_ept_settings
+entity_type: paragraph
+bundle: ept_accordion
+label: Settings
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ept_settings

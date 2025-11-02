@@ -1,0 +1,33 @@
+---
+label: 'Backstop Configuration'
+related:
+- backstop_generator.overview
+- backstop_generator.terminology
+- backstop_generator.usage
+---
+
+<h2>{% trans %}Settings Tab{% endtrans %}</h2>
+<ul>
+  <li><strong>{% trans %}Test Domain{% endtrans %}</strong>: {% trans %}This field is automatically populated with your current site URL. It is the site you want to test.{% endtrans %}</li>
+  <li><strong>{% trans %}Reference Domain{% endtrans %}</strong>: {% trans %}This field is where you enter the URL of the site to compare against, typically your live production site.{% endtrans %}</li>
+  <li><strong>{% trans %}Scenario Defaults{% endtrans %}</strong>: {% trans %}Settings to include in the scenarioDefaults section. These can be overridden at the Profile level. All new Profiles you create will inherit these defaults.{% endtrans %}</li>
+  <li><strong>{% trans %}Profile Parameters{% endtrans %}</strong>: {% trans %}Default settings that can be overridden at the Profile level. All new Profiles you create will inherit these defaults.{% endtrans %}</li>
+</ul>
+<p><strong>{% trans %}Note{% endtrans %}:</strong> {% trans %}The settings you configure here will be applied to new Profiles only. Existing Profiles will retain their individual settings unless manually updated.{% endtrans %}</p>
+
+<h2>{% trans %}Viewports Tab{% endtrans %}</h2>
+<p>{% trans %}Viewports are automatically generated based on the breakpoints in your site's default theme. You can also manually add new Viewports or use the Viewport Generator to create them for other enabled themes with breakpoints.{% endtrans %}</p>
+<h3>{% trans %}Viewport Generator{% endtrans %}</h3>
+<p>{% trans %}Backstop Generator can automatically create Viewports for any enabled theme that has configured breakpoints. To do this, select the theme from the list and click the{% endtrans %} <strong>{% trans %}Generate viewports{% endtrans %}</strong> {% trans %}button. This will generate Viewports based on the breakpoints defined in the theme's{% endtrans %} <code>[theme].breakpoints.yml</code> {% trans %}file.{% endtrans %}</p>
+
+<h2>{% trans %}Profiles Tab{% endtrans %}</h2>
+<p>{% trans %}The Profiles tab allows you to create and manage your BackstopJS Profiles. Each Profile contains a set of Scenarios and can have its own configuration settings. The default settings are inherited from the Profile parameters section on the module configuration form. Below are the key parameters you can configure for each Profile.{% endtrans %}</p>
+<h3>{% trans %}Scenario Generator{% endtrans %}</h3>
+<p>{% trans %}Within each profile, the Scenario Generator allows you to automatically create Scenarios based on your site's content. You can select which languages to test, include the homepage, and choose specific menus and content types to generate Scenarios from. You can also manually add paths for specific nodes or views.{% endtrans %}</p>
+
+<h2>{% trans %}Scenarios Tab{% endtrans %}</h2>
+<p>{% trans %}The Scenarios tab allows you to manage individual test scenarios for your BackstopJS Profiles. Each Scenario represents a specific page of your site that you want to visually test. Below are the key settings you can configure for each Scenario.{% endtrans %}</p>
+<p>{% trans %}Settings here will override those set globally in the Profile's{% endtrans %} <code>scenarioDefaults</code> {% trans %}section.{% endtrans %}</p>
+
+<h2>{% trans %}Commands Tab{% endtrans %}</h2>
+<p>{% trans %}The Commands tab scans the folder where Backstop's JSON files are stored, and displays the terminal commands you need to run the tests. Run these commands into your terminal to generate reference images and run tests against your current site.{% endtrans %}</p>

@@ -1,0 +1,13 @@
+name: 'Media Name'
+type: module
+description: 'If the Media name is displayed on the create/edit form, make it not mandatory. If the name has been set previously or updated, preserve it on file change.'
+package: 'Media'
+configure: media_name.settings_form
+dependencies:
+  - drupal:media
+core_version_requirement: ^8.8 || ^9 || ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2025-04-22
+version: '8.x-1.0-alpha4'
+project: 'media_name'
+datestamp: 1745338380

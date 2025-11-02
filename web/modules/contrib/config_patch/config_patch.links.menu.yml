@@ -1,0 +1,5 @@
+config_patch.settings:
+  title: 'Config Patch Settings'
+  route_name: config_patch.settings
+  parent: system.admin_config_development
+  description: 'Config Patch related settings.'

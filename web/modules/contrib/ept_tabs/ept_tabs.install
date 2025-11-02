@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the EPT Tabs.
+ */
+
+use Drupal\paragraphs\Entity\ParagraphsType;
+
+/**
+ * Implements hook_requirements().
+ */
+function ept_tabs_requirements($phase) {
+  if ($phase != 'install') {
+    return [];
+  }
+
+  $entity_type_manager = \Drupal::service('entity_type.manager');
+
+  // Check if the 'node_type' entity type exists.
+  if (!$entity_type_manager->hasDefinition('node_type')) {
+    return [];
+  }
+
+  $entity_type_manager = \Drupal::service('entity_type.manager');
+  $content_types = $entity_type_manager->getStorage('node_type')->loadMultiple();
+  foreach ($content_types as $content_type) {
+    if ($content_type->id() == 'page') {
+      return [];
+    }
+  }
+
+  return [
+    'ept_tabs_content_type_page' => [
+      'title' => t('Content type Page'),
+      'value' => t('Not created'),
+      'description' => t('The EPT Tabs needs to be <a href="@url">created</a> "Page" content type.', ['@url' => '/admin/structure/types']),
+      'severity' => REQUIREMENT_ERROR,
+    ],
+  ];
+}

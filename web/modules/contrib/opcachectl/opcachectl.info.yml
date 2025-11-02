@@ -1,0 +1,11 @@
+name: OPcache Control
+type: module
+description: Shows PHP OPcache status and allows cache clearing
+package: 'Performance and scalability'
+core_version_requirement: ^10 || ^11
+
+
+# Information added by Drupal.org packaging script on 2025-10-17
+version: '3.0.0-beta5'
+project: 'opcachectl'
+datestamp: 1760712231

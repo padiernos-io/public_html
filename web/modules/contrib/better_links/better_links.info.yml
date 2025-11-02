@@ -1,0 +1,11 @@
+name: Better Links
+type: module
+description: Provide a Link Field Widget with better options.
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+dependencies:
+  - drupal:link
+
+# Information added by Drupal.org packaging script on 2024-08-06
+version: '2.1.0'
+project: 'better_links'
+datestamp: 1722937497

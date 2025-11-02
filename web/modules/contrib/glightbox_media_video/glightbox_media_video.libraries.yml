@@ -1,0 +1,10 @@
+glightbox-media-video:
+  css:
+    theme:
+      css/glightbox-media-video.css: {}
+  js:
+    js/glightbox-media-video.js: {}
+  dependencies:
+    - system/drupal.system
+    - glightbox/glightbox
+    - core/once

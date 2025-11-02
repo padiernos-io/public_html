@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * @file
+ * Update and install hooks for the Patreon module.
+ */
+
+use Drupal\Component\Serialization\Json;
+
+/**
+ * Convert old settings to new format.
+ */
+function patreon_update_9401(): void {
+
+  /** @var \Drupal\Core\State\StateInterface $service */
+  $service = \Drupal::service('state');
+
+  // If the token doesn't exist, there's nothing to do.
+  if ($token = $service->get('patreon.access_token')) {
+
+    // If the token does not decode, it is probably in the old format.
+    if (!Json::decode($token)) {
+
+      // If we have a refresh token, we can use that.
+      if ($refresh = $service->get('patreon.refresh_token')) {
+
+        /** @var \Drupal\patreon\PatreonService $patreon */
+        $patreon = \Drupal::service('patreon.api');
+
+        if ($oauth = $patreon->getOauth()) {
+          try {
+            if ($refreshed = $oauth->getAccessToken('refresh_token', [
+              'refresh_token' => $refresh,
+            ])) {
+              $patreon->storeTokens($refreshed);
+
+              \Drupal::messenger()->addError(t('Your Patreon access tokens have been refreshed: you should be able to continue using the API, but if you have problems please try re-authorising.'));
+            }
+          }
+          catch (\Exception $e) {
+            \Drupal::logger('patreon')->error(t('Error refreshing tokens - :error', [
+              ':error' => $e->getMessage(),
+            ]));
+            \Drupal::messenger()->addError(t('Your access tokens could not be refreshed: please reauthorise your account and try again.'));
+          }
+        }
+      }
+      else {
+
+        // If the refresh token doesn't exist, something odd is going on. Best
+        // let an admin sort it out themselves.
+        \Drupal::messenger()->addError(t('Your access tokens could not be refreshed: please reauthorise your account and try again.'));
+      }
+    }
+  }
+}
+
+/**
+ * Delete unused value stored in state.
+ */
+function patreon_update_9402(): void {
+
+  /** @var \Drupal\Core\State\StateInterface $service */
+  $service = \Drupal::service('state');
+
+  $service->delete('patreon.refresh_token');
+}

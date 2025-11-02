@@ -1,0 +1,17 @@
+root = true
+
+[*.css]
+indent_style = space
+indent_size = 2
+
+[*.js]
+indent_style = space
+indent_size = 2
+
+[*.twig]
+indent_style = space
+indent_size = 2
+
+[*.{php,module}]
+indent_style = space
+indent_size = 2

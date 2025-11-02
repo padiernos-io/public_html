@@ -1,0 +1,51 @@
+uuid: adbacd8e-9ec5-44aa-b1f9-2bad18465689
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_block.field_ept_block_block
+    - field.field.paragraph.ept_block.field_ept_settings
+    - field.field.paragraph.ept_block.field_ept_text
+    - field.field.paragraph.ept_block.field_ept_title
+    - paragraphs.paragraphs_type.ept_block
+  module:
+    - block_field
+    - ept_core
+    - text
+_core:
+  default_config_hash: BFcfVmJHF2899wHjHN2VFWpiUyRAjvacvce9Cfs79BY
+id: paragraph.ept_block.default
+targetEntityType: paragraph
+bundle: ept_block
+mode: default
+content:
+  field_ept_block_block:
+    type: block_field
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_settings:
+    type: ept_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ept_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

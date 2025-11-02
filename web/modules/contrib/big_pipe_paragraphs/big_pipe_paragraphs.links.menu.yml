@@ -1,0 +1,6 @@
+big_pipe_paragraphs.settings:
+  title: 'Big Pipe Paragraphs'
+  route_name: big_pipe_paragraphs.settings
+  description: 'Big Pipe Paragraphs settings.'
+  parent: system.admin_config_system
+  weight: 99

@@ -1,0 +1,21 @@
+.ept-hero {
+  .buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.ept-hero {
+  .field--name-field-ept-hero-link {
+    margin-bottom: 0;
+    margin-block-end: 0;
+  }
+  .field--name-field-ept-hero-link.field:not(:last-child) {
+    margin-block-end: 0;
+  }
+  .field--name-field-ept-hero-title-prefix {
+    text-transform: uppercase;
+  }
+}

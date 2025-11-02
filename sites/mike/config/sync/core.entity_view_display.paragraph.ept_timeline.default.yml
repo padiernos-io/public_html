@@ -1,0 +1,53 @@
+uuid: 1f09a569-e8e7-4d4c-8c63-e2db88a1f95f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_timeline.field_ept_settings
+    - field.field.paragraph.ept_timeline.field_ept_text
+    - field.field.paragraph.ept_timeline.field_ept_timeline
+    - field.field.paragraph.ept_timeline.field_ept_title
+    - paragraphs.paragraphs_type.ept_timeline
+  module:
+    - entity_reference_revisions
+    - ept_core
+    - text
+_core:
+  default_config_hash: Zjs0sEEPc_mOJeefVa5n32BEnP9OKVbam2H8MD9EhNs
+id: paragraph.ept_timeline.default
+targetEntityType: paragraph
+bundle: ept_timeline
+mode: default
+content:
+  field_ept_settings:
+    type: ept_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ept_timeline:
+    type: entity_reference_revisions_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

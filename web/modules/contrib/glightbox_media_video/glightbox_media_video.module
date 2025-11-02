@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Adds GLightbox support to Media Video and Remote Video types.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function glightbox_media_video_theme() {
+  return [
+    'glightbox_media_remote_video_formatter' => [
+      'variables' => [
+        'remote_video' => NULL,
+        'thumb' => NULL,
+        'entity' => NULL,
+        'settings' => NULL,
+      ],
+      'file' => 'glightbox_media_video.theme.inc',
+    ],
+    'glightbox_media_file_video_formatter' => [
+      'variables' => [
+        'file_video' => NULL,
+        'thumb' => NULL,
+        'entity' => NULL,
+        'settings' => NULL,
+      ],
+      'file' => 'glightbox_media_video.theme.inc',
+    ],
+  ];
+}

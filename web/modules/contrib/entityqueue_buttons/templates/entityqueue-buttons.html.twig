@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Default theme implementation for entityqueue buttons.
+ *
+ * Available variables:
+ * - links: An array of queue operation links.
+ */
+#}
+<div{{ attributes.addClass('entityqueue-buttons-wrapper') }}>
+  {% for link in links %}
+    <div class="entityqueue-button-item">
+      {{ link }}
+    </div>
+  {% endfor %}
+</div>

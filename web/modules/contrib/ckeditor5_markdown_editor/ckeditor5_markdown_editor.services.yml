@@ -1,0 +1,4 @@
+services:
+  ckeditor5_markdown_editor_cli_commands:
+    class: Drupal\ckeditor5_markdown_editor\Command\CliCommandWrapper
+    arguments: ['@library.discovery', '@http_client', '@config.factory']

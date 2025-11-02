@@ -1,0 +1,16 @@
+name: Big Pipe Paragraphs
+type: module
+description: Load paragraphs with big pipe.
+package: Custom
+core: 8.x
+core_version_requirement: '^8 || ^9 || ^10 || ^11'
+dependencies:
+  - drupal:big_pipe
+  - drupal:dynamic_page_cache
+  - paragraphs:paragraphs
+  - preprocess:preprocess
+
+# Information added by Drupal.org packaging script on 2025-01-08
+version: '1.0.2'
+project: 'big_pipe_paragraphs'
+datestamp: 1736344177

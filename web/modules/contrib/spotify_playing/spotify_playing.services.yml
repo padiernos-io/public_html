@@ -1,0 +1,4 @@
+services:
+  spotify_playing.spotify_helper:
+    class: Drupal\spotify_playing\SpotifyHelper
+    arguments: ['@config.factory']

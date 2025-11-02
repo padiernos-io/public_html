@@ -1,0 +1,6 @@
+'administer cookie information settings':
+  title: Administer Cookie Information Settings
+  description: Allows users to administer Cookie Information settings.
+'disable cookie information consent':
+  title: Disable Cookie Information cookie consent popup
+  description: Disable Cookie Information cookie consent popup for users with this permission / role.

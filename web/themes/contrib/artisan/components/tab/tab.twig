@@ -1,0 +1,9 @@
+{% set attributes = attributes ?: create_attribute() %}
+{% set classes = ['tab', 'text-base'] %}
+{% if is_active %}
+  {% set classes = classes|merge(['tab-active']) %}
+{% endif %}
+
+{{ link|add_class(classes|join(' ')) }}
+
+

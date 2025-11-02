@@ -1,0 +1,12 @@
+uuid: 28963cf1-f8c4-42f8-9753-b23df2fd150d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gzUQpZ2WLaq6cYbIJG9au02yBTA2Hi4xUPtwlz0CRhU
+id: ept_basic_button
+label: 'EPT Basic Button'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT) Basic Button'
+behavior_plugins: {  }

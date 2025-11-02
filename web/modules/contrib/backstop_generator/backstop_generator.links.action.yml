@@ -1,0 +1,20 @@
+#entity.backstop_scenario.add_form:
+backstop_generator.scenario.add_form:
+  route_name: 'entity.backstop_scenario.add_form'
+  title: 'Add backstop scenario'
+  appears_on:
+    - entity.backstop_scenario.collection
+
+#entity.backstop_profile.add_form:
+backstop_generator.profile.add_form:
+  route_name: 'entity.backstop_profile.add_form'
+  title: 'Add backstop profile'
+  appears_on:
+    - entity.backstop_profile.collection
+
+#entity.backstop_viewport.add_form:
+entity.backstop_viewport.add_form:
+  route_name: 'entity.backstop_viewport.add_form'
+  title: 'Add backstop viewport'
+  appears_on:
+    - entity.backstop_viewport.collection

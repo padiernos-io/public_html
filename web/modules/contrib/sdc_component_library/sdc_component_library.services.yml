@@ -1,0 +1,4 @@
+services:
+  sdc_component_library.controller:
+    class: Drupal\sdc_component_library\Controller\ComponentsController
+    arguments: ['@plugin.manager.sdc']

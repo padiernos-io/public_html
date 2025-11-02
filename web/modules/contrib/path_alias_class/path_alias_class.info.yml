@@ -1,0 +1,13 @@
+name: 'Path Alias Class'
+type: module
+description: 'Adds the path alias as a class to the body tag on every page.'
+package: Other
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+  - drupal:path
+configure: path_alias_class.settings
+
+# Information added by Drupal.org packaging script on 2024-08-19
+version: '1.0.1'
+project: 'path_alias_class'
+datestamp: 1724081267

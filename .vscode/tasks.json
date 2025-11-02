@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "gulp",
+			"script": "default",
+			"target": "default",
+			"path": "web/themes/custom/minim/",
+			"fileName": "gulpfile.js",
+			"uri": {
+				"$mid": 1,
+				"path": "/home/padiernos/public_html/web/themes/custom/minim/gulpfile.js",
+				"scheme": "vscode-remote",
+				"authority": "ssh-remote+spsi.padiernos"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"label": "[minim] gulp: default"
+		}
+	]
+}

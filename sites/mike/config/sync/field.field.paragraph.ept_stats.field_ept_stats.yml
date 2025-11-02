@@ -1,0 +1,33 @@
+uuid: dea438b4-0980-4ab3-9f06-6091f24f5158
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_stats
+    - paragraphs.paragraphs_type.ept_stats
+    - paragraphs.paragraphs_type.ept_stats_item
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: ixjxb8WmNFSxd8n64WYGee4M8gw_ihsOSTkxejxBK7I
+id: paragraph.ept_stats.field_ept_stats
+field_name: field_ept_stats
+entity_type: paragraph
+bundle: ept_stats
+label: 'EPT Stats'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ept_stats_item: ept_stats_item
+    negate: 0
+    target_bundles_drag_drop:
+      ept_stats_item:
+        weight: 59
+        enabled: true
+field_type: entity_reference_revisions

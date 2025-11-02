@@ -1,0 +1,60 @@
+.ept-quote-with_frame_and_background_image .ept-container .with_frame_main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.ept-quote-with_frame_and_background_image .ept-container .with_frame_main .with_frame_text {
+  background-color: #d9f2ff;
+  box-shadow: 0 10px 20px rgba(15, 15, 15, 0.07), 0 17.475px 18.875px rgba(26, 26, 26, 0.05), 0 15.2px 13px rgba(17, 17, 17, 0.04), 0 3.325px 4.625px rgba(17, 17, 17, 0.02);
+  border-radius: 20px;
+  padding: 1.5rem 1.25rem;
+  z-index: 18;
+  position: relative;
+  margin-top: -4.875rem;
+}
+@media (min-width: 1100px) {
+  .ept-quote-with_frame_and_background_image .ept-container .with_frame_main .with_frame_text {
+    width: 65%;
+    z-index: 10;
+    position: absolute;
+    padding: 4rem 5.625rem 4rem 5rem;
+  }
+}
+.ept-quote-with_frame_and_background_image .ept-container .with_frame_main .with_frame_text .field--type-text-with-summary {
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1100px) {
+  .ept-quote-with_frame_and_background_image .ept-container .with_frame_main .with_frame_text .field--type-text-with-summary {
+    font-size: 1.875rem;
+    line-height: 2.75rem;
+    margin-bottom: 2rem;
+  }
+}
+.ept-quote-with_frame_and_background_image .ept-container .with_frame_main .with_frame_text .field--name-field-ept-quote-author {
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+@media (min-width: 1100px) {
+  .ept-quote-with_frame_and_background_image .ept-container .with_frame_main .with_frame_text .field--name-field-ept-quote-author {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+  }
+}
+.ept-quote-with_frame_and_background_image .ept-container .with_frame_main .field--name-field-ept-quote-image {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 4;
+  margin: 0 auto;
+}
+@media (min-width: 1100px) {
+  .ept-quote-with_frame_and_background_image .ept-container .with_frame_main .field--name-field-ept-quote-image {
+    margin: unset;
+  }
+}

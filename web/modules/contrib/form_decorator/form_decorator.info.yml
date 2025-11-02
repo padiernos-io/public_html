@@ -1,0 +1,10 @@
+name: 'Form decorator'
+type: module
+description: 'Allow to decorate forms'
+package: Forms
+core_version_requirement: ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2025-07-16
+version: '1.0.0'
+project: 'form_decorator'
+datestamp: 1752667279

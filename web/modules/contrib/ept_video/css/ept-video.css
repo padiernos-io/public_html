@@ -1,0 +1,23 @@
+.ept-video .glightbox-media-video {
+  display: inline-block;
+  position: relative;
+}
+
+.ept-video .glightbox-media-video::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background: url(../img/play.svg) center center no-repeat;
+  background-size: 64px 64px;
+  opacity: 0.8;
+  left: 50%;
+  top: 50%;
+  margin-left: -32px;
+  margin-top: -32px;
+}
+
+.ept-video .glightbox-media-video:hover::before {
+  opacity: 1;
+}

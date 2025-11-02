@@ -1,0 +1,121 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the Backstop Generator module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use Drupal\backstop_generator\Entity\BackstopProfile;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function backstop_generator_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name === 'help.page.backstop_generator') {
+    return [
+      '#type' => 'markup',
+      '#markup' => t(
+        '<p>The Backstop Generator module provides an interface for generating Backstop.js configuration files for visual regression testing.</p><p>For more information, see the <a href="@url" target="_blank">official documentation</a>.</p>',
+        ['@url' => 'https://www.drupal.org/docs/extending-drupal/contributed-modules/contributed-module-documentation/backstop-generator-0']
+      ),
+      '#allowed_tags' => ['a', 'p'],
+    ];
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function backstop_generator_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (
+    $form_id == 'backstop_generator_settings' ||
+    $form_id == 'backstop_profile_add_form' ||
+    $form_id == 'backstop_profile_edit_form'
+  ) {
+    $form['#attached']['library'][] = 'backstop_generator/backstop_forms';
+  }
+}
+
+/**
+ * Confirm scenario values.
+ *
+ * @param array $values
+ *   Scenario values to check.
+ * @param string|null $profile_id
+ *   Profile IDs.
+ *
+ * @return array
+ *   An array of values
+ */
+function backstop_generator_process_scenario_values(array $values, ?string $profile_id = NULL): array {
+  $engine = $profile_id ? BackstopProfile::load($profile_id)->get('engine') : 'puppeteer';
+  $kp_goto_pattern = '/^([A-Za-z0-9.#@\s]+)\|([A-Za-z0-9.#@\s]+)(?:\r\n)?$/';
+
+  // Process the scenario values to ensure they are in the correct format.
+  foreach ($values as $key => $value) {
+    if (empty($value)) {
+      continue;
+    }
+
+    $value = trim($value);
+    switch ($key) {
+      // Convert comma-separated strings to arrays.
+      case 'selectors':
+      case 'hideSelectors':
+      case 'removeSelectors':
+      case 'hoverSelectors':
+      case 'clickSelectors':
+        $values[$key] = array_map('trim', explode(',', $value));
+        break;
+
+      // Convert integers to boolean.
+      case 'requireSameDimensions':
+      case 'selectorExpansion':
+        $values[$key] = TRUE;
+        break;
+
+      case 'keyPressSelectors':
+        $kp_vals = array_map('trim', explode("\r\n", $value));
+        $values[$key] = [];
+        foreach ($kp_vals as $kp_val) {
+          preg_match($kp_goto_pattern, $kp_val, $matches);
+          if (!empty($matches)) {
+            $values[$key][] = [
+              'selector' => trim($matches[1]),
+              'keyPress' => trim($matches[2]),
+            ];
+          }
+        }
+        break;
+
+      case 'gotoParameters':
+        $params = array_map('trim', explode("\r\n", $value));
+        $values[$key] = [];
+        foreach ($params as $param) {
+          preg_match($kp_goto_pattern, $param, $matches);
+          if (!empty($matches)) {
+            $values[$key][trim($matches[1])] = trim($matches[2]);
+          }
+        }
+        break;
+
+      // Convert boolean values to filenames.
+      case 'onBeforeScript':
+      case 'onReadyScript':
+        $values[$key] = "$engine/$key.js";
+        break;
+
+      // Unlisted values can pass through as-is.
+      default:
+        $values[$key] = $value;
+        break;
+    }
+  }
+  return array_filter($values);
+}

@@ -1,0 +1,24 @@
+{% set classes = [
+  'header',
+]|merge(extra_classes ?: []) %}
+
+{% block top %}
+  {% if top %}
+    {% embed 'artisan:header-top' with {
+      header_top_container_extra_classes: ['flex', 'justify-between', 'items-center'],
+      content: top,
+    } only %}
+    {% endembed %}
+  {% endif %}
+{% endblock %}
+
+<header {{ attributes.addClass(classes) }}>
+  {% block content %}
+    {% embed 'artisan:navbar' with {
+      navbar_start: content.branding,
+      navbar_center: [content.primary_menu, content.secondary_menu],
+      navbar_end: content.header,
+    } only %}
+    {% endembed %}
+  {% endblock %}
+</header>

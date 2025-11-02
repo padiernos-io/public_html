@@ -1,0 +1,6 @@
+services:
+  devutils.commands:
+    class: Drupal\devutils\Commands\DevutilsCommands
+    arguments: [ '@entity_type.manager', '@file.usage' ]
+    tags:
+      - { name: drush.command }

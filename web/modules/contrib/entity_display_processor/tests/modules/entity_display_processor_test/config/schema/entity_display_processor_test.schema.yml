@@ -1,0 +1,6 @@
+entity_display_processor_plugin.settings.wrapper_div:
+  type: mapping
+  mapping: { }
+entity_display_processor_plugin.settings.wrapper_div_alt:
+  type: mapping
+  mapping: { }

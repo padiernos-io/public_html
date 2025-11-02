@@ -1,0 +1,29 @@
+backstop_generator.settings_form:
+  title: Settings
+  route_name: backstop_generator.settings_form
+  base_route: backstop_generator.settings_form
+  weight: 0
+
+backstop_generator.viewports:
+  title: Viewports
+  route_name: entity.backstop_viewport.collection
+  base_route: backstop_generator.settings_form
+  weight: 1
+
+backstop_generator.scenarios:
+  title: Scenarios
+  route_name: entity.backstop_scenario.collection
+  base_route: backstop_generator.settings_form
+  weight: 3
+
+backstop_generator.profile:
+  title: Profiles
+  route_name: entity.backstop_profile.collection
+  base_route: backstop_generator.settings_form
+  weight: 2
+
+backstop_generator.commands:
+  title: Commands
+  route_name: backstop_generator.commands
+  base_route: backstop_generator.settings_form
+  weight: 4

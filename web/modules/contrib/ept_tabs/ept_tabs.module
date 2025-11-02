@@ -1,0 +1,163 @@
+<?php
+
+/**
+ * @file
+ * EPT Tabs module file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_field_widget_single_element_WIDGET_TYPE_form_alter().
+ */
+function ept_tabs_field_widget_single_element_entity_reference_paragraphs_form_alter(array &$element, FormStateInterface $form_state, array $context) {
+  if ($element['#paragraph_type'] != 'ept_tabs_item') {
+    return;
+  }
+
+  $options = [
+    'text' => 'field_ept_tab_text',
+    'page' => 'field_ept_tab_page',
+    'block' => 'field_ept_tab_block',
+    'views' => 'field_ept_tab_views',
+  ];
+
+  foreach ($options as $option => $field_name) {
+    _ept_tabs_paragraph_field_state($element, $field_name, 'visible', [
+      'value' => $option,
+    ]);
+  }
+}
+
+/**
+ * Implements hook_field_widget_single_element_WIDGET_TYPE_form_alter().
+ */
+function ept_tabs_field_widget_single_element_paragraphs_form_alter(array &$element, FormStateInterface $form_state, array $context) {
+  if ($element['#paragraph_type'] != 'ept_tabs_item') {
+    return;
+  }
+
+  $options = [
+    'text' => 'field_ept_tab_text',
+    'page' => 'field_ept_tab_page',
+    'block' => 'field_ept_tab_block',
+    'views' => 'field_ept_tab_views',
+  ];
+
+  foreach ($options as $option => $field_name) {
+    _ept_tabs_paragraph_field_state($element, $field_name, 'visible', [
+      'value' => $option,
+    ]);
+  }
+}
+
+/**
+ * Helper function to add state to the element.
+ */
+function _ept_tabs_paragraph_field_state(&$element, $field_name, $state_key, array $conditions) {
+  if (!isset($element['subform'][$field_name])) {
+    return;
+  }
+
+  $subform = &$element['subform'];
+  $parents = $subform['#parents'];
+  $parents[] = 'field_ept_tab_content';
+
+  $field_id = array_shift($parents);
+  $field_id .= '[' . implode('][', $parents) . ']';
+  $subform[$field_name]['#states'][$state_key][':input[name="' . $field_id . '"]'] = $conditions;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function ept_tabs_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // @todo Get paragraph subform.
+  if ($form_id != 'node_paragraphs_page_edit_form') {
+    return;
+  }
+
+  $form['#validate'][] = '_ept_tabs_form_validation';
+}
+
+/**
+ * Form validate for EPT Tabs.
+ */
+function _ept_tabs_form_validation(array &$form, FormStateInterface $form_state) {
+  // @todo Get paragraph subform.
+  $field_ept_tabs = $form_state->getValue('field_ept_tabs');
+
+  if (empty($field_ept_tabs)) {
+    return;
+  }
+
+  foreach ($field_ept_tabs as $field_ept_tab) {
+    _ept_tabs_form_validate_subform($field_ept_tab, $form_state);
+  }
+}
+
+/**
+ * Auxiliar function to validate the EPT Tab subform.
+ */
+function _ept_tabs_form_validate_subform($field_ept_tab, &$form_state) {
+  $field_ept_tab_content = $field_ept_tab['subform']['field_ept_tab_content'][0]['value'];
+  switch ($field_ept_tab_content) {
+    case 'text':
+      if (empty($field_ept_tab['subform']['field_ept_tab_text'][0]['value'])) {
+        $form_state->setErrorByName('field_ept_tab_text', t('Field "Tab text" is required.'));
+      }
+      break;
+
+    case 'page':
+      if (empty($field_ept_tab['subform']['field_ept_tab_page'][0]['target_id'])) {
+        $form_state->setErrorByName('field_ept_tab_page', t('Field "Tab page" is required.'));
+      }
+      break;
+
+    case 'block':
+      if (empty($field_ept_tab['subform']['field_ept_tab_block'][0]['plugin_id'])) {
+        $form_state->setErrorByName('field_ept_tab_block', t('Field "Tab Block" is required.'));
+      }
+      break;
+
+    case 'views':
+      if (empty($field_ept_tab['subform']['field_ept_tab_views'][0])) {
+        $form_state->setErrorByName('field_ept_tab_views', t('Field "Tab views" is required.'));
+      }
+      break;
+
+  }
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function ept_tabs_theme_registry_alter(&$theme_registry) {
+  $ept_module = 'ept_tabs';
+  $module_path = \Drupal::service('extension.list.module')
+    ->getPath($ept_module);
+  $ept_module_with_dashes = str_replace('_', '-', $ept_module);
+  $base_theme = 'paragraph';
+  $theme_registry['paragraph__ept_tabs_item__default'] = [
+    'path' => $module_path . '/templates',
+    'template' => 'paragraph--ept-tabs-item--default',
+    'render element' => $theme_registry[$base_theme]['render element'],
+    'base hook' => $base_theme,
+    'type' => 'module',
+    'theme path' => $module_path,
+    'preprocess functions' => $theme_registry[$base_theme]['preprocess functions'],
+    'initial preprocess' => 'template_preprocess_paragraph',
+  ];
+
+  $base_theme = 'field';
+  $theme_registry['field__paragraph__field_' . $ept_module . '__' . $ept_module] = [
+    'path' => $module_path . '/templates',
+    'template' => 'field--paragraph--field-' . $ept_module_with_dashes . '--' . $ept_module_with_dashes,
+    'render element' => $theme_registry[$base_theme]['render element'],
+    'base hook' => $base_theme,
+    'type' => 'module',
+    'theme path' => $module_path,
+    'preprocess functions' => $theme_registry[$base_theme]['preprocess functions'],
+    'initial preprocess' => 'template_preprocess_field',
+  ];
+}

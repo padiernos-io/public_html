@@ -1,0 +1,16 @@
+consent_mode:
+  version: -1
+  js:
+    js/consent_mode.js: {}
+
+consent_mode_v2:
+  js:
+    js/consent_mode_v2.js: {}
+iframes:
+  version: -1
+  js:
+    js/iframes.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once

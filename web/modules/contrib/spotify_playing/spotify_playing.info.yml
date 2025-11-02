@@ -1,0 +1,9 @@
+name: 'Spotify Now Playing'
+type: module
+core_version_requirement: ^11
+description: '"Now Playing" widgets and endpoints from Spotify.'
+
+# Information added by Drupal.org packaging script on 2025-04-17
+version: '1.1.2'
+project: 'spotify_playing'
+datestamp: 1744902525

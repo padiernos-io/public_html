@@ -1,0 +1,24 @@
+uuid: b99b2f86-39c1-460d-b981-18d78bec39c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_text
+    - paragraphs.paragraphs_type.ept_timeline
+  module:
+    - text
+_core:
+  default_config_hash: 1LBtM8LbKsNWBieOZnECcqs_A80USSjd7FOp1-PKw-Q
+id: paragraph.ept_timeline.field_ept_text
+field_name: field_ept_text
+entity_type: paragraph
+bundle: ept_timeline
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

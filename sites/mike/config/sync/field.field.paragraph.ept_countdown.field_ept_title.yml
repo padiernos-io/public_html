@@ -1,0 +1,24 @@
+uuid: ae2f7f13-51c7-4ea2-99c7-c5b6b22f7360
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_title
+    - paragraphs.paragraphs_type.ept_countdown
+  module:
+    - text
+_core:
+  default_config_hash: hE1iEpJa-BGC9-RbtJz3GYEuzj1nOmJqKNp7bNq63v8
+id: paragraph.ept_countdown.field_ept_title
+field_name: field_ept_title
+entity_type: paragraph
+bundle: ept_countdown
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

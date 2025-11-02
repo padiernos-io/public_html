@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for ept_webform.
+ */
+
+use Drupal\paragraphs\Entity\ParagraphsType;
+
+/**
+ * Update the Paragraph Type description of EPT Webform.
+ */
+function ept_webform_update_9001() {
+
+  // Get the entity object.
+  $paragraph_type = ParagraphsType::load('ept_webform');
+
+  // If there is no result, skip.
+  if (empty($paragraph_type)) {
+    return;
+  }
+
+  // Update the description.
+  $paragraph_type->set('description', 'Extra Paragraph Type (EPT): Webform');
+
+  // Save the entity.
+  $paragraph_type->save();
+
+}

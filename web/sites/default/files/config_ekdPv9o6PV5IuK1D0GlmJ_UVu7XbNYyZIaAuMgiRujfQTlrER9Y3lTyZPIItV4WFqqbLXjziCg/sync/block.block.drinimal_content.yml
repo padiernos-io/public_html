@@ -1,0 +1,22 @@
+uuid: 68f882f4-a023-48db-8725-d620ab6163bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drinimal
+_core:
+  default_config_hash: G4iNGvy_k2yNIEH_FJmbkvgBBar1etJIhKJYuygT7hU
+id: drinimal_content
+theme: drinimal
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

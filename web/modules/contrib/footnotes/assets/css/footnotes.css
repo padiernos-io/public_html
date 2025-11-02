@@ -1,0 +1,30 @@
+/*
+ * Sample starter CSS for the to Footnotes module.
+*/
+
+/* Citation styling. */
+.footnote__citation,
+.footnote__citation-separator {
+  position: relative;
+  top: -0.2em;
+  vertical-align: top;
+  font-size: 0.73em;
+}
+
+/* References styling. */
+.footnotes {
+  position: relative;
+  margin: 4em 0 2em;
+  padding-left: 0;
+  border-top: 1px solid #000;
+  font-size: 0.9em;
+}
+.footnotes__item-wrapper {
+  display: grid;
+  grid-template-columns: minmax(auto, 3rem) 1fr;
+}
+
+/* Multiple backlinks */
+.footnotes__item-backlink.has-next {
+  margin-right: 0.2em;
+}

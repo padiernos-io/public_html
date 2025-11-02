@@ -1,0 +1,5 @@
+cookieinformation.settings:
+  title: 'Cookie Information Settings'
+  description: 'Configure common settings for Cookie Information cookie consent.'
+  parent: system.admin_config_system
+  route_name: cookieinformation.settings

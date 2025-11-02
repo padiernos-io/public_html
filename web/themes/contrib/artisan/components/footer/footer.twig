@@ -1,0 +1,24 @@
+{% set classes = [
+  'footer',
+]|merge(extra_classes ?: []) %}
+
+<footer {{ attributes.addClass(classes) }}>
+  {% block top %}
+    {% if top %}
+      {% embed 'artisan:footer-top' with {
+        content: top
+      } only %}
+      {% endembed %}
+    {% endif %}
+  {% endblock %}
+
+  {% block content %}
+    {% if content %}
+      {% embed 'artisan:footer-bottom' with {
+        container_attributes: container_attributes.addClass(['container']),
+        content: content
+      } only %}
+      {% endembed %}
+    {% endif %}
+  {% endblock %}
+</footer>

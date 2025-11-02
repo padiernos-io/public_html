@@ -1,0 +1,17 @@
+{
+    "name": "drupal/ept_quote",
+    "type": "drupal-module",
+    "description": "Extra Block Types (EPT): Quote",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ept_quote",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ept_quote",
+        "source": "https://git.drupalcode.org/project/ept_quote"
+    },
+    "require": {
+        "drupal/ept_core": "^1.4",
+        "drupal/paragraphs": "^1.0"
+    }
+}

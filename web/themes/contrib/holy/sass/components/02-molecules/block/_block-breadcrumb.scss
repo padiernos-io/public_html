@@ -1,0 +1,51 @@
+.block-system-breadcrumb-block {
+  margin: 0;
+  padding: 33px 0 0 0;
+
+  & > h2 {
+    display: none;
+  }
+
+  .breadcrumb {
+    padding: 0;
+
+    ol {
+      margin-bottom: 10px;
+
+      li {
+        margin: 0 10px 0 0;
+        padding-right: 13px;
+        color: var(--black);
+        background: url('../images/breadcrumb-separator.svg') no-repeat right 50%;
+        background-size: 6px 7px;
+        font-size: 12px;
+
+        &::before {
+          content: '';
+        }
+
+        &:last-child {
+          margin: 0;
+          padding-right: 0;
+          background: none;
+          font-weight: bold;
+        }
+
+        a {
+          color: var(--primary);
+
+          &:hover {
+            color: var(--primary-vivid);
+          }
+        }
+
+        a[href='/'] {
+          padding-left: 20px;
+          background: url('../images/breadcrumb-home.svg') no-repeat 0 50%;
+          background-size: 11px 9px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+uuid: 060c6a80-ad45-4431-9ea3-47085aabbf6c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - minim
+_core:
+  default_config_hash: A_KsAw1fyIvdBubmxkvtCtoSuV62cVV-p0RSPnvqc9U
+id: minim_primary_local_tasks
+theme: minim
+region: buffer
+weight: 1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Provides functionality of the Improve Line Breaks Filter module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function improve_line_breaks_filter_help($route_name, RouteMatchInterface $arg) {
+  switch ($route_name) {
+    case 'help.page.improve_line_breaks_filter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The text editor often replaces the line breaks with empty paragraphs. Paragraphs with a margin can weaken the look of your website. This module provides a text filter that replaces empty paragraphs.') . '</p>';
+      // Add a link to the Drupal.org project.
+      $output .= '<p>';
+      $output .= t('Visit the <a href=":project_link">project pages</a> on Drupal.org for more information.', [
+        ':project_link' => 'https://www.drupal.org/project/improve_line_breaks_filter',
+      ]);
+      $output .= '</p>';
+
+      return $output;
+  }
+
+  return NULL;
+}

@@ -1,0 +1,17 @@
+{
+    "name": "drupal/ept_timeline",
+    "type": "drupal-module",
+    "description": "Extra Paragraph Types (EPT): Timeline",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ept_timeline",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ept_timeline",
+        "source": "https://git.drupalcode.org/project/ept_timeline"
+    },
+    "require": {
+        "drupal/ept_core": "^1.4",
+        "drupal/paragraphs": "^1.0"
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "drupal/alt_login",
+  "description": "Alternative login field",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "requires": [
+    "drupal/token"
+  ]
+}

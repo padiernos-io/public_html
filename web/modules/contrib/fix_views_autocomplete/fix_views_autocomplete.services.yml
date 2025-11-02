@@ -1,0 +1,5 @@
+services:
+  fix_views_autocomplete.route_subscriber:
+    class: Drupal\fix_views_autocomplete\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

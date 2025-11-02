@@ -1,0 +1,18 @@
+flexslider:
+  remote: https://github.com/levmyshkin/flexslider
+  license:
+    name: GNU-GPL-2.0-or-later
+    url: https://github.com/levmyshkin/flexslider/blob/master/LICENSE.md
+    gpl-compatible: true
+  js:
+    /libraries/flexslider/jquery.flexslider-min.js: { minified: true }
+    js/flexslider/flexslider.js: {}
+  css:
+    component:
+      /libraries/flexslider/flexslider.css: {}
+      css/flexslider/flexslider.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/drupalSettings

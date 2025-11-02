@@ -1,0 +1,53 @@
+uuid: 303208d8-e91e-4d7f-97f3-86e9cd22ec4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_views.field_ept_settings
+    - field.field.paragraph.ept_views.field_ept_text
+    - field.field.paragraph.ept_views.field_ept_title
+    - field.field.paragraph.ept_views.field_ept_views_view
+    - paragraphs.paragraphs_type.ept_views
+  module:
+    - ept_core
+    - text
+    - viewsreference
+_core:
+  default_config_hash: HwJ8zDH-LTdrQbXrPD8P-vvx1n91p-8JocGN840XNUw
+id: paragraph.ept_views.default
+targetEntityType: paragraph
+bundle: ept_views
+mode: default
+content:
+  field_ept_settings:
+    type: ept_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ept_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ept_views_view:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_carousel
+    - paragraphs.paragraphs_type.ept_carousel
+    - paragraphs.paragraphs_type.ept_carousel_item
+  module:
+    - entity_reference_revisions
+id: paragraph.ept_carousel.field_ept_carousel
+field_name: field_ept_carousel
+entity_type: paragraph
+bundle: ept_carousel
+label: Carousel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ept_carousel_item: ept_carousel_item
+    negate: 0
+    target_bundles_drag_drop:
+      ept_carousel_item:
+        weight: 31
+        enabled: true
+field_type: entity_reference_revisions

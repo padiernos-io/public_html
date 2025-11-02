@@ -1,0 +1,20 @@
+name: Family
+type: theme
+description: "Main theme for www.padiernos.me utilizing the base theme Stone"
+core_version_requirement: ^9 || ^10 || ^11
+base theme: minim
+
+regions:
+  branding                          : "Branding"
+  navigation                        : "Navigation"
+  focus                             : "Focus"
+  hero                              : "Hero"
+  highlight                         : "Highlight"
+  content                           : "Content"
+  sidebar                           : "Sidebar"
+  footer                            : "Footer"
+  buffer                            : "Buffer"
+
+libraries:
+  - family/global-styling
+

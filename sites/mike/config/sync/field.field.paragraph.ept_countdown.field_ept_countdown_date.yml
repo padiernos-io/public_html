@@ -1,0 +1,23 @@
+uuid: c609999d-6790-44c4-bcea-37a073931464
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_countdown_date
+    - paragraphs.paragraphs_type.ept_countdown
+  module:
+    - datetime
+_core:
+  default_config_hash: Tpuj04Fr7uNZO039Nd8J5cv4Ya-znGKtwNYc5cXn1gc
+id: paragraph.ept_countdown.field_ept_countdown_date
+field_name: field_ept_countdown_date
+entity_type: paragraph
+bundle: ept_countdown
+label: 'Countdown date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

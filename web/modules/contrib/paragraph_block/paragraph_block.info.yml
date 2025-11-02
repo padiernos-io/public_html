@@ -1,0 +1,15 @@
+name: 'Paragraph block'
+type: module
+description: 'Exposes paragraph types as block types.'
+package: paragraphs
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:block_content
+  - paragraphs:paragraphs
+  - form_decorator:form_decorator
+  - block_form_alter:block_form_alter
+
+# Information added by Drupal.org packaging script on 2025-07-30
+version: '2.0.0-rc3'
+project: 'paragraph_block'
+datestamp: 1753881400

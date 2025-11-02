@@ -1,0 +1,18 @@
+{% set attributes = attributes ?: create_attribute() %}
+
+{% set classes = [
+  'badge',
+  size ? 'badge-' ~ size,
+  color ? 'badge-' ~ color,
+  variant ? 'badge-' ~ variant,
+] %}
+
+{% if url %}
+  <a href="{{ url }}" {{ attributes.addClass(classes).setAttribute('href', url) }}>
+    {{ text }}
+  </a>
+{% else %}
+  <div {{ attributes.addClass(classes) }}>
+    {{ text }}
+  </div>
+{% endif %}

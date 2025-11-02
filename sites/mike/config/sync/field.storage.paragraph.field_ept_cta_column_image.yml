@@ -1,0 +1,22 @@
+uuid: 9b530da1-3486-4a6a-ae6e-a2a23973cb6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: BVZIBdZwlh9CG5xDwjnekBIIuVdEEtKvFPci5rwGdA0
+id: paragraph.field_ept_cta_column_image
+field_name: field_ept_cta_column_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

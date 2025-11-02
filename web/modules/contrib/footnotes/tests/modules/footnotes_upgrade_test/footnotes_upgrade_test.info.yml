@@ -1,0 +1,11 @@
+name: Footnotes Upgrade Test
+description: 'Test module for upgrading footnotes.'
+type: module
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:footnotes
+
+# Information added by Drupal.org packaging script on 2025-07-09
+version: '4.0.0-beta7'
+project: 'footnotes'
+datestamp: 1752088038

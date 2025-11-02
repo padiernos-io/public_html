@@ -1,0 +1,7 @@
+filter_settings.improve_line_breaks_filter:
+  type: mapping
+  label: 'Improve line breaks settings'
+  mapping:
+    remove_empty_paragraphs:
+      type: boolean
+      label: 'Remove empty paragraphs'

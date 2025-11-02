@@ -1,0 +1,7 @@
+{% set textarea_classes = [
+  'textarea',
+]|merge(textarea_extra_classes ?: []) %}
+
+<div {{ wrapper_attributes }}>
+  <textarea {{ attributes.addClass(textarea_classes) }}>{{ value }}</textarea>
+</div>

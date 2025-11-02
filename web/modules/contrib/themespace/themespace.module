@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Drupal hook and global functions for the themespace module.
+ */
+
+/**
+ * Implements hook_themes_installed().
+ */
+function themespace_themes_installed(array $theme_list): void {
+  $theme_extensions = \Drupal::service('extension.list.theme');
+
+  // Check newly installed themes to determine if they may possibly have
+  // namespaces which need to be added. If any of the newly installed themes
+  // have a "src/" folder the trigger a container rebuild to detect and add
+  // any potential namespaces.
+  // Drupal Kernel triggers this on module installs so only theme need this.
+  foreach ($theme_list as $theme) {
+    if (file_exists($theme_extensions->getPath($theme) . '/src')) {
+      \Drupal::service('kernel')->rebuildContainer();
+      \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
+      break;
+    }
+  }
+}
+
+/**
+ * Implements hook_themes_uninstalled().
+ */
+function themespace_themes_uninstalled(array $themes): void {
+  $namespaces = \Drupal::getContainer()
+    ->getParameter('container.themespaces');
+
+  // Check of any of the themes defined namespaces, and if they did
+  // rebuild the container to remove those namespaces, and flush plugin
+  // cache discovery for compliant plugin managers. Only one theme with a
+  // namespace, require the rebuild and plugin flush.
+  foreach ($themes as $theme) {
+    $theme_namespace = 'Drupal\\' . $theme;
+
+    if (isset($namespaces[$theme_namespace])) {
+      \Drupal::service('kernel')->rebuildContainer();
+      \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
+      break;
+    }
+  }
+}

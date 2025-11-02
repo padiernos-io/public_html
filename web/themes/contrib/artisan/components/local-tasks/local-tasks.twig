@@ -1,0 +1,22 @@
+{% set classes = [
+  'tabs',
+  'tabs-lift',
+]|merge(extra_classes ?: [])  %}
+
+{% set secondary_tab_classes = [
+  'tabs',
+  'tabs-lift',
+]|merge(secondary_tab_extra_classes ?: []) %}
+
+{% block primary_tabs %}
+  {% if primary_tabs %}
+    <ul {{ attributes.addClass(classes) }}>{{ primary_tabs }}</ul>
+  {% endif %}
+{% endblock %}
+
+{% block secondary_tabs %}
+  {% if secondary_tabs %}
+    <ul class="{{ secondary_tab_classes|join(' ') }}">{{ secondary_tabs }}</ul>
+  {% endif %}
+{% endblock %}
+

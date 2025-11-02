@@ -1,0 +1,6 @@
+{
+  "ignorePaths": [
+    "**/*.min.js",
+    "node_modules/**"
+  ]
+}

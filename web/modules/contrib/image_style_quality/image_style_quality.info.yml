@@ -1,0 +1,17 @@
+name: Image Style Quality
+type: module
+description: 'Provides an image effect plugin that allows you to choose the quality of images.'
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+package: Media
+php: 8.1
+dependencies:
+  - drupal:image
+
+test_dependencies:
+  - imagemagick:imagemagick
+  - imagick:imagick
+
+# Information added by Drupal.org packaging script on 2024-11-06
+version: '8.x-1.7'
+project: 'image_style_quality'
+datestamp: 1730925824

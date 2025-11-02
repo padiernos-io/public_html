@@ -1,0 +1,7 @@
+services:
+  logger.channel.media_name:
+    parent: logger.channel_base
+    arguments: ['media_name']
+  media_name:
+    class: Drupal\media_name\MediaName
+    arguments: ['@entity_field.manager', '@config.factory', '@messenger', '@logger.factory']

@@ -1,0 +1,7 @@
+izi_message.settings:
+  path: '/admin/config/development/izi_message/settings'
+  defaults:
+    _title: 'Izi message settings'
+    _form:  '\Drupal\izi_message\Form\IziMessageSettingsForm'
+  requirements:
+    _permission: 'administer site configuration'

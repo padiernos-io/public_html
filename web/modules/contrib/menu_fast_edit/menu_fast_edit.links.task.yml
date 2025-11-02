@@ -1,0 +1,4 @@
+entity.menu.fast_edit_form:
+  title: 'Fast Edit menu'
+  route_name: entity.menu.fast_edit_form
+  base_route: entity.menu.fast_edit_form

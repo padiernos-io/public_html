@@ -1,0 +1,10 @@
+name: Preprocess - TEST
+type: module
+description: 'Support module for testing preprocessing.'
+package: Testing
+core_version_requirement: ^9 || ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2025-09-11
+version: '2.2.1'
+project: 'preprocess'
+datestamp: 1757593645

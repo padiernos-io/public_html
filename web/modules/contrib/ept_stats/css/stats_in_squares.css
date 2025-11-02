@@ -1,0 +1,62 @@
+@media (min-width: 880px) {
+  .ept-stats-stats_in_squares .ept-container .ept-stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 880px) {
+  .ept-stats-stats_in_squares .ept-container .ept-stats-wrapper .field__item {
+    width: 24%;
+  }
+}
+.ept-stats-stats_in_squares .ept-container .ept-stats-wrapper .field__item .paragraph--type--ept-stats-item {
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 880px) {
+  .ept-stats-stats_in_squares .ept-container .ept-stats-wrapper .field__item .paragraph--type--ept-stats-item {
+    padding: 20px;
+  }
+}
+.ept-stats-stats_in_squares .ept-container .ept-stats-wrapper .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-image {
+  display: none;
+}
+.ept-stats-stats_in_squares .ept-container .ept-stats-wrapper .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-number {
+  font-size: 40px;
+  color: #379b5d;
+  margin-bottom: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (min-width: 880px) {
+  .ept-stats-stats_in_squares .ept-container .ept-stats-wrapper .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-number {
+    font-size: 30px;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+.ept-stats-stats_in_squares .ept-container .ept-stats-wrapper .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-text {
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+  word-wrap: break-word;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (min-width: 880px) {
+  .ept-stats-stats_in_squares .ept-container .ept-stats-wrapper .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-text {
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+.ept-stats-stats_in_squares .ept-container .ept-stats-wrapper .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-link {
+  font-size: 18px;
+  word-wrap: break-word;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+@media (min-width: 880px) {
+  .ept-stats-stats_in_squares .ept-container .ept-stats-wrapper .field__item .paragraph--type--ept-stats-item .field--name-field-ept-stats-item-link {
+    width: 100%;
+  }
+}

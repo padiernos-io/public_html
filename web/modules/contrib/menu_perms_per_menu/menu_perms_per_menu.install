@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Install hooks for module menu_perms_per_menu.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function menu_perms_per_menu_install() {
+  // Weight should be higher than menu_admin_per_menu as we override the
+  // behaviour of this module.
+  $extension_config = \Drupal::configFactory()->get('core.extension');
+  $menu_admin_per_menu_weight = $extension_config->get('module.menu_admin_per_menu');
+  module_set_weight('menu_perms_per_menu', $menu_admin_per_menu_weight + 1);
+}

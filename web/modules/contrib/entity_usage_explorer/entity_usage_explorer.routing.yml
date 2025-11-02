@@ -1,0 +1,7 @@
+entity_usage_explorer.usage_page:
+  path: '/admin/usage/{entity_type}/{entity_id}'
+  defaults:
+    _controller: 'Drupal\entity_usage_explorer\Controller\UsageOverviewController::getUsagePage'
+    _title_callback: 'Drupal\entity_usage_explorer\Controller\UsageOverviewController::getTitle'
+  requirements:
+    _permission: 'access entity usage dashboard'

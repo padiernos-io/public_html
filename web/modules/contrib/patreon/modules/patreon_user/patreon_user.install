@@ -1,0 +1,93 @@
+<?php
+
+/**
+ * @file
+ * Install functions for the Patreon User module.
+ */
+
+use Drupal\Component\Serialization\Json;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Implements hook_install().
+ */
+function patreon_user_install(): void {
+  /** @var \Drupal\patreon\PatreonServiceInterface $service */
+  $service = \Drupal::service('patreon.api');
+  $service->createRoles();
+
+  \Drupal::messenger()->addWarning(t('The Patreon User module has been enabled. Please add the URL :url to your allowed redirects at <a href="https://www.patreon.com/portal/registration/register-clients">https://www.patreon.com/portal/registration/register-clients</a>.', [
+    ':url' => \Drupal::service('patreon_user.api')->getCallback()->toString(),
+  ]));
+}
+
+/**
+ * Update all users for the new token structure.
+ */
+function patreon_user_update_9401(&$sandbox): void {
+  if (!isset($sandbox['progress'])) {
+    $sandbox['progress'] = 0;
+    $sandbox['users'] = \Drupal::entityTypeManager()->getStorage('user')->getQuery()
+      ->exists('user_patreon_token')
+      ->accessCheck(FALSE)
+      ->execute();
+    $sandbox['max'] = count($sandbox['users']);
+  }
+
+  if ($uid = array_pop($sandbox['users'])) {
+
+    /** @var \Drupal\user\UserInterface $user */
+    if ($user = \Drupal::entityTypeManager()->getStorage('user')->load($uid)) {
+      if ($data = $user->get('user_patreon_token')->getString()) {
+
+        // If the token won't decode, then it is probably in the old format.
+        if (!Json::decode($data)) {
+
+          /** @var \Drupal\patreon_user\PatreonUserService $service */
+          $service = \Drupal::service('patreon_user.api');
+
+          if ($oauth = $service->getOauth()) {
+            try {
+              if ($refreshed = $oauth->getAccessToken('refresh_token', [
+                'refresh_token' => $user->get('user_patreon_refresh_token')->getString(),
+              ])) {
+                $service->storeTokens($refreshed);
+              }
+            }
+            catch (\Exception $e) {
+              $message = t('Error refreshing tokens for user :account - :error', [
+                ':account' => $user->id(),
+                ':error' => $e->getMessage(),
+              ]);
+              \Drupal::logger('patreon_user')->error($message);
+              \Drupal::messenger()->addError($message);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  $sandbox['progress']++;
+
+  if (empty($sandbox['users'])) {
+    $sandbox['#finished'] = 1;
+  }
+  else {
+    $sandbox['#finished'] = empty($sandbox['max']) ? 1 : ($sandbox['progress'] / $sandbox['max']);
+  }
+}
+
+/**
+ * Delete the unused user_patreon_refresh_token field.
+ */
+function patreon_user_update_9402(): void {
+  if ($field = FieldConfig::loadByName('user', 'user', 'user_patreon_refresh_token')) {
+    $field->delete();
+  }
+
+  if ($field_storage = FieldStorageConfig::loadByName('user', 'user_patreon_refresh_token')) {
+    $field_storage->delete();
+  }
+}

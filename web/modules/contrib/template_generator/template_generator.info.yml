@@ -1,0 +1,11 @@
+name: Template Generator
+type: module
+description: Automatic templates generation.
+package: Template Generator
+configure: template_generator.settings
+core_version_requirement: ^9.3 || ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2025-02-10
+version: '2.0.3'
+project: 'template_generator'
+datestamp: 1739196178

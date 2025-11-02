@@ -1,0 +1,98 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for module menu_perms_per_menu.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alter form at admin/structure/menu/item/%mlid/edit.
+ */
+function menu_perms_per_menu_form_menu_link_content_menu_link_content_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Retrieve current user account + menu link object.
+  $account = \Drupal::currentUser()->getAccount();
+  /** @var Drupal\menu_link_content\Form\MenuLinkContentForm */
+  $form_object = $form_state->getFormObject();
+  /** @var Drupal\menu_link_content\Entity\MenuLinkContent */
+  $menu_link = $form_object->getEntity();
+
+  // Restrict access to 'Link' field.
+  if ($form['link'] && !$account->hasPermission('edit link of menu links in ' . $menu_link->getMenuName() . ' menu')) {
+    $form['link']['#disabled'] = TRUE;
+  }
+
+  // Restrict access to 'Enable' checkbox.
+  if ($form['enabled'] && !$account->hasPermission('enable/disable links in ' . $menu_link->getMenuName() . ' menu')) {
+    $form['enabled']['#disabled'] = TRUE;
+  }
+
+  // Restrict access to 'Show as expanded' checkbox.
+  if ($form['expanded'] && !$account->hasPermission('expand links in ' . $menu_link->getMenuName() . ' menu')) {
+    $form['expanded']['#disabled'] = TRUE;
+    $form['expanded']['description'] = [
+      '#markup' => t('You require special access to toggle this field.'),
+    ];
+  }
+
+  // Restrict access to 'Delete' action.
+  if (!$account->hasPermission('delete links in ' . $menu_link->getMenuName() . ' menu from menu interface')) {
+    $form['actions']['delete']['#access'] = FALSE;
+  }
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alter form at admin/structure/menu/manage/%menu.
+ */
+function menu_perms_per_menu_form_menu_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Retrieve current user account + menu object.
+  $account = \Drupal::currentUser()->getAccount();
+  /** @var Drupal\menu_ui\MenuForm */
+  $form_object = $form_state->getFormObject();
+  /** @var Drupal\system\Entity\Menu */
+  $menu = $form_object->getEntity();
+
+  // If menu is empty and message contains "Add link".
+  if (isset($form['links']['links']['#empty'])) {
+    if (!$account->hasPermission('add new links to ' . $menu->id() . ' menu from menu interface') && str_contains($form['links']['links']['#empty'], "Add link")) {
+      // Remove "Add link" url.
+      $form['links']['links']['#empty'] = preg_replace('/<a href="[^"]*">Add link<\/a>\./', '', $form['links']['links']['#empty']);
+    }
+  }
+
+  // For each link listed in the table.
+  if (isset($form['links']['links'])) {
+    $menu_link_ids = Element::children($form['links']['links']);
+    foreach ($menu_link_ids as $menu_link_id) {
+
+      // Restrict access to 'Enable' checkbox.
+      if (!$account->hasPermission('enable/disable links in ' . $menu->id() . ' menu')) {
+        $form['links']['links'][$menu_link_id]['enabled']['#disabled'] = TRUE;
+      }
+
+      // Restrict access to 'Delete' in menu link operation dropdown.
+      if (!$account->hasPermission('delete links in ' . $menu->id() . ' menu from menu interface')) {
+        unset($form['links']['links'][$menu_link_id]['operations']['#links']['delete']);
+      }
+
+      // Restrict access to 'Translate' in menu link operation dropdown.
+      if (!$account->hasPermission('translate links in ' . $menu->id() . ' menu from menu interface')) {
+        unset($form['links']['links'][$menu_link_id]['operations']['#links']['translate']);
+      }
+
+      // Restrict access to 'Add child' in menu link operation dropdown.
+      // Adding a child link is equivalent of creating/adding a new menu link.
+      if (!$account->hasPermission('add new links to ' . $menu->id() . ' menu from menu interface')) {
+        unset($form['links']['links'][$menu_link_id]['operations']['#links']['add-child']);
+      }
+    }
+  }
+
+}

@@ -1,0 +1,122 @@
+uuid: e81fb3cc-76b9-4554-9d18-c6e7b046608c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_paragraphs
+    - profile.type.user_story
+  module:
+    - entity_reference_revisions
+id: profile.user_story.field_paragraphs
+field_name: field_paragraphs
+entity_type: profile
+bundle: user_story
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      ept_accordion:
+        weight: 33
+        enabled: false
+      ept_accordion_section:
+        weight: 34
+        enabled: false
+      ept_basic_button:
+        weight: 35
+        enabled: false
+      ept_block:
+        weight: 36
+        enabled: false
+      ept_carousel:
+        weight: 37
+        enabled: false
+      ept_carousel_item:
+        weight: 38
+        enabled: false
+      ept_columns:
+        weight: 39
+        enabled: false
+      ept_countdown:
+        weight: 40
+        enabled: false
+      ept_counter:
+        weight: 41
+        enabled: false
+      ept_counter_item:
+        weight: 42
+        enabled: false
+      ept_cta:
+        weight: 43
+        enabled: false
+      ept_hero:
+        weight: 44
+        enabled: false
+      ept_image:
+        weight: 45
+        enabled: false
+      ept_image_gallery:
+        weight: 46
+        enabled: false
+      ept_micromodal:
+        weight: 47
+        enabled: false
+      ept_quote:
+        weight: 48
+        enabled: false
+      ept_slideshow:
+        weight: 49
+        enabled: false
+      ept_slideshow_item:
+        weight: 50
+        enabled: false
+      ept_stats:
+        weight: 51
+        enabled: false
+      ept_stats_item:
+        weight: 52
+        enabled: false
+      ept_text:
+        weight: 53
+        enabled: false
+      ept_tiles:
+        weight: 54
+        enabled: false
+      ept_tiles_item:
+        weight: 55
+        enabled: false
+      ept_timeline:
+        weight: 56
+        enabled: false
+      ept_timeline_item:
+        weight: 57
+        enabled: false
+      ept_video:
+        weight: 58
+        enabled: false
+      ept_video_and_image_gallery:
+        weight: 59
+        enabled: false
+      ept_video_and_image_gallery_item:
+        weight: 60
+        enabled: false
+      ept_views:
+        weight: 61
+        enabled: false
+      ept_webform:
+        weight: 62
+        enabled: false
+      ept_webform_popup:
+        weight: 63
+        enabled: false
+      from_library:
+        weight: 64
+        enabled: false
+field_type: entity_reference_revisions

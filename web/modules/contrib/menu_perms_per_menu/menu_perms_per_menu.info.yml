@@ -1,0 +1,12 @@
+name: Menu Perms per Menu
+type: module
+description: Extends Menu Admin per Menu with fine-grained permissions
+package: Administration
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+  - menu_admin_per_menu:menu_admin_per_menu
+
+# Information added by Drupal.org packaging script on 2025-10-27
+version: '1.0.0'
+project: 'menu_perms_per_menu'
+datestamp: 1761596058

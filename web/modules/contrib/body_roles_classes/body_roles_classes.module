@@ -1,0 +1,59 @@
+<?php
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * @file
+ * This is the file description for user role added in body class.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function body_roles_classes_preprocess_html(&$variables) {
+  $role_classes = '';
+  $roles = \Drupal::currentUser()->getRoles();
+  if (count($roles) > 0) {
+	  $role_classes = implode(' ', $roles);
+	  $variables['attributes']['class'][] = $role_classes;	
+  }
+}
+
+/**
+ * @file
+ * Roles classes module is used to add user's roles as classes in page body.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function body_roles_classes_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.body_roles_classes':
+      $readme = __DIR__ . '/README.txt';
+      $text = file_get_contents($readme);
+      $output = '';
+
+      // If the Markdown module is installed, use it to render the README.
+      if ($text && \Drupal::moduleHandler()->moduleExists('markdown') === TRUE) {
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        $output = $filter->process($text, 'en');
+      }
+      // Else the Markdown module is not installed output the README as text.
+      else if ($text) {
+        $output = '<pre>' . $text . '</pre>';
+      }
+
+      // Add a link to the Drupal.org project.
+      $output .= '<p>';
+      $output .= t('Visit the <a href=":project_link">Roles Classes project page</a> on Drupal.org for more information.',[
+        ':project_link' => 'https://www.drupal.org/project/body_roles_classes'
+        ]);
+      $output .= '</p>';
+
+      return $output;
+  }
+
+}
