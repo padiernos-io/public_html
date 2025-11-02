@@ -1,0 +1,19 @@
+includes:
+	- vendor/mglaman/phpstan-drupal/extension.neon
+
+parameters:
+	level: 1
+	paths:
+		- web/modules/custom
+		- web/themes/custom
+	excludePaths:
+		- web/modules/custom/*/tests/*
+		- web/themes/custom/*/tests/*
+	# Note: drupal_root parameter is deprecated and removed
+	# Drupal root is now discovered automatically
+	reportUnmatchedIgnoredErrors: false
+	ignoreErrors:
+		# Ignore the specific drupal_root deprecation warning
+		- '#The drupal_root parameter is deprecated#'
+		# Ignore common Drupal deprecations during development
+		- '#Call to deprecated#'
