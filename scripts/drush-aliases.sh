@@ -12,7 +12,7 @@ echo "================================"
 case "${1:-help}" in
     "list"|"ls")
         echo "📋 Available site aliases:"
-        drush site:alias --format=table
+        drush site:alias --format=list
         ;;
     "test")
         echo "🧪 Testing site aliases..."
