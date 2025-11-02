@@ -1,0 +1,127 @@
+# =============================================================================
+# Drupal CMS Project .gitignore
+# =============================================================================
+
+# Composer dependencies
+vendor/
+
+# Drupal web root (managed by composer)
+web/
+
+# Site-specific data
+data/
+u/
+sites/
+
+# =============================================================================
+# Node.js and Frontend Build Tools
+# =============================================================================
+
+# Dependencies
+node_modules/
+
+# Package manager files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json
+
+# Uncomment if using alternative package managers
+# yarn.lock
+# pnpm-lock.yaml
+
+# Build outputs and compiled assets
+dist/
+build/
+*.min.js
+*.min.css
+
+# =============================================================================
+# Cache and Temporary Files
+# =============================================================================
+
+# General cache directories
+.cache/
+.tmp/
+.temp/
+
+# Composer cache (using custom location)
+.composer-cache/
+
+# PHPStan cache
+phpstan-cache/
+
+# =============================================================================
+# Development Environment
+# =============================================================================
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# =============================================================================
+# AWStats Web Analytics
+# =============================================================================
+
+# AWStats directories
+awstats/
+awstatsicons/
+awstats-icon/
+awstats-data/
+awstats_data/
+awstats_sessions/
+awstats_temp/
+
+# AWStats configuration and data files
+awstats.*.conf
+awstats.conf
+awstatsdirdata.txt
+*.awstats
+awstats*.txt
+awstats*.html
+
+# AWStats icons (these are in your root, may want to keep them)
+# awstats-icon/
+# awstatsicons/
+
+# =============================================================================
+# Security and Credentials
+# =============================================================================
+
+# SSH keys and certificates
+*.pem
+*.p12
+*.key
+id_rsa*
+id_ed25519*
+
+# Environment files with secrets
+.env.production
+.env.staging
+.env.aws
+
+# =============================================================================
+# Logs and Runtime Files
+# =============================================================================
+
+# Application logs
+logs/
+*.log
+error_log
+
+# Runtime files
+*.pid
+*.seed
+*.pid.lock
