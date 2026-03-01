@@ -3,27 +3,28 @@ status: true
 dependencies:
   module:
     - eca_user
+    - modeler_api
+third_party_settings:
+  modeler_api:
+    modeler_id: bpmn_io
+    label: 'Authentication redirects'
 id: auth_redirects
-modeller: bpmn_io
-label: 'Authentication redirects'
-version: 1.0.0
 weight: 0
 events:
-  Event_user_logout:
+  user__logout:
     plugin: 'user:logout'
     label: 'User logout'
     configuration: {  }
     successors:
       -
-        id: Action_redirect_to_login
+        id: action_goto_action_login
         condition: ''
 conditions: {  }
 gateways: {  }
 actions:
-  Action_redirect_to_login:
-    plugin: action_goto_action
+  action_goto_action_login:
     label: 'Back to login after logout'
+    plugin: action_goto_action
     configuration:
-      replace_tokens: false
       url: /user/login
     successors: {  }

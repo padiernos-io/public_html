@@ -1,63 +1,97 @@
 {
-    "_hash": "ceb92bf73be098158e9e4a6ceaf25b0185b4bd721d461f7f46a4265d80faafff",
+    "_hash": "79f4414720dd2303ef7d40f6621a1b44681a88a7de714ad3fb7e20070571be05",
     "patches": {
+        "drupal/big_pipe_sessionless": [
+            {
+                "package": "drupal/big_pipe_sessionless",
+                "description": "New major release for Drupal 11 compatibility",
+                "url": "https://www.drupal.org/files/issues/2025-10-02/3428235-big_pipe_sessionless-22.d11.patch",
+                "sha256": "319de6cd164e86ef14dbc6f5a055eb4081c302eb6905a3dad5af6c51bfc33e41",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
         "drupal/book_access_code": [
             {
                 "package": "drupal/book_access_code",
                 "description": "Automated Drupal 11 compatibility fixes for book_access_code",
                 "url": "https://www.drupal.org/files/issues/2024-03-15/book_access_code.2.0.1.rector.patch",
                 "sha256": "97274eb988e960c1fb4aeb511efdea7b2252a6d370582a60de1570d77781d607",
-                "depth": 3,
+                "depth": 1,
                 "extra": {
                     "provenance": "root"
                 }
             }
         ],
-        "drupal/book_tree_menu": [
+        "drupal/layout_paragraphs": [
             {
-                "package": "drupal/book_tree_menu",
-                "description": "Automated Drupal 11 compatibility fixes for book_tree_menu",
-                "url": "https://www.drupal.org/files/issues/2024-11-22/book_tree_menu_issue_3429037.patch",
-                "sha256": "231a30ba62a1cecaca4d41967f987f1df5d37586ffbebc3b1a29f35c2c746db5",
-                "depth": 3,
+                "package": "drupal/layout_paragraphs",
+                "description": "Fix undefined variable warnings in EditComponentForm::orphanedItemsElement()",
+                "url": "https://www.drupal.org/files/issues/2025-12-29/3545135-php84-old-layout-undefined-variable.patch",
+                "sha256": "2fc191d6ce965988ed62754752c775d95083c980372432e321cee38fc68f3b20",
+                "depth": 1,
                 "extra": {
                     "provenance": "root"
                 }
             }
         ],
-        "drupal/social_post_facebook": [
+        "drupal/core": [
             {
-                "package": "drupal/social_post_facebook",
-                "description": "D11 Compatibility",
-                "url": "https://www.drupal.org/files/issues/2024-03-25/social_post_facebook.3.0.x-dev.rector.patch",
-                "sha256": "6c47d9d3b71c67a1f762e76808dfdc297f98b95a3e9b1cb9c1f5506039a90f16",
-                "depth": 3,
+                "package": "drupal/core",
+                "description": "Issue #3272720: Fix PHP8.1+ Deprecated function: hash(): Passing null to parameter #2 ($data) of type string is deprecated in generateFieldTableName",
+                "url": "https://git.drupalcode.org/project/webpatches/-/raw/patches/core-drupal--10-2-x--2022-07-21--3272720-6.patch",
+                "sha256": "4712408867e7ca33a5d7ff36b28865b9ad942b5d9b6551cf967b4cf76cac1700",
+                "depth": 2,
                 "extra": {
-                    "provenance": "root"
+                    "provenance": "dependency:drupal/core"
+                }
+            },
+            {
+                "package": "drupal/core",
+                "description": "Issue #3302838: Fix PHP8.1+ Querying with NULL values results in warning mb_strtolower(): Passing null to parameter is deprecated",
+                "url": "https://git.drupalcode.org/project/webpatches/-/raw/patches/core-drupal--10-2-x--2023-07-05--3302838-38.patch",
+                "sha256": "e1460d3a58e7f14ba3a7143409b230c8075b90cb092dbe626d72c286eff7f107",
+                "depth": 2,
+                "extra": {
+                    "provenance": "dependency:drupal/core"
                 }
             }
         ],
-        "drupal/social_post_linkedin": [
+        "drupal/default_content": [
             {
-                "package": "drupal/social_post_linkedin",
-                "description": "D10 Compatibility",
-                "url": "https://www.drupal.org/files/issues/2024-04-22/social_api_linkedin-update-20240422.patch",
-                "sha256": "dc2aeb38ec67734285135ba5018c684252c93a6c816b5092e59d3d3fe3b6bae1",
-                "depth": 3,
+                "package": "drupal/default_content",
+                "description": "Issue #3160146: Add Layout Builder Normalizer and Denormalize",
+                "url": "https://git.drupalcode.org/project/webpatches/-/raw/patches/default_content-2021-04-07--3160146-37.patch",
+                "sha256": "f05f5afbf04095bc00d36aeb9874059222ec36166b918fb81f97f6b34b0887e9",
+                "depth": 1,
                 "extra": {
-                    "provenance": "root"
+                    "provenance": "dependency:drupal/default_content"
                 }
             }
         ],
-        "drupal/themable_forms": [
+        "drupal/dashboards": [
             {
-                "package": "drupal/themable_forms",
-                "description": "Automated Drupal 11 compatibility fixes for themable_forms",
-                "url": "https://www.drupal.org/files/issues/2024-03-25/themable_forms.8.x-1.0.rector.patch",
-                "sha256": "8114e28fe6f1de658d2fc9af967345fbfbe75ad085a984728af2fea832386409",
-                "depth": 3,
+                "package": "drupal/dashboards",
+                "description": "fix: #3542888 PHP 8.4 Support",
+                "url": "https://git.drupalcode.org/project/webpatches/-/raw/patches/dashboards--2026-01-24--3542888--mr-40.patch",
+                "sha256": "f45f0729c44e086cb18c9bf0d841dc5faae20fee5514db6b15594b285f01bb71",
+                "depth": 1,
                 "extra": {
-                    "provenance": "root"
+                    "provenance": "dependency:drupal/dashboards"
+                }
+            }
+        ],
+        "drupal/views_bulk_edit": [
+            {
+                "package": "drupal/views_bulk_edit",
+                "description": "Issue #3561886 : Implicit nullable AccountInterface parameters for PHP 8.4 compatibility",
+                "url": "https://git.drupalcode.org/project/webpatches/-/raw/patches/views_bulk_edit--2026-01-25--3561886.patch",
+                "sha256": "673f5599c4bc48e4c9c7f1e80aa53e8d532e5c481e8bd845608efa018118b640",
+                "depth": 1,
+                "extra": {
+                    "provenance": "dependency:drupal/views_bulk_edit"
                 }
             }
         ]

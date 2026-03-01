@@ -57,12 +57,7 @@ phpstan-cache/
 # Development Environment
 # =============================================================================
 
-# IDE and editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# OS-specific files
 .DS_Store
 Thumbs.db
 
@@ -70,6 +65,24 @@ Thumbs.db
 .env
 .env.local
 .env.*.local
+
+# DDEV configuration and runtime files
+.ddev/
+
+# IDE and editor files
+*.swp
+*.swo
+*~
+
+# Jetbrains and VSCode directories
+.idea/
+.vscode/
+
+# mise-en-place configuration files
+mise.toml
+
+# historical files
+README.old.md
 
 # =============================================================================
 # AWStats Web Analytics
@@ -123,3 +136,4 @@ error_log
 *.pid
 *.seed
 *.pid.lock
+

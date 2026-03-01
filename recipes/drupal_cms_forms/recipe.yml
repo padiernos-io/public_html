@@ -3,12 +3,10 @@ type: Drupal CMS
 description: Adds a simple contact form, and tools for building forms.
 recipes:
   - drupal_cms_anti_spam
-  - drupal_cms_page
 install:
   - captcha
   - editor
   - filter
-  - menu_link_content
   - views
   - webform
   - webform_ui
@@ -35,4 +33,10 @@ config:
   actions:
     webform.settings:
       simpleConfigUpdate:
+        # Prevent unnecessary JS for <details> elements being added to all pages
+        # with webforms.
+        settings.default_form_details_toggle: false
+        ui.details_save: false
+        # Hide promotional messages that Webform shows when it is installed, because
+        # they're confusing for users who don't know that Webform has been installed.
         ui.promotions_disabled: true

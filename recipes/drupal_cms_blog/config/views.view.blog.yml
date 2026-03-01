@@ -7,7 +7,6 @@ dependencies:
     - node.type.blog
     - taxonomy.vocabulary.tags
   module:
-    - add_content_by_bundle
     - better_exposed_filters
     - node
     - taxonomy
@@ -301,7 +300,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      use_ajax: true
+      use_ajax: false
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -542,26 +541,14 @@ display:
         groups:
           1: AND
       defaults:
+        use_ajax: false
         exposed_form: false
         filters: false
         filter_groups: false
         header: false
+      use_ajax: true
       display_description: ''
-      header:
-        add_content_by_bundle:
-          id: add_content_by_bundle
-          table: views
-          field: add_content_by_bundle
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: add_content_by_bundle
-          label: 'Add a blog post'
-          empty: true
-          bundle: blog
-          class: button
-          target: ''
-          width: 600
+      header: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -682,7 +669,9 @@ display:
             type: none
             fail: 'not found'
           validate_options: {  }
-          break_phrase: false
+          # This prevents SQL errors in certain situations.
+          # @see https://www.drupal.org/i/3521292
+          break_phrase: true
           not: false
         nid:
           id: nid

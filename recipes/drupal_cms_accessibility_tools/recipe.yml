@@ -2,9 +2,10 @@ name: Accessibility Tools
 type: Drupal CMS
 description: Adds automated checks to help ensure content conforms to web accessibility guidelines.
 recipes:
-  - drupal_cms_page
+  - drupal_cms_content_type_base
 install:
   - editoria11y
+  - views
 config:
   strict: false
   import:

@@ -16,7 +16,7 @@ effects:
       crop_type: focal_point
   94553ea6-7659-4f21-b586-3dd07fb21e88:
     uuid: 94553ea6-7659-4f21-b586-3dd07fb21e88
-    id: image_convert
+    id: image_convert_avif
     weight: 2
     data:
       extension: webp
