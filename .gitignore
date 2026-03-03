@@ -5,13 +5,17 @@
 # Composer dependencies
 vendor/
 
-# Drupal web root (managed by composer)
-web/
+# Drupal folders (managed by composer)
+web/core/
+web/modules/contrib/
+web/themes/contrib/
+web/profiles/contrib/
+web/libraries/
 
-# Site-specific data
-data/
-u/
-sites/
+# Drupal sites (keep default settings and services)
+!web/sites/default/default.services.yml
+!web/sites/default/default.settings.php
+web/sites/*
 
 # =============================================================================
 # Node.js and Frontend Build Tools

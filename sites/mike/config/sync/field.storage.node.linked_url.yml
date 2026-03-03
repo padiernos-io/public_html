@@ -1,0 +1,21 @@
+uuid: fa8a7d41-9454-444a-b9ff-40eeb23c4576
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: pWDZlt69nqUKDJQ4tJbUaVkBm5EOMxM60isPR5Iwyeo
+id: node.linked_url
+field_name: linked_url
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

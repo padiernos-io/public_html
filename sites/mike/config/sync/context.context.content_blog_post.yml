@@ -1,0 +1,124 @@
+uuid: 36963ccc-b332-40bb-b805-7903096168f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - field.storage.node.field_headline
+    - field.storage.node.field_tags
+    - views.view.tardis
+  module:
+    - context_active_trail
+    - fieldblock
+    - headline_group
+    - node
+    - views
+label: 'Content - Blog Post'
+name: content_blog_post
+group: Content
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 006f5bb3-3be1-4628-95f2-9532af592e87
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      blog_post: blog_post
+reactions:
+  blocks:
+    id: blocks
+    uuid: 99cd3d81-89b0-4483-985e-4ff2967e1915
+    blocks:
+      9cd079e3-8dcc-4495-af4c-a70b665d25dd:
+        uuid: 9cd079e3-8dcc-4495-af4c-a70b665d25dd
+        id: 'views_block:tardis-tardis_block'
+        label: ''
+        provider: views
+        label_display: '0'
+        region: sidebar
+        weight: '0'
+        custom_id: views_block_tardis_tardis_block
+        theme: brimstone
+        css_class: ''
+        unique: 0
+        context_id: content_blog_post
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: null
+        third_party_settings: {  }
+      563207b7-ce88-471c-93d5-8e4473bde553:
+        uuid: 563207b7-ce88-471c-93d5-8e4473bde553
+        id: 'fieldblock:node'
+        label: Category
+        provider: fieldblock
+        label_display: '0'
+        region: sidebar
+        weight: '-2'
+        custom_id: fieldblock_node
+        theme: brimstone
+        css_class: ''
+        unique: 1
+        context_id: content_blog_post
+        context_mapping: {  }
+        label_from_field: 0
+        field_name: field_category
+        formatter_id: entity_reference_label
+        formatter_settings:
+          link: 1
+        third_party_settings: {  }
+      b39a5a5d-5a39-4073-b702-1d831d2bb734:
+        uuid: b39a5a5d-5a39-4073-b702-1d831d2bb734
+        id: 'fieldblock:node'
+        label: 'Content field'
+        provider: fieldblock
+        label_display: '0'
+        region: hero
+        weight: '0'
+        custom_id: fieldblock_node
+        theme: brimstone
+        css_class: ''
+        unique: 0
+        context_id: content_blog_post
+        context_mapping: {  }
+        label_from_field: 0
+        field_name: field_headline
+        formatter_id: headline_default
+        formatter_settings:
+          headline_group_tag: h1
+          headline_group_class: 'page-title headline-group'
+          headline_group_bem: 0
+          headline_group_anchor: 1
+        third_party_settings: {  }
+      f262c26e-5157-471c-8a45-096cd417cbf0:
+        uuid: f262c26e-5157-471c-8a45-096cd417cbf0
+        id: 'fieldblock:node'
+        label: 'Content field'
+        provider: fieldblock
+        label_display: '0'
+        region: sidebar
+        weight: '-1'
+        custom_id: fieldblock_node
+        theme: brimstone
+        css_class: ''
+        unique: 1
+        context_id: content_blog_post
+        context_mapping: {  }
+        label_from_field: 1
+        field_name: field_tags
+        formatter_id: entity_reference_label
+        formatter_settings:
+          link: 1
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+  active_trail:
+    id: active_trail
+    uuid: 680b5e86-727e-4498-81f4-fb9eacfe1111
+    trail: 'main:menu_link_content:6741044e-d80d-4c2b-b152-2d1023978b6a'
+    breadcrumbs: true
+    breadcrumb_title: false
+weight: 0

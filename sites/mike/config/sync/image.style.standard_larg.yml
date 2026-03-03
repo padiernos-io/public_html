@@ -1,0 +1,19 @@
+uuid: 13bc3d01-378c-46bd-b952-990b190c5bca
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: QoYKGEBD_gPqGHAOQhnDde7Kmfh-1apWw9eG8g9lfAw
+name: standard_larg
+label: 'Standard Larg'
+effects:
+  9faa9c6d-691e-4b71-9d33-dc6729191ff4:
+    uuid: 9faa9c6d-691e-4b71-9d33-dc6729191ff4
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 563
+      crop_type: focal_point

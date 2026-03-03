@@ -1,0 +1,31 @@
+uuid: a14ff2b9-0b36-4a2c-9eef-0223c1a9e97b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.summary
+    - field.field.paragraph.blurb.field_blurb_body
+    - field.field.paragraph.blurb.field_blurb_summary
+    - paragraphs.paragraphs_type.blurb
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.blurb.summary
+targetEntityType: paragraph
+bundle: blurb
+mode: summary
+content:
+  field_blurb_summary:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_blurb_body: true
+  search_api_excerpt: true

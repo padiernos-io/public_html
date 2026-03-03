@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: bx7Jsx5RRK1QNO4znJgayuJKh0dMWgi3XHfCQWSkRps
+external_dashboard:
+  enabled: false
+  api_key: ''
+user_type: mixed
+scan_directories: |
+  web/modules/custom
+  web/themes/custom
+exclude_patterns: |
+  *Test.php
+  *TestBase.php
+  tests/
+  node_modules/

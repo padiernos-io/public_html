@@ -1,0 +1,21 @@
+uuid: 88679482-56db-43c8-a418-1030f4f64b32
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: '-2PNM_k1cGXc-Q0fAWwWKl0WSoTksX8UcJ3-t0wUn1s'
+id: paragraph.field_ept_image_caption
+field_name: field_ept_image_caption
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,13 @@
+uuid: c57346ed-88a7-4f61-9525-cfd989efdaee
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: yKnlDCM7GRcnIG6H4T5M7Edo0rxp5t7sXc2iQScHo6s
+id: media.traditional
+label: Traditional
+description: null
+targetEntityType: media
+cache: true

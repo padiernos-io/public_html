@@ -1,0 +1,94 @@
+_core:
+  default_config_hash: 3U6sHS0xqnEGwbTJo7bLZCYbYwWFqKiNVhuE6FDgcN8
+enabled_entities:
+  block_content: false
+  config_revision: false
+  entity_subqueue: false
+  media: false
+  menu_link_content: false
+  node: true
+  paragraphs_library_item: false
+  taxonomy_term: false
+disable_automatic_queueing: false
+verbose_log: false
+defaults:
+  block_content:
+    age:
+      id: age
+      status: false
+      settings:
+        age: 6
+    amount:
+      id: amount
+      status: false
+      settings:
+        amount: 3
+  config_revision:
+    age:
+      id: age
+      status: false
+      settings:
+        age: 6
+    amount:
+      id: amount
+      status: false
+      settings:
+        amount: 3
+  entity_subqueue:
+    age:
+      id: age
+      status: false
+      settings:
+        age: 6
+    amount:
+      id: amount
+      status: false
+      settings:
+        amount: 3
+  media:
+    age:
+      id: age
+      status: false
+      settings:
+        age: 6
+    amount:
+      id: amount
+      status: false
+      settings:
+        amount: 3
+  menu_link_content:
+    age:
+      id: age
+      status: false
+      settings:
+        age: 6
+    amount:
+      id: amount
+      status: false
+      settings:
+        amount: 3
+  node:
+    age:
+      id: age
+      status: false
+      settings:
+        age: 6
+    amount:
+      id: amount
+      status: false
+      settings:
+        amount: 3
+  paragraphs_library_item:
+    age: {  }
+    amount: {  }
+  taxonomy_term:
+    age:
+      id: age
+      status: false
+      settings:
+        age: 6
+    amount:
+      id: amount
+      status: false
+      settings:
+        amount: 3

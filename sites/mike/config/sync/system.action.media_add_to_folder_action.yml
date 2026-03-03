@@ -1,0 +1,14 @@
+uuid: 80fbcbc0-f438-400a-9e90-7eb88d399868
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - media_folders
+_core:
+  default_config_hash: wjbs1sN5RrmlbGPl6ehwGatNNne2vHpBy0G-Dxzjhuc
+id: media_add_to_folder_action
+label: 'Add media to folder'
+type: media
+plugin: 'media_add_to_folder_action:media'
+configuration: {  }

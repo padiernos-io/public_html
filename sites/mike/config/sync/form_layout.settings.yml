@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: jf71_N4DvRvRUQ1w11_ms8SxiNQwEhfc5WOLMPIgGGo
+enabled_entity_types:
+  - node
+  - media

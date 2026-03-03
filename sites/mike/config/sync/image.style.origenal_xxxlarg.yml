@@ -1,0 +1,17 @@
+uuid: 0c5f7a26-fb02-4a56-a416-ec2d07e0d2f4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MXVsTt-vtiGPfKVCfPCJ3KNT3nWO6fR9uEorI5FQwc4
+name: origenal_xxxlarg
+label: 'Origenal XXX Larg'
+effects:
+  4b2b4bf8-6f99-49ac-8149-f05de3752529:
+    uuid: 4b2b4bf8-6f99-49ac-8149-f05de3752529
+    id: image_scale
+    weight: 1
+    data:
+      width: 3600
+      height: null
+      upscale: false

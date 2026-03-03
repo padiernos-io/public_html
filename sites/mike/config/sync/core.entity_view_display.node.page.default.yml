@@ -1,0 +1,51 @@
+uuid: c4dcfa61-b7f6-4695-bd00-bdc5d16a51c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_paragraphs
+    - node.type.page
+  module:
+    - layout_paragraphs
+    - manage_display
+_core:
+  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  field_paragraphs:
+    type: layout_paragraphs_builder
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  langcode: true
+  published_at: true
+  search_api_excerpt: true
+  uid: true

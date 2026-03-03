@@ -1,0 +1,22 @@
+uuid: 3dca09af-a621-4746-9878-aac7c695dce2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - brimstone
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: brimstone_content
+theme: brimstone
+region: buffer
+weight: 2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

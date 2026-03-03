@@ -1,0 +1,42 @@
+uuid: ad6dace4-02f5-4780-addb-f76ae109b655
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+label: 'Page - About'
+name: page_about
+group: Pages
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 685beed8-db32-4ed9-871e-cd6c0f0f3abd
+    context_mapping: {  }
+    pages: /about
+reactions:
+  blocks:
+    id: blocks
+    uuid: fadc2917-e468-44bc-91c3-973e44bdaaa9
+    blocks:
+      6e332286-885c-48c0-8648-92aeb0ae5fe0:
+        uuid: 6e332286-885c-48c0-8648-92aeb0ae5fe0
+        id: page_title_block
+        label: 'Page title'
+        provider: core
+        label_display: '0'
+        region: hero
+        weight: '0'
+        custom_id: page_title_block
+        theme: brimstone
+        css_class: ''
+        unique: 0
+        context_id: page_about
+        context_mapping: {  }
+        third_party_settings: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

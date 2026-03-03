@@ -1,0 +1,156 @@
+uuid: 60322d20-c339-4243-b7c1-7ed87f652008
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.blog_post
+    - paragraphs.paragraphs_type.blurb
+    - paragraphs.paragraphs_type.ept_accordion
+    - paragraphs.paragraphs_type.ept_accordion_section
+    - paragraphs.paragraphs_type.ept_basic_button
+    - paragraphs.paragraphs_type.ept_block
+    - paragraphs.paragraphs_type.ept_columns
+    - paragraphs.paragraphs_type.ept_cta
+    - paragraphs.paragraphs_type.ept_image
+    - paragraphs.paragraphs_type.ept_image_gallery
+    - paragraphs.paragraphs_type.ept_micromodal
+    - paragraphs.paragraphs_type.ept_quote
+    - paragraphs.paragraphs_type.ept_slideshow
+    - paragraphs.paragraphs_type.ept_slideshow_item
+    - paragraphs.paragraphs_type.ept_text
+    - paragraphs.paragraphs_type.ept_tiles
+    - paragraphs.paragraphs_type.ept_tiles_item
+    - paragraphs.paragraphs_type.ept_timeline
+    - paragraphs.paragraphs_type.ept_timeline_item
+    - paragraphs.paragraphs_type.ept_video
+    - paragraphs.paragraphs_type.ept_video_and_image_gallery
+    - paragraphs.paragraphs_type.ept_video_and_image_gallery_item
+    - paragraphs.paragraphs_type.ept_views
+    - paragraphs.paragraphs_type.ept_webform
+    - paragraphs.paragraphs_type.ept_webform_popup
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.paragraph_class
+  module:
+    - entity_reference_revisions
+id: node.blog_post.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: blog_post
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      from_library: from_library
+      paragraph_class: paragraph_class
+      blurb: blurb
+      ept_columns: ept_columns
+      ept_block: ept_block
+      ept_image: ept_image
+      ept_text: ept_text
+      ept_video: ept_video
+      ept_accordion: ept_accordion
+      ept_accordion_section: ept_accordion_section
+      ept_basic_button: ept_basic_button
+      ept_cta: ept_cta
+      ept_image_gallery: ept_image_gallery
+      ept_micromodal: ept_micromodal
+      ept_quote: ept_quote
+      ept_slideshow: ept_slideshow
+      ept_slideshow_item: ept_slideshow_item
+      ept_tiles: ept_tiles
+      ept_tiles_item: ept_tiles_item
+      ept_timeline: ept_timeline
+      ept_timeline_item: ept_timeline_item
+      ept_video_and_image_gallery: ept_video_and_image_gallery
+      ept_video_and_image_gallery_item: ept_video_and_image_gallery_item
+      ept_views: ept_views
+      ept_webform: ept_webform
+      ept_webform_popup: ept_webform_popup
+    negate: 0
+    target_bundles_drag_drop:
+      blurb:
+        weight: -51
+        enabled: true
+      ept_accordion:
+        weight: -45
+        enabled: true
+      ept_accordion_section:
+        weight: -44
+        enabled: true
+      ept_basic_button:
+        weight: -43
+        enabled: true
+      ept_block:
+        weight: -49
+        enabled: true
+      ept_columns:
+        weight: -50
+        enabled: true
+      ept_cta:
+        weight: -42
+        enabled: true
+      ept_image:
+        weight: -48
+        enabled: true
+      ept_image_gallery:
+        weight: -41
+        enabled: true
+      ept_micromodal:
+        weight: -40
+        enabled: true
+      ept_quote:
+        weight: -39
+        enabled: true
+      ept_slideshow:
+        weight: -38
+        enabled: true
+      ept_slideshow_item:
+        weight: -37
+        enabled: true
+      ept_text:
+        weight: -47
+        enabled: true
+      ept_tiles:
+        weight: -36
+        enabled: true
+      ept_tiles_item:
+        weight: -35
+        enabled: true
+      ept_timeline:
+        weight: -34
+        enabled: true
+      ept_timeline_item:
+        weight: -33
+        enabled: true
+      ept_video:
+        weight: -46
+        enabled: true
+      ept_video_and_image_gallery:
+        weight: -32
+        enabled: true
+      ept_video_and_image_gallery_item:
+        weight: -31
+        enabled: true
+      ept_views:
+        weight: -30
+        enabled: true
+      ept_webform:
+        weight: -29
+        enabled: true
+      ept_webform_popup:
+        weight: -28
+        enabled: true
+      from_library:
+        weight: -53
+        enabled: true
+      paragraph_class:
+        weight: -52
+        enabled: true
+field_type: entity_reference_revisions

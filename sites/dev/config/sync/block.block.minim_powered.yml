@@ -1,0 +1,22 @@
+uuid: 6a8a13a9-bd41-43b8-881c-88e39a99478f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - minim
+_core:
+  default_config_hash: 5VBXsyvJSTQNtrh86WK8GN_FCaRtK03D1fjfZQnUvtU
+id: minim_powered
+theme: minim
+region: footer
+weight: -1
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

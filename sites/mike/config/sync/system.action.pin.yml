@@ -1,0 +1,13 @@
+uuid: b94dbecc-5350-4a3b-a171-c022625ff9f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - moderated_content_bulk_publish
+_core:
+  default_config_hash: cIcJb6W4UkxsnzR5wGiL5EcFTqVANjHVZREPPkYq5HM
+id: pin
+label: 'Pin current revision (sticky)'
+type: node
+plugin: pin_content_action
+configuration: {  }

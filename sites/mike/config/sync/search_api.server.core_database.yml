@@ -1,0 +1,18 @@
+uuid: c86d1706-1660-4e88-80f5-1dda83aa4bed
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: core_database
+name: Database
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: words
+  phrase: bigram
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

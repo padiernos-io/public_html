@@ -1,0 +1,33 @@
+uuid: e445d366-de4c-4c88-b15f-10e6decacb3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_accordion_section.field_ept_accordion_text
+    - field.field.paragraph.ept_accordion_section.field_ept_accordion_title
+    - paragraphs.paragraphs_type.ept_accordion_section
+  module:
+    - text
+_core:
+  default_config_hash: UjA4zXZ3oMZFxRvkNrsM94SAiqKznnxAtCPUVIC6MT0
+id: paragraph.ept_accordion_section.default
+targetEntityType: paragraph
+bundle: ept_accordion_section
+mode: default
+content:
+  field_ept_accordion_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ept_accordion_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

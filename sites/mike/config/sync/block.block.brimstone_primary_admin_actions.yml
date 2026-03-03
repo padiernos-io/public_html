@@ -1,0 +1,20 @@
+uuid: f45116ac-695f-4a9b-875f-e4ee3859c9df
+langcode: en
+status: true
+dependencies:
+  theme:
+    - brimstone
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: brimstone_primary_admin_actions
+theme: brimstone
+region: buffer
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

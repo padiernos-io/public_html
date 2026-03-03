@@ -1,0 +1,28 @@
+uuid: 75cd8d29-4ce6-41ce-bcca-e232b88e7efe
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - type_tray
+third_party_settings:
+  type_tray:
+    type_category: _none
+    type_thumbnail: ''
+    type_icon: ''
+    type_description: ''
+    existing_nodes_link_text: 'View existing <em class="placeholder">Basic page</em> content'
+    type_weight: 0
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: i0snV8Wj--OkRW12UdachUiYiz3FbeMwHu_pZYfzKLc
+name: Page
+type: page
+description: "Use <em>pages</em> for your static content or landing pages, such as an 'About us' page or 'Services' page."
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

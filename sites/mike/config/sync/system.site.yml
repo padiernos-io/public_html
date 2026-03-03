@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: en
+uuid: 247047ce-e1db-47ae-8ccb-a8dc138e03c1
+name: 'M. Padiernos'
+mail: no-reply@padiernos.me
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /page
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

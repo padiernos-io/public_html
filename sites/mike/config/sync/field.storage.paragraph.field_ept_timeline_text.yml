@@ -1,0 +1,21 @@
+uuid: 99411456-9ef6-4ba1-9d34-6597bf44c3cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: 6CFdQoo-bePeZGKIYM6E_5CJZ9dP_RK7Utm2HJmhryw
+id: paragraph.field_ept_timeline_text
+field_name: field_ept_timeline_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

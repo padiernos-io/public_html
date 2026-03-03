@@ -1,0 +1,31 @@
+uuid: c5c42e7e-3a8b-43e2-b037-4416f734b5d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_slideshow_slide
+    - media.type.image
+    - paragraphs.paragraphs_type.ept_slideshow_item
+_core:
+  default_config_hash: a66BmJCI3SYkj4hLc0icKJq37QzM84zA3q3tcAMeAqA
+id: paragraph.ept_slideshow_item.field_ept_slideshow_slide
+field_name: field_ept_slideshow_slide
+entity_type: paragraph
+bundle: ept_slideshow_item
+label: 'Slide Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

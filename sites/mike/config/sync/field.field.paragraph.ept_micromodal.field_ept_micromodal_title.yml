@@ -1,0 +1,24 @@
+uuid: b3b56af5-8c7a-4500-b11e-8aa31fa6f79b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_micromodal_title
+    - paragraphs.paragraphs_type.ept_micromodal
+  module:
+    - text
+_core:
+  default_config_hash: jDNhkuS0vb097p4tXdHxr-ydSAj5cLsbKHtJJ8CC8A0
+id: paragraph.ept_micromodal.field_ept_micromodal_title
+field_name: field_ept_micromodal_title
+entity_type: paragraph
+bundle: ept_micromodal
+label: 'Micromodal Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,27 @@
+uuid: 1a45fb33-fd70-4f2d-b5f1-f894220f4574
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+label: 'Content - User'
+name: content_user
+group: Content
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 38667a82-c7ee-4c3e-9059-3954722ff0d2
+    context_mapping: {  }
+    pages: '/user/*'
+reactions:
+  blocks:
+    id: blocks
+    uuid: 11024cd9-5d1c-4a11-ae57-6c0e9cf64250
+    blocks: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

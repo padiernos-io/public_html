@@ -1,0 +1,38 @@
+uuid: 9fa596a0-954b-4c24-95b4-e57b9d4e2856
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+label: 'Page - Common'
+name: page_common
+group: Pages
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 03be05e2-b62c-4b1c-9cbb-edd99cfe5b1c
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      blog_post: blog_post
+      page: page
+      webform: webform
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 09f9a333-228c-417d-a9c1-d956e36cee09
+    context_mapping: {  }
+    pages: '/*'
+reactions:
+  blocks:
+    id: blocks
+    uuid: 3a8cc31a-0035-4810-9023-e5c5d74f49c4
+    blocks: {  }
+    include_default_blocks: 1
+    saved: false
+weight: 0

@@ -1,0 +1,12 @@
+uuid: 87ae0964-5354-4678-a15a-c6966cb0c6bd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Nfgfk4KcPZeTvLQf2BL053XNap0XyXoq1BIWTixbwrg
+id: ept_webform_popup
+label: 'EPT Webform Popup'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Webform Popup'
+behavior_plugins: {  }

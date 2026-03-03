@@ -1,0 +1,22 @@
+uuid: bd2c8eff-f72f-49ac-ae0a-b13d569a66fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blurb_summary
+    - paragraphs.paragraphs_type.blurb
+  module:
+    - text
+id: paragraph.blurb.field_blurb_summary
+field_name: field_blurb_summary
+entity_type: paragraph
+bundle: blurb
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: zKAWJZa-s8tuC6eUZsxi2XpCcSEPW7saR9dZHeLLGHQ
+words_per_minute: '200'
+enabled_content_types:
+  blog_post: blog_post
+display_format: minutes
+round_up: 1
+background_color: '#100f0d'
+text_color: '#efe100'
+border_radius: '3'
+padding: 'calc(var(--border-radius) * 2) calc(var(--border-radius) * 4)'

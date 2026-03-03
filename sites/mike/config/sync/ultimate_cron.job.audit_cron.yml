@@ -1,0 +1,17 @@
+uuid: b5ab3d76-1f5b-4d4b-b706-fb6dcd5b4713
+langcode: en
+status: true
+dependencies:
+  module:
+    - audit
+title: 'Default cron handler'
+id: audit_cron
+weight: 0
+module: audit
+callback: 'audit#cron'
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

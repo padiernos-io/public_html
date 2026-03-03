@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: PygQnXwsxHWzSdo4q579KInZn1BGh4rGt3jDYLk04CA
+simplify_admin: true
+simplify_nodes_global:
+  - author
+  - menu
+  - path
+simplify_users_global: {  }
+simplify_comments_global: {  }
+simplify_eck_global: {  }
+simplify_taxonomies_global: {  }
+simplify_menu_links_global: {  }
+simplify_blocks_global: {  }
+simplify_profiles_global: {  }
+simplify_media_global: {  }

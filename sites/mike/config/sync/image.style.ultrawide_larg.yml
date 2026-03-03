@@ -1,0 +1,19 @@
+uuid: 83fac203-f6f1-41d5-b0da-9c14245607c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: q4lMsNmra5bgue4iljabvLFi0WP_DLTYK9tQeyYhcf8
+name: ultrawide_larg
+label: 'Ultrawide Larg'
+effects:
+  169119fd-702b-46ef-9f26-d0732fb40208:
+    uuid: 169119fd-702b-46ef-9f26-d0732fb40208
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 429
+      crop_type: focal_point

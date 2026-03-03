@@ -1,0 +1,17 @@
+uuid: 331f1e9b-4c83-4421-bb15-19a998de67f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - htaccess
+title: 'Default cron handler'
+id: htaccess_cron
+weight: 0
+module: htaccess
+callback: 'htaccess#cron'
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

@@ -1,0 +1,20 @@
+uuid: cfeedec5-305d-4dac-abb9-ca4f80d28d86
+langcode: en
+status: true
+dependencies:
+  module:
+    - revision_manager
+title: 'Queue: Remove entity revisions'
+id: ultimate_cron_queue_revision_manager_remove_revisions
+weight: 10
+module: revision_manager
+callback: 'ultimate_cron.queue_worker:queueCallback'
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '* * * * *'
+launcher:
+  id: serial
+logger:
+  id: database

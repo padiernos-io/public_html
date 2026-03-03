@@ -1,0 +1,8 @@
+uuid: 5badad9b-8305-4990-acc1-04531c0e1c88
+langcode: en
+status: true
+dependencies: {  }
+id: custom_date
+label: 'Custom Date'
+locked: false
+pattern: Y.m.d

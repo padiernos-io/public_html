@@ -1,0 +1,13 @@
+uuid: 8b1db778-e339-47fb-9a0b-cfbf499faeb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: Ke98VVRVrFf0zJnwVFPmGDwYBEWV8hpdzqCCL16Zff8
+id: media.origenal
+label: Origenal
+description: null
+targetEntityType: media
+cache: true

@@ -1,0 +1,24 @@
+uuid: 7448232e-8747-419a-a161-16e9d3d064c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_slideshow_text
+    - paragraphs.paragraphs_type.ept_slideshow_item
+  module:
+    - text
+_core:
+  default_config_hash: JIuZsvq1IySXyy86tHyxkIPZnRhYgEKfm5uNfN4Qgi8
+id: paragraph.ept_slideshow_item.field_ept_slideshow_text
+field_name: field_ept_slideshow_text
+entity_type: paragraph
+bundle: ept_slideshow_item
+label: 'Slide Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

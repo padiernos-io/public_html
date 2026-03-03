@@ -1,0 +1,15 @@
+uuid: 5ef3275d-6096-4228-a7a4-170496c20fb0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - paragraphs_library
+_core:
+  default_config_hash: RGSkW7xbQQkzNrGunBWMSKS6lacu7KsgZjVWGVUF0xY
+id: from_library
+label: 'From library'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

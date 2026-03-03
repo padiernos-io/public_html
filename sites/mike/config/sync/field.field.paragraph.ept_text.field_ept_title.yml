@@ -1,0 +1,26 @@
+uuid: c02d57f6-ab85-479c-8993-774f01c4173b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_title
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.ept_text
+  module:
+    - text
+_core:
+  default_config_hash: DZTXvQuYpXkQt9q004RnVKvKTocT9hurW7VYy0As9Is
+id: paragraph.ept_text.field_ept_title
+field_name: field_ept_title
+entity_type: paragraph
+bundle: ept_text
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

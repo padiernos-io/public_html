@@ -1,0 +1,13 @@
+uuid: 9846b7c4-dc3d-43f3-b61d-7e71daecf493
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: hrWZ2by9y8V27Hv_3EBEgSBPp_2-kB9fizZj-DLVRcQ
+id: media.ept_image_gallery
+label: 'EPT Image Gallery'
+description: null
+targetEntityType: media
+cache: true

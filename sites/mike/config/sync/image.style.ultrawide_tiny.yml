@@ -1,0 +1,19 @@
+uuid: 9f43811a-6c37-4ac3-a6bd-3ef089bb0579
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: W5yIwpEVOjPovAA869Wtlqos0kcmXxfGpm8YqrE4WMo
+name: ultrawide_tiny
+label: 'Ultrawide Tiny'
+effects:
+  f8bc32b9-6b14-4ad9-a4cc-9e391130b47c:
+    uuid: f8bc32b9-6b14-4ad9-a4cc-9e391130b47c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 86
+      crop_type: focal_point

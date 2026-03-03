@@ -1,0 +1,39 @@
+uuid: 2af48415-df42-4aa4-a065-5e13948d3cd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.traditional_larg
+    - image.style.traditional_medium
+    - image.style.traditional_tiny
+    - image.style.traditional_xlarg
+    - image.style.traditional_xxlarg
+  module:
+    - webassets
+_core:
+  default_config_hash: nptyOQ-5b5r5fia8cPHaN3k4O1kBvQ1UZ_txSMSj-t0
+id: traditional
+label: Traditional
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: traditional_xxlarg
+    breakpoint_id: webassets.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: traditional_xlarg
+    breakpoint_id: webassets.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: traditional_larg
+    breakpoint_id: webassets.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: traditional_medium
+    breakpoint_id: webassets.sm
+    multiplier: 1x
+breakpoint_group: webassets
+fallback_image_style: traditional_tiny

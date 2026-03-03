@@ -1,0 +1,13 @@
+uuid: cdfdca31-5ad4-43f4-997a-30a3dc017b6c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - navigation
+_core:
+  default_config_hash: RP5hKQYc151zqBiiWtGfY-3JN7i35Gtxo1f2hhS09hM
+id: navigation-user-links
+label: 'Navigation - User Links'
+description: 'Navigation used for user links'
+locked: true

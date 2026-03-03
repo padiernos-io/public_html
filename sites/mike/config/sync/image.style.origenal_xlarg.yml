@@ -1,0 +1,17 @@
+uuid: 1f1255e0-37b3-43c7-b126-03df95ead153
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: kaB0sTMbsoNRn6NbDszL9Ti0LpFoTpf2kpy4nrPGrhc
+name: origenal_xlarg
+label: 'Origenal X Larg'
+effects:
+  1f8e7769-21db-4cbc-9a0b-e6bda0a39f22:
+    uuid: 1f8e7769-21db-4cbc-9a0b-e6bda0a39f22
+    id: image_scale
+    weight: 1
+    data:
+      width: 1400
+      height: null
+      upscale: false

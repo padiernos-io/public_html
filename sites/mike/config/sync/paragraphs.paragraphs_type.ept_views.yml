@@ -1,0 +1,12 @@
+uuid: 99c19fd4-2037-4c61-88e0-9d3c88078dd1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JfY6zZuA9cpemb4U-YVMX2rzmT1pm_Pr1YpT7xaSxeA
+id: ept_views
+label: 'EPT Views'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Views'
+behavior_plugins: {  }

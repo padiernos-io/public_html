@@ -1,0 +1,13 @@
+uuid: 5253b1ff-e0bc-4357-915b-565054f88b99
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.paragraph_class
+id: paragraph.paragraph_class.default
+targetEntityType: paragraph
+bundle: paragraph_class
+mode: default
+content: {  }
+hidden:
+  search_api_excerpt: true

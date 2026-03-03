@@ -1,0 +1,8 @@
+uuid: e2e5eed2-c57a-46e4-8676-ab6873a14167
+langcode: en
+status: true
+dependencies: {  }
+id: focus
+label: 'Navigation - Focus'
+description: 'Navigation that provides targeted links to pages with increased importance'
+locked: false

@@ -1,0 +1,24 @@
+uuid: cc3ac1a4-1d91-4ed9-a133-fb3c5d4167ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_title
+    - paragraphs.paragraphs_type.ept_video_and_image_gallery
+  module:
+    - text
+_core:
+  default_config_hash: nYAF3MHEVZhy6EJ7hiHDE82BlOyi6F94s9AtJa31HxY
+id: paragraph.ept_video_and_image_gallery.field_ept_title
+field_name: field_ept_title
+entity_type: paragraph
+bundle: ept_video_and_image_gallery
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

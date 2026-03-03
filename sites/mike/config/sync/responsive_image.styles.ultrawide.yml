@@ -1,0 +1,39 @@
+uuid: 83637e59-5c24-4b09-bac3-af7f0c813975
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.ultrawide_larg
+    - image.style.ultrawide_medium
+    - image.style.ultrawide_small
+    - image.style.ultrawide_xlarg
+    - image.style.ultrawide_xxlarg
+  module:
+    - webassets
+_core:
+  default_config_hash: FvYK4Z8ay7NM0OUtXQKmyIZ5GtBSaTsfIGilr2ax5DQ
+id: ultrawide
+label: Ultrawide
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: ultrawide_xxlarg
+    breakpoint_id: webassets.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: ultrawide_xlarg
+    breakpoint_id: webassets.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: ultrawide_larg
+    breakpoint_id: webassets.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: ultrawide_medium
+    breakpoint_id: webassets.sm
+    multiplier: 1x
+breakpoint_group: webassets
+fallback_image_style: ultrawide_small

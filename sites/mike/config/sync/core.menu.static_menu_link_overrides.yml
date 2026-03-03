@@ -1,0 +1,69 @@
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
+definitions:
+  standard__front_page:
+    weight: -50
+    menu_name: main
+    parent: ''
+    expanded: false
+    enabled: true
+  navigation__create:
+    weight: -50
+    menu_name: content
+    parent: ''
+    enabled: true
+    expanded: false
+  navigation__content__media_type__document:
+    enabled: false
+    menu_name: content
+    parent: navigation.create
+    weight: 1
+    expanded: false
+  navigation__content__media_type__image:
+    enabled: false
+    menu_name: content
+    parent: navigation.create
+    weight: 1
+    expanded: false
+  navigation__blocks:
+    weight: -48
+    menu_name: content
+    parent: ''
+    expanded: false
+    enabled: true
+  navigation__content:
+    weight: -49
+    menu_name: content
+    parent: ''
+    expanded: false
+    enabled: true
+  navigation__media:
+    weight: -47
+    menu_name: content
+    parent: ''
+    expanded: false
+    enabled: true
+  navigation__trash:
+    weight: -46
+    menu_name: content
+    parent: ''
+    expanded: false
+    enabled: true
+  db_maintenance__page:
+    weight: -49
+    menu_name: tools
+    parent: ''
+    enabled: false
+    expanded: false
+  node__add_page:
+    weight: -50
+    menu_name: tools
+    parent: ''
+    expanded: false
+    enabled: true
+  filter__tips_all:
+    weight: -48
+    menu_name: tools
+    parent: ''
+    expanded: false
+    enabled: false

@@ -1,0 +1,20 @@
+uuid: 07d31a96-54ee-47f3-b3e0-a8bda11f52f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - brimstone
+id: brimstone_mainpagecontent
+theme: brimstone
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

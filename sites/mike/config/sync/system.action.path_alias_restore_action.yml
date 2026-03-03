@@ -1,0 +1,12 @@
+uuid: fc2870b4-ee35-477e-98b0-32e6fa069843
+langcode: en
+status: true
+dependencies:
+  module:
+    - path_alias
+    - trash
+id: path_alias_restore_action
+label: 'Restore URL alias from trash'
+type: path_alias
+plugin: 'entity:restore_action:path_alias'
+configuration: {  }

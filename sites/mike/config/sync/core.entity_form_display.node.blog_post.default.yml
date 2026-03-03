@@ -1,0 +1,167 @@
+uuid: fb839e52-84fa-445d-aa99-fc6b822a7d84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog_post.body
+    - field.field.node.blog_post.comment
+    - field.field.node.blog_post.field_background
+    - field.field.node.blog_post.field_category
+    - field.field.node.blog_post.field_headline
+    - field.field.node.blog_post.field_paragraphs
+    - field.field.node.blog_post.field_tags
+    - node.type.blog_post
+  module:
+    - autocomplete_deluxe
+    - comment
+    - form_layout
+    - headline_group
+    - layout_paragraphs
+    - media_library
+    - path
+    - publication_date
+third_party_settings:
+  form_layout:
+    enabled: true
+    config:
+      type: vertical_tabs
+      tabs:
+        content:
+          title: Content
+          open: true
+          fields: {  }
+        media:
+          title: Media
+          open: false
+          fields: {  }
+        meta:
+          title: Meta
+          open: false
+          fields: {  }
+id: node.blog_post.default
+targetEntityType: node
+bundle: blog_post
+mode: default
+content:
+  comment:
+    type: comment_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_background:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_category:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_headline:
+    type: headline_complete
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_paragraphs:
+    type: layout_paragraphs
+    weight: 4
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 1
+      empty_message: ''
+    third_party_settings: {  }
+  field_tags:
+    type: autocomplete_deluxe
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      size: 60
+      selection_handler: default
+      match_limit: 10
+      min_length: 0
+      delimiter: ', '
+      not_found_message_allow: true
+      not_found_message: "The term '@term' will be added"
+      new_terms: true
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 5
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  published_at:
+    type: publication_date_timestamp
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  promote: true
+  sticky: true
+  title: true

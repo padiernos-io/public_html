@@ -1,0 +1,12 @@
+uuid: 55346080-ff56-4612-a073-1e4ec10d5850
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fQ2CW1Vm9f_8Xi0V4exsAGpv8RdV6Ptm-cjffg9lPyM
+id: ept_image_gallery
+label: 'EPT Image Gallery'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Image Gallery'
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+uuid: d32c4557-f4c3-47eb-8a84-88bdd900f303
+langcode: en
+status: true
+dependencies:
+  theme:
+    - brimstone
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: brimstone_secondary_local_tasks
+theme: brimstone
+region: buffer
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

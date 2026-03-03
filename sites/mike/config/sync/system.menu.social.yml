@@ -1,0 +1,8 @@
+uuid: 744dddda-2807-4bff-bf3b-e1d945f95688
+langcode: en
+status: true
+dependencies: {  }
+id: social
+label: 'Navigation - Social'
+description: 'Navigation that provides links with images to social media'
+locked: false

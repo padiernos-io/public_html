@@ -1,0 +1,40 @@
+uuid: 904a2342-57a5-448b-a545-df0b400bbfce
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.core_database
+  module:
+    - node
+id: core_index
+name: Index
+description: ''
+read_only: false
+field_settings: {  }
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected:
+        - blog_post
+        - page
+        - webform
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: core_database

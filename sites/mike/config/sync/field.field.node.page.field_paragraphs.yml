@@ -1,0 +1,151 @@
+uuid: 858b607a-0f41-4b73-97df-46f3d50a2c23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.page
+    - paragraphs.paragraphs_type.ept_accordion
+    - paragraphs.paragraphs_type.ept_accordion_section
+    - paragraphs.paragraphs_type.ept_basic_button
+    - paragraphs.paragraphs_type.ept_block
+    - paragraphs.paragraphs_type.ept_columns
+    - paragraphs.paragraphs_type.ept_cta
+    - paragraphs.paragraphs_type.ept_image
+    - paragraphs.paragraphs_type.ept_image_gallery
+    - paragraphs.paragraphs_type.ept_micromodal
+    - paragraphs.paragraphs_type.ept_quote
+    - paragraphs.paragraphs_type.ept_slideshow
+    - paragraphs.paragraphs_type.ept_slideshow_item
+    - paragraphs.paragraphs_type.ept_text
+    - paragraphs.paragraphs_type.ept_tiles
+    - paragraphs.paragraphs_type.ept_tiles_item
+    - paragraphs.paragraphs_type.ept_timeline
+    - paragraphs.paragraphs_type.ept_timeline_item
+    - paragraphs.paragraphs_type.ept_video
+    - paragraphs.paragraphs_type.ept_video_and_image_gallery
+    - paragraphs.paragraphs_type.ept_video_and_image_gallery_item
+    - paragraphs.paragraphs_type.ept_views
+    - paragraphs.paragraphs_type.ept_webform
+    - paragraphs.paragraphs_type.ept_webform_popup
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.paragraph_class
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: page
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      from_library: from_library
+      paragraph_class: paragraph_class
+      ept_block: ept_block
+      ept_image: ept_image
+      ept_text: ept_text
+      ept_video: ept_video
+      ept_accordion: ept_accordion
+      ept_accordion_section: ept_accordion_section
+      ept_basic_button: ept_basic_button
+      ept_columns: ept_columns
+      ept_cta: ept_cta
+      ept_image_gallery: ept_image_gallery
+      ept_micromodal: ept_micromodal
+      ept_quote: ept_quote
+      ept_slideshow: ept_slideshow
+      ept_slideshow_item: ept_slideshow_item
+      ept_tiles: ept_tiles
+      ept_tiles_item: ept_tiles_item
+      ept_timeline: ept_timeline
+      ept_timeline_item: ept_timeline_item
+      ept_video_and_image_gallery: ept_video_and_image_gallery
+      ept_video_and_image_gallery_item: ept_video_and_image_gallery_item
+      ept_views: ept_views
+      ept_webform: ept_webform
+      ept_webform_popup: ept_webform_popup
+    negate: 0
+    target_bundles_drag_drop:
+      ept_accordion:
+        weight: 26
+        enabled: true
+      ept_accordion_section:
+        weight: 27
+        enabled: true
+      ept_basic_button:
+        weight: 28
+        enabled: true
+      ept_block:
+        weight: 7
+        enabled: true
+      ept_columns:
+        weight: 30
+        enabled: true
+      ept_cta:
+        weight: 31
+        enabled: true
+      ept_image:
+        weight: 8
+        enabled: true
+      ept_image_gallery:
+        weight: 33
+        enabled: true
+      ept_micromodal:
+        weight: 34
+        enabled: true
+      ept_quote:
+        weight: 35
+        enabled: true
+      ept_slideshow:
+        weight: 36
+        enabled: true
+      ept_slideshow_item:
+        weight: 37
+        enabled: true
+      ept_text:
+        weight: 9
+        enabled: true
+      ept_tiles:
+        weight: 39
+        enabled: true
+      ept_tiles_item:
+        weight: 40
+        enabled: true
+      ept_timeline:
+        weight: 41
+        enabled: true
+      ept_timeline_item:
+        weight: 42
+        enabled: true
+      ept_video:
+        weight: 10
+        enabled: true
+      ept_video_and_image_gallery:
+        weight: 44
+        enabled: true
+      ept_video_and_image_gallery_item:
+        weight: 45
+        enabled: true
+      ept_views:
+        weight: 46
+        enabled: true
+      ept_webform:
+        weight: 47
+        enabled: true
+      ept_webform_popup:
+        weight: 48
+        enabled: true
+      from_library:
+        weight: 2
+        enabled: true
+      paragraph_class:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

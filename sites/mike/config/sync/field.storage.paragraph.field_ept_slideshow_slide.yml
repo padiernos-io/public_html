@@ -1,0 +1,22 @@
+uuid: 5d884d13-9197-47d4-b9b6-1ad28d873cb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: qxeflsuOm7AVY0acEDYWC8RbV1WUHCbVdEWrV-i8xCU
+id: paragraph.field_ept_slideshow_slide
+field_name: field_ept_slideshow_slide
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

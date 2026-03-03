@@ -1,0 +1,25 @@
+uuid: 572b70d5-f51f-4e3e-86d0-a6838c9abf0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: null
+_core:
+  default_config_hash: NsVkvD5RbJS6kL-3uUgn718RpXYxCy8_-mQoS9jUU1U
+id: remote_video
+label: 'Video [Remote]'
+description: 'A video hosted on an external site (for example, YouTube or Vimeo).'
+source: 'oembed:video'
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_oembed_video
+  thumbnails_directory: 'public://oembed_thumbnails/[date:custom:Y-m]'
+  providers:
+    - YouTube
+    - Vimeo
+field_map:
+  title: name

@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: 5kthGSZkvPigq9LX3c6A7vuH86na9t0wshKPvIBEZc8
+disable_toolbar_language_switcher: 0
+enable_dialog_node_edit_form: 1
+enable_dialog_admin_content: 1
+current_translation_only: 0
+workflow: editorial
+workflow_state_draft: draft
+workflow_state_unpublished: archived
+workflow_state_published: published

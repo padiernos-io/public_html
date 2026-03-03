@@ -1,0 +1,31 @@
+uuid: 0987b235-5109-4b11-bc64-a3422b50d4e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_quote_image
+    - media.type.image
+    - paragraphs.paragraphs_type.ept_quote
+_core:
+  default_config_hash: YjnCUtsj4uSblj8ujLf9XPYiUCvxUQCzn6Si7IvFez0
+id: paragraph.ept_quote.field_ept_quote_image
+field_name: field_ept_quote_image
+entity_type: paragraph
+bundle: ept_quote
+label: 'Quote Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

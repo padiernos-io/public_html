@@ -1,0 +1,24 @@
+uuid: 5b5e15b9-c962-405d-8c61-e375c4be03ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_title
+    - paragraphs.paragraphs_type.ept_accordion
+  module:
+    - text
+_core:
+  default_config_hash: '-fStMIM_IiXT6N43R2XfdUDoqFS_sK8AUA-WvSHfcwo'
+id: paragraph.ept_accordion.field_ept_title
+field_name: field_ept_title
+entity_type: paragraph
+bundle: ept_accordion
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

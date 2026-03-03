@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: e0Aqx8MCgsq0M289DbRCdv3F6bEvKF4RRMwoOO71vPA
+ffmpeg: /home/padiernos/.local/share/mise/shims/ffmpeg
+ffprobe: /home/padiernos/.local/share/mise/shims/ffprobe
+timeout: '3600'
+threads: '12'

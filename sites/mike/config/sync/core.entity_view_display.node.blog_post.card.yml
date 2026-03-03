@@ -1,0 +1,111 @@
+uuid: 5ebbab78-d843-4d08-96f2-16f208f0485c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.blog_post.body
+    - field.field.node.blog_post.comment
+    - field.field.node.blog_post.field_background
+    - field.field.node.blog_post.field_category
+    - field.field.node.blog_post.field_headline
+    - field.field.node.blog_post.field_paragraphs
+    - field.field.node.blog_post.field_tags
+    - image.style.square_medium
+    - node.type.blog_post
+  module:
+    - field_cache
+    - headline_group
+    - layout_builder
+    - layout_paragraphs
+    - media
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.blog_post.card
+targetEntityType: node
+bundle: blog_post
+mode: card
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_background:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: square_medium
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      field_cache:
+        enabled: false
+        max_age: -1
+        contexts: {  }
+        tags: {  }
+    weight: 0
+    region: content
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_headline:
+    type: headline_default
+    label: hidden
+    settings:
+      headline_group_tag: div
+      headline_group_class: headline-group
+      headline_group_bem: true
+      headline_group_anchor: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraphs:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: summary
+      link: ''
+    third_party_settings:
+      field_cache:
+        enabled: false
+        max_age: -1
+        contexts: {  }
+        tags: {  }
+    weight: 2
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  read_time:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  body: true
+  comment: true
+  created: true
+  langcode: true
+  published_at: true
+  search_api_excerpt: true
+  title: true
+  uid: true

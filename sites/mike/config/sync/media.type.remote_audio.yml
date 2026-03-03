@@ -1,0 +1,23 @@
+uuid: 774923d6-133f-4801-9d9b-b68332f580b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_remote_audio
+third_party_settings:
+  crop:
+    image_field: null
+_core:
+  default_config_hash: 7A_fgfI0-viKyi2hGGJ-dc_VQuYHOqcTSeetkAHn1f8
+id: remote_audio
+label: 'Audio [Remote]'
+description: 'A remotely hosted audio file from various oEmbed audio providers.'
+source: 'oembed:audio'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_oembed_audio
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers: {  }
+field_map: {  }

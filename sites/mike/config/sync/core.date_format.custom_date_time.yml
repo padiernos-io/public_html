@@ -1,0 +1,8 @@
+uuid: f157958a-bbaa-4920-bec9-9cfd31aa6475
+langcode: en
+status: true
+dependencies: {  }
+id: custom_date_time
+label: 'Custom Date + Time'
+locked: false
+pattern: 'Y.m.d - G:i:s'

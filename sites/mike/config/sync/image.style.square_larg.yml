@@ -1,0 +1,19 @@
+uuid: 3141db64-02c6-49c8-9ae0-9ad60ef1c2cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: z790dw16cReKU8klOiIfzS-JOIiG_pD5bo3XF9OZLSs
+name: square_larg
+label: 'Square Larg'
+effects:
+  98dd39cd-c368-4dc0-8e1a-c56db5d33d21:
+    uuid: 98dd39cd-c368-4dc0-8e1a-c56db5d33d21
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 1000
+      crop_type: focal_point

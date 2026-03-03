@@ -1,0 +1,39 @@
+uuid: c6c07fe1-50c5-40d2-a8f3-52533eef6fe2
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.origenal_larg
+    - image.style.origenal_medium
+    - image.style.origenal_small
+    - image.style.origenal_xlarg
+    - image.style.origenal_xxlarg
+  module:
+    - webassets
+_core:
+  default_config_hash: 7N86wpmg_hxA8rmXn34p-FJM2vGobbt548DBebiOG80
+id: origenal
+label: Origenal
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: origenal_xxlarg
+    breakpoint_id: webassets.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: origenal_xlarg
+    breakpoint_id: webassets.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: origenal_larg
+    breakpoint_id: webassets.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: origenal_medium
+    breakpoint_id: webassets.sm
+    multiplier: 1x
+breakpoint_group: webassets
+fallback_image_style: origenal_small

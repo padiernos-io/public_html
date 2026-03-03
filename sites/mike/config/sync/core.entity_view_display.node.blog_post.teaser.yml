@@ -1,0 +1,68 @@
+uuid: 57afcd17-f362-4cb4-819c-80bfd4464c30
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blog_post.body
+    - field.field.node.blog_post.comment
+    - field.field.node.blog_post.field_background
+    - field.field.node.blog_post.field_category
+    - field.field.node.blog_post.field_headline
+    - field.field.node.blog_post.field_paragraphs
+    - field.field.node.blog_post.field_tags
+    - node.type.blog_post
+  module:
+    - manage_display
+    - text
+id: node.blog_post.teaser
+targetEntityType: node
+bundle: blog_post
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  comment: true
+  created: true
+  field_background: true
+  field_category: true
+  field_headline: true
+  field_paragraphs: true
+  langcode: true
+  published_at: true
+  search_api_excerpt: true
+  uid: true

@@ -1,0 +1,19 @@
+uuid: 66eed07d-1e1c-406f-b997-e41ba7401205
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+    - paragraphs_class
+id: paragraph_class
+label: Class
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      layout_onecol: 'One column'
+  paragraphs_class_paragraph_class:
+    enabled: true

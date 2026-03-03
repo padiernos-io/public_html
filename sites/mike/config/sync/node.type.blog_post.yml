@@ -1,0 +1,41 @@
+uuid: c2c256a4-71c8-4f8d-9b67-de3b5c02c2d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - revision_manager
+    - search_api_exclude
+    - type_tray
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  type_tray:
+    type_category: _none
+    type_thumbnail: ''
+    type_icon: ''
+    type_description: ''
+    existing_nodes_link_text: ''
+    type_weight: 0
+  revision_manager:
+    age:
+      id: age
+      status: false
+      settings:
+        age: 6
+    amount:
+      id: amount
+      status: false
+      settings:
+        amount: 3
+  search_api_exclude:
+    enabled: false
+name: 'Blog Post'
+type: blog_post
+description: 'Use <em>blog posts</em> for time-sensitive or personal content like news, press releases or opinion posts.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: true

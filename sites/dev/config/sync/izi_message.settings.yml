@@ -1,0 +1,24 @@
+_core:
+  default_config_hash: _5mU3ClyX0VHF-dDvtNIF8URvjwzcJvIZe3SwQoP0dk
+position: bottomRight
+theme: light
+maxWidth: 500
+timeout: 5000
+titleSize: ''
+messageSize: ''
+drag: true
+close: true
+closeOnEscape: true
+closeOnClick: true
+rtl: false
+pauseOnHover: true
+resetOnHover: true
+progressBar: true
+overlay: true
+overlayClose: true
+animateInside: true
+transitionIn: fadeInUp
+transitionOut: fadeOut
+transitionInMobile: fadeInUp
+transitionOutMobile: fadeOutDown
+displayMode: false

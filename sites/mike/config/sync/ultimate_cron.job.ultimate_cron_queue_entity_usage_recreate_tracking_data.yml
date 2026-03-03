@@ -1,0 +1,20 @@
+uuid: fa23e34b-1942-459c-9bd9-9255addba7a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_usage
+title: 'Queue: Entity Usage Recreate Tracking Data for Field Queue'
+id: ultimate_cron_queue_entity_usage_recreate_tracking_data
+weight: 10
+module: entity_usage
+callback: 'ultimate_cron.queue_worker:queueCallback'
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '* * * * *'
+launcher:
+  id: serial
+logger:
+  id: database

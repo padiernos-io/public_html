@@ -1,0 +1,17 @@
+uuid: 45f6d63d-2aa0-4390-ad9e-c7e61ff60631
+langcode: en
+status: true
+dependencies:
+  module:
+    - robotstxt_utils
+title: 'Default cron handler'
+id: robotstxt_utils_cron
+weight: 0
+module: robotstxt_utils
+callback: 'robotstxt_utils#cron'
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

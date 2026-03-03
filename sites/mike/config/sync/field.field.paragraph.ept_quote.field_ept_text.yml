@@ -1,0 +1,24 @@
+uuid: e29ebdd2-a8ca-4390-80d8-f2325c23d042
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_text
+    - paragraphs.paragraphs_type.ept_quote
+  module:
+    - text
+_core:
+  default_config_hash: daebO4BuA3YZb6pUdTzPsiqUuJH_LDMHLJkxdMWVZSo
+id: paragraph.ept_quote.field_ept_text
+field_name: field_ept_text
+entity_type: paragraph
+bundle: ept_quote
+label: Quote
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

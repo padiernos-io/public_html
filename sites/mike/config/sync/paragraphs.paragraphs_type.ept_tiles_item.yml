@@ -1,0 +1,12 @@
+uuid: 075808c5-731e-42c9-ba49-12820349c7a5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Q4wQLWgQpxsrvWKawlFVZnqSn8qCCPj4IOKPpn7O8Po
+id: ept_tiles_item
+label: 'EPT Tiles Item'
+icon_uuid: null
+icon_default: null
+description: 'Section for EPT Tiles'
+behavior_plugins: {  }

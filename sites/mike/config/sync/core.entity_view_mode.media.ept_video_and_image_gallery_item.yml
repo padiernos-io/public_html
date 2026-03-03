@@ -1,0 +1,13 @@
+uuid: 4c262c7c-e85c-4005-895a-290d7fb33156
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: QIGappKnnavEIRi1GzZ_dSeZaYoyiLSX-hOaXrOHbz8
+id: media.ept_video_and_image_gallery_item
+label: 'EPT Video and Image gallery item'
+description: ''
+targetEntityType: media
+cache: true

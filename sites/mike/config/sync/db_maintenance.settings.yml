@@ -1,0 +1,17 @@
+cron_last_run: 1772035588
+cron_frequency: 86400
+use_time_interval: true
+time_interval_start: '01:30'
+time_interval_end: '02:30'
+all_tables: 1
+write_log: 0
+_core:
+  default_config_hash: T_ds3REH4r3NJRKBQ8cLc-RVnb4uooa-F_oEyWxdB8w
+table_list_mike:
+  cache_data: cache_data
+  watchdog: watchdog
+actions: null
+form_build_id: form-zxW7P11V_l3WXYtZY2zJpjdwCh049-GbSIwMVop3YsA
+form_token: TZ_ZTEAjn0NNFPhNJcU7vapBLaRtgcJ_IZ1LCC87c5c
+form_id: db_maintenance_admin_settings
+gin_move_focus_to_sticky_bar: null

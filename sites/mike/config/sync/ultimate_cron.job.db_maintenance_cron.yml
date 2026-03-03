@@ -1,0 +1,17 @@
+uuid: bf68f126-477f-40c4-98eb-41dae35f864d
+langcode: en
+status: true
+dependencies:
+  module:
+    - db_maintenance
+title: 'Default cron handler'
+id: db_maintenance_cron
+weight: 0
+module: db_maintenance
+callback: 'db_maintenance#cron'
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

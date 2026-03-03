@@ -1,0 +1,22 @@
+uuid: 3d158b95-a890-4e43-aae4-530e659e4432
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - brimstone
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: brimstone_powered
+theme: brimstone
+region: footer
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

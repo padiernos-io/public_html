@@ -1,0 +1,17 @@
+uuid: f6764426-10d0-4af6-be6c-5f7ab793fd27
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gN5ig4PlfcY7X_JPJTMkN5WrbbnYghu0IuhmrJ2KTb0
+name: origenal_tiny
+label: 'Origenal Tiny'
+effects:
+  8e8f0813-935e-4c74-9c86-3d6ea7502c07:
+    uuid: 8e8f0813-935e-4c74-9c86-3d6ea7502c07
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: null
+      upscale: false

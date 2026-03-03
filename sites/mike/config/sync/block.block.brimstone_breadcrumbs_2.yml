@@ -1,0 +1,24 @@
+uuid: dd14828f-2da1-4f36-8692-9327f12f6759
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - brimstone
+id: brimstone_breadcrumbs_2
+theme: brimstone
+region: highlight
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /about

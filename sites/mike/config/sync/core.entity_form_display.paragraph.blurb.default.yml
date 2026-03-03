@@ -1,0 +1,36 @@
+uuid: 258ed4f1-40f0-41ec-a128-41928cddd66e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blurb.field_blurb_body
+    - field.field.paragraph.blurb.field_blurb_summary
+    - paragraphs.paragraphs_type.blurb
+  module:
+    - text
+id: paragraph.blurb.default
+targetEntityType: paragraph
+bundle: blurb
+mode: default
+content:
+  field_blurb_body:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_blurb_summary:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
