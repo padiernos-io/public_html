@@ -51,14 +51,14 @@ component_tree:
     slot: footer_last
     uuid: 4bffe49a-041a-4120-bed4-3670026e2041
     component_id: sdc.byte_theme.heading
-    component_version: 80684659bfb1ef65
+    component_version: 6e6854ead521fa05
     inputs: '{"heading_text":"Stay up to date","text_color":"default","align":"left","text_size":"heading-responsive-2xl","level":2}'
   '0:footer_last:1':
     parent_uuid: b4ea9fb2-d3fc-428a-9114-bce92069cbab
     slot: footer_last
     uuid: 33b0c50f-4431-4684-9128-ae760159ef36
     component_id: sdc.byte_theme.text
-    component_version: 21cbfe93d4622099
+    component_version: 16c79c28a4108f9b
     inputs: '{"text":{"value":"\u003Cp\u003ESubscribe to our newsletter to be the first to know about our latest updates, exclusive offers, and more.\u003C\/p\u003E","format":"canvas_html_block"},"text_size":"text-sm","text_color":"default"}'
   '0:footer_last:2':
     parent_uuid: b4ea9fb2-d3fc-428a-9114-bce92069cbab
@@ -79,5 +79,5 @@ component_tree:
     slot: footer_utility_last
     uuid: a606580b-bd8b-4576-b89e-b9f97ef72d91
     component_id: sdc.byte_theme.text
-    component_version: 21cbfe93d4622099
+    component_version: 16c79c28a4108f9b
     inputs: '{"text":{"value":"\u003Cp\u003E\u00a9 Copyright 2026\u003C\/p\u003E","format":"canvas_html_block"},"text_size":"text-sm","text_color":"default"}'

@@ -1,0 +1,22 @@
+uuid: 46a67682-7d04-4e10-9b6d-c64caf3756b1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - matter
+_core:
+  default_config_hash: C1SyEfalp5FZKUJQQDgKSW-1mV_yXylXjKDJAFzKFNk
+id: matter_local_tasks
+theme: matter
+region: buffer
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

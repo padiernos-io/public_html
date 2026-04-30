@@ -8,7 +8,7 @@ dependencies:
     - text
   theme:
     - byte_theme
-active_version: a043e3602ea2e466
+active_version: 002e9ffe10816cfb
 versioned_properties:
   active:
     settings:

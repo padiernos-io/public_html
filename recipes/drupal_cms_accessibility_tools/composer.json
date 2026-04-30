@@ -7,5 +7,5 @@
         "drupal/drupal_cms_content_type_base": "^2",
         "drupal/editoria11y": "^2.2"
     },
-    "version": "2.0.0"
+    "version": "2.1.0"
 }

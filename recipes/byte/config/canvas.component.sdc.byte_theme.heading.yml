@@ -5,7 +5,7 @@ dependencies:
     - options
   theme:
     - byte_theme
-active_version: 80684659bfb1ef65
+active_version: 6e6854ead521fa05
 versioned_properties:
   active:
     settings:

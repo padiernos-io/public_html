@@ -1,0 +1,53 @@
+_core:
+  default_config_hash: SVprdJ7WPrRa5g22doNmpfKAYVsoh711zziV_j74Wgo
+langcode: en
+plugins:
+  common:
+    enabled: true
+    weight: 0
+    group_collections: ''
+    hide_empty_collections: false
+    hide_add_new_content: false
+    generate_overview_links: true
+    override_max_menu_depth: false
+  blocks:
+    enabled: true
+    weight: 0
+    hide_core_link: false
+  content:
+    enabled: true
+    weight: 0
+    recent_items:
+      limit: 5
+      link: default
+    create_items:
+      hide_from_navigation_create: false
+      show_create_new_links: false
+      navigation_create_collections: false
+  files:
+    enabled: true
+    weight: 0
+    hide_core_link: false
+    show_in_media: false
+  media:
+    enabled: true
+    weight: 0
+    link_media_library: true
+    create_items:
+      hide_from_navigation_create: false
+      show_create_new_links: false
+      navigation_create_collections: false
+  taxonomies:
+    enabled: true
+    weight: 0
+    create_items:
+      hide_from_navigation_create: false
+      show_create_new_links: false
+      navigation_create_collections: false
+  users:
+    enabled: true
+    weight: 0
+    roles: true
+    roles_to_hide: {  }
+    people: ''
+    add_new_user: ''

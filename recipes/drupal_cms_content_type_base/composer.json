@@ -6,7 +6,7 @@
     "require": {
         "drupal/autosave_form": "^1.10",
         "drupal/bpmn_io": "^3",
-        "drupal/canvas": "^1.1",
+        "drupal/canvas": "^1.2",
         "drupal/core": "^11.3",
         "drupal/drupal_cms_helper": "^2",
         "drupal/eca": "^3.0.8",
@@ -19,5 +19,5 @@
         "drupal/token": "^1",
         "drupal/trash": "^3.0.13"
     },
-    "version": "2.0.1"
+    "version": "2.1.0"
 }

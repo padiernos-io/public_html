@@ -1,0 +1,22 @@
+uuid: 0bf7ae51-fea8-4a49-8fa5-192c5bab375a
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - matter
+_core:
+  default_config_hash: Wi23yq_QOBtBLrLXgiXR50xeuVV64aaV9eZeYWsJD4o
+id: matter_help
+theme: matter
+region: buffer
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

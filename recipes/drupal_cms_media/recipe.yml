@@ -32,6 +32,24 @@ config:
   import:
     focal_point: '*'
   actions:
+    core.entity_form_display.media.*.*:
+      setComponent:
+        name: name
+        options:
+          type: string_textfield
+          weight: -5
+      hideComponent: path
+    core.entity_form_display.media.image.*:
+      setComponent:
+        name: field_media_image
+        options:
+          type: image_focal_point
+          weight: 1
+          settings:
+            progress_indicator: throbber
+            preview_image_style: media_library
+            preview_link: true
+            offsets: '50,50'
     core.entity_view_display.media.image.media_library:
       setComponent:
         name: thumbnail

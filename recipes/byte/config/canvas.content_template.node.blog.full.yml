@@ -49,7 +49,7 @@ component_tree:
     slot: main_slot
     uuid: caa1e4b2-d58b-4140-b99b-ab3e1ce55ad5
     component_id: sdc.byte_theme.text
-    component_version: 21cbfe93d4622099
+    component_version: 16c79c28a4108f9b
     inputs: '{"text":{"sourceType":"dynamic","expression":"\u2139\ufe0e\u241centity:node:blog\u241dfield_content\u241e\u241fprocessed"},"text_size":"normal","text_color":"inverted"}'
   3:
     uuid: d371f39b-3ad5-4920-afb1-23320aa47c8a
@@ -61,7 +61,7 @@ component_tree:
     slot: header_slot
     uuid: 1dfd51a0-5209-45e4-968b-57732f763e7f
     component_id: sdc.byte_theme.heading
-    component_version: 80684659bfb1ef65
+    component_version: 6e6854ead521fa05
     inputs: '{"heading_text":"More insights","level":2,"text_size":"default","text_color":"default","align":"center"}'
   '3:main_slot:0':
     parent_uuid: d371f39b-3ad5-4920-afb1-23320aa47c8a

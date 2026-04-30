@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: vn4QAA0TH2X2Iygryhu0O73v-kPfAjwALeziT7IxZPE
+include_tests: false
+ccn_warning_threshold: 10
+ccn_error_threshold: 20
+max_hotspots_display: 20
+detect_service_locators: true
+detect_deep_arrays: true
+detect_hardcoded_ids: true
+detect_direct_queries: true
+deep_array_threshold: 4
+allow_service_locators_in_procedural: true
+timeout: 120

@@ -1,0 +1,18 @@
+_core:
+  default_config_hash: NiHQjZCfxCXxs38YYhTHS2dkKA00A9DWC4M5U4a-DZU
+content: |
+  /* TEAM */
+  Your title: Your name.
+  Site: email, link to a contact form, etc.
+  Twitter: your Twitter username.
+  Location: City, Country.
+
+  /* THANKS */
+  Name: name or URL
+
+  /* SITE */
+  Last update: YYYY/MM/DD
+  Standards: HTML5, CSS3,..
+  Components: Modernizr, jQuery, etc.
+  Software: Software used for the development
+display_link: true

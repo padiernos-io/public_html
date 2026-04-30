@@ -1,0 +1,32 @@
+uuid: f58069ca-e3a2-4413-8f98-bec658d99df4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - matter
+_core:
+  default_config_hash: KbZgFU8-_2MJXIrL9xne8erqBlgQCGVhC74js67tGlY
+id: matter_account_menu
+theme: matter
+region: buffer
+weight: -6
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "/landing-page-10\r\n/home-pages"

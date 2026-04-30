@@ -1,0 +1,20 @@
+uuid: 60f8a067-10fb-4bcd-8323-8e23aaf7db6e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - matter
+_core:
+  default_config_hash: qyQALO7vQr_MykN8PxPKt7bKdr3xQytGuUswJqDY2jA
+id: matter_local_actions
+theme: matter
+region: buffer
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

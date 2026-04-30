@@ -1,0 +1,32 @@
+uuid: 79e6f56d-efae-42fa-a920-d8d5b039802f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - matter
+_core:
+  default_config_hash: 5pmJ3pHn-vNCJOolhzZcr_yIWjhnCMnMHzGg8E73hIo
+id: matter_tools
+theme: matter
+region: buffer
+weight: -5
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /shortcodes

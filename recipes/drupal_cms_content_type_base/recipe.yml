@@ -129,6 +129,10 @@ config:
         - 'view any unpublished content'
         - 'view own unpublished media'
         - 'view scheduled content'
+      # The dashboard is provided by drupal_cms_admin_ui, so we cannot assume
+      # it exists when this recipe is applied.
+      grantPermissionsIfExist:
+        - 'view welcome dashboard'
     # Disable the taxonomy and media scheduler views because they are not
     # needed and break the navigation menu.
     views.view.scheduler_scheduled_media:

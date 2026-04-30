@@ -1,0 +1,29 @@
+uuid: 46620d42-0cbd-47bb-a861-451f0821123b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - matter
+_core:
+  default_config_hash: HHU6woBKOhHIUFhSa6V7xwOxKtSMr4hnktZ4SdJlstw
+id: matter_branding
+theme: matter
+region: branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /home-pages

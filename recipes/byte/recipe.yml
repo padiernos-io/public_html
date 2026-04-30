@@ -87,44 +87,53 @@ config:
       addNodeTypes: ['blog']
     # Disable Canvas components that aren't really useful in building pages or
     # content templates.
-    canvas.component.block.announce_block:
+    ?canvas.component.block.announce_block:
       disable: []
-    canvas.component.block.dashboard_placeholder:
+    ?canvas.component.block.dashboard_placeholder:
       disable: []
-    canvas.component.block.dashboard_site_status:
+    ?canvas.component.block.dashboard_site_status:
       disable: []
     canvas.component.block.local_actions_block:
       disable: []
     canvas.component.block.local_tasks_block:
       disable: []
-    canvas.component.block.navigation_dashboard:
+    ?canvas.component.block.navigation_dashboard:
       disable: []
-    canvas.component.block.navigation_link:
+    ?canvas.component.block.navigation_link:
       disable: []
-    canvas.component.block.navigation_shortcuts:
+    ?canvas.component.block.navigation_shortcuts:
       disable: []
-    canvas.component.block.navigation_user:
+    ?canvas.component.block.navigation_user:
       disable: []
     canvas.component.block.project_browser_block.*:
       disable: []
-    canvas.component.block.system_menu_block.admin:
+    ?canvas.component.block.system_menu_block.admin:
       disable: []
-    canvas.component.block.system_menu_block.navigation-user-links:
+    ?canvas.component.block.system_menu_block.navigation-user-links:
       disable: []
-    canvas.component.block.system_menu_block.tools:
+    ?canvas.component.block.system_menu_block.tools:
       disable: []
-    canvas.component.block.system_menu_block.top-tasks:
+    ?canvas.component.block.system_menu_block.top-tasks:
       disable: []
     canvas.component.block.system_messages_block:
       disable: []
-    canvas.component.block.views_block.publishing_content-block_drafts:
+    ?canvas.component.block.views_block.publishing_content-block_drafts:
       disable: []
-    canvas.component.block.views_block.publishing_content-block_scheduled:
+    ?canvas.component.block.views_block.publishing_content-block_scheduled:
       disable: []
-    canvas.component.block.views_block.recent_pages-block_recent_pages:
+    ?canvas.component.block.views_block.recent_pages-block_recent_pages:
       disable: []
-    canvas.component.sdc.navigation.title:
+    ?canvas.component.sdc.navigation.title:
+      disable: []
+    ?canvas.component.block.events_block:
       disable: []
 extra:
+  drupal_cms_installer:
+    creator: Drupal CMS
+    links:
+      - text: Demo
+        url: https://1-x-sto8008tjs6iflsxj7xdugohlnxgmecq.tugboatqa.com/
+      - text: Learn more
+        url: https://new.drupal.org/node/11445224
   recipe_installer_kit:
     finish_url: '/admin/dashboard/welcome'

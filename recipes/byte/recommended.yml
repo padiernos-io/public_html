@@ -7,7 +7,7 @@
 drupal/drupal_cms_accessibility_tools:
   title: 'Accessibility Tools'
   type: recipe
-  logo: null
+  logo: https://git.drupalcode.org/project/editoria11y/-/avatar
   core: '^11.3'
   machineName: drupal_cms_accessibility_tools
   body:
@@ -25,19 +25,19 @@ drupal/drupal_cms_ai:
   packageName: drupal/drupal_cms_ai
 
 drupal/drupal_cms_google_analytics:
-  title: 'Google Analytics'
+  title: 'Google Tag'
   type: recipe
-  logo: null
+  logo: https://git.drupalcode.org/project/google_tag/-/avatar
   core: '^11.3'
   machineName: drupal_cms_google_analytics
   body:
-    summary: 'Adds tracking of website traffic using Google Analytics and Google Tag Manager. Requires a Google Tag Manager ID.'
+    summary: 'Adds Google Tag and Google Tag Manager to use Google measurement and advertising products like Google Ads, Google Analytics, Campaign Manager, Display & Video 360, and Search Ads 360. Requires a Google Tag or GTM ID.'
   packageName: drupal/drupal_cms_google_analytics
 
 drupal/mailchimp_signup_forms:
   title: 'Mailchimp'
   type: recipe
-  logo: null
+  logo: https://git.drupalcode.org/project/mailchimp/-/avatar
   core: '>=11.2'
   machineName: mailchimp_signup_forms
   body:

@@ -1,0 +1,11 @@
+uuid: 7a0d4018-f5fd-42ea-8727-a94f7394a737
+langcode: en
+status: true
+dependencies:
+  module:
+    - llms_txt
+id: llms_txt_section.token
+label: Token
+description: null
+targetEntityType: llms_txt_section
+cache: true

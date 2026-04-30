@@ -1,6 +1,18 @@
 {
-    "_hash": "79f4414720dd2303ef7d40f6621a1b44681a88a7de714ad3fb7e20070571be05",
+    "_hash": "b841f4f7694dbc80cea677b988a015783222f10b6af35c1b142bb95d6dd62800",
     "patches": {
+        "drupal/advagg": [
+            {
+                "package": "drupal/advagg",
+                "description": "Drupal 11 compatibility version",
+                "url": "https://www.drupal.org/files/issues/2026-01-07/46.patch",
+                "sha256": "e9569ccaf5b58d4cf96f16c69853d4b4ae0d78bae5c26acdb1a69276080fc294",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
         "drupal/big_pipe_sessionless": [
             {
                 "package": "drupal/big_pipe_sessionless",
@@ -19,6 +31,18 @@
                 "description": "Automated Drupal 11 compatibility fixes for book_access_code",
                 "url": "https://www.drupal.org/files/issues/2024-03-15/book_access_code.2.0.1.rector.patch",
                 "sha256": "97274eb988e960c1fb4aeb511efdea7b2252a6d370582a60de1570d77781d607",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/context": [
+            {
+                "package": "drupal/context",
+                "description": "Fix PHP 8.4 deprecations",
+                "url": "https://www.drupal.org/files/issues/2025-03-17/context-fix-php-84-deprecations-3513516-62.patch",
+                "sha256": "86e4af4284574b5a2b3fb5fa0f9f14aab6127d2f2db5e8677120f4ae343831d1",
                 "depth": 1,
                 "extra": {
                     "provenance": "root"
@@ -68,18 +92,6 @@
                 "depth": 1,
                 "extra": {
                     "provenance": "dependency:drupal/default_content"
-                }
-            }
-        ],
-        "drupal/dashboards": [
-            {
-                "package": "drupal/dashboards",
-                "description": "fix: #3542888 PHP 8.4 Support",
-                "url": "https://git.drupalcode.org/project/webpatches/-/raw/patches/dashboards--2026-01-24--3542888--mr-40.patch",
-                "sha256": "f45f0729c44e086cb18c9bf0d841dc5faae20fee5514db6b15594b285f01bb71",
-                "depth": 1,
-                "extra": {
-                    "provenance": "dependency:drupal/dashboards"
                 }
             }
         ],

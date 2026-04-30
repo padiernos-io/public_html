@@ -94,7 +94,7 @@ config:
             label_display: '0'
             provider: navigation
             title: Help
-            uri: 'https://new.drupal.org/docs/drupal-cms'
+            uri: 'https://project.pages.drupalcode.org/drupal_cms'
             icon_class: help
           weight: -2
           additional: []
@@ -118,4 +118,7 @@ config:
         - 'access contextual links'
         - 'access navigation'
         - 'view the administration theme'
-        - 'view welcome dashboard'
+    # Don't grant dashboard access to regular authenticated users, because by default
+    # it has nothing for them to do.
+    ?user.role.content_editor:
+      grantPermission: 'view welcome dashboard'

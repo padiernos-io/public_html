@@ -1,0 +1,27 @@
+uuid: 8f06487a-1655-4eff-8280-55848339ba15
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - matter
+_core:
+  default_config_hash: jzJur2KPpvdcvrfLBQkmhQol5vnnYnE8Tvd8Pn-ZcZQ
+id: matter_main_menu
+theme: matter
+region: navigation
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }
