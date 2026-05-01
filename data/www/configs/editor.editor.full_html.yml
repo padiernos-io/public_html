@@ -34,6 +34,7 @@ settings:
       - codeBlock
       - '|'
       - sourceEditing
+      - tokenBrowser
   plugins:
     ckeditor5_codeBlock:
       languages:
@@ -96,6 +97,8 @@ settings:
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    token_filter_token_browser:
+      token_types: {  }
 image_upload:
   status: true
   scheme: public

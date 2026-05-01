@@ -9,7 +9,7 @@ _core:
 id: matter_local_tasks
 theme: matter
 region: buffer
-weight: -1
+weight: -2
 provider: null
 plugin: local_tasks_block
 settings:

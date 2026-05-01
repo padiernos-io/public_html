@@ -1,0 +1,25 @@
+uuid: 311b3dde-b17f-44cc-9b0c-6d432dc1aca4
+langcode: en
+status: true
+dependencies:
+  module:
+    - copyright_block
+  theme:
+    - matter
+id: matter_copyrightblock
+theme: matter
+region: footer
+weight: -7
+provider: null
+plugin: copyright_block
+settings:
+  id: copyright_block
+  label: 'Copyright block'
+  label_display: '0'
+  provider: copyright_block
+  start_year: '2010'
+  separator: ' - '
+  text:
+    value: '<p>© [site:name], [copyright_statement:dates]</p>'
+    format: basic_html
+visibility: {  }

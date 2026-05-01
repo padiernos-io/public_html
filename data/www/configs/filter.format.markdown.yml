@@ -1,0 +1,57 @@
+uuid: cc1c0955-d04e-4169-a2b2-bff4c78bd355
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+  module:
+    - editor
+    - media
+    - node_token_filter
+    - token_filter
+name: Markdown
+format: markdown
+weight: 0
+filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 0
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: 15
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_view_modes:
+        default: default
+        full: full
+      allowed_media_types:
+        audio: audio
+        document: document
+        image: image
+        remote_video: remote_video
+        video: video
+  node_filter_token_by_url:
+    id: node_filter_token_by_url
+    provider: node_token_filter
+    status: true
+    weight: 0
+    settings:
+      replace_empty_token: true
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: true
+    weight: 0
+    settings:
+      replace_empty: true

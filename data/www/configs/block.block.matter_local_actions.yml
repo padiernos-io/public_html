@@ -9,7 +9,7 @@ _core:
 id: matter_local_actions
 theme: matter
 region: buffer
-weight: 0
+weight: -1
 provider: null
 plugin: local_actions_block
 settings:
