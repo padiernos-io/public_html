@@ -1,0 +1,14 @@
+uuid: 697f250f-2eaa-4e87-86da-bf7757e48f91
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.permission_navigation
+  module:
+    - user
+id: user_add_role_action.permission_navigation
+label: 'Add the Navigation role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: permission_navigation

@@ -1,0 +1,25 @@
+uuid: 39094d6e-2ec0-4018-bd48-b516d958bbe3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.navigation-focus
+  module:
+    - system
+  theme:
+    - matter
+id: matter_navigationfocus
+theme: matter
+region: focus
+weight: 0
+provider: null
+plugin: 'system_menu_block:navigation-focus'
+settings:
+  id: 'system_menu_block:navigation-focus'
+  label: 'Navigation - Focus'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

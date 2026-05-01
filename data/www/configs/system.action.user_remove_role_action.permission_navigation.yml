@@ -1,0 +1,14 @@
+uuid: e8f751e8-f8e8-4b88-8088-7437c77fed84
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.permission_navigation
+  module:
+    - user
+id: user_remove_role_action.permission_navigation
+label: 'Remove the Navigation role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: permission_navigation

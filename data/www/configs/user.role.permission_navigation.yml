@@ -1,0 +1,12 @@
+uuid: 6119b942-2d1c-419c-8414-111255a98f14
+langcode: en
+status: true
+dependencies:
+  module:
+    - navigation
+id: permission_navigation
+label: Navigation
+weight: 5
+is_admin: false
+permissions:
+  - 'access navigation'
