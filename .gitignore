@@ -17,7 +17,6 @@ web/profiles/contrib/
 web/libraries/
 
 # Custom Drupal code (uncomment if you want to ignore custom code, but usually you want to keep this in version control)
-!web/themes/custom/matter
 web/modules/custom/
 web/themes/custom/
 web/profiles/custom/
