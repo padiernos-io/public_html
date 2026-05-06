@@ -329,6 +329,7 @@
         "drupal/new_relic_rpm": "^2.2",
         "drupal/nextcloud_dam": "1.0.x-dev@dev",
         "drupal/nextcloud_webdav_client": "1.0.x-dev@dev",
+        "drupal/nextcloud_webdav_mount": "^1.6",
         "drupal/node_class": "2.0.x-dev@dev",
         "drupal/node_co_authors": "^1.2",
         "drupal/node_display_title": "^2.1",
