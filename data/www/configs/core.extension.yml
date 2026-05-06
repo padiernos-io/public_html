@@ -7,6 +7,7 @@ module:
   block: 0
   block_content: 0
   block_field: 0
+  block_form_alter: 0
   breakpoint: 0
   captcha: 0
   ckeditor5: 0
@@ -76,8 +77,10 @@ module:
   field: 0
   field_group: 0
   field_ui: 0
+  fieldblock: 0
   file: 0
   filter: 0
+  fix_views_autocomplete: 0
   flexible_permissions: 0
   form_decorator: 0
   gin_everywhere: 0
@@ -91,6 +94,7 @@ module:
   humanstxt: 0
   image: 0
   imagick: 0
+  improve_line_breaks_filter: 0
   inline_form_errors: 0
   izi_message: 0
   jquery_ui: 0
@@ -101,6 +105,7 @@ module:
   layout_builder_customizer: 0
   layout_discovery: 0
   layout_paragraphs: 0
+  layout_paragraphs_clipboard: 0
   layout_paragraphs_library: 0
   layout_paragraphs_permissions: 0
   link: 0
@@ -108,6 +113,9 @@ module:
   linkit: 0
   linkit_attributes: 0
   llms_txt: 0
+  manage_display: 0
+  manage_display_extras: 0
+  manage_display_node_created: 0
   media: 0
   media_directories: 0
   media_directories_editor: 0
@@ -123,12 +131,22 @@ module:
   navigation_extra: 0
   navigation_extra_tools: 0
   node: 0
+  node_read_time: 0
   node_token_filter: 0
   options: 0
   page_cache: 0
+  paragraph_block: 0
+  paragraph_sdc: 0
+  paragraph_skins: 0
   paragraph_usage_dashboard: 0
+  paragraphs_admin: 0
   paragraphs_class: 0
+  paragraphs_clipboard: 0
+  paragraphs_edit: 0
+  paragraphs_features: 0
   paragraphs_library: 0
+  paragraphs_type_permissions: 0
+  paragraphs_usage_manager: 0
   path: 0
   path_alias: 0
   pathauto_update: 0
@@ -144,6 +162,7 @@ module:
   syslog: 0
   system: 0
   tabtamer: 0
+  tardis: 0
   taxonomy: 0
   text: 0
   token: 0
@@ -202,6 +221,7 @@ module:
   pathauto: 1
   views: 10
   paragraphs: 11
+  paragraphs_ee: 15
   config_provider: 100
   twigsuggest: 100
   standard: 1000
@@ -212,5 +232,4 @@ theme:
   starterkit_theme: 0
   matter: 0
   stable: 0
-  classy: 0
 profile: standard

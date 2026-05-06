@@ -1,0 +1,21 @@
+uuid: 5f23a8fc-73cb-4549-9e00-315486b6d056
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sdc_paragraph_properties
+    - paragraphs.paragraphs_type.sdc_paragraph
+_core:
+  default_config_hash: FFq5ynH9r6_nWhAbEkBwqW-wq-qAzL98DTi2mVRVW78
+id: paragraph.sdc_paragraph.field_sdc_paragraph_properties
+field_name: field_sdc_paragraph_properties
+entity_type: paragraph
+bundle: sdc_paragraph
+label: 'SDC Paragraph Properties'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

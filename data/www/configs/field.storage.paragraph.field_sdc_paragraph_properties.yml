@@ -1,0 +1,21 @@
+uuid: 7b19ab3a-480f-4a3c-813c-c5fadfda5010
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: Xez8zISxxpaXu0DrhohZYExZ3VhaEP1zjJUglm5djlw
+id: paragraph.field_sdc_paragraph_properties
+field_name: field_sdc_paragraph_properties
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

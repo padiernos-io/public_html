@@ -1,0 +1,19 @@
+uuid: 476c92b6-cf6f-4b9b-9faf-4c7c46c1b096
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sdc_paragraph.field_sdc_paragraph_name
+    - field.field.paragraph.sdc_paragraph.field_sdc_paragraph_properties
+    - paragraphs.paragraphs_type.sdc_paragraph
+_core:
+  default_config_hash: Q-YogP7wSIcCJi_0KuwHLV-ebFTBq7P4wfY10e7gucE
+id: paragraph.sdc_paragraph.default
+targetEntityType: paragraph
+bundle: sdc_paragraph
+mode: default
+content: {  }
+hidden:
+  field_sdc_paragraph_name: true
+  field_sdc_paragraph_properties: true
+  search_api_excerpt: true

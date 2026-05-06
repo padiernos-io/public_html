@@ -1,0 +1,12 @@
+uuid: 1ea39fb6-e283-427f-819b-4dfd2de8c703
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vEzzaL9K4GmwvuOLx_J55542F7Hw5AG4H_swY404yLo
+id: sdc_paragraph
+label: 'SDC Paragraph'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

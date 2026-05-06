@@ -5,12 +5,22 @@
 # Composer dependencies
 vendor/
 
+# Composer lock files (optional, but often excluded to allow flexibility in environments)
+composer.lock
+patches.lock.json
+
 # Drupal folders (managed by composer)
 web/core/
 web/modules/contrib/
 web/themes/contrib/
 web/profiles/contrib/
 web/libraries/
+
+# Custom Drupal code (uncomment if you want to ignore custom code, but usually you want to keep this in version control)
+!web/themes/custom/matter
+web/modules/custom/
+web/themes/custom/
+web/profiles/custom/
 
 # Drupal sites (keep default settings and services)
 !web/sites/default/default.services.yml

@@ -1,0 +1,34 @@
+uuid: 17314e32-66bf-4434-859d-3c2824cad41a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sdc_paragraph.field_sdc_paragraph_name
+    - field.field.paragraph.sdc_paragraph.field_sdc_paragraph_properties
+    - paragraphs.paragraphs_type.sdc_paragraph
+_core:
+  default_config_hash: fYNvdIkqxRxdZUyXdmAWfWleMl7VgPFl3svqcshYX-g
+id: paragraph.sdc_paragraph.default
+targetEntityType: paragraph
+bundle: sdc_paragraph
+mode: default
+content:
+  field_sdc_paragraph_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sdc_paragraph_properties:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: Pt2jn3j6mQSJveE0gu-hksyq8LnRCR4GXxNuYmiRZh4
+enabled_entity_types:
+  - node
+  - paragraph
