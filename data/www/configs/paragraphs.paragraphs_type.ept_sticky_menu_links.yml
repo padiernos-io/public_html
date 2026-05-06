@@ -1,0 +1,12 @@
+uuid: ff922e55-42de-4cfe-b91d-914ba87dbf11
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QmdRRxo7P_0xutavhjDKJA4_xcM6gI8XrLHxXHW8E4g
+id: ept_sticky_menu_links
+label: 'EPT Sticky Menu Links'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

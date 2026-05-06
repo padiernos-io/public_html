@@ -1,0 +1,12 @@
+uuid: 11a0362e-c499-4b15-a122-a8a56be2faab
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FU0WTLBDpLuC53lMEuAJGnwlX6sqt0SutW7q0c-btWQ
+id: ept_video
+label: 'EPT Video'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Video'
+behavior_plugins: {  }

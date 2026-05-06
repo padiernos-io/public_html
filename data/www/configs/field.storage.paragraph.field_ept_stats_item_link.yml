@@ -1,0 +1,21 @@
+uuid: 7d562791-c177-40d7-98a4-6e90cb18ce10
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+_core:
+  default_config_hash: r9tIHirJngA0lU8nZzF4zo3Sk3sZoNMDm7tn4Q8f6nU
+id: paragraph.field_ept_stats_item_link
+field_name: field_ept_stats_item_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

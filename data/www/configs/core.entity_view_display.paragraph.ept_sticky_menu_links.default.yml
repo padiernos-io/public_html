@@ -1,0 +1,37 @@
+uuid: 89bf9908-3f9b-4d9d-a51e-5209c7ffbaaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_sticky_menu_links.field_ept_sticky_menu_links
+    - field.field.paragraph.ept_sticky_menu_links.field_ept_sticky_menu_parent
+    - paragraphs.paragraphs_type.ept_sticky_menu_links
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: K7xSO6QJazwPPiIAIbAlsKQ-8f4J92kX8aoaU_6bdaw
+id: paragraph.ept_sticky_menu_links.default
+targetEntityType: paragraph
+bundle: ept_sticky_menu_links
+mode: default
+content:
+  field_ept_sticky_menu_links:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ept_sticky_menu_parent:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

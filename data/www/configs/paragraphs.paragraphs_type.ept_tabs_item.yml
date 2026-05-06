@@ -1,0 +1,12 @@
+uuid: 8bd47358-988f-426c-ad10-4e4063c13905
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: VixuGFI2mBIwt085I9X7vz9dq9H8dh0Bb20u-pT90X8
+id: ept_tabs_item
+label: 'EPT Tabs Item'
+icon_uuid: null
+icon_default: null
+description: 'Tab item for EPT Tabs paragraph'
+behavior_plugins: {  }

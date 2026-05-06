@@ -1,0 +1,22 @@
+uuid: 301e17bd-741a-42ad-84fe-caec6e507982
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: VnQUEhooOW55UuzgEJxAJIMz27qnLo-Irh9NXv7ALpo
+id: paragraph.field_ept_timeline_media_image
+field_name: field_ept_timeline_media_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -11,7 +11,7 @@ _core:
 id: matter_powered
 theme: matter
 region: buffer
-weight: 1
+weight: 0
 provider: null
 plugin: system_powered_by_block
 settings:

@@ -1,0 +1,21 @@
+uuid: e7fd85f1-220c-4284-a335-7eb5029b809b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: Vb_uSodiEH1YHgcoZFitK_cSCdO65_4U1fUOrl-0G-0
+id: paragraph.field_ept_counter_description
+field_name: field_ept_counter_description
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

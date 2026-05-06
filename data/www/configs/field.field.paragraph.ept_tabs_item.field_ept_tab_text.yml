@@ -1,0 +1,24 @@
+uuid: f2e13550-4806-4c1b-b159-d53cc19a9ecc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_tab_text
+    - paragraphs.paragraphs_type.ept_tabs_item
+  module:
+    - text
+_core:
+  default_config_hash: UhI0Db-BZ8kkyso5fdxGaK2SLKXQOo3Tz91NfllT_zE
+id: paragraph.ept_tabs_item.field_ept_tab_text
+field_name: field_ept_tab_text
+entity_type: paragraph
+bundle: ept_tabs_item
+label: 'Tab text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

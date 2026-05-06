@@ -1,0 +1,102 @@
+uuid: ed55009f-a01e-42ae-987d-b5ccc04e073b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_countdown.field_ept_countdown_date
+    - field.field.paragraph.ept_countdown.field_ept_settings
+    - field.field.paragraph.ept_countdown.field_ept_text
+    - field.field.paragraph.ept_countdown.field_ept_title
+    - paragraphs.paragraphs_type.ept_countdown
+  module:
+    - datetime
+    - ept_countdown
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_settings
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_content:
+      children:
+        - field_ept_title
+        - field_ept_text
+        - field_ept_countdown_date
+      label: Content
+      region: content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_settings:
+      children:
+        - field_ept_settings
+      label: Settings
+      region: content
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+_core:
+  default_config_hash: ZxcirB8U5v0ZYrJRdwsxmS_1WIhbNwZMbBqsAz988cQ
+id: paragraph.ept_countdown.default
+targetEntityType: paragraph
+bundle: ept_countdown
+mode: default
+content:
+  field_ept_countdown_date:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ept_settings:
+    type: ept_settings_countdown
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ept_text:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ept_title:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

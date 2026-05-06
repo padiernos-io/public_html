@@ -1,0 +1,23 @@
+uuid: bf4e4778-b75a-4d32-bb65-0098677a9536
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_settings
+    - paragraphs.paragraphs_type.ept_sticky_menu
+  module:
+    - ept_core
+_core:
+  default_config_hash: sVCjvfGbYBso1cLXkdI4YDF3ucSyDRwPg6dDBOSRYFM
+id: paragraph.ept_sticky_menu.field_ept_settings
+field_name: field_ept_settings
+entity_type: paragraph
+bundle: ept_sticky_menu
+label: Settings
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ept_settings

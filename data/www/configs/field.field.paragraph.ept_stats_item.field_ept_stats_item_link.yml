@@ -1,0 +1,25 @@
+uuid: 4fb3f1b7-8f24-4da7-a1a2-010034a4f4d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_stats_item_link
+    - paragraphs.paragraphs_type.ept_stats_item
+  module:
+    - link
+_core:
+  default_config_hash: MnXt19dK8rTz4x1hRigyeVWiXn1o6VumcHTMqrFFk74
+id: paragraph.ept_stats_item.field_ept_stats_item_link
+field_name: field_ept_stats_item_link
+entity_type: paragraph
+bundle: ept_stats_item
+label: 'Stats item link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

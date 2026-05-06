@@ -1,0 +1,7 @@
+contexts:
+  -
+    context: ''
+    translations:
+      -
+        source: /llms.txt
+        translation: llms.txt

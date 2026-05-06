@@ -1,0 +1,10 @@
+--- a/modules/navigation/src/NavigationRenderer.php
++++ b/modules/navigation/src/NavigationRenderer.php
+@@ -291,7 +291,7 @@ class NavigationRenderer implements ContainerInjectionInterface {
+       // @see \Drupal\Core\Menu\LocalTaskManager::getTasksBuild()
+       $link = $local_task['#link'];
+-      $link['localized_options'] += [
++      $link['localized_options'] = ($link['localized_options'] ?? []) + [
+         'set_active_class' => TRUE,
+       ];
+       $this->localTasks['page_actions'][$local_task_name] = [

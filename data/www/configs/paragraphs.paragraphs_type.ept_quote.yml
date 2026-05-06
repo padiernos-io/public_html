@@ -1,0 +1,12 @@
+uuid: 10a1773f-9868-4102-b786-96383ca53395
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zd4SMxSGtEMXFqSse2TdY999VhcjYnraQj7qnFhHo6Q
+id: ept_quote
+label: 'EPT Quote'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Quote'
+behavior_plugins: {  }

@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: 6ynzArDptMgNVdAPodaYCxp1_iI3gS-5vLfl5M7H13M
+hide_media_library_media_tab: true
+hide_media_library_files_tab: true
+hide_admin_toolbar_links: false
+enable_combined_upload: true
+combined_upload_media_types:
+  audio: audio
+  document: document
+  image: image
+  video: video

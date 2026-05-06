@@ -1,0 +1,21 @@
+uuid: 559737c2-0b75-4791-90ca-d8b7c758e945
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: K1TV7SR5GOPQTJv3GF_zAIsJciKLKB5xd_eo3WUc5HA
+id: paragraph.field_ept_tiles_text
+field_name: field_ept_tiles_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

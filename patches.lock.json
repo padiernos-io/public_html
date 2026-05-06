@@ -1,6 +1,18 @@
 {
-    "_hash": "b841f4f7694dbc80cea677b988a015783222f10b6af35c1b142bb95d6dd62800",
+    "_hash": "9dc15ea3429de74d3a8e6320a1829245e169bf5c76cc099b4d686195afa0c2ea",
     "patches": {
+        "drupal/tabtamer": [
+            {
+                "package": "drupal/tabtamer",
+                "description": "Add missing localized_options to #link arrays to fix TypeError with NavigationRenderer",
+                "url": "patches/drupal-tabtamer-missing-localized-options.patch",
+                "sha256": "5093c39aa1e8eee47a456f08617fbb8abd24220a681967c79ccf9f6ec0738f7f",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
         "drupal/advagg": [
             {
                 "package": "drupal/advagg",
@@ -61,49 +73,15 @@
                 }
             }
         ],
-        "drupal/core": [
+        "drupal/tab_manager": [
             {
-                "package": "drupal/core",
-                "description": "Issue #3272720: Fix PHP8.1+ Deprecated function: hash(): Passing null to parameter #2 ($data) of type string is deprecated in generateFieldTableName",
-                "url": "https://git.drupalcode.org/project/webpatches/-/raw/patches/core-drupal--10-2-x--2022-07-21--3272720-6.patch",
-                "sha256": "4712408867e7ca33a5d7ff36b28865b9ad942b5d9b6551cf967b4cf76cac1700",
-                "depth": 2,
-                "extra": {
-                    "provenance": "dependency:drupal/core"
-                }
-            },
-            {
-                "package": "drupal/core",
-                "description": "Issue #3302838: Fix PHP8.1+ Querying with NULL values results in warning mb_strtolower(): Passing null to parameter is deprecated",
-                "url": "https://git.drupalcode.org/project/webpatches/-/raw/patches/core-drupal--10-2-x--2023-07-05--3302838-38.patch",
-                "sha256": "e1460d3a58e7f14ba3a7143409b230c8075b90cb092dbe626d72c286eff7f107",
-                "depth": 2,
-                "extra": {
-                    "provenance": "dependency:drupal/core"
-                }
-            }
-        ],
-        "drupal/default_content": [
-            {
-                "package": "drupal/default_content",
-                "description": "Issue #3160146: Add Layout Builder Normalizer and Denormalize",
-                "url": "https://git.drupalcode.org/project/webpatches/-/raw/patches/default_content-2021-04-07--3160146-37.patch",
-                "sha256": "f05f5afbf04095bc00d36aeb9874059222ec36166b918fb81f97f6b34b0887e9",
+                "package": "drupal/tab_manager",
+                "description": "Automated Drupal 11 compatibility fixes for tab_manager",
+                "url": "https://www.drupal.org/files/issues/2024-03-25/tab_manager.1.0.5.rector.patch",
+                "sha256": "6ef7fa7b3caa4d90d7af8e5127188177789c4cc8f13a10b2324df5c09967c308",
                 "depth": 1,
                 "extra": {
-                    "provenance": "dependency:drupal/default_content"
-                }
-            }
-        ],
-        "drupal/views_bulk_edit": [
-            {
-                "package": "drupal/views_bulk_edit",
-                "description": "Issue #3561886 : Implicit nullable AccountInterface parameters for PHP 8.4 compatibility",
-                "url": "https://git.drupalcode.org/project/webpatches/-/raw/patches/views_bulk_edit--2026-01-25--3561886.patch",
-                "sha256": "673f5599c4bc48e4c9c7f1e80aa53e8d532e5c481e8bd845608efa018118b640",
-                "depth": 1,
-                "extra": {
-                    "provenance": "dependency:drupal/views_bulk_edit"
+                    "provenance": "root"
                 }
             }
         ]

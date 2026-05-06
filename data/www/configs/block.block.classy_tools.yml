@@ -1,0 +1,32 @@
+uuid: 6ec1cfe3-c628-42b1-9453-aa0f50d526bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - classy
+_core:
+  default_config_hash: 5pmJ3pHn-vNCJOolhzZcr_yIWjhnCMnMHzGg8E73hIo
+id: classy_tools
+theme: classy
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /shortcodes

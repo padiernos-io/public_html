@@ -1,0 +1,47 @@
+uuid: 51c2604b-2241-492a-8730-32fd8f48015f
+langcode: en
+status: true
+dependencies: {  }
+id: entity_paragraphs_library_item_collection
+label: entity.paragraphs_library_item.collection
+tabs:
+  6:
+    label: system.admin_content
+    link: Content
+    weight: -10
+    access: true
+  0:
+    label: entity.block_content.collection
+    link: Blocks
+    weight: -9
+    access: true
+  1:
+    label: comment.admin
+    link: Comments
+    weight: -8
+    access: true
+  3:
+    label: entity.media.collection
+    link: Media
+    weight: -7
+    access: true
+  4:
+    label: media_directories_ui.media_directories_overview.tab
+    link: 'Media browser'
+    weight: -6
+    access: true
+  5:
+    label: entity.paragraphs_library_item.collection
+    link: Paragraphs
+    weight: -5
+    access: true
+  7:
+    label: 'views_view:view.files.page_1'
+    link: Files
+    weight: -4
+    access: true
+  2:
+    label: llms_txt.llms_txt
+    link: llms.txt
+    weight: -3
+    access: true

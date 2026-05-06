@@ -1,0 +1,17 @@
+uuid: 2ea5bfd0-7495-401d-9eaf-707665f22bc4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MdIxwqWCNGZvTnQhaG_Z3pXcjYlSF6yK3dfOXMzpRv4
+id: edit_url_alias
+label: 'Edit URL alias'
+type: ops
+dialog_group: administrative
+dialog_type: modal
+dialog_width: '550'
+dialog_title_override: ''
+selection_criteria:
+  entity_type: path_alias
+  bundles: {  }
+  key: edit

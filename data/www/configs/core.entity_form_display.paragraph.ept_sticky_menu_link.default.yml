@@ -1,0 +1,35 @@
+uuid: 41ef87c4-c565-47fb-baeb-11455a528336
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_sticky_menu_link.field_ept_settings
+    - field.field.paragraph.ept_sticky_menu_link.field_ept_sticky_menu_link
+    - paragraphs.paragraphs_type.ept_sticky_menu_link
+  module:
+    - ept_sticky_menu
+    - link
+_core:
+  default_config_hash: wmGFKklDpOdqNX4Y3_fLJtKp9WpQtpNubS9h9IQebCY
+id: paragraph.ept_sticky_menu_link.default
+targetEntityType: paragraph
+bundle: ept_sticky_menu_link
+mode: default
+content:
+  field_ept_settings:
+    type: ept_settings_sticky_menu_link
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ept_sticky_menu_link:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -11,7 +11,7 @@ _core:
 id: matter_breadcrumbs
 theme: matter
 region: buffer
-weight: -4
+weight: -5
 provider: null
 plugin: system_breadcrumb_block
 settings:

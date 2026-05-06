@@ -1,0 +1,22 @@
+uuid: 16e14458-ecce-4333-bed5-76a47099a900
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+_core:
+  default_config_hash: HG0HGpRQXhX56PVuj3x5C5jDc-vtEneALavRoeN1CvM
+id: paragraph.field_ept_tab_page
+field_name: field_ept_tab_page
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

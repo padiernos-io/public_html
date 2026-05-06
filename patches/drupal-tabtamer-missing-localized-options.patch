@@ -1,0 +1,18 @@
+--- a/tabtamer.module
++++ b/tabtamer.module
+@@ -52,6 +52,7 @@ function tabtamer_menu_local_tasks_alter(&$data, $route_name, RefinableCacheabl
+     '#link' => [
+       'title' => t('Add tabtamer'),
+       'url' => Url::fromRoute('entity.tab_tamer.add_form', [], ['query' => ['route' => $route_name]]),
++      'localized_options' => [],
+     ],
+   ];
+ 
+@@ -79,6 +80,7 @@ function tabtamer_menu_local_tasks_alter(&$data, $route_name, RefinableCacheabl
+     $tabTamerAdminTab['#link'] = [
+       'title' => t('Edit tabtamer'),
+       'url' => $tabTamer->toUrl(),
++      'localized_options' => [],
+     ];
+   }
+   if ($currentUser->hasPermission('administer tab_tamer')) {

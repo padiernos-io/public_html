@@ -1,0 +1,21 @@
+uuid: 5266613e-7385-49e1-94d8-3cfa82036089
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: CTuSHda2RHGJciX7ZF12J7Y9A3TK_RrRj7CRxyKyNGA
+id: paragraph.field_ept_counter_title
+field_name: field_ept_counter_title
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

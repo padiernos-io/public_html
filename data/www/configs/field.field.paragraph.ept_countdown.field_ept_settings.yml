@@ -1,0 +1,23 @@
+uuid: 1661f89a-4c27-4e85-8bd3-b7e205f9f8d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_settings
+    - paragraphs.paragraphs_type.ept_countdown
+  module:
+    - ept_core
+_core:
+  default_config_hash: Ba5vspWY7pQHKiHMxUWsBgPe13kyadBUwXJG_mtVF04
+id: paragraph.ept_countdown.field_ept_settings
+field_name: field_ept_settings
+entity_type: paragraph
+bundle: ept_countdown
+label: 'EPT Settings'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ept_settings

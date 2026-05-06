@@ -1,0 +1,47 @@
+uuid: 6b058877-7daa-4063-8582-d411d8d1b5f3
+langcode: en
+status: true
+dependencies: {  }
+id: comment_admin_approval
+label: comment.admin_approval
+tabs:
+  5:
+    label: system.admin_content
+    link: Content
+    weight: -10
+    access: true
+  0:
+    label: entity.block_content.collection
+    link: Blocks
+    weight: -9
+    access: true
+  1:
+    label: comment.admin
+    link: Comments
+    weight: -8
+    access: true
+  3:
+    label: entity.media.collection
+    link: Media
+    weight: -7
+    access: true
+  4:
+    label: media_directories_ui.media_directories_overview.tab
+    link: 'Media browser'
+    weight: -6
+    access: true
+  6:
+    label: 'views_view:view.files.page_1'
+    link: Files
+    weight: -5
+    access: true
+  7:
+    label: entity.paragraphs_library_item.collection
+    link: Paragraphs
+    weight: -4
+    access: true
+  2:
+    label: llms_txt.llms_txt
+    link: llms.txt
+    weight: -3
+    access: true

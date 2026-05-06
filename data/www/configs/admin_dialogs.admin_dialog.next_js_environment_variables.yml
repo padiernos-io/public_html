@@ -1,0 +1,17 @@
+uuid: 253e6a72-2b6c-4833-8b6a-6b6dc927d58b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ENrGFKoExonBxzaEC4B96GhM-fmqPzuMeaxqewq1Fhk
+id: next_js_environment_variables
+label: 'Next.js Environment Variables'
+type: ops
+dialog_group: contrib_modules
+dialog_type: modal
+dialog_width: '850'
+dialog_title_override: ''
+selection_criteria:
+  entity_type: next_site
+  bundles: {  }
+  key: environment_variables

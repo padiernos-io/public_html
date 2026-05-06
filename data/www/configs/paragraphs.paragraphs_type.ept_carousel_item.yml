@@ -1,0 +1,12 @@
+uuid: e7de3247-65ed-47d0-9aa3-b8e23896efe4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YtKbftJ20RlhAbMlxwbbttKpDr7oOd_NrNquqRUyXK8
+id: ept_carousel_item
+label: 'EPT Carousel Item'
+icon_uuid: null
+icon_default: null
+description: 'Carousel item for EPT Carousel'
+behavior_plugins: {  }

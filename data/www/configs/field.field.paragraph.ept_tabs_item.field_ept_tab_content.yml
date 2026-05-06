@@ -1,0 +1,23 @@
+uuid: 81f71b89-17ae-458e-b8a3-ce032b2f8031
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_tab_content
+    - paragraphs.paragraphs_type.ept_tabs_item
+  module:
+    - options
+_core:
+  default_config_hash: FHi-QeaCukjELTWL55S3DmUxMPC5qvpjm7YoUXlN2_k
+id: paragraph.ept_tabs_item.field_ept_tab_content
+field_name: field_ept_tab_content
+entity_type: paragraph
+bundle: ept_tabs_item
+label: 'Tab content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

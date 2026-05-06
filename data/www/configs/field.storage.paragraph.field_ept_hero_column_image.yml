@@ -1,0 +1,22 @@
+uuid: 144a8b60-e57d-4955-8a38-21372b6d096d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: knr6QfLVidPHSzwjlRdOZ6PqAiVNnXT73--qFC4pZqo
+id: paragraph.field_ept_hero_column_image
+field_name: field_ept_hero_column_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

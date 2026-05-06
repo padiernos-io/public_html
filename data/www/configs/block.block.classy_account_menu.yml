@@ -1,0 +1,32 @@
+uuid: 010176dd-b9d5-44ab-90eb-17a155178f4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - classy
+_core:
+  default_config_hash: KbZgFU8-_2MJXIrL9xne8erqBlgQCGVhC74js67tGlY
+id: classy_account_menu
+theme: classy
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "/landing-page-10\r\n/home-pages"

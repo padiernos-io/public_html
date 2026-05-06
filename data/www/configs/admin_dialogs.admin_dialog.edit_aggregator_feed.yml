@@ -1,0 +1,16 @@
+uuid: 972c083e-d164-46bd-94e5-9259652afea6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fAkhbylXWN0ALSlCQQ8fYzqutGlL9VUpCdlQ-CtVayo
+id: edit_aggregator_feed
+label: 'Edit Aggregator Feed'
+type: paths
+dialog_group: contrib_modules
+dialog_type: modal
+dialog_width: '550'
+dialog_title_override: ''
+selection_criteria:
+  paths:
+    - '/aggregator/sources/*/configure*'

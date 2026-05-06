@@ -1,0 +1,22 @@
+uuid: 7b3fe5a7-5941-448c-a50a-ac23da520c8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+_core:
+  default_config_hash: DN-eUBaWRL5DUM4vAtNI-mr_zEGb_muHymnH4YqvxNI
+id: paragraph.field_ept_sticky_menu_links
+field_name: field_ept_sticky_menu_links
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

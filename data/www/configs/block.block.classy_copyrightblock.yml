@@ -1,0 +1,25 @@
+uuid: 769f233d-02eb-47b8-8321-573106924a6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - copyright_block
+  theme:
+    - classy
+id: classy_copyrightblock
+theme: classy
+region: footer
+weight: -7
+provider: null
+plugin: copyright_block
+settings:
+  id: copyright_block
+  label: 'Copyright block'
+  label_display: '0'
+  provider: copyright_block
+  start_year: '2010'
+  separator: ' - '
+  text:
+    value: '<p>© [site:name], [copyright_statement:dates]</p>'
+    format: basic_html
+visibility: {  }

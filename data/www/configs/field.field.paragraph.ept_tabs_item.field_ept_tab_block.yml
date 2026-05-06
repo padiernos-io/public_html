@@ -1,0 +1,26 @@
+uuid: 7dd28b45-222d-4001-82f6-b70b4223bfbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_tab_block
+    - paragraphs.paragraphs_type.ept_tabs_item
+  module:
+    - block_field
+_core:
+  default_config_hash: Djebt4QCWYRzCydiBvhKgj0bMyEaWAKfY-YBAf7OX4Y
+id: paragraph.ept_tabs_item.field_ept_tab_block
+field_name: field_ept_tab_block
+entity_type: paragraph
+bundle: ept_tabs_item
+label: 'Tab Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids: {  }
+field_type: block_field

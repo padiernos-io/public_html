@@ -1,0 +1,21 @@
+uuid: 872d4204-52f3-4a73-973d-8c3e7fc86506
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: HgeEpS7HHbPsoLeKHrpRrax2ttxvlJADvMU3R-HwVf4
+id: paragraph.field_ept_hero_title_prefix
+field_name: field_ept_hero_title_prefix
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

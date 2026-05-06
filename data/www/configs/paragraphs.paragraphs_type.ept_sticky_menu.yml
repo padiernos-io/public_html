@@ -1,0 +1,12 @@
+uuid: 065e741f-c491-48f0-93ec-08fec5a6bba9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qn_R95HEiL2rEcQHc7gnGgGXQ-Yqd-XbqClfaCTKgVI
+id: ept_sticky_menu
+label: 'EPT Sticky Menu'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Sticky Menu'
+behavior_plugins: {  }

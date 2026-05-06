@@ -1,0 +1,16 @@
+uuid: 0cb12891-e626-494e-8243-ee2be00168ee
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6VVqtYl8bpTGQZGCCsLLOH5i4zlHRwlXt8ndjPrgvPA
+id: add_redirect
+label: 'Add Redirect'
+type: paths
+dialog_group: contrib_modules
+dialog_type: modal
+dialog_width: '650'
+dialog_title_override: ''
+selection_criteria:
+  paths:
+    - '/admin/config/search/redirect/add*'

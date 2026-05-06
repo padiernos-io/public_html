@@ -1,0 +1,12 @@
+uuid: 764e6e24-12dc-47f9-ac24-6d35239e53c5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KAQ05Ri6j17FmntgY7SCHOgGFRtUqdJWrNKlBxVsBsI
+id: ept_stats
+label: 'EPT Stats'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Stats'
+behavior_plugins: {  }

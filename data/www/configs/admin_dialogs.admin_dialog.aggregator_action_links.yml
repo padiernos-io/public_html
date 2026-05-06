@@ -1,0 +1,17 @@
+uuid: 7e1122d6-919e-45c0-b2e7-0536f2356648
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: u14wGIHRB66xHMMIOHfzHdSuutbxF05l0N7kAFGzs7Q
+id: aggregator_action_links
+label: 'Aggregator Action Links'
+type: actions
+dialog_group: contrib_modules
+dialog_type: modal
+dialog_width: '550'
+dialog_title_override: ''
+selection_criteria:
+  routes:
+    - aggregator.feed_add
+    - aggregator.opml_add

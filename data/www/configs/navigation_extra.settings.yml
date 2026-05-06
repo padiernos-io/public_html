@@ -1,7 +1,12 @@
-_core:
-  default_config_hash: SVprdJ7WPrRa5g22doNmpfKAYVsoh711zziV_j74Wgo
-langcode: en
 plugins:
+  blocks:
+    enabled: true
+    weight: 0
+    icon: null
+    hide_core_link: false
+    position: navigation.content
+    navigation_safe_block_ids: ''
+    hidden_navigation_safe_block_ids: ''
   common:
     enabled: true
     weight: 0
@@ -10,15 +15,13 @@ plugins:
     hide_add_new_content: false
     generate_overview_links: true
     override_max_menu_depth: false
-  blocks:
-    enabled: true
-    weight: 0
-    hide_core_link: false
   content:
     enabled: true
     weight: 0
+    icon: null
     recent_items:
-      limit: 5
+      number_of_items: 5
+      hide_empty_list: false
       link: default
     create_items:
       hide_from_navigation_create: false
@@ -27,11 +30,23 @@ plugins:
   files:
     enabled: true
     weight: 0
+    icon: null
     hide_core_link: false
     show_in_media: false
+  forms:
+    enabled: false
+    weight: 4
+    icon: null
+    webform:
+      enable: false
+      link_to_results: false
+  local_tasks:
+    enabled: true
+    weight: 0
   media:
     enabled: true
     weight: 0
+    icon: null
     link_media_library: true
     create_items:
       hide_from_navigation_create: false
@@ -40,14 +55,42 @@ plugins:
   taxonomies:
     enabled: true
     weight: 0
+    icon: null
     create_items:
       hide_from_navigation_create: false
       show_create_new_links: false
       navigation_create_collections: false
+  tools:
+    enabled: false
+    weight: 0
+    icon: null
+    navigation_extra_tools:
+      position: ''
+      group: false
   users:
     enabled: true
     weight: 0
+    icon: null
     roles: true
-    roles_to_hide: {  }
+    roles_to_hide:
+      content_editor: 0
+      administrator: 0
+      permission_navigation: 0
     people: ''
     add_new_user: ''
+  version:
+    enabled: false
+    weight: 0
+    source:
+      provider: ''
+      module: standard
+      file: ''
+      env: ''
+      pattern: ''
+      format: ''
+    output:
+      title: ''
+      description: ''
+      url: ''
+      updates: false
+    environments: {  }

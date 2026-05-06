@@ -1,0 +1,31 @@
+--- a/src/IziMessage.php
++++ b/src/IziMessage.php
+@@ -3,6 +3,7 @@
+ namespace Drupal\izi_message;
+
+ use Drupal\Core\Render\Element\RenderElement;
++use Drupal\big_pipe\Render\Placeholder\BigPipeStrategy;
+
+ /**
+  * Provides pre_render for a messages element.
+@@ -35,10 +36,19 @@ class IziMessage extends RenderElement {
+   public static function generatePlaceholder(array $element) {
+     $build = [
+       '#lazy_builder' => [
+-        __CLASS__ . '::renderMessages',
++        static::class . '::renderMessages',
+         [$element['#display']],
+       ],
+       '#create_placeholder' => TRUE,
++      // Prevent this placeholder being handled by BigPipe. Messages are
++      // very quick to render and this allows pages without other placeholders
++      // to avoid loading BigPipe's JavaScript altogether. Note that while the
++      // BigPipe namespace is referenced, PHP happily uses the '::class' magic
++      // property without needing to load the class, so this works when the
++      // big_pipe module is not installed.
++      '#placeholder_strategy_denylist' => [
++        BigPipeStrategy::class => TRUE,
++      ],
+     ];
+
+     $build = \Drupal::service('render_placeholder_generator')->createPlaceholder($build);

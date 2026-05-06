@@ -1,0 +1,24 @@
+uuid: aadd746d-32c8-42e1-87dc-0b37c301aca6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_stats_item_text
+    - paragraphs.paragraphs_type.ept_stats_item
+  module:
+    - text
+_core:
+  default_config_hash: syABtrl4XuopN2UmpGpkCfjm8LZlB4zLjgHycG4AUww
+id: paragraph.ept_stats_item.field_ept_stats_item_text
+field_name: field_ept_stats_item_text
+entity_type: paragraph
+bundle: ept_stats_item
+label: 'Stats item text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

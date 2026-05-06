@@ -1,0 +1,182 @@
+uuid: 5e310029-a1e2-4f63-9326-c6adebc09c04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_sticky_menu_links
+    - paragraphs.paragraphs_type.ept_sticky_menu
+    - paragraphs.paragraphs_type.ept_sticky_menu_link
+    - paragraphs.paragraphs_type.ept_sticky_menu_links
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: YYGrSzfYFuWkU-muFT9XiYD_FeGBGL6opbyk6XTxlyk
+id: paragraph.ept_sticky_menu.field_ept_sticky_menu_links
+field_name: field_ept_sticky_menu_links
+entity_type: paragraph
+bundle: ept_sticky_menu
+label: 'Menu Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ept_sticky_menu_link: ept_sticky_menu_link
+      ept_sticky_menu_links: ept_sticky_menu_links
+    negate: 0
+    target_bundles_drag_drop:
+      ebt_accordion:
+        weight: 51
+        enabled: false
+      ebt_carousel:
+        weight: 52
+        enabled: false
+      ebt_counter_item:
+        weight: 53
+        enabled: false
+      ebt_slick_slider:
+        weight: 54
+        enabled: false
+      ebt_slideshow:
+        weight: 55
+        enabled: false
+      ebt_stats_item:
+        weight: 56
+        enabled: false
+      ebt_tab:
+        weight: 57
+        enabled: false
+      ebt_tiles_item:
+        weight: 58
+        enabled: false
+      ebt_timeline:
+        weight: 59
+        enabled: false
+      ebt_video_and_image_gallery_item:
+        weight: 60
+        enabled: false
+      ept_accordion:
+        weight: 61
+        enabled: false
+      ept_accordion_section:
+        weight: 62
+        enabled: false
+      ept_basic_button:
+        weight: 63
+        enabled: false
+      ept_block:
+        weight: 64
+        enabled: false
+      ept_bootstrap_button:
+        weight: 65
+        enabled: false
+      ept_carousel:
+        weight: 66
+        enabled: false
+      ept_carousel_item:
+        weight: 67
+        enabled: false
+      ept_columns:
+        weight: 68
+        enabled: false
+      ept_countdown:
+        weight: 69
+        enabled: false
+      ept_counter:
+        weight: 70
+        enabled: false
+      ept_counter_item:
+        weight: 71
+        enabled: false
+      ept_cta:
+        weight: 72
+        enabled: false
+      ept_hero:
+        weight: 73
+        enabled: false
+      ept_image:
+        weight: 74
+        enabled: false
+      ept_image_gallery:
+        weight: 75
+        enabled: false
+      ept_micromodal:
+        weight: 76
+        enabled: false
+      ept_quote:
+        weight: 77
+        enabled: false
+      ept_slick_slider:
+        weight: 78
+        enabled: false
+      ept_slick_slider_item:
+        weight: 79
+        enabled: false
+      ept_slideshow:
+        weight: 80
+        enabled: false
+      ept_slideshow_item:
+        weight: 81
+        enabled: false
+      ept_stats:
+        weight: 82
+        enabled: false
+      ept_stats_item:
+        weight: 83
+        enabled: false
+      ept_sticky_menu:
+        weight: 84
+        enabled: false
+      ept_sticky_menu_link:
+        weight: 85
+        enabled: true
+      ept_sticky_menu_links:
+        weight: 86
+        enabled: true
+      ept_tabs:
+        weight: 87
+        enabled: false
+      ept_tabs_item:
+        weight: 88
+        enabled: false
+      ept_text:
+        weight: 89
+        enabled: false
+      ept_tiles:
+        weight: 90
+        enabled: false
+      ept_tiles_item:
+        weight: 91
+        enabled: false
+      ept_timeline:
+        weight: 92
+        enabled: false
+      ept_timeline_item:
+        weight: 93
+        enabled: false
+      ept_video:
+        weight: 94
+        enabled: false
+      ept_video_and_image_gallery:
+        weight: 95
+        enabled: false
+      ept_video_and_image_gallery_item:
+        weight: 96
+        enabled: false
+      ept_views:
+        weight: 97
+        enabled: false
+      ept_webform:
+        weight: 98
+        enabled: false
+      ept_webform_popup:
+        weight: 99
+        enabled: false
+      images:
+        weight: 100
+        enabled: false
+field_type: entity_reference_revisions
