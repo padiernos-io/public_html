@@ -8,16 +8,17 @@
 #   3. Delegates to `ddev exec php` with the translated arguments.
 set -e
 
-DDEV_ROOT="/home/mikepadiernos/Library/Projects/personal/padiernos.me"
-HOST_ROOT="$DDEV_ROOT"
 CONTAINER_ROOT="/var/www/html"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DDEV_ROOT="$(dirname "$SCRIPT_DIR")"
+HOST_ROOT="$DDEV_ROOT"
 TWIGGY_CACHE="$SCRIPT_DIR/twiggy-cache"
 
 # Sync the latest phpUtils files from the active Twiggy extension into the
 # project directory so DDEV can reach them.
-TWIGGY_PHP_UTILS=$(ls -d /home/mikepadiernos/.vscode-insiders/extensions/moetelo.twiggy-*/dist/phpUtils 2>/dev/null | sort -V | tail -1)
+VSCODE_EXTENSIONS_DIR="${HOME}/.vscode-insiders/extensions"
+TWIGGY_PHP_UTILS=$(ls -d "$VSCODE_EXTENSIONS_DIR"/moetelo.twiggy-*/dist/phpUtils 2>/dev/null | sort -V | tail -1)
 if [ -n "$TWIGGY_PHP_UTILS" ]; then
     mkdir -p "$TWIGGY_CACHE"
     cp -f "$TWIGGY_PHP_UTILS"/*.php "$TWIGGY_CACHE/"
