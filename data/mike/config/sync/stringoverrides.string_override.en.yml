@@ -1,7 +1,0 @@
-contexts:
-  -
-    context: ''
-    translations:
-      -
-        source: 'Simple XML Sitemap'
-        translation: Sitemap
