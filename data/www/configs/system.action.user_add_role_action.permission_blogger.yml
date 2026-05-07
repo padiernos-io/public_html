@@ -1,0 +1,14 @@
+uuid: 59cc1433-b910-405d-85df-e9d3a4e24449
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.permission_blogger
+  module:
+    - user
+id: user_add_role_action.permission_blogger
+label: 'Add the Blogger Access role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: permission_blogger

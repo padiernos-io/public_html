@@ -1,0 +1,6 @@
+{
+  "twiggy.framework": "twig",
+  "twiggy.vanillaTwigEnvironmentPath": "/home/mikepadiernos/Library/Projects/personal/padiernos.me/web/themes/custom/matter/.vscode/twig-env.php",
+  "twiggy.phpExecutable": "/home/mikepadiernos/Library/Projects/personal/padiernos.me/web/themes/custom/matter/.vscode/php-ddev.sh",
+  "composerCompanion.executablePath": "vendor/bin/composer"
+}

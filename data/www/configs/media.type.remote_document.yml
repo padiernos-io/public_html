@@ -1,0 +1,23 @@
+uuid: 916f570d-d142-4961-a05a-f8e4507e6143
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_remote_document
+third_party_settings:
+  crop:
+    image_field: null
+_core:
+  default_config_hash: WiwQdYA_w1N9LEewi4N3lKpNYCm3oAjgb8izzZg8bn0
+id: remote_document
+label: 'Document [Remote]'
+description: 'A remotely hosted document from Figma or Canva.'
+source: 'oembed:document'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_oembed_document
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers: {  }
+field_map: {  }

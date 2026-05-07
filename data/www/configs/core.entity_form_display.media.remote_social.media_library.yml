@@ -1,0 +1,35 @@
+uuid: 9b5b7110-e290-43ae-8170-7ad933a1f13f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.remote_social.field_media_oembed_social
+    - media.type.remote_social
+_core:
+  default_config_hash: A0CaQXbrEAM9Su4fVR9xLkmsRHt3JJ2Z271zuhEHkIE
+id: media.remote_social.media_library
+targetEntityType: media
+bundle: remote_social
+mode: media_library
+content:
+  directory:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_oembed_social: true
+  path: true
+  status: true
+  uid: true

@@ -1,0 +1,14 @@
+Fix PHP 8.4 deprecations: implicit nullable type and optional param before required params.
+
+diff --git a/src/Breadcrumb/BreadcrumbManagerBuilder.php b/src/Breadcrumb/BreadcrumbManagerBuilder.php
+--- a/src/Breadcrumb/BreadcrumbManagerBuilder.php
++++ b/src/Breadcrumb/BreadcrumbManagerBuilder.php
+@@ -84,7 +84,7 @@
+     TitleResolverInterface $title_resolver,
+     AccountInterface $current_user,
+     CurrentPathStack $current_path,
+-    PathMatcherInterface $path_matcher = NULL,
++    ?PathMatcherInterface $path_matcher,
+     BreadcrumbTitleResolverManager $title_resolver_manager,
+     ModuleHandlerInterface $module_handler
+   ) {

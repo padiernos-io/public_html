@@ -1,0 +1,23 @@
+uuid: 5299038c-edc4-4e20-a93d-e2545811ee0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_remote_image
+third_party_settings:
+  crop:
+    image_field: null
+_core:
+  default_config_hash: ZxaHcQX42V4pnWrrRoVa5StLBqa-vogiIyOZDVG4QoY
+id: remote_image
+label: 'Image [Remote]'
+description: 'A remotely hosted image.'
+source: 'oembed:image'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_oembed_image
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers: {  }
+field_map: {  }

@@ -2,7 +2,7 @@ uuid: 955af04a-1bce-45a0-96e6-5cbef01a898f
 langcode: en
 status: true
 dependencies: {  }
-name: Media
+name: 'Media Folders'
 vid: media
 description: null
 weight: 0

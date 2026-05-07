@@ -5,8 +5,8 @@ dependencies:
   module:
     - navigation
 id: permission_navigation
-label: Navigation
-weight: 5
+label: 'Navigation Access'
+weight: -8
 is_admin: false
 permissions:
   - 'access navigation'

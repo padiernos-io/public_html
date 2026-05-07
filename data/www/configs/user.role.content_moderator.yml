@@ -1,0 +1,9 @@
+uuid: 4bd32bc1-4271-4da0-b64b-1bea076232ba
+langcode: en
+status: true
+dependencies: {  }
+id: content_moderator
+label: 'Content Moderator'
+weight: -5
+is_admin: false
+permissions: {  }

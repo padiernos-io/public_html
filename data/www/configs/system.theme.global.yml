@@ -14,3 +14,11 @@ logo:
   path: ''
   url: null
   use_default: true
+ui_styles_entity_status_unpublished: {  }
+logo_style: _none
+logo_alt: padiernos.me
+logo_title: padiernos.me
+logo_loading: lazy
+logo_fetchpriority: auto
+logo_decoding: auto
+debug_enabled: 0

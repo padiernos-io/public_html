@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: sMNBLjxnh_EOsY6sRT2Wy02SnrL3Eh1-GAGrPlGkyqo
+server_url: 'https://cloud.padiernos.me'
+webdav_path: '/remote.php/dav/files/{username}/'
+enable_mount_log: false
+operation_mode: mount
+sync_direction: pull
+sync_interval: 0
+enable_sync_log: false

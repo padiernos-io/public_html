@@ -1,0 +1,20 @@
+uuid: a927b4a0-5c73-4493-b75c-b3817e00cd9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: mfR7VEi_pSh_XGPZkw5-fLGud58Mjl9QOW9Htc3J_N8
+name: ultrawide_small
+label: 'Ultrawide Small'
+effects:
+  a2a33304-0937-4b38-9ca4-27dd35702b4f:
+    uuid: a2a33304-0937-4b38-9ca4-27dd35702b4f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 215
+      crop_type: focal_point
+pipeline: __default__

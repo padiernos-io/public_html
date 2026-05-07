@@ -1,0 +1,62 @@
+uuid: 80630b75-cc74-4460-8a2f-6dc4426af57b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.remote_document.field_media_oembed_document
+    - media.type.remote_document
+  module:
+    - media
+    - path
+_core:
+  default_config_hash: z8M6YUJswKPi8J1RtMaY4aM9TzlTZ5MBMsrBOmaJ9NQ
+id: media.remote_document.default
+targetEntityType: media
+bundle: remote_document
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  directory:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_oembed_document:
+    type: oembed_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  name: true

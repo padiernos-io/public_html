@@ -1,0 +1,18 @@
+uuid: 755517a1-e9d2-410e-b998-18966ee2f882
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OMSf6VDmW_vSd8Kw3Nub8x27jiYJSJW5jIfG3xumtYw
+name: origenal_medium
+label: 'Origenal Medium'
+effects:
+  07dcf25e-6891-44ba-a4d6-4bee07d94f8f:
+    uuid: 07dcf25e-6891-44ba-a4d6-4bee07d94f8f
+    id: image_scale
+    weight: 1
+    data:
+      width: 700
+      height: null
+      upscale: false
+pipeline: __default__

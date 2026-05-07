@@ -1,0 +1,9 @@
+uuid: 5cd1e328-25c5-4fa2-a58f-ecc8eb2664f5
+langcode: en
+status: true
+dependencies: {  }
+id: permission_blogger
+label: 'Blogger Access'
+weight: -7
+is_admin: false
+permissions: {  }

@@ -1,0 +1,21 @@
+uuid: 0535de04-5d0c-43cb-a15f-874256c3bb54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_oembed_social
+    - media.type.remote_social
+_core:
+  default_config_hash: ViKNfi9EMW_ssGh_zbM14SnS8gM1Tid2mNsLVyYrrJc
+id: media.remote_social.field_media_oembed_social
+field_name: field_media_oembed_social
+entity_type: media
+bundle: remote_social
+label: 'Social URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

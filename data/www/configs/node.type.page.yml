@@ -1,12 +1,38 @@
-uuid: f0f58625-b9b6-4d28-aa48-4616f9576e5a
+uuid: bd6e3444-f656-4b35-a547-7cddeb964b3a
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+    - revision_manager
+    - type_tray
+third_party_settings:
+  type_tray:
+    type_category: _none
+    type_thumbnail: ''
+    type_icon: ''
+    type_description: ''
+    existing_nodes_link_text: 'View existing <em class="placeholder">Basic page</em> content'
+    type_weight: 0
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  revision_manager:
+    age:
+      id: age
+      status: false
+      settings:
+        age: 6
+    amount:
+      id: amount
+      status: false
+      settings:
+        amount: 3
 _core:
   default_config_hash: i0snV8Wj--OkRW12UdachUiYiz3FbeMwHu_pZYfzKLc
-name: 'Basic page'
+name: Page
 type: page
-description: "Use <em>basic pages</em> for your static content, such as an 'About us' page."
+description: "Use <em>pages</em> for your static content or landing pages, such as an 'About us' page or 'Services' page."
 help: null
 new_revision: true
 preview_mode: 1

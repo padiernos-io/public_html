@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: 3U6sHS0xqnEGwbTJo7bLZCYbYwWFqKiNVhuE6FDgcN8
+enabled_entities: {  }
+defaults: {  }
+disable_automatic_queueing: false
+verbose_log: false

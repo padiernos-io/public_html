@@ -1,0 +1,18 @@
+uuid: 8855ae7f-1aa6-4f3e-bad0-89696e3cef6a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8NtkW6etertKmZbDyHgAzv2xnOe5Hx1oVQTDMLWK9co
+name: origenal_small
+label: 'Origenal Small'
+effects:
+  a412bebe-956e-45b3-8f27-b7ecd39ea31c:
+    uuid: a412bebe-956e-45b3-8f27-b7ecd39ea31c
+    id: image_scale
+    weight: 1
+    data:
+      width: 500
+      height: null
+      upscale: false
+pipeline: __default__

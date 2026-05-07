@@ -1,0 +1,14 @@
+uuid: 102a429f-8e39-4604-8532-3e0e90336d00
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.permission_blogger
+  module:
+    - user
+id: user_remove_role_action.permission_blogger
+label: 'Remove the Blogger Access role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: permission_blogger

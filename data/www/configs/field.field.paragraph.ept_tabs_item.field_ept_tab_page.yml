@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_ept_tab_page
-    - node.type.page
     - paragraphs.paragraphs_type.ept_tabs_item
 _core:
   default_config_hash: lSW-pbI_Dd3D3Pmk9Ey9S92Si1kgRJBouroj9i9FcxI
@@ -21,8 +20,7 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
-    target_bundles:
-      page: page
+    target_bundles: {  }
     sort:
       field: _none
       direction: ASC

@@ -1,0 +1,33 @@
+uuid: 13d46b1a-021a-4a68-bb89-f1662fd8a5c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.remote_social.field_media_oembed_social
+    - image.style.medium
+    - media.type.remote_social
+  module:
+    - image
+_core:
+  default_config_hash: jDYy_1NaNOsB4lmLqqfcmoPNbNJvg-np1FZ8EPEhJdc
+id: media.remote_social.media_library
+targetEntityType: media
+bundle: remote_social
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_oembed_social: true
+  name: true
+  search_api_excerpt: true
+  uid: true

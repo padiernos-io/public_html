@@ -12,8 +12,8 @@ dependencies:
 _core:
   default_config_hash: xLG41YbRo2NP-0SgRNTkMzLEuaeibanGXgUTbdIcIIg
 id: anonymous
-label: 'Anonymous user'
-weight: 0
+label: 'Anonymous User'
+weight: -10
 is_admin: false
 permissions:
   - 'access comments'

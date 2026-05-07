@@ -1,0 +1,20 @@
+uuid: a0f4d7dd-3a00-44a3-a4f2-0268a926df79
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: yjN0iSju_yupgRdj83FefCsRRCxBI1yhFflhmpS-FWs
+name: traditional_xxxlarg
+label: 'Traditional XXX Larg'
+effects:
+  f93f7dcc-3ea1-4da8-b651-de7a2c8c2ba5:
+    uuid: f93f7dcc-3ea1-4da8-b651-de7a2c8c2ba5
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 3600
+      height: 2700
+      crop_type: focal_point
+pipeline: __default__

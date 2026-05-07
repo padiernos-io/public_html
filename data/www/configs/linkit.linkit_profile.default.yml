@@ -17,7 +17,17 @@ matchers:
       metadata: '[node:content-type:name] #[node:nid] | [node:created:medium] by [node:author]'
       bundles: {  }
       group_by_bundle: false
+      substitution_type: canonical
+      limit: 100
       include_unpublished: false
+    weight: 0
+  592b29ca-d6c2-431c-8cce-4fa9314b0b88:
+    id: 'entity:media'
+    uuid: 592b29ca-d6c2-431c-8cce-4fa9314b0b88
+    settings:
+      metadata: ''
+      bundles: {  }
+      group_by_bundle: false
       substitution_type: canonical
       limit: 100
     weight: 0

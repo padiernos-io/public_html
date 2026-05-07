@@ -1,22 +1,20 @@
-uuid: 39e175b4-0ba1-4e6d-959f-06820d851e18
+uuid: a63b5dbe-1ab0-4c18-a82a-0321d1b54c38
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.page
+    - node.type.blog_post
   module:
     - text
-_core:
-  default_config_hash: KHu9I-pR4FnP79crRJ5gVD_1mKGSZcJsdIm9bn64iFg
-id: node.page.body
+id: node.blog_post.body
 field_name: body
 entity_type: node
-bundle: page
+bundle: blog_post
 label: Body
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

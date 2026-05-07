@@ -381,6 +381,7 @@
         "drupal/publication_date": "^3.0",
         "drupal/purge": "^3.6",
         "drupal/purge_purger_http": "1.x-dev@dev",
+        "drupal/purl": "^2.0",
         "drupal/rabbit_hole": "1.x-dev@dev",
         "drupal/read_time_calculator": "^1.0",
         "drupal/reading_progress_bar": "^2.2",
@@ -673,6 +674,9 @@
             },
             "drupal/book_access_code": {
                 "Automated Drupal 11 compatibility fixes for book_access_code": "https://www.drupal.org/files/issues/2024-03-15/book_access_code.2.0.1.rector.patch"
+            },
+            "drupal/breadcrumb_manager": {
+                "Fix PHP 8.4 deprecation: implicit nullable type on $path_matcher parameter": "patches/breadcrumb-manager-php84-nullable-path-matcher.patch"
             },
             "drupal/context": {
                 "Fix PHP 8.4 deprecations": "https://www.drupal.org/files/issues/2025-03-17/context-fix-php-84-deprecations-3513516-62.patch"

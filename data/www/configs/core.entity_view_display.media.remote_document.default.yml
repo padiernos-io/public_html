@@ -1,0 +1,31 @@
+uuid: c1148c52-1364-43c8-809a-982a66c2898b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.remote_document.field_media_oembed_document
+    - media.type.remote_document
+  module:
+    - media
+_core:
+  default_config_hash: lHFPOGiupt1_xJN2m9TzsP0NUB7-D_HJomot73KDU1Q
+id: media.remote_document.default
+targetEntityType: media
+bundle: remote_document
+mode: default
+content:
+  field_media_oembed_document:
+    type: oembed
+    label: visually_hidden
+    weight: 0
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

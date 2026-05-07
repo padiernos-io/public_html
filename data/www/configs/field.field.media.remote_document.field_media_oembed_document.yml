@@ -1,0 +1,21 @@
+uuid: 0d111a6b-2b88-47f3-94bf-27a707380a1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_oembed_document
+    - media.type.remote_document
+_core:
+  default_config_hash: oA3wmJ_m5_mWK11KRBLQapaSz222t9H8TyQrw-zUNZY
+id: media.remote_document.field_media_oembed_document
+field_name: field_media_oembed_document
+entity_type: media
+bundle: remote_document
+label: 'Document URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

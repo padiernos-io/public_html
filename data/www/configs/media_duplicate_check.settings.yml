@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: LGywR-97PovuTgpaTDsIwQiFMScuCinFnMsfW6jZ2hk
+enabled: true
+check_media_types:
+  - image
+  - document
+  - svg_image
+check_by_hash: true
+check_filename_only: false
+case_sensitive: false

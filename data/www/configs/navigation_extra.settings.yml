@@ -3,17 +3,17 @@ plugins:
     enabled: true
     weight: 0
     icon: null
-    hide_core_link: false
-    position: navigation.content
+    hide_core_link: true
+    position: ''
     navigation_safe_block_ids: ''
     hidden_navigation_safe_block_ids: ''
   common:
     enabled: true
     weight: 0
-    group_collections: ''
-    hide_empty_collections: false
+    group_collections: top
+    hide_empty_collections: true
     hide_add_new_content: false
-    generate_overview_links: true
+    generate_overview_links: false
     override_max_menu_depth: false
   content:
     enabled: true
@@ -24,22 +24,22 @@ plugins:
       hide_empty_list: false
       link: default
     create_items:
-      hide_from_navigation_create: false
-      show_create_new_links: false
+      hide_from_navigation_create: true
+      show_create_new_links: true
       navigation_create_collections: false
   files:
     enabled: true
     weight: 0
     icon: null
-    hide_core_link: false
+    hide_core_link: true
     show_in_media: false
   forms:
-    enabled: false
+    enabled: true
     weight: 4
     icon: null
     webform:
-      enable: false
-      link_to_results: false
+      enable: true
+      link_to_results: true
   local_tasks:
     enabled: true
     weight: 0
@@ -49,22 +49,25 @@ plugins:
     icon: null
     link_media_library: true
     create_items:
-      hide_from_navigation_create: false
-      show_create_new_links: false
-      navigation_create_collections: false
+      hide_from_navigation_create: true
+      show_create_new_links: true
+      navigation_create_collections: true
   taxonomies:
     enabled: true
     weight: 0
     icon: null
     create_items:
-      hide_from_navigation_create: false
-      show_create_new_links: false
-      navigation_create_collections: false
+      hide_from_navigation_create: true
+      show_create_new_links: true
+      navigation_create_collections: true
   tools:
-    enabled: false
+    enabled: true
     weight: 0
     icon: null
     navigation_extra_tools:
+      position: ''
+      group: false
+    devel:
       position: ''
       group: false
   users:

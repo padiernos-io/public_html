@@ -1,0 +1,13 @@
+uuid: 15f75f41-c08d-4006-867a-a9d10f32d1f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: sAHzldMn8Ph9v05uqbl8YAkWUuqIGbrnz_7tznVFTY8
+id: media.ultrawide
+label: Ultrawide
+description: null
+targetEntityType: media
+cache: true

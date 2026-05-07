@@ -1,12 +1,17 @@
 uuid: 6387164d-7f16-4c0b-9183-7aa745422a54
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: null
 _core:
   default_config_hash: NsVkvD5RbJS6kL-3uUgn718RpXYxCy8_-mQoS9jUU1U
 id: remote_video
-label: 'Remote video'
-description: 'A video hosted on an external site (for example, YouTube or Vimeo).'
+label: 'Video [Remote]'
+description: 'A remotely hosted video on an external site (for example, YouTube or Vimeo).'
 source: 'oembed:video'
 queue_thumbnail_downloads: false
 new_revision: true

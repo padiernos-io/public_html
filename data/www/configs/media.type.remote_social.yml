@@ -1,0 +1,23 @@
+uuid: ad8a5621-d28e-4b9f-baed-a9ba0e9f9da3
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_remote_social
+third_party_settings:
+  crop:
+    image_field: null
+_core:
+  default_config_hash: WvyL_gIjTodsMngmYELlxG_RZonBl-PIopB0DO8vCwc
+id: remote_social
+label: 'Social [Remote]'
+description: 'A remotely hosted social post from Facebook or Instagram.'
+source: 'oembed:social'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_oembed_social
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers: {  }
+field_map: {  }

@@ -1,0 +1,38 @@
+uuid: 5df40d60-9e7d-4251-91da-1feef5b4f1b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - revision_manager
+    - type_tray
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:menu_link_content:6741044e-d80d-4c2b-b152-2d1023978b6a'
+  type_tray:
+    type_category: _none
+    type_thumbnail: ''
+    type_icon: ''
+    type_description: ''
+    existing_nodes_link_text: 'View existing <em class="placeholder">Blog Post</em> content'
+    type_weight: 0
+  revision_manager:
+    age:
+      id: age
+      status: false
+      settings:
+        age: 6
+    amount:
+      id: amount
+      status: false
+      settings:
+        amount: 3
+name: 'Blog Post'
+type: blog_post
+description: 'Use <em>blog posts</em> for time-sensitive or personal content like news, press releases or opinion posts.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

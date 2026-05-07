@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: A-NYbAZrlfFKvYGlc4x7RtXKpa34FzV_g3mIDbpru7s
+logo_style: _none
+logo_path: ''
+logo_alt: padiernos.me
+logo_title: padiernos.me
+logo_loading: lazy
+logo_fetchpriority: auto
+logo_decoding: auto
+debug_enabled: false

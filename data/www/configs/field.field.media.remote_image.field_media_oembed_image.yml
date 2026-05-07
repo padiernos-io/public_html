@@ -1,0 +1,21 @@
+uuid: 84fb8f43-6936-491a-8c15-52301d187d19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_oembed_image
+    - media.type.remote_image
+_core:
+  default_config_hash: dNdPT69TBrC5iuuB4WC65M9Riibfx8flgG9EevKWQs0
+id: media.remote_image.field_media_oembed_image
+field_name: field_media_oembed_image
+entity_type: media
+bundle: remote_image
+label: 'Image URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

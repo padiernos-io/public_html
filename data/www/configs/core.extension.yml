@@ -2,12 +2,17 @@ _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
   admin_dialogs: 0
+  alt_text_bulk_edit: 0
   announcements_feed: 0
+  audio_embed_media_core: 0
   automated_cron: 0
+  bg_image_formatter: 0
   block: 0
   block_content: 0
   block_field: 0
   block_form_alter: 0
+  breadcrumb_manager: 0
+  breadcrumb_manager_context: 0
   breakpoint: 0
   captcha: 0
   ckeditor5: 0
@@ -15,7 +20,7 @@ module:
   comment: 0
   components: 0
   config: 0
-  config_filter: 0
+  config_distro: 0
   config_normalizer: 0
   config_revision: 0
   config_snapshot: 0
@@ -25,12 +30,13 @@ module:
   context_ui: 0
   contextual: 0
   copyright_block: 0
+  crop: 0
   custom_status_report: 0
   cva: 0
-  dashboard: 0
   datetime: 0
   dblog: 0
   devel: 0
+  diff: 0
   display_builder: 0
   display_builder_entity_view: 0
   display_builder_page_layout: 0
@@ -43,6 +49,7 @@ module:
   embed: 0
   entity: 0
   entity_browser: 0
+  entity_browser_entity_form: 0
   entity_embed: 0
   entity_reference_revisions: 0
   entity_usage: 0
@@ -75,31 +82,45 @@ module:
   ept_webform: 0
   ept_webform_popup: 0
   field: 0
+  field_cache: 0
   field_group: 0
   field_ui: 0
   fieldblock: 0
   file: 0
+  file_mdm: 0
+  file_mdm_exif: 0
+  file_mdm_font: 0
   filter: 0
   fix_views_autocomplete: 0
   flexible_permissions: 0
+  focal_point: 0
   form_decorator: 0
   gin_everywhere: 0
   gin_moderation_sidebar: 0
   gin_toolbar: 0
+  gin_type_tray: 0
   glightbox: 0
   glightbox_media_video: 0
+  headline_group: 0
   help: 0
   honeypot: 0
   htaccess: 0
   humanstxt: 0
   image: 0
+  image_effects: 0
+  image_style_quality: 0
+  image_styles_builder: 0
+  imageapi_optimize: 0
+  imageapi_optimize_binaries: 0
   imagick: 0
   improve_line_breaks_filter: 0
+  inline_entity_form: 0
   inline_form_errors: 0
   izi_message: 0
   jquery_ui: 0
   jquery_ui_accordion: 0
   jquery_ui_tabs: 0
+  key: 0
   kint: 0
   layout_builder: 0
   layout_builder_customizer: 0
@@ -112,7 +133,9 @@ module:
   link_attributes: 0
   linkit: 0
   linkit_attributes: 0
+  linkit_media_library: 0
   llms_txt: 0
+  logo_image_enhanced: 0
   manage_display: 0
   manage_display_extras: 0
   manage_display_node_created: 0
@@ -120,8 +143,23 @@ module:
   media_directories: 0
   media_directories_editor: 0
   media_directories_ui: 0
+  media_duplicate_check: 0
+  media_entity_audio: 0
+  media_entity_browser: 0
   media_library: 0
+  media_library_bulk_upload: 0
   media_library_form_element: 0
+  media_name: 0
+  media_remote: 0
+  media_remote_audio: 0
+  media_remote_document: 0
+  media_remote_image: 0
+  media_remote_social: 0
+  media_thumbnails: 0
+  media_thumbnails_epub: 0
+  media_thumbnails_pdf: 0
+  media_thumbnails_svg: 0
+  media_thumbnails_video: 0
   menu_link_content: 0
   menu_ui: 0
   mgv: 0
@@ -130,6 +168,7 @@ module:
   navigation: 0
   navigation_extra: 0
   navigation_extra_tools: 0
+  nextcloud_webdav_mount: 0
   node: 0
   node_read_time: 0
   node_token_filter: 0
@@ -150,18 +189,27 @@ module:
   path: 0
   path_alias: 0
   pathauto_update: 0
+  profile: 0
   readmore: 0
   realname: 0
+  responsive_background_image: 0
+  responsive_bg_image_formatter: 0
   responsive_image: 0
+  revision_manager: 0
   robotstxt: 0
   robotstxt_utils: 0
   sdc_component_library: 0
   search_api: 0
   shortcut: 0
   stringoverrides: 0
+  svg_image: 0
+  svg_image_responsive: 0
   syslog: 0
   system: 0
   tabtamer: 0
+  tagify: 0
+  tagify_icons: 0
+  tagify_user_list: 0
   tardis: 0
   taxonomy: 0
   text: 0
@@ -174,6 +222,7 @@ module:
   twig_casings: 0
   twig_placeholders: 0
   twig_tweak: 0
+  type_tray: 0
   ui_examples: 0
   ui_examples_defaults: 0
   ui_icons: 0
@@ -212,9 +261,11 @@ module:
   user: 0
   views_ui: 0
   viewsreference: 0
+  webassets: 0
   webform: 0
   webform_access: 0
   webform_node: 0
+  webform_options_custom: 0
   webform_revision_ui: 0
   webform_ui: 0
   workflows: 0
@@ -222,9 +273,11 @@ module:
   views: 10
   paragraphs: 11
   paragraphs_ee: 15
+  publication_date: 99
   config_provider: 100
   twigsuggest: 100
   standard: 1000
+  vertical_tabs_config: 1001
 theme:
   claro: 0
   gin: 0

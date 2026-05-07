@@ -1,0 +1,18 @@
+uuid: 3086be47-f3ef-499b-af07-27b7c5abc96d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: square_medium
+label: 'Square Medium'
+effects:
+  7346943a-c93e-41c6-8630-3a0a449054c4:
+    uuid: 7346943a-c93e-41c6-8630-3a0a449054c4
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 700
+      crop_type: focal_point
+pipeline: ''
