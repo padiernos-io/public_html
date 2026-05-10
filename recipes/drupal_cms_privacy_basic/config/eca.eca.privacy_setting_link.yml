@@ -13,6 +13,7 @@ third_party_settings:
     label: 'Show link to privacy settings'
 id: privacy_setting_link
 weight: 0
+template: null
 events:
   config__save_config:
     plugin: 'config:save'

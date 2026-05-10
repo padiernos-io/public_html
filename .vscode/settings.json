@@ -2,5 +2,5 @@
   "twiggy.framework": "twig",
   "twiggy.vanillaTwigEnvironmentPath": "${workspaceFolder}/.vscode/twig-env.php",
   "twiggy.phpExecutable": "${workspaceFolder}/.vscode/php-ddev.sh",
-  "composerCompanion.executablePath": "${workspaceFolder}/vendor/bin/composer",
+  "composerCompanion.executablePath": "/home/mikepadiernos/Library/Projects/personal/padiernos.me/.vscode/composer-ddev.sh",
 }

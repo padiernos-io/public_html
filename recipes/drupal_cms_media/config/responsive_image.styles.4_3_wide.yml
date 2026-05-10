@@ -7,6 +7,8 @@ dependencies:
     - image.style.4_3_1800x1350_focal_point_webp
     - image.style.4_3_500x375_focal_point_webp
     - image.style.4_3_700x525_focal_point_webp
+  module:
+    - eca_render
   enforced:
     config:
       - eca.eca.define_breakpoints

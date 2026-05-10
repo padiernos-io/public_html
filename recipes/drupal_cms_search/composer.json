@@ -9,5 +9,5 @@
         "drupal/search_api": "^1.39",
         "drupal/search_api_exclude": "^2"
     },
-    "version": "2.1.0"
+    "version": "2.1.1"
 }

@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - filter.format.content_format
-    - linkit.linkit_profile.default
   module:
     - ckeditor5
 format: content_format
@@ -45,6 +44,7 @@ settings:
       properties:
         reversed: true
         startIndex: true
+        styles: false
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }

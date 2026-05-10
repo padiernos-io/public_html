@@ -139,5 +139,3 @@ config:
       disable: {}
     views.view.scheduler_scheduled_taxonomy_term:
       disable: {}
-    workflows.workflow.basic_editorial:
-      addNodeTypes: ['page']

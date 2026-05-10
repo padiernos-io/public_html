@@ -11,5 +11,5 @@
         "drupal/menu_link_attributes": "^1.5",
         "drupal/modeler_api": "^1"
     },
-    "version": "2.1.0"
+    "version": "2.1.1"
 }

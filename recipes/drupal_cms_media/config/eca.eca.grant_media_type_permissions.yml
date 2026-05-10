@@ -14,6 +14,7 @@ third_party_settings:
     version: 1.0.0
 id: grant_media_type_permissions
 weight: 0
+template: null
 events:
   config__save_1_1:
     plugin: 'config:save'

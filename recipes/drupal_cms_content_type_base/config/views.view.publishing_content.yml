@@ -3,9 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - workflows.workflow.basic_editorial
   module:
-    - content_moderation
     - node
     - user
 id: publishing_content
@@ -578,9 +576,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -625,8 +620,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -665,8 +658,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -709,8 +700,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -1213,10 +1202,10 @@ display:
       use_more_always: true
       use_more_text: 'See all drafts'
       link_display: custom_url
-      link_url: '/admin/content/moderated'
+      link_url: /admin/content/moderated
       display_comment: 'Shows a list of all drafted for the currently logged-in user.'
       exposed_block: false
-      display_extenders: []
+      display_extenders: {  }
       block_description: 'My drafts'
       block_category: Dashboard
       allow:
@@ -1586,9 +1575,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
             min_placeholder: ''
             max_placeholder: ''
             placeholder: ''
@@ -1636,9 +1622,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
             min_placeholder: ''
             max_placeholder: ''
             placeholder: ''
@@ -1679,7 +1662,7 @@ display:
       link_display: custom_url
       link_url: /admin/content/scheduled
       exposed_block: false
-      display_extenders: []
+      display_extenders: {  }
       block_description: Scheduled
       block_category: Dashboard
       allow:

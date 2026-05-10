@@ -28,7 +28,7 @@ if [ -n "$TWIGGY_PHP_UTILS" ]; then
         "$TWIGGY_CACHE/printTwigEnvironment.php"
 fi
 
-CONTAINER_CACHE="$CONTAINER_ROOT/web/themes/custom/matter/.vscode/twiggy-cache"
+CONTAINER_CACHE="$CONTAINER_ROOT/.vscode/twiggy-cache"
 
 # Build the translated argument list.
 ARGS=()

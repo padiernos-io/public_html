@@ -10,6 +10,7 @@ third_party_settings:
     label: 'Authentication redirects'
 id: auth_redirects
 weight: 0
+template: null
 events:
   user__logout:
     plugin: 'user:logout'

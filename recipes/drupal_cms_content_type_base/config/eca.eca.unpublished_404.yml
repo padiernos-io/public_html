@@ -13,6 +13,7 @@ third_party_settings:
     label: 'Unpublished 404'
 id: unpublished_404
 weight: 0
+template: null
 events:
   kernel__exception_status_code_exception:
     plugin: 'kernel:exception_status_code'

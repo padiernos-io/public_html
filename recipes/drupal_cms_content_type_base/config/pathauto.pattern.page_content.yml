@@ -1,11 +1,11 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   enforced:
     config:
       - node.type.page
-  module:
-    - node
 id: page_content
 label: 'Page content'
 type: 'canonical_entities:node'

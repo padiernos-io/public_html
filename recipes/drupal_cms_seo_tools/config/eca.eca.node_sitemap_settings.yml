@@ -14,6 +14,7 @@ third_party_settings:
     label: 'Automatically configure sitemap settings for content types'
 id: node_sitemap_settings
 weight: 0
+template: null
 events:
   config__save_config:
     plugin: 'config:save'

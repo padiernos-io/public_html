@@ -10,7 +10,6 @@ dependencies:
     - node.type.page
   module:
     - user
-third_party_settings: {  }
 id: node.page.card
 targetEntityType: node
 bundle: page
@@ -36,5 +35,4 @@ hidden:
   content_moderation_control: true
   field_content: true
   field_tags: true
-  langcode: true
   links: true

@@ -19,5 +19,5 @@
         "drupal/token": "^1",
         "drupal/trash": "^3.0.13"
     },
-    "version": "2.1.0"
+    "version": "2.1.1"
 }

@@ -7,9 +7,7 @@ dependencies:
     - field.field.node.page.field_featured_image
     - field.field.node.page.field_tags
     - node.type.page
-    - workflows.workflow.basic_editorial
   module:
-    - content_moderation
     - media_library
     - path
     - scheduler

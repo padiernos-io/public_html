@@ -5,6 +5,8 @@ dependencies:
     - field.field.media.svg_image.field_media_svg_image
     - image.style.thumbnail
     - media.type.svg_image
+  module:
+    - svg_image
 id: media.svg_image.default
 targetEntityType: media
 bundle: svg_image
@@ -26,7 +28,7 @@ content:
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -50,6 +52,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  path: true
   publish_on: true
   publish_state: true
   unpublish_on: true

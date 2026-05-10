@@ -12,6 +12,7 @@ third_party_settings:
     version: 1.0.0
 id: define_breakpoints
 weight: 0
+template: null
 events:
   eca_render__breakpoints_alter_1ni95xs:
     plugin: 'eca_render:breakpoints_alter'
@@ -29,7 +30,13 @@ actions:
     plugin: eca_render_alter_breakpoint
     configuration:
       id: custom.sm
-      definition: "label: Small\nmediaQuery: 'all and (min-width: 500px)'\nweight: 0\nmultipliers:\n  - 1x\ngroup: custom"
+      definition: |-
+        label: Small
+        mediaQuery: 'all and (min-width: 500px)'
+        weight: 0
+        multipliers:
+          - 1x
+        group: custom
     successors:
       -
         id: eca_render_alter_breakpoint_176hkyu
@@ -39,7 +46,13 @@ actions:
     plugin: eca_render_alter_breakpoint
     configuration:
       id: custom.md
-      definition: "label: Medium\nmediaQuery: 'all and (min-width: 700px)'\nweight: 1\nmultipliers:\n  - 1x\ngroup: custom"
+      definition: |-
+        label: Medium
+        mediaQuery: 'all and (min-width: 700px)'
+        weight: 1
+        multipliers:
+          - 1x
+        group: custom
     successors:
       -
         id: eca_render_alter_breakpoint_1k0stlk
@@ -49,7 +62,13 @@ actions:
     plugin: eca_render_alter_breakpoint
     configuration:
       id: custom.lg
-      definition: "label: Large\nmediaQuery: 'all and (min-width: 1000px)'\nweight: 2\nmultipliers:\n  - 1x\ngroup: custom"
+      definition: |-
+        label: Large
+        mediaQuery: 'all and (min-width: 1000px)'
+        weight: 2
+        multipliers:
+          - 1x
+        group: custom
     successors:
       -
         id: eca_render_alter_breakpoint_1e7fgzt
@@ -59,5 +78,11 @@ actions:
     plugin: eca_render_alter_breakpoint
     configuration:
       id: custom.xl
-      definition: "label: X-Large\nmediaQuery: 'all and (min-width: 1300px)'\nweight: 3\nmultipliers:\n  - 1x\ngroup: custom"
+      definition: |-
+        label: X-Large
+        mediaQuery: 'all and (min-width: 1300px)'
+        weight: 3
+        multipliers:
+          - 1x
+        group: custom
     successors: {  }

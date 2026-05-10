@@ -7,9 +7,7 @@ dependencies:
     - announcements_feed
     - drupical
     - layout_builder
-    - layout_discovery
     - system
-    - views
 id: welcome
 label: 'Welcome to your site'
 description: 'Presented to users when they complete the Drupal CMS install process.'
@@ -18,8 +16,8 @@ layout:
     layout_id: layout_twocol_section
     layout_settings:
       label: 'Content and tasks'
-      context_mapping: {  }
       column_widths: 67-33
+      context_mapping: {  }
     components:
       cb457c1c-83c2-4a79-a09e-2c64a8bf8fb8:
         uuid: cb457c1c-83c2-4a79-a09e-2c64a8bf8fb8
@@ -40,7 +38,7 @@ layout:
         region: first
         configuration:
           id: dashboard_placeholder
-          decorates: views_block:recent_pages-block_recent_pages
+          decorates: 'views_block:recent_pages-block_recent_pages'
           label: ''
           label_display: visible
           provider: views
@@ -54,7 +52,7 @@ layout:
         region: first
         configuration:
           id: dashboard_placeholder
-          decorates: views_block:recent_content-block_recent_content
+          decorates: 'views_block:recent_content-block_recent_content'
           label: ''
           label_display: visible
           provider: views
@@ -68,11 +66,11 @@ layout:
         region: first
         configuration:
           id: dashboard_placeholder
-          decorates: views_block:a11y_tools_editoria11y_results-block_a11y_alerts
+          decorates: 'views_block:a11y_tools_editoria11y_results-block_a11y_alerts'
           label: ''
           label_display: visible
           provider: views
-          context_mapping: { }
+          context_mapping: {  }
           views_label: ''
           items_per_page: null
         weight: 3
@@ -82,8 +80,8 @@ layout:
     layout_id: layout_twocol_section
     layout_settings:
       label: 'Announcements and Events'
-      context_mapping: {  }
       column_widths: 50-50
+      context_mapping: {  }
     components:
       237ad3cf-cb2b-4991-a107-efafbef5f846:
         uuid: 237ad3cf-cb2b-4991-a107-efafbef5f846
