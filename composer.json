@@ -36,6 +36,7 @@
         "drupal/autocomplete_deluxe": "^2.1",
         "drupal/automated_crop": "^4.0",
         "drupal/autosave_form": "^1.10",
+        "drupal/background_wallpaper": "^1.0",
         "drupal/backlinks": "1.0.x-dev@dev",
         "drupal/backlinks_index": "^1.1",
         "drupal/backstop_generator": "^2.0@RC",
@@ -48,10 +49,11 @@
         "drupal/better_parent": "^11.0",
         "drupal/better_permissions_page": "^1.0",
         "drupal/better_taxonomy": "^1.0",
-        "drupal/bg_image_formatter": "1.x-dev@dev",
+        "drupal/bg_img_field": "2.x-dev@dev",
         "drupal/big_pipe_override": "1.x-dev@dev",
         "drupal/big_pipe_paragraphs": "^1.0",
         "drupal/big_pipe_sessionless": "^2.2",
+        "drupal/block_attributes": "2.x-dev@dev",
         "drupal/block_field": "^1.0@RC",
         "drupal/block_form_alter": "^2.1",
         "drupal/block_type_templates": "1.x-dev@dev",
@@ -214,6 +216,7 @@
         "drupal/freelinking": "^4.0",
         "drupal/gin": "5.0.x-dev@dev",
         "drupal/gin_everywhere": "^1.4",
+        "drupal/gin_lb": "3.0.x-dev@dev",
         "drupal/gin_moderation_sidebar": "^1.0",
         "drupal/gin_type_tray": "^1.0",
         "drupal/group_by_field_widget": "^1.2",
@@ -240,8 +243,12 @@
         "drupal/json_ld_schema": "^2.0",
         "drupal/kint": "^2.3",
         "drupal/klaro": "^3",
+        "drupal/layout_builder_component_attributes": "^2.2",
         "drupal/layout_builder_customizer": "^1.0",
+        "drupal/layout_builder_styles": "^2.1",
+        "drupal/layout_builder_widget": "^3.0",
         "drupal/layout_paragraphs": "^3.0@alpha",
+        "drupal/layout_section_classes": "^1.6",
         "drupal/legal": "^4.0@beta",
         "drupal/linkchecker": "^2.1",
         "drupal/linkit": "^7",
@@ -296,6 +303,7 @@
         "drupal/message_notify": "1.x-dev@dev",
         "drupal/message_subscribe": "^2.1",
         "drupal/message_ui": "1.x-dev@dev",
+        "drupal/meta_position": "^2.0",
         "drupal/metatag": "^2",
         "drupal/metatag_page_heading": "^1.0@beta",
         "drupal/mgv": "^2.3@RC",
@@ -384,7 +392,6 @@
         "drupal/redis": "^2.0@alpha",
         "drupal/rename_admin_paths": "^3.1",
         "drupal/requirements_manager": "^1.0",
-        "drupal/responsive_background_image": "^2.0@beta",
         "drupal/responsive_gallery": "^1.2",
         "drupal/responsive_tables_filter": "^2.0",
         "drupal/revision_manager": "^1.0@beta",
@@ -437,6 +444,7 @@
         "drupal/tardis": "4.0.x-dev@dev",
         "drupal/tb_megamenu": "^3.0@alpha",
         "drupal/template_generator": "^2.0",
+        "drupal/term_sidebar": "1.0.x-dev@dev",
         "drupal/tfa": "^2.0@alpha",
         "drupal/themable_forms": "^1.0",
         "drupal/theme_change": "^4.0",
@@ -444,6 +452,7 @@
         "drupal/theming_tools": "^1.0",
         "drupal/token": "^1",
         "drupal/token_browser": "^1.0",
+        "drupal/token_browser_plus": "^1.0@beta",
         "drupal/token_filter": "^2.2",
         "drupal/token_or": "^2.3",
         "drupal/tool": "1.0.x-dev@dev",
@@ -668,6 +677,9 @@
             "drupal/book_access_code": {
                 "Automated Drupal 11 compatibility fixes for book_access_code": "https://www.drupal.org/files/issues/2024-03-15/book_access_code.2.0.1.rector.patch"
             },
+            "drupal/background_image": {
+                "Fix PHP 8.4 deprecations: explicit nullable type on associateEntity() and return type on __sleep()": "patches/background-image-php84-nullable-sleep.patch"
+            },
             "drupal/breadcrumb_manager": {
                 "Fix PHP 8.4 deprecation: implicit nullable type on $path_matcher parameter": "patches/breadcrumb-manager-php84-nullable-path-matcher.patch"
             },
@@ -676,6 +688,9 @@
             },
             "drupal/layout_paragraphs": {
                 "Fix undefined variable warnings in EditComponentForm::orphanedItemsElement()": "https://www.drupal.org/files/issues/2025-12-29/3545135-php84-old-layout-undefined-variable.patch"
+            },
+            "drupal/manage_display": {
+                "Fix Drupal 11.3 Renderer::render() NULL deprecation in preprocess hooks": "patches/manage-display-render-null-deprecation.patch"
             },
             "drupal/tab_manager": {
                 "Automated Drupal 11 compatibility fixes for tab_manager": "https://www.drupal.org/files/issues/2024-03-25/tab_manager.1.0.5.rector.patch"

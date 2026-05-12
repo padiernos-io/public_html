@@ -45,3 +45,23 @@ tabs:
     link: llms.txt
     weight: -3
     access: true
+  8:
+    label: 'views_view:view.block_content.page_1'
+    link: Blocks
+    weight: 0
+    access: false
+  9:
+    label: 'views_view:view.comment.page_published'
+    link: Comments
+    weight: 0
+    access: false
+  10:
+    label: 'views_view:view.media.media_page_list'
+    link: Media
+    weight: 0
+    access: false
+  11:
+    label: 'views_view:view.paragraphs.page_admin_paragraphs'
+    link: Paragraphs
+    weight: 5
+    access: false

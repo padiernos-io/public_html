@@ -6,13 +6,16 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_hero
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.wide
     - node.type.article
+    - responsive_image.styles.origenal
   module:
+    - bg_img_field
     - comment
-    - image
+    - field_cache
+    - manage_display_extras
     - text
     - user
 _core:
@@ -24,10 +27,10 @@ mode: default
 content:
   body:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 3
     region: content
   comment:
     type: comment_default
@@ -36,30 +39,66 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 110
+    weight: 6
     region: content
-  field_image:
-    type: image
-    label: hidden
+  field_hero:
+    type: bg_img_field_formatter
+    label: above
     settings:
-      image_link: ''
-      image_style: wide
+      responsive_image_style: origenal
       image_loading:
-        attribute: eager
-    third_party_settings: {  }
-    weight: -1
+        attribute: lazy
+      image_link: ''
+    third_party_settings:
+      field_cache:
+        enabled: false
+        max_age: -1
+        contexts: {  }
+        tags: {  }
+    weight: 7
     region: content
   field_tags:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 4
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 5
     region: content
-hidden: {  }
+  node_read_time:
+    type: title_with_classes
+    label: hidden
+    settings:
+      tag: h2
+      classes: ''
+      link_to_entity: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  title:
+    type: title_with_classes
+    label: hidden
+    settings:
+      tag: h2
+      classes: ''
+      link_to_entity: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  uid:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  field_image: true
+  published_at: true
+  search_api_excerpt: true

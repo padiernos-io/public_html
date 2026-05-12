@@ -6,7 +6,7 @@ module:
   announcements_feed: 0
   audio_embed_media_core: 0
   automated_cron: 0
-  bg_image_formatter: 0
+  bg_img_field: 0
   block: 0
   block_content: 0
   block_field: 0
@@ -24,6 +24,7 @@ module:
   config_normalizer: 0
   config_revision: 0
   config_snapshot: 0
+  consumers: 0
   content_moderation: 0
   context: 0
   context_active_trail: 0
@@ -160,6 +161,7 @@ module:
   media_thumbnails_pdf: 0
   media_thumbnails_svg: 0
   media_thumbnails_video: 0
+  menu_item_extras: 0
   menu_link_content: 0
   menu_ui: 0
   mgv: 0
@@ -192,15 +194,16 @@ module:
   profile: 0
   readmore: 0
   realname: 0
-  responsive_background_image: 0
-  responsive_bg_image_formatter: 0
   responsive_image: 0
   revision_manager: 0
   robotstxt: 0
   robotstxt_utils: 0
+  scroll_up_down: 0
   sdc_component_library: 0
   search_api: 0
+  serialization: 0
   shortcut: 0
+  simple_oauth: 0
   stringoverrides: 0
   svg_image: 0
   svg_image_responsive: 0
@@ -259,6 +262,8 @@ module:
   update: 0
   url_entity: 0
   user: 0
+  views_infinite_scroll: 0
+  views_infinite_scroll_with_pager: 0
   views_ui: 0
   viewsreference: 0
   webassets: 0

@@ -1,0 +1,204 @@
+diff --git a/src/BackgroundImageInterface.php b/src/BackgroundImageInterface.php
+index f456d36..d89cf00 100644
+--- a/src/BackgroundImageInterface.php
++++ b/src/BackgroundImageInterface.php
+@@ -107,7 +107,7 @@ interface BackgroundImageInterface extends ContentEntityInterface, EntityOwnerIn
+    *   Flag indicating whether or not to save the background image entity
+    *   after it has been associated with the entity.
+    */
+-  public function associateEntity(EntityInterface $entity = NULL, $save = TRUE);
++  public function associateEntity(?EntityInterface $entity = NULL, $save = TRUE);
+ 
+   /**
+    * Gets the blur level.
+diff --git a/src/BackgroundImageManager.php b/src/BackgroundImageManager.php
+index 45d8c38..f5b554e 100644
+--- a/src/BackgroundImageManager.php
++++ b/src/BackgroundImageManager.php
+@@ -31,7 +31,6 @@ use Drupal\system\Plugin\ImageToolkit\GDToolkit;
+ use Drupal\views\ViewEntityInterface;
+ use Drupal\views\Views;
+ use Drupal\webform\WebformInterface;
+-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ 
+ /**
+@@ -39,7 +38,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
+  */
+ class BackgroundImageManager implements BackgroundImageManagerInterface {
+ 
+-  use ContainerAwareTrait;
+   use DependencySerializationTrait;
+   use StringTranslationTrait;
+ 
+@@ -202,9 +200,6 @@ class BackgroundImageManager implements BackgroundImageManagerInterface {
+     $this->routeMatch = $route_match;
+     $this->state = $state;
+     $this->urlGenerator = $url_generator;
+-    // @noinspection PhpUnhandledExceptionInspection
+-    $this->storage = $this->entityTypeManager->getStorage('background_image');
+-    $this->viewBuilder = $this->entityTypeManager->getViewBuilder('background_image');
+     $this->contextManager = $context_manager;
+   }
+ 
+@@ -268,7 +263,7 @@ class BackgroundImageManager implements BackgroundImageManagerInterface {
+   /**
+    * {@inheritdoc}
+    */
+-  public function cacheFlush(BackgroundImage $background_image = NULL) {
++  public function cacheFlush(?BackgroundImage $background_image = NULL) {
+     $bg_dir_uri = 'public://background_image/css';
+     if ($background_image !== NULL) {
+       $bg_dir_uri .= '/' . $background_image->id();
+@@ -306,7 +301,7 @@ class BackgroundImageManager implements BackgroundImageManagerInterface {
+   /**
+    * {@inheritdoc}
+    */
+-  public function colorSampleFile(FileInterface $file = NULL, $default = NULL) {
++  public function colorSampleFile(?FileInterface $file = NULL, $default = NULL) {
+     return isset($file) ? $this->colorSampleImage($this->imageFactory->get($file->getFileUri()), $default) : $default;
+   }
+ 
+@@ -423,6 +418,30 @@ class BackgroundImageManager implements BackgroundImageManagerInterface {
+     return $this->cssMinifier;
+   }
+ 
++  /**
++   * Returns the background_image entity storage, lazy-initialized.
++   *
++   * @return \Drupal\Core\Entity\EntityStorageInterface
++   */
++  protected function getStorage() {
++    if (!isset($this->storage)) {
++      $this->storage = $this->entityTypeManager->getStorage('background_image');
++    }
++    return $this->storage;
++  }
++
++  /**
++   * Returns the background_image view builder, lazy-initialized.
++   *
++   * @return \Drupal\Core\Entity\EntityViewBuilderInterface
++   */
++  protected function getViewBuilder() {
++    if (!isset($this->viewBuilder)) {
++      $this->viewBuilder = $this->entityTypeManager->getViewBuilder('background_image');
++    }
++    return $this->viewBuilder;
++  }
++
+   /**
+    * {@inheritdoc}
+    */
+@@ -480,7 +499,7 @@ class BackgroundImageManager implements BackgroundImageManagerInterface {
+   public function getEntityBackgroundImage(EntityInterface $entity, $langcode = NULL, array $context = []) {
+     if ($this->validEntity($entity)) {
+       $entity_type = $entity->getEntityType();
+-      $result = $this->storage->loadByProperties([
++      $result = $this->getStorage()->loadByProperties([
+         'type' => BackgroundImageInterface::TYPE_ENTITY,
+         'target' => $entity_type->id() . ':' . $entity->uuid(),
+       ]);
+@@ -496,7 +515,7 @@ class BackgroundImageManager implements BackgroundImageManagerInterface {
+    */
+   public function getEntityBundleBackgroundImage(EntityInterface $entity, $langcode = NULL, array $context = []) {
+     if ($entity->getEntityType()->getBundleEntityType()) {
+-      $result = $this->storage->loadByProperties([
++      $result = $this->getStorage()->loadByProperties([
+         'type' => BackgroundImageInterface::TYPE_ENTITY_BUNDLE,
+         'target' => $entity->getEntityTypeId() . ':' . $entity->bundle(),
+       ]);
+@@ -649,7 +668,7 @@ class BackgroundImageManager implements BackgroundImageManagerInterface {
+    * {@inheritdoc}
+    */
+   public function getGlobalBackgroundImage($langcode = NULL, array $context = []) {
+-    $result = $this->storage->loadByProperties(['type' => BackgroundImageInterface::TYPE_GLOBAL]);
++    $result = $this->getStorage()->loadByProperties(['type' => BackgroundImageInterface::TYPE_GLOBAL]);
+     if ($backgroundImage = reset($result)) {
+       return $this->entityRepository->getTranslationFromContext($backgroundImage, $langcode, $context);
+     }
+@@ -703,7 +722,7 @@ class BackgroundImageManager implements BackgroundImageManagerInterface {
+    */
+   public function getViewBackgroundImage(ViewEntityInterface $view, $langcode = NULL, array $context = []) {
+     if ($this->validView($view)) {
+-      $result = $this->storage->loadByProperties([
++      $result = $this->getStorage()->loadByProperties([
+         'type' => BackgroundImageInterface::TYPE_VIEW,
+         'target' => "{$view->id()}:{$view->getExecutable()->current_display}",
+       ]);
+@@ -718,7 +737,7 @@ class BackgroundImageManager implements BackgroundImageManagerInterface {
+    * {@inheritdoc}
+    */
+   public function getWebformBackgroundImage(WebformInterface $webform) {
+-    $result = $this->storage->loadByProperties([
++    $result = $this->getStorage()->loadByProperties([
+       'type' => BackgroundImageInterface::TYPE_ENTITY,
+       'target' => "{$webform->getEntityTypeId()}:{$webform->id()}",
+     ]);
+@@ -821,7 +840,7 @@ class BackgroundImageManager implements BackgroundImageManagerInterface {
+    * {@inheritdoc}
+    */
+   public function view($background_image, $view_mode = 'full', $langcode = NULL) {
+-    return $this->viewBuilder->view($background_image, $view_mode, $langcode);
++    return $this->getViewBuilder()->view($background_image, $view_mode, $langcode);
+   }
+ 
+ }
+diff --git a/src/BackgroundImageManagerInterface.php b/src/BackgroundImageManagerInterface.php
+index cee5ff4..6367e84 100644
+--- a/src/BackgroundImageManagerInterface.php
++++ b/src/BackgroundImageManagerInterface.php
+@@ -11,12 +11,10 @@ use Drupal\Core\Image\ImageInterface;
+ use Drupal\file\FileInterface;
+ use Drupal\views\ViewEntityInterface;
+ use Drupal\webform\WebformInterface;
+-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+-
+ /**
+  * Defines the BackgroundImageManagerInterface interface.
+  */
+-interface BackgroundImageManagerInterface extends ContainerAwareInterface, ContainerInjectionInterface {
++interface BackgroundImageManagerInterface extends ContainerInjectionInterface {
+ 
+   /**
+    * Perform alterations before a form is rendered.
+@@ -36,7 +34,7 @@ interface BackgroundImageManagerInterface extends ContainerAwareInterface, Conta
+    * @param \Drupal\background_image\Entity\BackgroundImage|null $background_image
+    *   The Background Image entity to flush the cache for.
+    */
+-  public function cacheFlush(BackgroundImage $background_image = NULL);
++  public function cacheFlush(?BackgroundImage $background_image = NULL);
+ 
+   /**
+    * Determines if a color is "dark".
+@@ -61,7 +59,7 @@ interface BackgroundImageManagerInterface extends ContainerAwareInterface, Conta
+    * @return string
+    *   The lowercase simple color (HEX) representation of the sampled image.
+    */
+-  public function colorSampleFile(FileInterface $file = NULL, $default = NULL);
++  public function colorSampleFile(?FileInterface $file = NULL, $default = NULL);
+ 
+   /**
+    * Samples the average color of an image file.
+diff --git a/src/Entity/BackgroundImage.php b/src/Entity/BackgroundImage.php
+index a80212c..c97e461 100644
+--- a/src/Entity/BackgroundImage.php
++++ b/src/Entity/BackgroundImage.php
+@@ -124,7 +124,7 @@ class BackgroundImage extends ContentEntityBase implements BackgroundImageInterf
+   /**
+    * {@inheritdoc}
+    */
+-  public function __sleep() {
++  public function __sleep(): array {
+     // Don't use unset() here because the magic method
+     // \Drupal\Core\Entity\ContentEntityBase::__get can cause the value to be
+     // set as a FieldItemList object. Instead, always explicitly set to NULL.
+@@ -139,7 +139,7 @@ class BackgroundImage extends ContentEntityBase implements BackgroundImageInterf
+   /**
+    * {@inheritdoc}
+    */
+-  public function associateEntity(EntityInterface $entity = NULL, $save = TRUE) {
++  public function associateEntity(?EntityInterface $entity = NULL, $save = TRUE) {
+     // Immediately return if not a valid entity.
+     if (!$this->getBackgroundImageManager()->validEntity($entity)) {
+       return;

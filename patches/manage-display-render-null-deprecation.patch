@@ -1,0 +1,34 @@
+diff --git a/manage_display.module b/manage_display.module
+index 38d880c..1bdb22e 100644
+--- a/manage_display.module
++++ b/manage_display.module
+@@ -226,8 +226,12 @@ function template_preprocess_submitted(&$variables) {
+   // @todo Remove after fixing core bug.
+   // @see https://www.drupal.org/project/drupal/issues/2334319
+   $renderer = \Drupal::service('renderer');
+-  $variables['author_name'] = $renderer->render($variables['author_name']);
+-  $variables['date'] = $renderer->render($variables['date']);
++  if (isset($variables['author_name']) && is_array($variables['author_name'])) {
++    $variables['author_name'] = $renderer->render($variables['author_name']);
++  }
++  if (isset($variables['date']) && is_array($variables['date'])) {
++    $variables['date'] = $renderer->render($variables['date']);
++  }
+ }
+ 
+ /**
+@@ -238,8 +242,12 @@ function template_preprocess_in_reply_to(&$variables) {
+   // @todo Remove after fixing core bug.
+   // @see https://www.drupal.org/project/drupal/issues/2334319
+   $renderer = \Drupal::service('renderer');
+-  $variables['subject'] = $renderer->render($variables['elements']['subject']);
+-  $variables['uid'] = $renderer->render($variables['elements']['uid']);
++  if (isset($variables['elements']['subject']) && is_array($variables['elements']['subject'])) {
++    $variables['subject'] = $renderer->render($variables['elements']['subject']);
++  }
++  if (isset($variables['elements']['uid']) && is_array($variables['elements']['uid'])) {
++    $variables['uid'] = $renderer->render($variables['elements']['uid']);
++  }
+ }
+ 
+ /**

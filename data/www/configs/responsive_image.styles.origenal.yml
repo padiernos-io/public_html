@@ -13,7 +13,7 @@ dependencies:
 _core:
   default_config_hash: 7N86wpmg_hxA8rmXn34p-FJM2vGobbt548DBebiOG80
 id: origenal
-label: Origenal
+label: Original
 image_style_mappings:
   -
     image_mapping_type: image_style

@@ -8,6 +8,7 @@ dependencies:
     - comment
     - filter
     - media
+    - scroll_up_down
     - system
 _core:
   default_config_hash: xLG41YbRo2NP-0SgRNTkMzLEuaeibanGXgUTbdIcIIg
@@ -18,5 +19,6 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access scroll arrows'
   - 'use text format restricted_html'
   - 'view media'
